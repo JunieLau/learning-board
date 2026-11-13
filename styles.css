@@ -134,6 +134,14 @@ body {
   transform: rotate(-0.7deg);
 }
 
+.moss {
+  grid-column: 8 / 13;
+  grid-row: 3;
+  align-self: end;
+  transform: rotate(1.4deg);
+  margin-top: 2.4rem;
+}
+
 .colophon {
   padding: 0 6vw 4.5rem;
   max-width: 1320px;
@@ -152,7 +160,7 @@ body {
     padding: 4.5vh 6vw 6vh;
   }
 
-  .intro, .portals, .slop, .valley {
+  .intro, .portals, .slop, .valley, .moss {
     transform: none;
     margin-top: 0;
     width: 100%;
