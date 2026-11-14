@@ -14,10 +14,12 @@
   </header>
 
   <div class="local-tools">
-    <p class="local-explain">顺序和「我的标注」只留在这台浏览器里。换设备、换浏览器，或清除本站数据，就看不到。不会同步到账号，也不会改页面上的公开文字。</p>
+    <p class="local-explain">可以拖动卡片、拖空白处看别处、滚轮或双指缩放。位置和「我的标注」目前只写在这台浏览器里，还不会自动同步到其他设备。不会改页面上的公开文字。</p>
     <div class="local-actions">
-      <button type="button" id="sort-date" aria-pressed="true">从新到旧</button>
-      <button type="button" id="sort-manual" aria-pressed="false">我的顺序</button>
+      <button type="button" id="arrange-date">按日期排开</button>
+      <button type="button" id="zoom-out" aria-label="缩小">缩小</button>
+      <button type="button" id="zoom-in" aria-label="放大">放大</button>
+      <button type="button" id="fit-board">看全板</button>
       <button type="button" id="export-local">导出备份</button>
       <label class="import-local">导入备份
         <input id="import-local" type="file" accept="application/json,.json">
@@ -26,8 +28,10 @@
     <p id="save-state" class="save-state" role="status"></p>
   </div>
 
+  <div class="stage" id="stage" tabindex="0">
+    <div class="world" id="world">
   <main class="board">
-    <article class="card intro">
+    <article class="card intro" data-id="intro">
       <div class="meta">
         <p class="hello">想学的，放在这里。</p>
         <p>每块上面是这个项目最标志性的画面，下面是标题和一小段说明。之后发来的，会继续钉上去。</p>
@@ -267,6 +271,8 @@
       </div>
     </article>
   </main>
+    </div>
+  </div>
 
   <footer class="colophon">
     画面来自各项目的官方发布，或作者视频的官方封面。Portals 为 CC BY-NC-SA 4.0，仅限非商业使用。The Moss Keeper 的海报取自 Chetaslua 仓库里的官方画面，版权仍归原作者。
