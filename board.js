@@ -32,7 +32,9 @@
   }
 
   function byPublishedDesc(a, b) {
-    return b.dataset.published.localeCompare(a.dataset.published);
+    var byDate = b.dataset.published.localeCompare(a.dataset.published);
+    if (byDate) return byDate;
+    return Number(a.dataset.tie || 0) - Number(b.dataset.tie || 0);
   }
 
   function setStatus(text) {
@@ -233,18 +235,61 @@
   }
 
   function placeMissing() {
-    var missing = cards().filter(function (card) { return !state.positions[card.dataset.id]; });
+    var missing = dateList().filter(function (card) { return !state.positions[card.dataset.id]; });
     if (!missing.length) return;
-    var maxX = 48;
-    var maxY = 48;
-    cards().forEach(function (card) {
-      var pos = state.positions[card.dataset.id];
-      if (!pos) return;
-      maxX = Math.max(maxX, pos.x + CARD_W + GAP);
-      maxY = Math.max(maxY, pos.y);
-    });
-    missing.forEach(function (card, index) {
-      state.positions[card.dataset.id] = { x: 48 + (index % 4) * (CARD_W + GAP), y: maxY + 420 };
+    function overlaps(x, y, ignoreId) {
+      return cards().some(function (card) {
+        if (card.dataset.id === ignoreId) return false;
+        var pos = state.positions[card.dataset.id];
+        if (!pos) return false;
+        var h = card.offsetHeight || 340;
+        return x < pos.x + CARD_W + 8 && x + CARD_W + 8 > pos.x && y < pos.y + h + 8 && y + 340 > pos.y;
+      });
+    }
+    missing.forEach(function (card) {
+      var list = dateList();
+      var index = list.indexOf(card);
+      var anchor = null;
+      var after = true;
+      var i;
+      for (i = index - 1; i >= 0; i -= 1) {
+        if (state.positions[list[i].dataset.id]) {
+          anchor = list[i];
+          after = true;
+          break;
+        }
+      }
+      if (!anchor) {
+        for (i = index + 1; i < list.length; i += 1) {
+          if (state.positions[list[i].dataset.id]) {
+            anchor = list[i];
+            after = false;
+            break;
+          }
+        }
+      }
+      var x = 48;
+      var y = 48;
+      if (anchor) {
+        var pos = state.positions[anchor.dataset.id];
+        if (after) {
+          x = pos.x + CARD_W + GAP;
+          y = pos.y;
+          if (x + CARD_W > 1560) {
+            x = 48;
+            y = pos.y + (anchor.offsetHeight || 360) + GAP;
+          }
+        } else {
+          x = pos.x;
+          y = Math.max(48, pos.y - 380);
+        }
+      }
+      var guard = 0;
+      while (overlaps(x, y, card.dataset.id) && guard < 24) {
+        y += 80;
+        guard += 1;
+      }
+      state.positions[card.dataset.id] = { x: x, y: y };
       applyPosition(card);
     });
   }
@@ -489,8 +534,10 @@
       fit();
       autoPlaced = true;
     } else {
+      var beforeCount = Object.keys(state.positions).length;
       placeMissing();
       cards().forEach(applyPosition);
+      if (Object.keys(state.positions).length !== beforeCount) persist();
     }
     applyCamera();
     if (loaded.empty && !loaded.corrupt) {
