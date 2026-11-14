@@ -160,6 +160,76 @@ body {
   .board { grid-template-columns: 1fr; }
 }
 
+body.is-freeform {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+body.is-freeform .local-tools {
+  flex: none;
+}
+
+body.is-freeform .colophon {
+  flex: none;
+  padding-top: 0.35rem;
+  padding-bottom: 0.45rem;
+}
+
+body.is-freeform .stage {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  touch-action: none;
+  cursor: grab;
+  outline: none;
+}
+
+body.is-freeform .stage.is-panning {
+  cursor: grabbing;
+}
+
+body.is-freeform .world {
+  transform-origin: 0 0;
+  width: 0;
+  height: 0;
+}
+
+body.is-freeform .board {
+  display: block;
+  position: relative;
+  width: 0;
+  height: 0;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+body.is-freeform .card {
+  position: absolute;
+  width: 280px;
+  margin: 0;
+  cursor: grab;
+}
+
+body.is-freeform .card.is-selected {
+  outline: 2px solid #fff8e8;
+  outline-offset: 3px;
+}
+
+body.is-freeform .card.is-lifting {
+  cursor: grabbing;
+  z-index: 5;
+}
+
+body.is-freeform .card a,
+body.is-freeform .card textarea,
+body.is-freeform .card button,
+body.is-freeform .card label {
+  cursor: auto;
+}
+
 .local-tools {
   max-width: 1440px;
   margin: 0 auto;
