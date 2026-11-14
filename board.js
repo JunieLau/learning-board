@@ -12,9 +12,7 @@
 
   var state = { manualOrder: null, notes: {}, view: "date" };
   var canStore = true;
-  var dirtyBlocked = false;
   var drag = null;
-  var noteTimer = 0;
 
   function cards() {
     return Array.prototype.slice.call(board.querySelectorAll("article.card[data-id]"));
@@ -93,13 +91,11 @@
     try {
       localStorage.setItem(KEY, JSON.stringify(payload));
       canStore = true;
-      dirtyBlocked = false;
       setStatus("已写在这台浏览器。");
       markMode();
       return true;
     } catch (err) {
       canStore = false;
-      dirtyBlocked = true;
       setStatus("这台浏览器拒绝保存。当前修改在刷新后会丢失。");
       markMode();
       return false;
@@ -270,17 +266,14 @@
       });
     });
     var field = mine.querySelector(".note");
-    field.addEventListener("input", function () {
-      state.notes[card.dataset.id] = cleanNote(field.value) || "";
-      if (!state.notes[card.dataset.id]) delete state.notes[card.dataset.id];
-      window.clearTimeout(noteTimer);
-      noteTimer = window.setTimeout(persist, 250);
-    });
-    field.addEventListener("blur", function () {
-      window.clearTimeout(noteTimer);
-      if (dirtyBlocked || field.value !== (state.notes[card.dataset.id] || "")) persist();
-      else persist();
-    });
+    function storeNote() {
+      var text = cleanNote(field.value) || "";
+      if (text) state.notes[card.dataset.id] = text;
+      else delete state.notes[card.dataset.id];
+      persist();
+    }
+    field.addEventListener("input", storeNote);
+    field.addEventListener("change", storeNote);
   }
 
   function showDate() {
@@ -374,6 +367,10 @@
     setStatus("还没有保存在这台浏览器的顺序或标注。");
   }
   markMode();
+
+  window.addEventListener("pagehide", function () {
+    persist();
+  });
 
   dateBtn.addEventListener("click", showDate);
   manualBtn.addEventListener("click", showManual);
