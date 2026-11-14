@@ -50,6 +50,16 @@ body {
 
 .card figure { margin: 0; }
 
+.card .still {
+  display: block;
+  color: inherit;
+}
+
+.card .still:focus-visible {
+  outline: 2px solid #fff8e8;
+  outline-offset: -4px;
+}
+
 .card img {
   display: block;
   width: 100%;
