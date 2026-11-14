@@ -159,3 +159,130 @@ body {
 @media (max-width: 340px) {
   .board { grid-template-columns: 1fr; }
 }
+
+.local-tools {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0.55rem 0.85rem 0;
+  color: #8b867c;
+}
+
+.local-explain,
+.save-state {
+  font-size: 0.68rem;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+}
+
+.local-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.4rem 0 0.25rem;
+}
+
+.local-actions button,
+.import-local {
+  font: inherit;
+  font-size: 0.68rem;
+  color: #e7e1d6;
+  background: transparent;
+  border: 1px solid rgba(231, 225, 214, 0.35);
+  padding: 0.2rem 0.45rem;
+  cursor: pointer;
+}
+
+.local-actions button[aria-pressed="true"] {
+  color: #161412;
+  background: #f3efe6;
+  border-color: #f3efe6;
+}
+
+.import-local {
+  position: relative;
+}
+
+.import-local input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.local-actions button:focus-visible,
+.import-local:focus-within {
+  outline: 2px solid #fff8e8;
+  outline-offset: 2px;
+}
+
+.mine {
+  margin-top: 0.45rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid rgba(22, 20, 18, 0.12);
+}
+
+.move {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.move button {
+  font: inherit;
+  font-size: 0.62rem;
+  line-height: 1.2;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid rgba(22, 20, 18, 0.28);
+  padding: 0.16rem 0.35rem;
+  cursor: pointer;
+}
+
+.handle {
+  cursor: grab;
+  touch-action: none;
+}
+
+.handle:active,
+.card.dragging .handle {
+  cursor: grabbing;
+}
+
+.move button:focus-visible,
+.note:focus-visible {
+  outline: 2px solid #161412;
+  outline-offset: 1px;
+}
+
+.card.dragging,
+.card.dragging * {
+  pointer-events: none;
+}
+
+.card.dragging {
+  opacity: 0.72;
+}
+
+.note-label {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.58rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.note {
+  display: block;
+  width: 100%;
+  margin-top: 0.2rem;
+  padding: 0.28rem 0.35rem;
+  border: 1px solid rgba(22, 20, 18, 0.2);
+  background: rgba(22, 20, 18, 0.04);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  resize: vertical;
+  min-height: 2.4rem;
+}
