@@ -224,9 +224,7 @@ body.is-freeform .card.is-lifting {
 }
 
 body.is-freeform .card a,
-body.is-freeform .card textarea,
-body.is-freeform .card button,
-body.is-freeform .card label {
+body.is-freeform .card button {
   cursor: auto;
 }
 
@@ -319,8 +317,7 @@ body.is-freeform .card label {
   cursor: grabbing;
 }
 
-.move button:focus-visible,
-.note:focus-visible {
+.move button:focus-visible {
   outline: 2px solid #161412;
   outline-offset: 1px;
 }
@@ -332,27 +329,4 @@ body.is-freeform .card label {
 
 .card.dragging {
   opacity: 0.72;
-}
-
-.note-label {
-  display: block;
-  margin-top: 0.35rem;
-  font-size: 0.58rem;
-  letter-spacing: 0.04em;
-  color: var(--muted);
-}
-
-.note {
-  display: block;
-  width: 100%;
-  margin-top: 0.2rem;
-  padding: 0.28rem 0.35rem;
-  border: 1px solid rgba(22, 20, 18, 0.2);
-  background: rgba(22, 20, 18, 0.04);
-  color: var(--ink);
-  font: inherit;
-  font-size: 0.72rem;
-  line-height: 1.4;
-  resize: vertical;
-  min-height: 2.4rem;
 }

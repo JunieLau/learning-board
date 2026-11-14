@@ -129,12 +129,32 @@
     }
   }
 
+  function notesForSave() {
+    var notes = {};
+    try {
+      var raw = localStorage.getItem(KEY);
+      if (raw) {
+        var parsed = JSON.parse(raw);
+        if (parsed && parsed.notes && typeof parsed.notes === "object" && !Array.isArray(parsed.notes)) {
+          var kept = cleanNotes(parsed.notes);
+          if (kept) notes = kept;
+        }
+      }
+    } catch (err) {}
+    Object.keys(state.notes).forEach(function (id) {
+      if (state.notes[id]) notes[id] = state.notes[id];
+    });
+    return notes;
+  }
+
   function persist() {
+    var notes = notesForSave();
+    state.notes = notes;
     try {
       localStorage.setItem(KEY, JSON.stringify({
         v: 1,
         positions: state.positions,
-        notes: state.notes,
+        notes: notes,
         camera: state.camera
       }));
       canStore = true;
@@ -268,45 +288,6 @@
     applyCamera();
   }
 
-  function bindNotes(card) {
-    if (!card.dataset.published) return;
-    var title = card.querySelector("h2");
-    var name = title ? title.textContent : card.dataset.id;
-    var meta = card.querySelector(".meta");
-    var mine = document.createElement("div");
-    mine.className = "mine";
-    var label = document.createElement("label");
-    label.className = "note-label";
-    label.textContent = "我的标注";
-    var field = document.createElement("textarea");
-    field.className = "note";
-    field.rows = 2;
-    field.maxLength = NOTE_MAX;
-    field.autocomplete = "off";
-    field.placeholder = "写在这台浏览器里";
-    field.setAttribute("aria-label", "给「" + name + "」写标注，只留在这台浏览器");
-    label.appendChild(field);
-    mine.appendChild(label);
-    meta.appendChild(mine);
-    function storeNote() {
-      var text = cleanNote(field.value) || "";
-      if (text) state.notes[card.dataset.id] = text;
-      else delete state.notes[card.dataset.id];
-      persist();
-    }
-    field.addEventListener("input", storeNote);
-    field.addEventListener("change", storeNote);
-  }
-
-  function applyNotes() {
-    cards().forEach(function (card) {
-      var field = card.querySelector(".note");
-      if (!field) return;
-      var text = state.notes[card.dataset.id] || "";
-      if (field.value !== text) field.value = text;
-    });
-  }
-
   function pointerRecord(event) {
     return pointers.get(event.pointerId);
   }
@@ -419,7 +400,7 @@
     arrange(dateList());
     fit();
     if (!persist()) return;
-    setStatus("已按发布日期排开。标注还在。这次会换掉之前摆放的位置。还不会同步到其他设备。");
+    setStatus("已按发布日期排开。这次会换掉之前摆放的位置。还不会同步到其他设备。");
   }
 
   function exportBackup() {
@@ -437,7 +418,7 @@
     link.click();
     link.remove();
     URL.revokeObjectURL(url);
-    setStatus("已导出这台浏览器里的位置和标注。这不是跨设备同步。");
+    setStatus("已导出这台浏览器里的位置。这不是跨设备同步。");
   }
 
   function importBackup(file) {
@@ -464,10 +445,9 @@
       } else if (clean.manualOrder) {
         arrange(listFromOrder(clean.manualOrder));
       }
-      applyNotes();
       applyCamera();
       if (!persist()) return;
-      setStatus("已用备份覆盖这台浏览器里的位置和标注。还不会同步到其他设备。");
+      setStatus("已用备份覆盖这台浏览器里的位置。还不会同步到其他设备。");
     };
     reader.onerror = function () {
       setStatus("这份备份读不出来，没有导入。");
@@ -476,7 +456,6 @@
   }
 
   document.body.classList.add("is-freeform");
-  works().forEach(bindNotes);
 
   var loaded = readKey(KEY);
   var old = readKey(OLD_KEY);
@@ -485,7 +464,7 @@
     arrange(dateList());
     fit();
     applyCamera();
-    setStatus("这台浏览器不能读取本地保存。位置和标注在刷新后不会留下。还不会同步到其他设备。");
+    setStatus("这台浏览器不能读取本地保存。位置在刷新后不会留下。还不会同步到其他设备。");
   } else if (loaded.corrupt) {
     arrange(dateList());
     fit();
@@ -513,13 +492,12 @@
       placeMissing();
       cards().forEach(applyPosition);
     }
-    applyNotes();
     applyCamera();
     if (loaded.empty && !loaded.corrupt) {
       persist();
-      setStatus(old.data ? "已把这台浏览器里原有的标注带到自由摆放。旧记录还留着。还不会同步到其他设备。" : "已按发布日期排开，并写在这台浏览器。还不会同步到其他设备。");
+      setStatus("已按发布日期排开，并写在这台浏览器。还不会同步到其他设备。");
     } else {
-      setStatus("已读到这台浏览器里的位置和标注。还不会同步到其他设备。");
+      setStatus("已读到这台浏览器里的位置。还不会同步到其他设备。");
     }
   }
 
