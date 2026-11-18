@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>学习板 · Claude / GPT</title>
   <meta name="description" content="Claude 与 GPT 的创意技术项目，一块一块钉在这块黑底的板上。">
-  <link rel="stylesheet" href="styles.css?v=2026-11-19-community8">
+  <link rel="stylesheet" href="styles.css?v=2026-11-19-ev">
   <script>
     (function () {
       try {
@@ -24,7 +24,7 @@
   </header>
 
   <div class="local-tools">
-    <p class="local-explain">上方目录分成 Claude 学习板和 OpenAI 学习板，点一下就换。地址用 #claude 或 #openai，不带记号时打开 Claude。可以拖动、平移和缩放。每次内容更新后，第一次打开会按原发布日期从新到旧排开，桌面窗口里一行八张内容卡同时可见，说明卡单独占上面一行。没有脚本时也会按这个行列排，不会把说明卡算进八张里。同一版里再拖动，仍留在这台浏览器，两块板分开记。OpenAI 板先排 9 个社区原帖，再排 7 张没有作品日期的官方 Showcase。点「查看本轮新增」会打开 OpenAI 板并框住这 9 张。标注还留着，页面上不再显示输入框。</p>
+    <p class="local-explain">上方目录分成 Claude 学习板和 OpenAI 学习板，点一下就换。地址用 #claude 或 #openai，不带记号时打开 Claude。可以拖动、平移和缩放。每次内容更新后，第一次打开会按原发布日期从新到旧排开，桌面窗口里一行八张内容卡同时可见，说明卡单独占上面一行。没有脚本时也会按这个行列排，不会把说明卡算进八张里。同一版里再拖动，仍留在这台浏览器，两块板分开记。OpenAI 板先排 9 个社区原帖，再排 7 张没有作品日期的官方 Showcase。点「查看本轮新增」会留在 Claude 板，并框住 ESCAPE VELOCITY。标注还留着，页面上不再显示输入框。</p>
     <div class="local-actions">
       <button type="button" id="show-cycle">查看本轮新增</button>
       <button type="button" id="arrange-date">按日期排开</button>
@@ -40,7 +40,7 @@
   </div>
 
   <nav class="board-nav" aria-label="目录">
-    <a href="#claude">Claude 学习板<small>28 张，含 1 条待核实参考</small></a>
+    <a href="#claude">Claude 学习板<small>29 张，含 1 条待核实参考</small></a>
     <a href="#openai">OpenAI 学习板<small>16 张：9 个社区作品，7 张官方 Showcase</small></a>
   </nav>
 
@@ -51,7 +51,7 @@
     <article class="card intro" data-id="intro-claude">
       <div class="meta">
         <p class="hello">Claude 学习板</p>
-        <p>28 张。其中 27 张是已有项目，1 张是指定参考、制作细节待核实，不计入已核实案例。按原发布日期从新到旧，说明卡不占内容位。</p>
+        <p>29 张。其中 28 张是已有项目，1 张是指定参考、制作细节待核实，不计入已核实案例。按原发布日期从新到旧，说明卡不占内容位。</p>
       </div>
     </article>
     <article class="card" data-id="blender-ai-video-course" data-published="2026-11-17T00:33:20+08:00">
@@ -558,6 +558,39 @@
         </p>
       </div>
     </article>
+    <article class="card" data-id="escape-velocity" data-published="2026-09-26T01:17:57+08:00" data-cycle="2026-11-19-ev" data-verification="author-archive">
+      <figure>
+        <a class="still" href="https://x.com/anabology/status/2103534482930491441" target="_blank" rel="noopener" aria-label="打开 ESCAPE VELOCITY 的原片">
+          <img src="images/escape-velocity/cover.jpg" alt="作者片库封面：侧脸的人，画面上有 ESCAPE VELOCITY、5:06 和 September 2026。这是封面，不是审片截图。" width="1200" height="630">
+        </a>
+        <figcaption>作者片库封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">案例 · 作者档案</p>
+        <h2>ESCAPE VELOCITY</h2>
+        <p class="by">anabology · Claude Code · Opus 5.5</p>
+        <p class="when"><time datetime="2026-09-26T01:17:57+08:00">2026-09-26</time></p>
+        <p>一支 5 分 06 秒的 MV。人负责方向、选歌和选角、批准分镜、看剪辑并给修改，最后点头。Claude Code 里主要是 Opus 5.5，做调研、歌词、分镜、提示词整理，并协调各段和运动图形的代码。歌是 Suno v6，底板是 Midjourney v8.2，活动和对口型是 Seedance 2.5，用画面底板加上真实人声切片。</p>
+        <p>值得学的是：先有逐词、逐拍的时间网格，生成的画面和代码画的字、图形是分开的，中间有人看片的关口。不是一条提示词自动做完。</p>
+        <p class="links">
+          <a href="https://x.com/anabology/status/2103534482930491441" target="_blank" rel="noopener">原片</a>
+          <a href="https://claudia.gallery/record/escape-velocity/readme.md" target="_blank" rel="noopener">制作说明</a>
+          <a href="https://claudia.gallery/escape-velocity.md" target="_blank" rel="noopener">影片页</a>
+        </p>
+        <p class="links">
+          <a href="https://claudia.gallery/record/escape-velocity/prompts-midjourney.md" target="_blank" rel="noopener">Midjourney 提示词</a>
+          <a href="https://claudia.gallery/record/escape-velocity/prompts-seedance.md" target="_blank" rel="noopener">Seedance 提示词</a>
+          <a href="https://claudia.gallery/record/escape-velocity/prompts-suno.md" target="_blank" rel="noopener">Suno 记录</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p>分工和数量都来自作者的制作档案，不是本板复跑的结果。档案写 9 章、141 镜；Midjourney 188 条提示词、636 张图、130 块底板；Seedance 47 条镜头加 30 条续拍。墙钟约 19 小时，导演意见约 50 条，都是作者自报。原帖那句 “12 hours later, woke up” 是套用别人的过夜说法，不当成精确工时。</p>
+          <p>开头大约 25 分钟用过 Fable 5.1，网页搜索辅助写的是 Haiku 4.5。本机还做了分轨、词级对齐和对口型备援。运动图形是自制 JS 引擎，制作页没有给出完整引擎源码，这里也不补。Claudia Grok Bot 是后来的入口，不是这部片子的制作引擎。</p>
+          <p>原帖互动：赞、转发、引用，以及帖外的独立反馈，这次都还没有核到，不记成 0。公开页抓取里出现过 “20.2M Views” 这几个字，旁边另有没有名目的数字，所以不把它们写成已核实的赞或转发。</p>
+          <p>未看完正片，未复跑。制作说明以作者档案为准。</p>
+        </details>
+      </div>
+    </article>
         </main>
       </div>
     </div>
@@ -921,7 +954,7 @@
   </footer>
   <script>
     (function () {
-      var expected = "2026-11-19-community8";
+      var expected = "2026-11-19-ev";
       function check() {
         fetch("revision.json?t=" + Date.now(), { cache: "no-store" }).then(function (res) {
           if (!res.ok) return null;
@@ -946,6 +979,6 @@
       });
     })();
   </script>
-  <script src="board.js?v=2026-11-19-community8"></script>
+  <script src="board.js?v=2026-11-19-ev"></script>
 </body>
 </html>
