@@ -1,8 +1,8 @@
 (function () {
   var KEY = "learning-board-freeform-v1";
   var OLD_KEY = "learning-board-local-v1";
-  var LAYOUT_REVISION = "2026-11-19-8view";
-  var CYCLE = "2026-11-19";
+  var LAYOUT_REVISION = "2026-11-19-8gpt";
+  var CYCLE = "2026-11-19-gpt";
   var NOTE_MAX = 2000;
   var FILE_MAX = 500000;
   var CARD_W = 280;
@@ -35,12 +35,21 @@
   }
 
   function works() {
-    return cards().filter(function (card) { return card.dataset.published; });
+    return cards().filter(function (card) { return !card.classList.contains("intro"); });
+  }
+
+  function unknownDate(card) {
+    return !card.dataset.published || card.dataset.datePrecision === "unknown";
   }
 
   function byPublishedDesc(a, b) {
-    var byDate = b.dataset.published.localeCompare(a.dataset.published);
-    if (byDate) return byDate;
+    var aUnknown = unknownDate(a);
+    var bUnknown = unknownDate(b);
+    if (aUnknown !== bUnknown) return aUnknown ? 1 : -1;
+    if (!aUnknown) {
+      var byDate = b.dataset.published.localeCompare(a.dataset.published);
+      if (byDate) return byDate;
+    }
     return Number(a.dataset.tie || 0) - Number(b.dataset.tie || 0);
   }
 
@@ -306,7 +315,7 @@
       var y = 48;
       if (anchor) {
         var pos = state.positions[anchor.dataset.id];
-        if (!anchor.dataset.published) {
+        if (anchor.classList.contains("intro")) {
           x = ORIGIN_X;
           y = pos.y + (anchor.offsetHeight || 160) + GAP;
         } else if (after) {
