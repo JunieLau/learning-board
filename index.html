@@ -14,8 +14,9 @@
   </header>
 
   <div class="local-tools">
-    <p class="local-explain">可以拖动卡片、拖空白处看别处、滚轮或双指缩放。位置目前只写在这台浏览器里，还不会自动同步到其他设备。不会改页面上的公开文字。</p>
+    <p class="local-explain">可以拖动卡片、拖空白处看别处、滚轮或双指缩放。位置目前只写在这台浏览器里，还不会自动同步到其他设备。本轮新增 3 张，点「查看本轮新增」就能看到，不改已保存的摆放。不会改页面上的公开文字。</p>
     <div class="local-actions">
+      <button type="button" id="show-cycle">查看本轮新增</button>
       <button type="button" id="arrange-date">按日期排开</button>
       <button type="button" id="zoom-out" aria-label="缩小">缩小</button>
       <button type="button" id="zoom-in" aria-label="放大">放大</button>
@@ -38,6 +39,49 @@
       </div>
     </article>
 
+    <article class="card" data-id="blender-ai-video-course" data-published="2026-11-17T00:33:20+08:00" data-cycle="2026-11-18">
+      <figure>
+        <a class="still" href="https://www.youtube.com/watch?v=OO6J2w_FBnE" target="_blank" rel="noopener" aria-label="打开 Dan Kieft 课程的原片">
+          <img src="images/blender-ai-video-course/anchor-hall.jpg" alt="作者配套页上的走廊场景：狭长旧楼道，日光灯，两侧掉漆的墙，地上堆着纸箱、鞋和一把伞。" width="1800" height="1005">
+        </a>
+      </figure>
+      <div class="meta">
+        <h2>Blender锁运镜→AI视频</h2>
+        <p class="by">Dan Kieft · 教程 · 跨工具</p>
+        <p class="when"><time datetime="2026-11-17">2026-11-17</time></p>
+        <p>原标题：Claude + Blender Is The Best Way To Make AI Videos (Full Course)。先用 Blender 锁住镜头和空间，再交给生成模型出片，不是纯代码成片。</p>
+        <p>Claude 写提示词并做进阶 MCP 搭景。初学路线推荐 Opus 5.5，进阶用的型号没有写明。成片走 Higgsfield / Nano Banana Pro 锚点，再由 Seedance 2.5 生成。作者公开了配套提示词。课程含付费插件推广。本板未看完全片，也未复跑。</p>
+        <p class="links">
+          <a href="https://www.youtube.com/watch?v=OO6J2w_FBnE" target="_blank" rel="noopener">教程</a>
+          <a href="https://claude-and-blender.vercel.app/" target="_blank" rel="noopener">提示词</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="card" data-id="cat-garden" data-published="2026-11-16T21:00:55+08:00" data-cycle="2026-11-18">
+      <figure>
+        <a class="still" href="https://x.com/BubbleBrain/status/2122313967473434639" target="_blank" rel="noopener" aria-label="打开 Cat Garden 的原帖">
+          <img src="images/cat-garden/preview.jpg" alt="Cat Garden 仓库预览：低机位看花园，前景虚化的绿叶，中景是红罂粟、紫花和一座温室。" width="1920" height="1080">
+        </a>
+      </figure>
+      <div class="meta">
+        <h2>Cat Garden</h2>
+        <p class="by">BubbleBrain · Claude Fable 5.2 · 案例＋源码</p>
+        <p class="when"><time datetime="2026-11-16">2026-11-16</time></p>
+        <p>约 110 秒的猫眼高度花园。作者仓库写明代码由 Claude（claude-fable-5-2）在 Claude Code 里写成，画面和声音由这段代码计算，不是 Blender、Three.js 或视频生成。</p>
+        <p>低机位、步态和视线弹簧、曝光与声音绑在同一时间轴，并用抽样帧做检查。暂未找到公开的逐步复刻教程。只能在 Apple Silicon + Metal 上跑，Windows 不能直接运行。仓库没有 LICENSE，不能据此当作可改写或可商用。本板未看完全片，也未跑渲染脚本。</p>
+        <p class="links">
+          <a href="https://x.com/BubbleBrain/status/2122313967473434639" target="_blank" rel="noopener">原片</a>
+          <a href="https://github.com/BubbleBrainBB/awesome-fable-5.2/tree/main/cat-garden" target="_blank" rel="noopener">源码</a>
+          <a href="https://github.com/BubbleBrainBB/awesome-fable-5.2/releases/tag/cat-garden-v1.0" target="_blank" rel="noopener">发布页</a>
+        </p>
+        <p class="links">
+          <a href="https://github.com/BubbleBrainBB/awesome-fable-5.2/tree/main/deep-dive" target="_blank" rel="noopener">同集 Deep Dive</a>
+          <a href="https://github.com/BubbleBrainBB/awesome-fable-5.2/tree/main/mountain-hike" target="_blank" rel="noopener">同集 Mountain Hike</a>
+        </p>
+      </div>
+    </article>
+
     <article class="card" data-id="fable-of-clawd" data-published="2026-11-15T00:17:32+08:00">
       <figure>
         <a class="still" href="https://www.youtube.com/watch?v=Bvb4DxB35MM" target="_blank" rel="noopener" aria-label="打开 The Fable of Clawd 的成片">
@@ -46,9 +90,10 @@
       </figure>
       <div class="meta">
         <h2>The Fable of Clawd</h2>
-        <p class="by">Riley Brown · Python + Blender · 成片 · 制作拆解</p>
+        <p class="by">Riley Brown · Claude Fable 5.2 · Python + Blender · 成片 · 制作拆解</p>
         <p class="when"><time datetime="2026-11-15">2026-11-15</time></p>
-        <p>2 分 19 秒的动画短片：Clawd 给自己造身体，送出生日礼物。作者称用 Python + Blender 制作、RunPod 云渲染；附原始提示词、制作流程与渲染设置。</p>
+        <p>2 分 19 秒的动画短片：Clawd 给自己造身体，送出生日礼物。作者称 Fable 5.2 / Claude Code 写 Python，在 Blender 里出片，并用 RunPod 云渲染。制作拆解页有起始提示词、流程、渲染设置和 52 镜故事板，没有成片播放器，也没有可下载源码。</p>
+        <p>本板未复跑，也不把它当成已端到端核实的完整教程，未审片。时长来自页面元数据。</p>
         <p class="links">
           <a href="https://www.youtube.com/watch?v=Bvb4DxB35MM" target="_blank" rel="noopener">成片</a>
           <a href="https://claude.ai/artifact/BkA6dzdGMx796WymCFpRyZ" target="_blank" rel="noopener">制作拆解</a>
@@ -67,7 +112,11 @@
         <h2>Fable 5.2 接入 Blender</h2>
         <p class="by">Pat Simmons · Fable 5.2 · 过程展示</p>
         <p class="when"><time datetime="2026-11-14">2026-11-14</time></p>
-        <p>过程展示，附书面教程、三份完整提示词与技能包；包含静帧批评循环和 Cycles 云渲染说明。尚未逐步复跑。</p>
+        <p>过程展示：Claude 驱动 Blender、写场景，Cycles 或云渲染出图，不是视频生成模型。另附书面教程、三份完整提示词与技能包，含静帧批评循环。尚未逐步复跑。技能包里的 Blender 5.1.2 是软件版本。</p>
+        <details class="more">
+          <summary>日期依据</summary>
+          <p>排序仍用视频日期 2026-11-14。书面页可见 November 17, 2026，JSON-LD 为 2026-11-18 11:29 亚洲/上海，两说并存，不拿文章日期覆盖视频日期。</p>
+        </details>
         <p class="links">
           <a href="https://www.youtube.com/watch?v=zVmnw-sgJPA" target="_blank" rel="noopener">视频</a>
           <a href="https://www.aiformortals.co/blog/fable-5-2-blender" target="_blank" rel="noopener">书面教程与提示词</a>
@@ -84,9 +133,9 @@
       </figure>
       <div class="meta">
         <h2>Python + Blender 广告</h2>
-        <p class="by">Marcus · Fable 5.2</p>
+        <p class="by">Marcus · Claude Fable 5.2 · 教程</p>
         <p class="when"><time datetime="2026-11-13">2026-11-13</time></p>
-        <p>用 Claude Code 写 Python，不必亲手打开 Blender，做出三维香水广告。配套 skill pack 在站外。</p>
+        <p>用 Claude Code 写 Python，不必亲手打开 Blender，由 Blender 在后台做出三维香水广告。教程标题写明 Claude Fable 5.2。配套 skill pack 在站外。尚未逐步复跑。</p>
         <p class="links">
           <a href="https://www.youtube.com/watch?v=qyaHfXiT6d8" target="_blank" rel="noopener">教程</a>
         </p>
@@ -101,9 +150,9 @@
       </figure>
       <div class="meta">
         <h2>Astral Realm</h2>
-        <p class="by">Scott · Three.js</p>
+        <p class="by">Scott · Claude Fable 5.2 · Three.js</p>
         <p class="when"><time datetime="2026-11-13">2026-11-13</time></p>
-        <p>用 Claude Fable 5.2 制作，在 Three.js 里渲染。除角色外都是程序生成。</p>
+        <p>用 Claude Fable 5.2 制作，在 Three.js 里渲染。除角色外都是程序生成。暂未找到公开教程。未审片。</p>
         <p class="links">
           <a href="https://x.com/scottstts/status/2121262812228141395" target="_blank" rel="noopener">原帖</a>
         </p>
@@ -118,9 +167,9 @@
       </figure>
       <div class="meta">
         <h2>No External Assets</h2>
-        <p class="by">Chetaslua · Three.js</p>
+        <p class="by">Chetaslua · Claude Fable 5.2 · Three.js</p>
         <p class="when"><time datetime="2026-11-13">2026-11-13</time></p>
-        <p>用 Claude Fable 5.2 和 Three.js 做的三维成片。作者写明成片没有外部素材。</p>
+        <p>用 Claude Fable 5.2 和 Three.js 做的三维成片。作者写明成片没有外部素材。暂未找到公开教程。未审片。</p>
         <p class="links">
           <a href="https://x.com/chetaslua/status/2121176151234330707" target="_blank" rel="noopener">原帖</a>
         </p>
@@ -138,7 +187,7 @@
         <p class="by">Blendi · Fable 5.2</p>
         <p class="when"><time datetime="2026-11-12">2026-11-12</time></p>
         <p>一座吉卜力手绘风格的山谷，可以走进去散步。土地、云和村庄都是代码画出来的。</p>
-        <p>Three.js 项目，非 Blender；本次检索未找到原作完整制作教程，可从源码改造入手。</p>
+        <p>Three.js 项目，非 Blender。型号依据原帖，演示页本身没写 Claude。本次检索未找到原作完整制作教程，可从源码改造入手。</p>
         <p class="links">
           <a href="https://patch.gg/blendi/painted-valley" target="_blank" rel="noopener">打开演示</a>
           <a href="https://x.com/BlendiByl/status/2120694003230560585" target="_blank" rel="noopener">原帖</a>
@@ -189,9 +238,9 @@
       </figure>
       <div class="meta">
         <h2>Animated Show Intro</h2>
-        <p class="by">Kevin Ngo · Python + Blender</p>
+        <p class="by">Kevin Ngo · Claude Fable 5.2 · Python + Blender</p>
         <p class="when"><time datetime="2026-11-11">2026-11-11</time></p>
-        <p>Claude Fable 5.2 做的动画节目片头。画面是代码：Python 做动画，Blender 渲染。</p>
+        <p>Claude Fable 5.2 做的动画节目片头。画面是代码：Python 做动画，Blender 渲染。暂未找到原作完整教程。未审片。</p>
         <p>本次检索未找到原作完整教程；此为相邻基础教学，非原作复刻，配套技能包在站外。</p>
         <p class="links">
           <a href="https://x.com/kevin_t_ngo/status/2120540964909711415" target="_blank" rel="noopener">原帖</a>
@@ -226,13 +275,33 @@
       </figure>
       <div class="meta">
         <h2>90's Toy Commercial</h2>
-        <p class="by">Kevin Ngo · Python + Blender</p>
+        <p class="by">Kevin Ngo · Claude Fable 5.2 · Python + Blender</p>
         <p class="when"><time datetime="2026-11-10">2026-11-10</time></p>
-        <p>Claude Fable 5.2 做的 90 年代玩具广告。画面是代码：Python 做动画，Blender 渲染。</p>
+        <p>Claude Fable 5.2 做的 90 年代玩具广告。画面是代码：Python 做动画，Blender 渲染。暂未找到原作完整教程。未审片。</p>
         <p>本次检索未找到原作完整教程；此为相邻基础教学，非原作复刻，配套技能包在站外。</p>
         <p class="links">
           <a href="https://x.com/kevin_t_ngo/status/2119972124211454139" target="_blank" rel="noopener">原帖</a>
           <a href="https://www.youtube.com/watch?v=qyaHfXiT6d8" target="_blank" rel="noopener">相邻教程：Blender广告</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="card" data-id="pelican-bicycle" data-published="2026-11-10T06:47:50+08:00" data-cycle="2026-11-18">
+      <figure>
+        <a class="still" href="https://x.com/techfren/status/2119924958134702276" target="_blank" rel="noopener" aria-label="打开鹈鹕骑自行车原帖">
+          <img src="images/pelican-bicycle/poster.jpg" alt="一只白色鹈鹕骑着青绿色自行车，背景是栏杆和水面。名称来自作者技术说明，不是另行公布的正式片名。" width="1200" height="675">
+        </a>
+      </figure>
+      <div class="meta">
+        <h2>Pelican on a bicycle</h2>
+        <p class="by">TechFriendAJ · Claude Fable 5.2 · Python + Blender</p>
+        <p class="when"><time datetime="2026-11-10">2026-11-10</time></p>
+        <p>名称来自作者技术说明里的描述，不是另行公布的正式片名。约 18.5 秒。作者回复写明 Claude Fable 5.2 在 Claude Code 里写 Python：绑定、几何、自行车连杆和五个镜头。</p>
+        <p>Blender 5.2.3 是软件版本，用 Cycles OptiX 渲染，ffmpeg 出片。用了 PolyHaven 的 CC0 天空和地面，不是无外部素材。公开的 agent trace 能看迭代，但不是已独立验证的逐步教程。未审片，也未把 trace 逐条跑通。</p>
+        <p class="links">
+          <a href="https://x.com/techfren/status/2119924958134702276" target="_blank" rel="noopener">原片</a>
+          <a href="https://x.com/techfren/status/2119926681716834440" target="_blank" rel="noopener">技术说明</a>
+          <a href="https://huggingface.co/datasets/techfren/pelican-fable-trace" target="_blank" rel="noopener">迭代记录</a>
         </p>
       </div>
     </article>
@@ -245,12 +314,13 @@
       </figure>
       <div class="meta">
         <h2>Portals</h2>
-        <p class="by">Ethan Mollick · 471 个世界</p>
+        <p class="by">Ethan Mollick · Claude Fable 5.2 · 471 个世界</p>
         <p class="when"><time datetime="2026-11-10">2026-11-10</time></p>
-        <p>一场不用操作的飞行。每个世界都是代码在浏览器里现场生成的场景，门里已经是下一个世界，没有剪辑，也没有淡入淡出。</p>
+        <p>一场不用操作的飞行。作者原帖写让 Fable 5.2 来做；Claude 写代码和世界，three.js 在浏览器里现场生成场景。门里已经是下一个世界，没有剪辑，也没有淡入淡出。未玩完 471 个世界。</p>
         <p class="links">
           <a href="https://portals-endless-worlds.netlify.app" target="_blank" rel="noopener">打开演示</a>
           <a href="https://github.com/emollick/ai-portals" target="_blank" rel="noopener">源代码</a>
+          <a href="https://x.com/emollick/status/2119918307457577163" target="_blank" rel="noopener">原帖</a>
         </p>
       </div>
     </article>
@@ -265,7 +335,7 @@
         <h2>What the water keeps</h2>
         <p class="by">Kevin Ngo · 可在浏览器里玩</p>
         <p class="when"><time datetime="2026-11-10">2026-11-10</time></p>
-        <p>坐船穿过 8 个梦境世界。作者写明由 Claude Fable 5.2 做成，画面在网页里当场画出来。</p>
+        <p>坐船穿过 8 个梦境世界。作者原帖写明由 Claude Fable 5.2 做成，画面在网页里当场画出来。演示页本身没写型号。暂未找到公开教程。未审片。</p>
         <p class="links">
           <a href="https://what-the-water-keeps.vercel.app/" target="_blank" rel="noopener">打开演示</a>
           <a href="https://x.com/kevin_t_ngo/status/2119868968307695818" target="_blank" rel="noopener">原帖</a>
@@ -298,9 +368,10 @@
       </figure>
       <div class="meta">
         <h2>The Moss Keeper</h2>
-        <p class="by">Chetaslua · 单文件 HTML</p>
+        <p class="by">Chetaslua · 单文件 HTML · 作者称 Fable 5.5</p>
         <p class="when"><time datetime="2026-11-02">2026-11-02</time></p>
         <p>苔藓巨人与森林的代码动画短片：日出时，长满苔藓的巨人在遗忘的森林里醒来。学习用代码组织绘画质感、场景和镜头。</p>
+        <p>作者原帖和仓库写 Made with Fable 5.5。2026-11-18 核对的官方型号表没有 Claude Fable 5.5，不能改记成 Fable 5.2，也不能当成已核实的官方型号。</p>
         <p class="links">
           <a href="https://chetaslua.github.io/moss-keeper/" target="_blank" rel="noopener">打开演示</a>
           <a href="https://github.com/ChetasLua/moss-keeper" target="_blank" rel="noopener">源代码</a>
@@ -317,11 +388,12 @@
       </figure>
       <div class="meta">
         <h2>Three.js 短片</h2>
-        <p class="by">Mr omi · 相邻工作流</p>
+        <p class="by">Mr omi · 教程</p>
         <p class="when"><time datetime="2026-11-01">2026-11-01</time></p>
-        <p>用 Claude 和 Three.js 在本地做动画短片，不靠视频生成模型。</p>
+        <p>用 Claude 和 Three.js 在本地做动画短片，不靠视频生成模型。Claude，具体版本未披露。未看视频。</p>
         <p class="links">
           <a href="https://www.youtube.com/watch?v=OtbLL6OBNE4" target="_blank" rel="noopener">教程</a>
+          <a href="https://github.com/mromidev/claude-animated-shorts" target="_blank" rel="noopener">技能包</a>
         </p>
       </div>
     </article>
@@ -334,12 +406,13 @@
       </figure>
       <div class="meta">
         <h2>Slop New York</h2>
-        <p class="by">mrdoob · 约 2.2MB</p>
+        <p class="by">mrdoob · 历史条目</p>
         <p class="when"><time datetime="2026-10-22">2026-10-22</time></p>
-        <p>打开网页时，曼哈顿的街道、立面和车流在浏览器里现场生成，不靠提前存好的照片。</p>
+        <p>打开网页时，曼哈顿的街道、立面和车流在浏览器里现场生成，不靠提前存好的照片。历史条目，尚未核实 Claude 参与。作者原帖写的是压缩后约 784KB。</p>
         <p class="links">
           <a href="https://mrdoob.github.io/slop-newyork/" target="_blank" rel="noopener">打开演示</a>
           <a href="https://github.com/mrdoob/slop-newyork" target="_blank" rel="noopener">源代码</a>
+          <a href="https://x.com/mrdoob/status/2113177383658561721" target="_blank" rel="noopener">原帖</a>
         </p>
       </div>
     </article>
@@ -352,11 +425,12 @@
       </figure>
       <div class="meta">
         <h2>JavaScript 逐帧</h2>
-        <p class="by">Chase AI · 相邻工作流</p>
+        <p class="by">Chase AI · 教程</p>
         <p class="when"><time datetime="2026-10-07">2026-10-07</time></p>
-        <p>用 Claude Code 写 JavaScript 逐帧画完，再用 Playwright 和 FFmpeg 拼成视频。</p>
+        <p>用 Claude Code 写 JavaScript 逐帧画完，再用 Playwright 和 FFmpeg 拼成视频。Claude，具体版本未披露。未看视频。</p>
         <p class="links">
           <a href="https://www.youtube.com/watch?v=rscb1DgJtNg" target="_blank" rel="noopener">教程</a>
+          <a href="https://github.com/cth9191/animate" target="_blank" rel="noopener">技能包</a>
         </p>
       </div>
     </article>

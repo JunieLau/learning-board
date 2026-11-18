@@ -20,6 +20,7 @@
   var selected = null;
   var zTop = 2;
   var autoPlaced = false;
+  var displayCamera = null;
   var pointers = new Map();
   var pinch = null;
 
@@ -169,8 +170,19 @@
     }
   }
 
-  function applyCamera() {
-    world.style.transform = "translate(" + state.camera.x + "px," + state.camera.y + "px) scale(" + state.camera.z + ")";
+  function shownCamera() {
+    return displayCamera || state.camera;
+  }
+
+  function applyCamera(cam) {
+    var c = cam || shownCamera();
+    world.style.transform = "translate(" + c.x + "px," + c.y + "px) scale(" + c.z + ")";
+  }
+
+  function keepDisplayedCamera() {
+    if (!displayCamera) return;
+    state.camera = { x: displayCamera.x, y: displayCamera.y, z: displayCamera.z };
+    displayCamera = null;
   }
 
   function applyPosition(card) {
@@ -295,6 +307,7 @@
   }
 
   function fit() {
+    keepDisplayedCamera();
     var list = cards();
     if (!list.length) return;
     var minX = Infinity;
@@ -321,6 +334,7 @@
   }
 
   function zoomAt(clientX, clientY, factor) {
+    keepDisplayedCamera();
     var rect = stage.getBoundingClientRect();
     var px = clientX - rect.left;
     var py = clientY - rect.top;
@@ -381,6 +395,7 @@
       pos.y += dy / state.camera.z;
       applyPosition(rec.card);
     } else {
+      keepDisplayedCamera();
       state.camera.x += dx;
       state.camera.y += dy;
       applyCamera();
@@ -554,6 +569,44 @@
   stage.addEventListener("pointercancel", onPointerUp);
   stage.addEventListener("wheel", onWheel, { passive: false });
   stage.addEventListener("keydown", onKey);
+  function focusCycle() {
+    var targets = cards().filter(function (card) { return card.dataset.cycle === "2026-11-18"; });
+    if (!targets.length) {
+      setStatus("这一轮没有标成新增的卡片。");
+      return;
+    }
+    var minX = Infinity;
+    var minY = Infinity;
+    var maxX = -Infinity;
+    var maxY = -Infinity;
+    targets.forEach(function (card) {
+      var pos = state.positions[card.dataset.id];
+      if (!pos) return;
+      minX = Math.min(minX, pos.x);
+      minY = Math.min(minY, pos.y);
+      maxX = Math.max(maxX, pos.x + (card.offsetWidth || CARD_W));
+      maxY = Math.max(maxY, pos.y + (card.offsetHeight || 360));
+    });
+    if (!isFinite(minX)) return;
+    var pad = 36;
+    var sw = stage.clientWidth;
+    var sh = stage.clientHeight;
+    var z = Math.min(sw / (maxX - minX + pad * 2), sh / (maxY - minY + pad * 2), 1.15);
+    z = clamp(z, 0.35, 1.6);
+    applyCamera({
+      z: z,
+      x: (sw - (maxX - minX) * z) / 2 - minX * z,
+      y: pad - minY * z
+    });
+    displayCamera = {
+      z: z,
+      x: (sw - (maxX - minX) * z) / 2 - minX * z,
+      y: pad - minY * z
+    };
+    setStatus("已把本轮新增放到窗口里。没有改已保存的卡片位置，也没有改已保存的视角，刷新后仍回到原来的画面。");
+  }
+
+  document.getElementById("show-cycle").addEventListener("click", focusCycle);
   document.getElementById("arrange-date").addEventListener("click", arrangeByDate);
   document.getElementById("zoom-in").addEventListener("click", function () {
     zoomAt(stage.clientWidth / 2 + stage.getBoundingClientRect().left, stage.clientHeight / 2 + stage.getBoundingClientRect().top, 1.12);

@@ -1,0 +1,29 @@
+{
+  "record_type": "publication_cycle_log",
+  "cycle_id": "2026-11-18-policy",
+  "timezone": "Asia/Shanghai",
+  "policy_issued": "2026-11-18T23:45:00+08:00",
+  "research_completed": "2026-11-18T23:52:00+08:00",
+  "source_check_date": "2026-11-18T23:46:00+08:00",
+  "previous_successful_deployment": {
+    "sha": "907d64266473cfa443a5ea16073b3f27363fdb1b",
+    "at": "2026-11-18T22:58:06+08:00",
+    "page": "https://junielau.com/learning-board/",
+    "content_cards": 18,
+    "evidence": "HTTP Last-Modified Wed, 18 Nov 2026 14:58:06 GMT"
+  },
+  "publication_status_at_authoring": "pending_not_yet_deployed",
+  "added_ids": [
+    "blender-ai-video-course",
+    "cat-garden",
+    "pelican-bicycle"
+  ],
+  "not_added": [
+    "geekie-blender-mcp",
+    "riley-the-edge",
+    "soda-pop-intro",
+    "sirio-seedance"
+  ],
+  "discoverability": "Button 查看本轮新增 frames data-cycle=2026-11-18 cards without writing card positions or the saved camera.",
+  "notes_ui": "personal note inputs remain removed; stored notes are not cleared"
+}
