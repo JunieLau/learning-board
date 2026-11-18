@@ -4,13 +4,13 @@
   "source_check_date": "2026-11-19T00:52:00+08:00",
   "research_cycle_date": "2026-11-19",
   "policy_date": "2026-11-19",
-  "content_card_count_in_this_commit": 35,
+  "content_card_count_in_this_commit": 44,
   "last_successful_deployment_before_this_commit": {
-    "sha": "892231f0cb13e669d2d9ecb0035abb4af8cf3b1d",
-    "at": "2026-11-19T00:56:45+08:00",
+    "sha": "8af059e29b02e0d8ed36bb6ead5ef93b5530f0eb",
+    "at": "2026-11-19T01:20:12+08:00",
     "page": "https://junielau.com/learning-board/",
     "content_cards": 35,
-    "evidence": "HTTP Last-Modified Wed, 18 Nov 2026 16:56:45 GMT after PR #16. This file does not claim the split boards are deployed."
+    "evidence": "HTTP Last-Modified Wed, 18 Nov 2026 17:20:12 GMT after PR #18. This file does not claim the nine community cards are deployed."
   },
   "this_commit_publication": "not yet deployed at the time this file was written",
   "official_model_check": {
@@ -765,11 +765,167 @@
           "url": "https://developers.openai.com/showcase/terrarium-glasshouse-studio"
         }
       ]
+    },
+    {
+      "id": "nagi-reef",
+      "title": "凪 NAGI（珊瑚礁浅滩）",
+      "original_published_at": "2026-11-18T08:18:13+08:00",
+      "verification": "community",
+      "model": "GPT-6.2 Astra",
+      "api_id": "gpt-6.2-astra",
+      "cycle": "2026-11-19-community",
+      "counts_as_verified_new": true,
+      "links": [
+        {
+          "label": "原帖",
+          "url": "https://x.com/Masimo_Blue/status/2122846803477537071"
+        },
+        {
+          "label": "在线演示",
+          "url": "https://nagi-reef-soundings.crystalosc.chatgpt.site/"
+        }
+      ]
+    },
+    {
+      "id": "nocturne-jukebox",
+      "title": "Nocturne 光学点唱机",
+      "original_published_at": "2026-11-18T07:16:45+08:00",
+      "verification": "community",
+      "model": "GPT-6.2 Astra",
+      "api_id": "gpt-6.2-astra",
+      "cycle": "2026-11-19-community",
+      "counts_as_verified_new": true,
+      "links": [
+        {
+          "label": "原帖",
+          "url": "https://x.com/ShadeLurk/status/2122831337321349384"
+        },
+        {
+          "label": "在线演示",
+          "url": "https://shadelurk.github.io/nocturne-jukebox/"
+        }
+      ]
+    },
+    {
+      "id": "peacock-svg",
+      "title": "SVG 孔雀",
+      "original_published_at": "2026-11-18T06:18:19+08:00",
+      "verification": "community",
+      "model": "GPT-6.2 Astra",
+      "api_id": "gpt-6.2-astra",
+      "cycle": "2026-11-19-community",
+      "counts_as_verified_new": true,
+      "links": [
+        {
+          "label": "原帖",
+          "url": "https://x.com/petergostev/status/2122816629402910859"
+        }
+      ]
+    },
+    {
+      "id": "kasane-valley",
+      "title": "Kasane Valley（叠加之谷）",
+      "original_published_at": "2026-11-18T06:17:01+08:00",
+      "verification": "community",
+      "model": "GPT-6.2 Astra",
+      "api_id": "gpt-6.2-astra",
+      "cycle": "2026-11-19-community",
+      "counts_as_verified_new": true,
+      "links": [
+        {
+          "label": "原帖",
+          "url": "https://x.com/givros/status/2122816304071803109"
+        },
+        {
+          "label": "在线演示",
+          "url": "https://givros.github.io/kasane-valley/"
+        }
+      ]
+    },
+    {
+      "id": "nuremberg-market",
+      "title": "可走的纽伦堡圣诞市场",
+      "original_published_at": "2026-11-18T05:32:53+08:00",
+      "verification": "community",
+      "model": "GPT-6.2 Astra",
+      "api_id": "gpt-6.2-astra",
+      "cycle": "2026-11-19-community",
+      "counts_as_verified_new": true,
+      "links": [
+        {
+          "label": "原帖",
+          "url": "https://x.com/FlorianGallwitz/status/2122805196938231879"
+        }
+      ]
+    },
+    {
+      "id": "pixel-jet-game",
+      "title": "单文件像素喷气游戏",
+      "original_published_at": "2026-11-18T05:13:18+08:00",
+      "verification": "community",
+      "model": "GPT-6.2 Astra",
+      "api_id": "gpt-6.2-astra",
+      "cycle": "2026-11-19-community",
+      "counts_as_verified_new": true,
+      "links": [
+        {
+          "label": "原帖",
+          "url": "https://x.com/vib3coded/status/2122800268706259244"
+        }
+      ]
+    },
+    {
+      "id": "city-disaster-sim",
+      "title": "三维城市灾难模拟器",
+      "original_published_at": "2026-11-18T03:13:04+08:00",
+      "verification": "community",
+      "model": "GPT-6.2 Astra",
+      "api_id": "gpt-6.2-astra",
+      "cycle": "2026-11-19-community",
+      "counts_as_verified_new": true,
+      "links": [
+        {
+          "label": "原帖",
+          "url": "https://x.com/lucian__03/status/2122770012234805383"
+        }
+      ]
+    },
+    {
+      "id": "pink-sky-train",
+      "title": "粉红天空里的蒸汽火车",
+      "original_published_at": "2026-11-18T03:03:15+08:00",
+      "verification": "community",
+      "model": "GPT-6.2 Astra",
+      "api_id": "gpt-6.2-astra",
+      "cycle": "2026-11-19-community",
+      "counts_as_verified_new": true,
+      "links": [
+        {
+          "label": "原帖",
+          "url": "https://x.com/soyukke_game/status/2122767541823225891"
+        }
+      ]
+    },
+    {
+      "id": "space-elevator",
+      "title": "从零做的太空电梯乘坐体验",
+      "original_published_at": "2026-11-18T02:16:10+08:00",
+      "verification": "community",
+      "model": "GPT-6.2 Astra",
+      "api_id": "gpt-6.2-astra",
+      "cycle": "2026-11-19-community",
+      "counts_as_verified_new": true,
+      "links": [
+        {
+          "label": "原帖",
+          "url": "https://x.com/emollick/status/2122755693191287009"
+        }
+      ]
     }
   ],
   "verified_new_projects_this_cycle": 7,
   "pending_reference_this_cycle": 0,
-  "layout_revision": "2026-11-19-split8",
+  "layout_revision": "2026-11-19-community8",
   "layout_columns": {
     "content_cards_per_row": 8,
     "intro_consumes_content_slot": false,
@@ -795,8 +951,9 @@
     },
     "openai": {
       "url": "https://junielau.com/learning-board/#openai",
-      "content_cards": 7,
-      "verified_official_showcase": 7
+      "content_cards": 16,
+      "community": 9,
+      "official_showcase": 7
     },
     "default": "claude",
     "columns": 8,

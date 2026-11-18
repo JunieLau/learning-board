@@ -1,0 +1,32 @@
+{
+  "record_type": "publication_cycle_log",
+  "cycle_id": "2026-11-19-community",
+  "timezone": "Asia/Shanghai",
+  "added_ids": [
+    "nagi-reef",
+    "nocturne-jukebox",
+    "peacock-svg",
+    "kasane-valley",
+    "nuremberg-market",
+    "pixel-jet-game",
+    "city-disaster-sim",
+    "pink-sky-train",
+    "space-elevator"
+  ],
+  "official_kept": [
+    "paris-atlas",
+    "notre-damn",
+    "forest-walks",
+    "escapement",
+    "light-and-matter",
+    "dot-rumble",
+    "terrarium"
+  ],
+  "openai_content_cards": 16,
+  "claude_content_cards": 28,
+  "total_content_cards": 44,
+  "sort": "nine community posts by original created_at descending, then seven official cards with unknown dates in the previous stable order",
+  "layout_revision": "2026-11-19-community8",
+  "publication_status_at_authoring": "pending_not_yet_deployed",
+  "kasane_ultra": "First post says GPT 6.2 Astra Ultra. Ultra is not an official model name and is not a documented reasoning.effort value. Later post says GPT 6.2 Astra."
+}
