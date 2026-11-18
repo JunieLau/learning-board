@@ -6,11 +6,11 @@
   "policy_date": "2026-11-19",
   "content_card_count_in_this_commit": 35,
   "last_successful_deployment_before_this_commit": {
-    "sha": "66e0d5e476455870b928ed2005c9c3eba10ccf07",
-    "at": "2026-11-19T00:48:46+08:00",
+    "sha": "892231f0cb13e669d2d9ecb0035abb4af8cf3b1d",
+    "at": "2026-11-19T00:56:45+08:00",
     "page": "https://junielau.com/learning-board/",
-    "content_cards": 28,
-    "evidence": "HTTP Last-Modified Wed, 18 Nov 2026 16:48:46 GMT after PR #15. That page shows eight cards across on a desktop open. This file does not claim the GPT-6.2 Astra cards are deployed."
+    "content_cards": 35,
+    "evidence": "HTTP Last-Modified Wed, 18 Nov 2026 16:56:45 GMT after PR #16. This file does not claim the split boards are deployed."
   },
   "this_commit_publication": "not yet deployed at the time this file was written",
   "official_model_check": {
@@ -769,7 +769,7 @@
   ],
   "verified_new_projects_this_cycle": 7,
   "pending_reference_this_cycle": 0,
-  "layout_revision": "2026-11-19-8gpt",
+  "layout_revision": "2026-11-19-split8",
   "layout_columns": {
     "content_cards_per_row": 8,
     "intro_consumes_content_slot": false,
@@ -785,5 +785,26 @@
     "status": "seven official showcase cards added; publication dates remain unknown",
     "cards_added": 7
   },
-  "date_sort_policy": "On the first load of a new content revision, every content card is laid out by original publication date, newest first, eight per row, on fresh and returning browsers. A desktop window shows that whole newest row. The intro tile stays above that grid and does not take a slot. Saved x/y and camera from an older revision are not applied. Within the same revision, freeform drag still persists locally. Day-only dates sort after known clocks on that day. Adding a link never changes a card's original date. Stored notes are kept and are not shown as inputs. Projects whose official page gives no publication date sort after every known date, in a stable tie order, and are not dated with the model launch day or the day they were collected."
+  "date_sort_policy": "On the first load of a new content revision, every content card is laid out by original publication date, newest first, eight per row, on fresh and returning browsers. A desktop window shows that whole newest row. The intro tile stays above that grid and does not take a slot. Saved x/y and camera from an older revision are not applied. Within the same revision, freeform drag still persists locally. Day-only dates sort after known clocks on that day. Adding a link never changes a card's original date. Stored notes are kept and are not shown as inputs. Projects whose official page gives no publication date sort after every known date, in a stable tie order, and are not dated with the model launch day or the day they were collected.",
+  "boards": {
+    "claude": {
+      "url": "https://junielau.com/learning-board/#claude",
+      "content_cards": 28,
+      "verified": 27,
+      "pending_reference": 1
+    },
+    "openai": {
+      "url": "https://junielau.com/learning-board/#openai",
+      "content_cards": 7,
+      "verified_official_showcase": 7
+    },
+    "default": "claude",
+    "columns": 8,
+    "intro_consumes_content_slot": false,
+    "static_fallback": "CSS grid is also eight content columns, intro spans the full width, nav links work without script"
+  },
+  "preview_gaps": {
+    "bilibili-fable-moba": "Public Bilibili requests from this environment return HTTP 412. The supplied page screenshot path was not readable on disk, so the card still uses a text stand-in, not a cropped page shot and not a Starfall image.",
+    "matt-pure-code-film": "Official post cover is nearly dark. x.com returned HTTP 403 from this environment, so the official cover remains and is labeled as not a watched frame."
+  }
 }

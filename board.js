@@ -1,7 +1,8 @@
 (function () {
-  var KEY = "learning-board-freeform-v1";
+function boot(section) {
+  var KEY = "learning-board-freeform-v1-" + (section.getAttribute("data-board") || "claude");
   var OLD_KEY = "learning-board-local-v1";
-  var LAYOUT_REVISION = "2026-11-19-8gpt";
+  var LAYOUT_REVISION = "2026-11-19-split8";
   var CYCLE = "2026-11-19-gpt";
   var NOTE_MAX = 2000;
   var FILE_MAX = 500000;
@@ -10,11 +11,11 @@
   var COLUMNS = 8;
   var ORIGIN_X = 48;
   var ORIGIN_Y = 48;
-  var board = document.querySelector(".board");
-  var stage = document.getElementById("stage");
-  var world = document.getElementById("world");
+  var board = section.querySelector(".board");
+  var stage = section.querySelector(".stage");
+  var world = section.querySelector(".world");
   var stateEl = document.getElementById("save-state");
-  if (!board || !stage || !world || !stateEl) return;
+  if (!board || !stage || !world || !stateEl) return null;
 
   var state = {
     positions: {},
@@ -372,7 +373,7 @@
     var sw = stage.clientWidth || window.innerWidth || 1280;
     var rowW = Math.max(maxX - minX, CARD_W);
     var z = (sw - pad * 2) / rowW;
-    if (sw < 1100) {
+    if (sw < 1000) {
       var twoW = CARD_W * 2 + GAP;
       var zTwo = (sw - pad * 2) / twoW;
       var zOne = Math.min((sw - pad * 2) / CARD_W, 1);
@@ -611,11 +612,15 @@
     applyCamera();
     setStatus("这台浏览器里的自由摆放记录读不出来。没有覆盖它，先按日期排开。");
   } else {
-    if (old.data && old.data.notes) {
-      Object.keys(old.data.notes).forEach(function (id) {
-        if (!state.notes[id]) state.notes[id] = old.data.notes[id];
+    function takeNotes(bag) {
+      if (!bag || !bag.notes) return;
+      cards().forEach(function (card) {
+        var id = card.dataset.id;
+        if (!state.notes[id] && bag.notes[id]) state.notes[id] = bag.notes[id];
       });
     }
+    takeNotes(old.data);
+    takeNotes(readKey("learning-board-freeform-v1").data);
     if (loaded.data) {
       state.notes = Object.assign({}, old.data && old.data.notes, loaded.data.notes);
       state.camera = loaded.data.camera;
@@ -688,36 +693,122 @@
     setStatus("已把本轮新增放到窗口里。没有改卡片位置，也没有覆盖已保存的视角。");
   }
 
-  document.getElementById("show-cycle").addEventListener("click", focusCycle);
-  document.getElementById("arrange-date").addEventListener("click", arrangeByDate);
-  document.getElementById("zoom-in").addEventListener("click", function () {
-    zoomAt(stage.clientWidth / 2 + stage.getBoundingClientRect().left, stage.clientHeight / 2 + stage.getBoundingClientRect().top, 1.12);
-    persist();
-  });
-  document.getElementById("zoom-out").addEventListener("click", function () {
-    zoomAt(stage.clientWidth / 2 + stage.getBoundingClientRect().left, stage.clientHeight / 2 + stage.getBoundingClientRect().top, 1 / 1.12);
-    persist();
-  });
-  document.getElementById("fit-board").addEventListener("click", function () {
-    fit();
-    persist();
-    setStatus("已把整块板放进窗口。还不会同步到其他设备。");
-  });
-  document.getElementById("export-local").addEventListener("click", exportBackup);
-  document.getElementById("import-local").addEventListener("change", function (event) {
-    var file = event.target.files && event.target.files[0];
-    event.target.value = "";
-    importBackup(file);
-  });
+  var needsReflow = false;
   function remeasure() {
-    if (!autoPlaced) return;
+    if (stage.clientWidth < 200) {
+      needsReflow = true;
+      return;
+    }
+    if (!autoPlaced && !needsReflow) return;
     arrange(dateList());
     showNewest();
     autoPlaced = false;
+    needsReflow = false;
     persist();
     if (loadNotice) setStatus(loadNotice);
   }
+  if (autoPlaced) needsReflow = true;
   if (document.readyState === "complete") remeasure();
   else window.addEventListener("load", remeasure);
   window.addEventListener("pagehide", function () { persist(); });
+  return {
+    section: section,
+    focusCycle: focusCycle,
+    arrangeByDate: arrangeByDate,
+    zoomAt: zoomAt,
+    fit: fit,
+    exportBackup: exportBackup,
+    importBackup: importBackup,
+    onShow: remeasure,
+    persist: persist
+  };
+}
+
+var mounts = {};
+document.querySelectorAll(".board-view").forEach(function (section) {
+  var api = boot(section);
+  if (api) mounts[section.id] = api;
+});
+
+function boardIdFromLocation() {
+  var hash = (location.hash || "").replace(/^#/, "");
+  if (hash === "openai" || hash === "claude") return hash;
+  try {
+    var query = new URLSearchParams(location.search).get("board");
+    if (query === "openai" || query === "claude") return query;
+  } catch (err) {}
+  return "claude";
+}
+
+function active() {
+  return mounts[boardIdFromLocation()] || mounts.claude || null;
+}
+
+function markNav() {
+  var id = boardIdFromLocation();
+  document.querySelectorAll(".board-nav a").forEach(function (link) {
+    if (link.getAttribute("href") === "#" + id) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
+  });
+}
+
+window.addEventListener("hashchange", function () {
+  markNav();
+  var api = active();
+  if (api) api.onShow();
+});
+markNav();
+
+var showCycle = document.getElementById("show-cycle");
+if (showCycle) showCycle.addEventListener("click", function () {
+  if (location.hash !== "#openai") {
+    location.hash = "openai";
+    requestAnimationFrame(function () {
+      if (mounts.openai) mounts.openai.focusCycle();
+    });
+    return;
+  }
+  var api = mounts.openai;
+  if (api) api.focusCycle();
+});
+var arrangeBtn = document.getElementById("arrange-date");
+if (arrangeBtn) arrangeBtn.addEventListener("click", function () {
+  var api = active();
+  if (api) api.arrangeByDate();
+});
+var zoomIn = document.getElementById("zoom-in");
+if (zoomIn) zoomIn.addEventListener("click", function () {
+  var api = active();
+  if (!api) return;
+  var stage = api.section.querySelector(".stage");
+  api.zoomAt(stage.clientWidth / 2 + stage.getBoundingClientRect().left, stage.clientHeight / 2 + stage.getBoundingClientRect().top, 1.12);
+  api.persist();
+});
+var zoomOut = document.getElementById("zoom-out");
+if (zoomOut) zoomOut.addEventListener("click", function () {
+  var api = active();
+  if (!api) return;
+  var stage = api.section.querySelector(".stage");
+  api.zoomAt(stage.clientWidth / 2 + stage.getBoundingClientRect().left, stage.clientHeight / 2 + stage.getBoundingClientRect().top, 1 / 1.12);
+  api.persist();
+});
+var fitBtn = document.getElementById("fit-board");
+if (fitBtn) fitBtn.addEventListener("click", function () {
+  var api = active();
+  if (!api) return;
+  api.fit();
+  api.persist();
+});
+var exportBtn = document.getElementById("export-local");
+if (exportBtn) exportBtn.addEventListener("click", function () {
+  var api = active();
+  if (api) api.exportBackup();
+});
+var importInput = document.getElementById("import-local");
+if (importInput) importInput.addEventListener("change", function (event) {
+  var api = active();
+  var file = event.target.files && event.target.files[0];
+  event.target.value = "";
+  if (api) api.importBackup(file);
+});
 })();
