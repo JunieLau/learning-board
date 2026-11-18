@@ -12,7 +12,7 @@
     "content_cards": 35,
     "evidence": "HTTP Last-Modified Wed, 18 Nov 2026 17:20:12 GMT after PR #18. This file does not claim the nine community cards are deployed."
   },
-  "this_commit_publication": "prepared, not deployed; reception evidence for ESCAPE VELOCITY is not yet verified",
+  "this_commit_publication": "not yet deployed at the time this file was written",
   "official_model_check": {
     "checked_at": "2026-11-19T00:52:00+08:00",
     "openai": {
@@ -969,12 +969,19 @@
     "original_published_at": "2026-09-26T01:17:57+08:00",
     "sort": "oldest known date on the Claude board; after 2026-10-07",
     "reception": {
-      "likes": "unknown",
-      "reposts": "unknown",
-      "quotes": "unknown",
-      "independent_feedback": "unknown",
-      "note": "A public page scrape on 2026-11-19 contained the words 20.2M Views and other unlabeled counts. Those unlabeled counts are not recorded as likes or reposts. This is not treated as verified reception."
+      "checked_at": "2026-11-19T02:49:00+08:00",
+      "source": "live public X interface on https://x.com/anabology/status/2103534482930491441",
+      "impressions": 20234881,
+      "video_view_count": 3360278,
+      "video_views_are_not_impressions": true,
+      "likes": 16508,
+      "reposts": 2017,
+      "quotes": 907,
+      "replies": 1044,
+      "bookmarks": 13926,
+      "making_of_site_metrics": "not part of this original-post snapshot",
+      "sampling": "not a formal representative sample; positive replies and mixed AI-propaganda reactions both exist"
     },
-    "publication": "held until checked reception evidence is supplied or independently verified"
+    "publication": "ready to publish after this metrics check"
   }
 }
