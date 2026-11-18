@@ -1,32 +1,41 @@
 {
   "record_type": "public_project_index",
   "timezone": "Asia/Shanghai",
-  "source_check_date": "2026-11-19T00:12:00+08:00",
+  "source_check_date": "2026-11-19T00:52:00+08:00",
   "research_cycle_date": "2026-11-19",
   "policy_date": "2026-11-19",
-  "content_card_count_in_this_commit": 28,
+  "content_card_count_in_this_commit": 35,
   "last_successful_deployment_before_this_commit": {
-    "sha": "79a109e99232bc12d6deade1c1fa6fc4b0791cfb",
-    "at": "2026-11-19T00:39:58+08:00",
+    "sha": "66e0d5e476455870b928ed2005c9c3eba10ccf07",
+    "at": "2026-11-19T00:48:46+08:00",
     "page": "https://junielau.com/learning-board/",
     "content_cards": 28,
-    "evidence": "HTTP Last-Modified Wed, 18 Nov 2026 16:39:58 GMT after PR #14. That deploy laid ten columns on the canvas but opened at scale 1, so a 1440px window still showed about four cards. This file does not claim the ten-across view is deployed."
+    "evidence": "HTTP Last-Modified Wed, 18 Nov 2026 16:48:46 GMT after PR #15. That page shows eight cards across on a desktop open. This file does not claim the GPT-6.2 Astra cards are deployed."
   },
   "this_commit_publication": "not yet deployed at the time this file was written",
   "official_model_check": {
-    "checked_at": "2026-11-19T00:06:00+08:00",
-    "urls": [
-      "https://platform.claude.com/docs/en/models/overview",
-      "https://www.anthropic.com/claude-fable-and-mythos-5-2"
-    ],
-    "latest_models_found": [
-      "Claude Fable 5.2",
-      "Claude Opus 5.5",
-      "Claude Sonnet 5.5",
-      "Claude Haiku 5.5"
-    ],
-    "fable_5_5": "not found in those official pages",
-    "labeling": "Author text that says only Fable 5.2 is labeled 作者声明. The official full name may be shown beside it. The author's sentence is not rewritten to insert Claude when that word is absent."
+    "checked_at": "2026-11-19T00:52:00+08:00",
+    "openai": {
+      "urls": [
+        "https://developers.openai.com/api/docs/models.md",
+        "https://developers.openai.com/api/docs/models/gpt-6.2-astra.md",
+        "https://developers.openai.com/api/docs/guides/latest-model/gpt-6.2-astra.md"
+      ],
+      "official_name": "GPT-6.2 Astra",
+      "api_id": "gpt-6.2-astra",
+      "sibling": "GPT-6.2 Sol is gpt-6.2-sol, not another name for Astra",
+      "previous": "GPT-6 Astra is gpt-6-astra, still listed, and is not 6.2",
+      "astra_max": "not an official model name; reasoning.effort can be max"
+    },
+    "claude_previous_check": {
+      "checked_at": "2026-11-19T00:06:00+08:00",
+      "latest_models_found": [
+        "Claude Fable 5.2",
+        "Claude Opus 5.5",
+        "Claude Sonnet 5.5",
+        "Claude Haiku 5.5"
+      ]
+    }
   },
   "cards": [
     {
@@ -602,11 +611,165 @@
           "url": "https://github.com/cth9191/animate"
         }
       ]
+    },
+    {
+      "id": "paris-atlas",
+      "title": "Paris Atlas",
+      "original_published_at": null,
+      "date_precision": "unknown",
+      "tie": 0,
+      "verification": "official-showcase",
+      "model": "GPT-6.2 Astra",
+      "api_id": "gpt-6.2-astra",
+      "cycle": "2026-11-19-gpt",
+      "counts_as_verified_new": true,
+      "links": [
+        {
+          "label": "在线演示",
+          "url": "https://paris-atlas-street-explorer.openai.chatgpt.site/"
+        },
+        {
+          "label": "官方制作过程",
+          "url": "https://developers.openai.com/showcase/paris-atlas"
+        }
+      ]
+    },
+    {
+      "id": "notre-damn",
+      "title": "Notre Damn",
+      "original_published_at": null,
+      "date_precision": "unknown",
+      "tie": 1,
+      "verification": "official-showcase",
+      "model": "GPT-6.2 Astra",
+      "api_id": "gpt-6.2-astra",
+      "cycle": "2026-11-19-gpt",
+      "counts_as_verified_new": true,
+      "links": [
+        {
+          "label": "在线演示",
+          "url": "https://cathedral-walk.openai.chatgpt.site/"
+        },
+        {
+          "label": "官方制作过程",
+          "url": "https://developers.openai.com/showcase/notre-damn"
+        }
+      ]
+    },
+    {
+      "id": "forest-walks",
+      "title": "Forest Walks",
+      "original_published_at": null,
+      "date_precision": "unknown",
+      "tie": 2,
+      "verification": "official-showcase",
+      "model": "GPT-6.2 Astra",
+      "api_id": "gpt-6.2-astra",
+      "cycle": "2026-11-19-gpt",
+      "counts_as_verified_new": true,
+      "links": [
+        {
+          "label": "在线演示",
+          "url": "https://forest-walks-at-dusk.openai.chatgpt.site/"
+        },
+        {
+          "label": "官方制作过程",
+          "url": "https://developers.openai.com/showcase/forest-walks"
+        }
+      ]
+    },
+    {
+      "id": "escapement",
+      "title": "Escapement",
+      "original_published_at": null,
+      "date_precision": "unknown",
+      "tie": 3,
+      "verification": "official-showcase",
+      "model": "GPT-6.2 Astra",
+      "api_id": "gpt-6.2-astra",
+      "cycle": "2026-11-19-gpt",
+      "counts_as_verified_new": true,
+      "links": [
+        {
+          "label": "在线演示",
+          "url": "https://escapement.openai.chatgpt.site/"
+        },
+        {
+          "label": "官方制作过程",
+          "url": "https://developers.openai.com/showcase/escapement"
+        }
+      ]
+    },
+    {
+      "id": "light-and-matter",
+      "title": "Light & Matter",
+      "original_published_at": null,
+      "date_precision": "unknown",
+      "tie": 4,
+      "verification": "official-showcase",
+      "model": "GPT-6.2 Astra",
+      "api_id": "gpt-6.2-astra",
+      "cycle": "2026-11-19-gpt",
+      "counts_as_verified_new": true,
+      "links": [
+        {
+          "label": "在线演示",
+          "url": "https://light-and-matter.openai.chatgpt.site/"
+        },
+        {
+          "label": "官方制作过程",
+          "url": "https://developers.openai.com/showcase/light-and-matter"
+        }
+      ]
+    },
+    {
+      "id": "dot-rumble",
+      "title": "Dot Rumble",
+      "original_published_at": null,
+      "date_precision": "unknown",
+      "tie": 5,
+      "verification": "official-showcase",
+      "model": "GPT-6.2 Astra",
+      "api_id": "gpt-6.2-astra",
+      "cycle": "2026-11-19-gpt",
+      "counts_as_verified_new": true,
+      "links": [
+        {
+          "label": "在线演示",
+          "url": "https://dot-rumble-arcade.openai.chatgpt.site/"
+        },
+        {
+          "label": "官方制作过程",
+          "url": "https://developers.openai.com/showcase/dot-rumble"
+        }
+      ]
+    },
+    {
+      "id": "terrarium",
+      "title": "Terrarium",
+      "original_published_at": null,
+      "date_precision": "unknown",
+      "tie": 6,
+      "verification": "official-showcase",
+      "model": "GPT-6.2 Astra",
+      "api_id": "gpt-6.2-astra",
+      "cycle": "2026-11-19-gpt",
+      "counts_as_verified_new": true,
+      "links": [
+        {
+          "label": "在线演示",
+          "url": "https://terrarium-glasshouse-studio.openai.chatgpt.site/"
+        },
+        {
+          "label": "官方制作过程",
+          "url": "https://developers.openai.com/showcase/terrarium-glasshouse-studio"
+        }
+      ]
     }
   ],
-  "verified_new_projects_this_cycle": 6,
-  "pending_reference_this_cycle": 1,
-  "layout_revision": "2026-11-19-8view",
+  "verified_new_projects_this_cycle": 7,
+  "pending_reference_this_cycle": 0,
+  "layout_revision": "2026-11-19-8gpt",
   "layout_columns": {
     "content_cards_per_row": 8,
     "intro_consumes_content_slot": false,
@@ -618,10 +781,9 @@
   },
   "pending_user_request": {
     "requested_at": "2026-11-19T00:45:00+08:00",
-    "topic": "Add cases that use GPT-6.2 Astra",
-    "status": "pending official verification",
-    "cards_added": 0,
-    "note": "The user asked to include GPT-6.2 Astra work. No card was added and no model name on the board was changed, because verified sources were not provided with this request."
+    "topic": "Add official GPT-6.2 Astra showcase projects",
+    "status": "seven official showcase cards added; publication dates remain unknown",
+    "cards_added": 7
   },
-  "date_sort_policy": "On the first load of a new content revision, every content card is laid out by original publication date, newest first, eight per row, on fresh and returning browsers. A desktop window shows that whole newest row. The intro tile stays above that grid and does not take a slot. Saved x/y and camera from an older revision are not applied. Within the same revision, freeform drag still persists locally. Day-only dates sort after known clocks on that day. Adding a link never changes a card's original date. Stored notes are kept and are not shown as inputs."
+  "date_sort_policy": "On the first load of a new content revision, every content card is laid out by original publication date, newest first, eight per row, on fresh and returning browsers. A desktop window shows that whole newest row. The intro tile stays above that grid and does not take a slot. Saved x/y and camera from an older revision are not applied. Within the same revision, freeform drag still persists locally. Day-only dates sort after known clocks on that day. Adding a link never changes a card's original date. Stored notes are kept and are not shown as inputs. Projects whose official page gives no publication date sort after every known date, in a stable tie order, and are not dated with the model launch day or the day they were collected."
 }

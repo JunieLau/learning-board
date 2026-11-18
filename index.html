@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>学习板 · Learning Board</title>
-  <meta name="description" content="想学的项目和教程，一块一块钉在这块黑底的板上。">
-  <link rel="stylesheet" href="styles.css?v=2026-11-19-8view">
+  <title>学习板 · Claude / GPT</title>
+  <meta name="description" content="Claude 与 GPT 的创意技术项目，一块一块钉在这块黑底的板上。">
+  <link rel="stylesheet" href="styles.css?v=2026-11-19-8gpt">
 </head>
 <body>
   <header class="mast">
     <span>学习板</span>
-    <span>Learning Board</span>
+    <span>Claude / GPT</span>
   </header>
 
   <div class="local-tools">
-    <p class="local-explain">可以拖动卡片、拖空白处看别处、滚轮或双指缩放。位置只写在这台浏览器里，不会同步到其他设备。每次内容更新后，第一次打开会按原发布日期从新到旧重新排开，并让这一行八张同时出现在窗口里。说明卡单独放在上面，不占位子。同一版里再拖动，仍会留在这台浏览器。本轮是 6 个已核实的新项目，另有 1 张指定参考、制作细节待核实，点「查看本轮新增」就能看到。标注还留着，页面上不再显示输入框。</p>
+    <p class="local-explain">可以拖动卡片、拖空白处看别处、滚轮或双指缩放。位置只写在这台浏览器里，不会同步到其他设备。每次内容更新后，第一次打开会按原发布日期从新到旧重新排开，并让这一行八张同时出现在窗口里。说明卡单独放在上面，不占位子。同一版里再拖动，仍会留在这台浏览器。本轮是 7 个 OpenAI 官方 Showcase 的 GPT-6.2 Astra 项目，官方页没有作品日期，所以排在所有已知日期之后。点「查看本轮新增」就能看到。标注还留着，页面上不再显示输入框。</p>
     <div class="local-actions">
       <button type="button" id="show-cycle">查看本轮新增</button>
       <button type="button" id="arrange-date">按日期排开</button>
@@ -35,7 +35,7 @@
     <article class="card intro" data-id="intro">
       <div class="meta">
         <p class="hello">想学的，放在这里。</p>
-        <p>每块上面是这个项目最标志性的画面，下面是标题和一小段说明。之后发来的，会继续钉上去。</p>
+        <p>Claude 和 GPT 的创意技术。每块上面是标志性画面，下面是标题和一小段说明。</p>
       </div>
     </article>
 
@@ -569,6 +569,146 @@
         </p>
       </div>
     </article>
+
+    <article class="card" data-id="paris-atlas" data-date-precision="unknown" data-tie="0" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
+      <figure>
+        <a class="still" href="https://paris-atlas-street-explorer.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Paris Atlas 的在线演示">
+          <img src="images/paris-atlas/open-graph.png" alt="Paris Atlas 官方预览：俯看巴黎，埃菲尔铁塔、塞纳河和网格线叠在街区上。" width="1200" height="630">
+        </a>
+      </figure>
+      <div class="meta">
+        <p class="badge">OpenAI 官方 Showcase · GPT-6.2 Astra</p>
+        <h2>Paris Atlas</h2>
+        <p class="by">Thomas Ricouard · OpenAI</p>
+        <p class="when">发布日期待核实</p>
+        <p>官方页写 GPT-6.2 Astra，API 型号是 gpt-6.2-astra。页眉没有 Codex 徽章。正文写 Codex 把 Blender 里的地标放进 Three.js，于是可以在巴黎步行或开车。学的是真实街区、地标和可走可开的尺度，不是视频模型。</p>
+        <p>推荐依据：OpenAI 官方 Showcase 收录，公开互动数未披露。官方页有分步制作过程，含提示摘要，不是已复跑的完整教程，也不是公开源码。暂未找到公开源码。未试玩，未复跑。本批七个项目的官方页都没有作品日期，所以都排在已知日期之后。</p>
+        <p class="links">
+          <a href="https://paris-atlas-street-explorer.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
+          <a href="https://developers.openai.com/showcase/paris-atlas" target="_blank" rel="noopener">官方制作过程</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="card" data-id="notre-damn" data-date-precision="unknown" data-tie="1" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
+      <figure>
+        <a class="still" href="https://cathedral-walk.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Notre Damn 的在线演示">
+          <img src="images/notre-damn/open-graph.png" alt="Notre Damn 官方预览：哥特教堂内部，巨大玫瑰窗和彩窗，光束打在石柱上。" width="1200" height="630">
+        </a>
+      </figure>
+      <div class="meta">
+        <p class="badge">OpenAI 官方 Showcase · GPT-6.2 Astra + Codex</p>
+        <h2>Notre Damn</h2>
+        <p class="by">Thomas Ricouard · OpenAI</p>
+        <p class="when">发布日期待核实</p>
+        <p>标题用官方拼法 Notre Damn。灵感来自巴黎圣母院中殿，这是官方提示里的说法。页眉写 GPT-6.2 Astra + Codex。技术是 JavaScript、Three.js、WebGL 2 和 Canvas 2D。可走的教堂内部，按时辰看彩窗、反射和尺度。官方正文写地板下还有一台相机，用来画长椅之间的玫瑰窗倒影。</p>
+        <p>推荐依据：OpenAI 官方 Showcase 收录，公开互动数未披露。官方制作过程未独立复跑。暂未找到公开源码。未试玩。</p>
+        <p class="links">
+          <a href="https://cathedral-walk.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
+          <a href="https://developers.openai.com/showcase/notre-damn" target="_blank" rel="noopener">官方制作过程</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="card" data-id="forest-walks" data-date-precision="unknown" data-tie="2" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
+      <figure>
+        <a class="still" href="https://forest-walks-at-dusk.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Forest Walks 的在线演示">
+          <img src="images/forest-walks/open-graph.png" alt="Forest Walks 官方预览：黄昏树林里的小路，路边有一堆篝火。" width="1200" height="630">
+        </a>
+      </figure>
+      <div class="meta">
+        <p class="badge">OpenAI 官方 Showcase · GPT-6.2 Astra + Codex</p>
+        <h2>Forest Walks</h2>
+        <p class="by">Thomas Ricouard · OpenAI</p>
+        <p class="when">发布日期待核实</p>
+        <p>同一条空间路径上有三种画面：写实黄昏、绘本和半透明色叶。切换时位置和朝向还在。页眉写 GPT-6.2 Astra + Codex。技术是 JavaScript、Three.js、WebGL 2、Blender 和 Web Audio。篝火的声音跟着空间走。不是三张重复的卡，也不是审片。</p>
+        <p>推荐依据：OpenAI 官方 Showcase 收录，公开互动数未披露。官方制作过程未独立复跑。暂未找到公开源码。未试玩。</p>
+        <p class="links">
+          <a href="https://forest-walks-at-dusk.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
+          <a href="https://developers.openai.com/showcase/forest-walks" target="_blank" rel="noopener">官方制作过程</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="card" data-id="escapement" data-date-precision="unknown" data-tie="3" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
+      <figure>
+        <a class="still" href="https://escapement.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Escapement 的在线演示">
+          <img src="images/escapement/open-graph.png" alt="Escapement 官方预览：木轨和铜质连杆之间，一颗弹珠停在轨道上。" width="1200" height="630">
+        </a>
+      </figure>
+      <div class="meta">
+        <p class="badge">OpenAI 官方 Showcase · GPT-6.2 Astra</p>
+        <h2>Escapement</h2>
+        <p class="by">Eric Provencher · OpenAI</p>
+        <p class="when">发布日期待核实</p>
+        <p>页眉写 GPT-6.2 Astra，没有写 Codex。官方页没有写引擎，这里也不补 Three.js。三颗弹珠穿过一套连锁机构，镜头和声音按碰撞对齐。官方制作过程从鲁布·戈德堡式演示写起，含提示和分步。</p>
+        <p>推荐依据：OpenAI 官方 Showcase 收录，公开互动数未披露。那是官方步骤和提示摘要，不是已复跑的公开教程。暂未找到公开源码。未试玩。</p>
+        <p class="links">
+          <a href="https://escapement.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
+          <a href="https://developers.openai.com/showcase/escapement" target="_blank" rel="noopener">官方制作过程</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="card" data-id="light-and-matter" data-date-precision="unknown" data-tie="4" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
+      <figure>
+        <a class="still" href="https://light-and-matter.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Light and Matter 的在线演示">
+          <img src="images/light-and-matter/open-graph.png" alt="Light &amp; Matter 官方预览：玻璃展厅，悬挂的玻璃装置和地面上的倒影。" width="1200" height="630">
+        </a>
+      </figure>
+      <div class="meta">
+        <p class="badge">OpenAI 官方 Showcase · GPT-6.2 Astra</p>
+        <h2>Light &amp; Matter</h2>
+        <p class="by">Eric Provencher · OpenAI</p>
+        <p class="when">发布日期待核实</p>
+        <p>页眉写 GPT-6.2 Astra。官方页没有写引擎。可走的材质、光线、反射和视觉特效展厅，能走近看灯，有烘焙日光和实时阴影，悬挂物在动，地面有倒影。学的是走动着看材质，不是一条成片。</p>
+        <p>推荐依据：OpenAI 官方 Showcase 收录，公开互动数未披露。官方制作过程未独立复跑。暂未找到公开源码。未试玩。</p>
+        <p class="links">
+          <a href="https://light-and-matter.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
+          <a href="https://developers.openai.com/showcase/light-and-matter" target="_blank" rel="noopener">官方制作过程</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="card" data-id="dot-rumble" data-date-precision="unknown" data-tie="5" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
+      <figure>
+        <a class="still" href="https://dot-rumble-arcade.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Dot Rumble 的在线演示">
+          <img src="images/dot-rumble/open-graph.png" alt="Dot Rumble 官方预览：两个毛绒角色在屋顶对打，一个在出脚，一个身上有火。" width="1200" height="630">
+        </a>
+      </figure>
+      <div class="meta">
+        <p class="badge">OpenAI 官方 Showcase · GPT-6.2 Astra</p>
+        <h2>Dot Rumble</h2>
+        <p class="by">Chaow Wu · OpenAI</p>
+        <p class="when">发布日期待核实</p>
+        <p>页眉写 GPT-6.2 Astra。技术写的是 Three.js。六个格斗角色。官方制作过程从剪影、毛绒和缝线，到绑定、战斗姿势，再到攻击判定的可视化。学的是角色从外形到骨骼再到可玩判定。</p>
+        <p>推荐依据：OpenAI 官方 Showcase 收录，公开互动数未披露。官方步骤未独立复跑。暂未找到公开源码。未试玩。</p>
+        <p class="links">
+          <a href="https://dot-rumble-arcade.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
+          <a href="https://developers.openai.com/showcase/dot-rumble" target="_blank" rel="noopener">官方制作过程</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="card" data-id="terrarium" data-date-precision="unknown" data-tie="6" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
+      <figure>
+        <a class="still" href="https://terrarium-glasshouse-studio.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Terrarium 的在线演示">
+          <img src="images/terrarium/open-graph.png" alt="Terrarium 官方预览：软木塞玻璃罐里的苔藓、蕨类、石头和一只小蘑菇。" width="1200" height="630">
+        </a>
+      </figure>
+      <div class="meta">
+        <p class="badge">OpenAI 官方 Showcase · GPT-6.2 Astra + Codex</p>
+        <h2>Terrarium</h2>
+        <p class="by">Katia Gil Guzman · OpenAI</p>
+        <p class="when">发布日期待核实</p>
+        <p>页眉写 GPT-6.2 Astra + Codex。技术是 JavaScript、Three.js 和 WebGL。可布置的三维玻璃花园：拖植物、苔藓和石头，调光的方向，看物体落下和阴影对齐，再导出高清图。学的是布置工具，不是一条做完的影片。</p>
+        <p>推荐依据：OpenAI 官方 Showcase 收录，公开互动数未披露。官方制作过程未独立复跑。暂未找到公开源码。未试玩。</p>
+        <p class="links">
+          <a href="https://terrarium-glasshouse-studio.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
+          <a href="https://developers.openai.com/showcase/terrarium-glasshouse-studio" target="_blank" rel="noopener">官方制作过程</a>
+        </p>
+      </div>
+    </article>
   </main>
     </div>
   </div>
@@ -578,7 +718,7 @@
   </footer>
   <script>
     (function () {
-      var expected = "2026-11-19-8view";
+      var expected = "2026-11-19-8gpt";
       function check() {
         fetch("revision.json?t=" + Date.now(), { cache: "no-store" }).then(function (res) {
           if (!res.ok) return null;
@@ -603,6 +743,6 @@
       });
     })();
   </script>
-  <script src="board.js?v=2026-11-19-8view"></script>
+  <script src="board.js?v=2026-11-19-8gpt"></script>
 </body>
 </html>

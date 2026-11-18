@@ -1,0 +1,38 @@
+{
+  "record_type": "publication_cycle_log",
+  "cycle_id": "2026-11-19-gpt",
+  "timezone": "Asia/Shanghai",
+  "source_check_date": "2026-11-19T00:52:00+08:00",
+  "previous_successful_deployment": {
+    "sha": "66e0d5e476455870b928ed2005c9c3eba10ccf07",
+    "at": "2026-11-19T00:48:46+08:00",
+    "page": "https://junielau.com/learning-board/",
+    "content_cards": 28
+  },
+  "publication_status_at_authoring": "pending_not_yet_deployed",
+  "content_card_count_expected": 35,
+  "added_ids": [
+    "paris-atlas",
+    "notre-damn",
+    "forest-walks",
+    "escapement",
+    "light-and-matter",
+    "dot-rumble",
+    "terrarium"
+  ],
+  "date_precision": "unknown",
+  "sort": "after every card with a known publication date; tie order is the showcase recommendation order",
+  "model": {
+    "name": "GPT-6.2 Astra",
+    "api_id": "gpt-6.2-astra"
+  },
+  "not_added": [
+    "one-good-turn",
+    "soundings-first-touch",
+    "community posts",
+    "Astra Max as a model name"
+  ],
+  "layout_revision": "2026-11-19-8gpt",
+  "content_cards_per_row": 8,
+  "discoverability": "查看本轮新增 frames data-cycle=2026-11-19-gpt only"
+}
