@@ -6,11 +6,11 @@
   "policy_date": "2026-11-19",
   "content_card_count_in_this_commit": 28,
   "last_successful_deployment_before_this_commit": {
-    "sha": "9149474e0bddafe0591950b182b58e879b73c142",
-    "at": "2026-11-19T00:01:28+08:00",
+    "sha": "8fc4a07a33b98db4a817989f4f38b64b058ef437",
+    "at": "2026-11-19T00:25:26+08:00",
     "page": "https://junielau.com/learning-board/",
-    "content_cards": 21,
-    "evidence": "Prior live board observed before this commit; PR #12 merge SHA. This file does not claim the current commit is deployed."
+    "content_cards": 28,
+    "evidence": "HTTP Last-Modified Wed, 18 Nov 2026 16:25:26 GMT after PR #13. This file does not claim the ten-per-row commit is deployed."
   },
   "this_commit_publication": "not yet deployed at the time this file was written",
   "official_model_check": {
@@ -606,6 +606,17 @@
   ],
   "verified_new_projects_this_cycle": 6,
   "pending_reference_this_cycle": 1,
-  "layout_revision": "2026-11-19",
-  "date_sort_policy": "On the first load of a new content revision, every card is laid out by original publication date, newest first, on fresh and returning browsers. Saved x/y and camera from an older revision are not applied. Within the same revision, freeform drag still persists locally. Day-only dates sort after known clocks on that day. Adding a link never changes a card's original date. Stored notes are kept and are not shown as inputs."
+  "layout_revision": "2026-11-19-10",
+  "layout_columns": {
+    "content_cards_per_row": 10,
+    "intro_consumes_content_slot": false,
+    "intro_position": "above the content grid, on its own band",
+    "order": "original publication date descending, left to right, then the next row",
+    "card_width_px": 280,
+    "do_not_shrink_cards_to_fit_viewport": true,
+    "initial_camera": "scale 1 aimed at the newest content card; pan and zoom reach the rest of the ten-column row",
+    "applies_to": "default first load of a layout revision, and the 按日期排开 action",
+    "future_updates": "Keep ten content cards per row. Do not wrap by viewport width."
+  },
+  "date_sort_policy": "On the first load of a new content revision, every content card is laid out by original publication date, newest first, ten per row, on fresh and returning browsers. The intro tile stays above that grid and does not take a slot. Saved x/y and camera from an older revision are not applied. Within the same revision, freeform drag still persists locally. Day-only dates sort after known clocks on that day. Adding a link never changes a card's original date. Stored notes are kept and are not shown as inputs. Do not shrink cards to fit a row in the window."
 }
