@@ -1,0 +1,59 @@
+{
+  "record_type": "publication_cycle_log",
+  "cycle_id": "2026-11-19-pioneers",
+  "timezone": "Asia/Shanghai",
+  "policy_issued": "2026-11-19T00:05:00+08:00",
+  "source_check_date": "2026-11-19T00:12:00+08:00",
+  "previous_successful_deployment": {
+    "sha": "9149474e0bddafe0591950b182b58e879b73c142",
+    "at": "2026-11-19T00:01:28+08:00",
+    "page": "https://junielau.com/learning-board/",
+    "content_cards": 21,
+    "evidence": "PR #12 on main. This file does not claim the 2026-11-19 board is already deployed."
+  },
+  "publication_status_at_authoring": "pending_not_yet_deployed",
+  "content_card_count_expected": 28,
+  "verified_new_count": 6,
+  "pending_reference_count": 1,
+  "verified_new_ids": [
+    "crosstown",
+    "matt-pure-code-film",
+    "saltline",
+    "the-edge",
+    "welcome-fable-worlds",
+    "legal-documents-scale"
+  ],
+  "pending_reference_ids": [
+    "bilibili-fable-moba"
+  ],
+  "not_added": [
+    "starfall",
+    "soda-pop",
+    "sirio",
+    "geekie",
+    "deep-dive-as-own-card",
+    "mountain-hike-as-own-card"
+  ],
+  "crosstown_posts_merged": [
+    "https://x.com/mattshumer_/status/2120282133503820150",
+    "https://x.com/mattshumer_/status/2120308139153326225"
+  ],
+  "bilibili": {
+    "url": "https://www.bilibili.com/video/BV1raWB6uEmW/",
+    "status": "指定参考·制作细节待核实",
+    "relation_to_starfall": "unresolved; no Sanwan link, Starfall name, or X account on the page that was read"
+  },
+  "date_sort_policy": "First load of layout revision 2026-11-19 rearranges every card by original publication date, newest first, and fits the camera, including browsers that already stored positions. The same revision keeps later drags. Day-only dates use T00:00:00+08:00 so they sort after known clocks that day. Notes stay in storage and are not cleared.",
+  "discoverability": "Button 查看本轮新增 frames data-cycle=2026-11-19 only: the 6 verified cards plus the 1 pending reference. It does not target the 2026-11-18 cards.",
+  "notes_ui": "personal note inputs remain removed; stored notes are not cleared",
+  "official_model_check": {
+    "checked_at": "2026-11-19T00:06:00+08:00",
+    "latest_models_found": [
+      "Claude Fable 5.2",
+      "Claude Opus 5.5",
+      "Claude Sonnet 5.5",
+      "Claude Haiku 5.5"
+    ],
+    "fable_5_5": "not found"
+  }
+}

@@ -24,6 +24,8 @@
     "soda-pop-intro",
     "sirio-seedance"
   ],
-  "discoverability": "Button 查看本轮新增 frames data-cycle=2026-11-18 cards without writing card positions or the saved camera.",
+  "discoverability": "Superseded on 2026-11-19. The button no longer targets data-cycle=2026-11-18. Those three cards stay on the board at their original dates.",
+  "superseded_by": "2026-11-19",
+  "layout_policy_then": "Returning browsers kept saved positions. That rule was replaced on 2026-11-19: a new content revision re-lays every card newest-first, including returning browsers.",
   "notes_ui": "personal note inputs remain removed; stored notes are not cleared"
 }

@@ -1,6 +1,8 @@
 (function () {
   var KEY = "learning-board-freeform-v1";
   var OLD_KEY = "learning-board-local-v1";
+  var LAYOUT_REVISION = "2026-11-19";
+  var CYCLE = "2026-11-19";
   var NOTE_MAX = 2000;
   var FILE_MAX = 500000;
   var CARD_W = 280;
@@ -20,6 +22,7 @@
   var selected = null;
   var zTop = 2;
   var autoPlaced = false;
+  var loadNotice = "";
   var displayCamera = null;
   var pointers = new Map();
   var pinch = null;
@@ -116,7 +119,8 @@
     if (!camera) return null;
     var manualOrder = data.manualOrder == null ? null : cleanOrder(data.manualOrder);
     if (data.manualOrder != null && !manualOrder) return null;
-    return { v: 1, positions: positions, notes: notes, camera: camera, manualOrder: manualOrder };
+    var revision = typeof data.revision === "string" ? data.revision : "";
+    return { v: 1, positions: positions, notes: notes, camera: camera, manualOrder: manualOrder, revision: revision };
   }
 
   function readKey(key) {
@@ -156,6 +160,7 @@
     try {
       localStorage.setItem(KEY, JSON.stringify({
         v: 1,
+        revision: LAYOUT_REVISION,
         positions: state.positions,
         notes: notes,
         camera: state.camera
@@ -304,6 +309,13 @@
       state.positions[card.dataset.id] = { x: x, y: y };
       applyPosition(card);
     });
+  }
+
+  function showNewest() {
+    state.camera.x = 16;
+    state.camera.y = 12;
+    state.camera.z = 1;
+    applyCamera();
   }
 
   function fit() {
@@ -466,6 +478,7 @@
   function exportBackup() {
     var blob = new Blob([JSON.stringify({
       v: 1,
+      revision: LAYOUT_REVISION,
       positions: state.positions,
       notes: state.notes,
       camera: state.camera
@@ -522,12 +535,12 @@
   if (loaded.blocked || old.blocked) {
     canStore = false;
     arrange(dateList());
-    fit();
+    showNewest();
     applyCamera();
     setStatus("这台浏览器不能读取本地保存。位置在刷新后不会留下。还不会同步到其他设备。");
   } else if (loaded.corrupt) {
     arrange(dateList());
-    fit();
+    showNewest();
     applyCamera();
     setStatus("这台浏览器里的自由摆放记录读不出来。没有覆盖它，先按日期排开。");
   } else {
@@ -543,11 +556,16 @@
     } else if (old.data) {
       state.notes = old.data.notes || {};
     }
-    if (!Object.keys(state.positions).length) {
-      if (old.data && old.data.manualOrder && old.data.view === "manual") arrange(listFromOrder(old.data.manualOrder));
-      else arrange(dateList());
-      fit();
+    var revisionMatches = !!(loaded.data && loaded.data.revision === LAYOUT_REVISION);
+    var hadSavedLayout = Object.keys(state.positions).length > 0;
+    if (!revisionMatches || !hadSavedLayout) {
+      state.positions = {};
+      arrange(dateList());
+      showNewest();
       autoPlaced = true;
+      loadNotice = hadSavedLayout
+        ? "这次内容更新已按原发布日期从新到旧重新排开。以前保存的摆放和视角已让位，标注还留在这台浏览器里。还不会同步到其他设备。"
+        : "已按发布日期排开，并写在这台浏览器。还不会同步到其他设备。";
     } else {
       var beforeCount = Object.keys(state.positions).length;
       placeMissing();
@@ -555,12 +573,9 @@
       if (Object.keys(state.positions).length !== beforeCount) persist();
     }
     applyCamera();
-    if (loaded.empty && !loaded.corrupt) {
-      persist();
-      setStatus("已按发布日期排开，并写在这台浏览器。还不会同步到其他设备。");
-    } else {
-      setStatus("已读到这台浏览器里的位置。还不会同步到其他设备。");
-    }
+    if (autoPlaced) persist();
+    if (loadNotice) setStatus(loadNotice);
+    else setStatus("已读到这台浏览器里的位置。还不会同步到其他设备。");
   }
 
   stage.addEventListener("pointerdown", onPointerDown);
@@ -570,7 +585,7 @@
   stage.addEventListener("wheel", onWheel, { passive: false });
   stage.addEventListener("keydown", onKey);
   function focusCycle() {
-    var targets = cards().filter(function (card) { return card.dataset.cycle === "2026-11-18"; });
+    var targets = cards().filter(function (card) { return card.dataset.cycle === CYCLE; });
     if (!targets.length) {
       setStatus("这一轮没有标成新增的卡片。");
       return;
@@ -592,7 +607,7 @@
     var sw = stage.clientWidth;
     var sh = stage.clientHeight;
     var z = Math.min(sw / (maxX - minX + pad * 2), sh / (maxY - minY + pad * 2), 1.15);
-    z = clamp(z, 0.35, 1.6);
+    z = clamp(z, 0.16, 1.6);
     applyCamera({
       z: z,
       x: (sw - (maxX - minX) * z) / 2 - minX * z,
@@ -603,7 +618,7 @@
       x: (sw - (maxX - minX) * z) / 2 - minX * z,
       y: pad - minY * z
     };
-    setStatus("已把本轮新增放到窗口里。没有改已保存的卡片位置，也没有改已保存的视角，刷新后仍回到原来的画面。");
+    setStatus("已把本轮新增放到窗口里。没有改卡片位置，也没有覆盖已保存的视角。");
   }
 
   document.getElementById("show-cycle").addEventListener("click", focusCycle);
@@ -629,11 +644,11 @@
   });
   function remeasure() {
     if (!autoPlaced) return;
-    if (old.data && old.data.manualOrder && old.data.view === "manual") arrange(listFromOrder(old.data.manualOrder));
-    else arrange(dateList());
-    fit();
+    arrange(dateList());
+    showNewest();
     autoPlaced = false;
     persist();
+    if (loadNotice) setStatus(loadNotice);
   }
   if (document.readyState === "complete") remeasure();
   else window.addEventListener("load", remeasure);
