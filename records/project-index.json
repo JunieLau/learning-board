@@ -1,0 +1,468 @@
+{
+  "record_type": "public_project_index",
+  "timezone": "Asia/Shanghai",
+  "source_check_date": "2026-11-18T23:46:00+08:00",
+  "research_cycle_date": "2026-11-18",
+  "policy_date": "2026-11-18",
+  "content_card_count_in_this_commit": 21,
+  "last_successful_deployment_before_this_commit": {
+    "sha": "907d64266473cfa443a5ea16073b3f27363fdb1b",
+    "at": "2026-11-18T22:58:06+08:00",
+    "page": "https://junielau.com/learning-board/",
+    "content_cards": 18,
+    "evidence": "HTTP Last-Modified Wed, 18 Nov 2026 14:58:06 GMT"
+  },
+  "this_commit_publication": "not yet deployed at the time this file was written",
+  "official_model_check": {
+    "checked_at": "2026-11-18T23:46:00+08:00",
+    "urls": [
+      "https://platform.claude.com/docs/en/models/overview",
+      "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+    ],
+    "latest_models_found": [
+      "Claude Fable 5.2",
+      "Claude Opus 5.5",
+      "Claude Sonnet 5.5",
+      "Claude Haiku 5.5"
+    ],
+    "fable_5_5": "not found in those official pages"
+  },
+  "cards": [
+    {
+      "id": "blender-ai-video-course",
+      "title": "Blender锁运镜→AI视频",
+      "original_published_at": "2026-11-17T00:33:20+08:00",
+      "cycle": "2026-11-18",
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://www.youtube.com/watch?v=OO6J2w_FBnE"
+        },
+        {
+          "label": "教程",
+          "url": "https://www.youtube.com/watch?v=OO6J2w_FBnE"
+        },
+        {
+          "label": "提示词",
+          "url": "https://claude-and-blender.vercel.app/"
+        }
+      ]
+    },
+    {
+      "id": "cat-garden",
+      "title": "Cat Garden",
+      "original_published_at": "2026-11-16T21:00:55+08:00",
+      "cycle": "2026-11-18",
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://x.com/BubbleBrain/status/2122313967473434639"
+        },
+        {
+          "label": "原片",
+          "url": "https://x.com/BubbleBrain/status/2122313967473434639"
+        },
+        {
+          "label": "源码",
+          "url": "https://github.com/BubbleBrainBB/awesome-fable-5.2/tree/main/cat-garden"
+        },
+        {
+          "label": "发布页",
+          "url": "https://github.com/BubbleBrainBB/awesome-fable-5.2/releases/tag/cat-garden-v1.0"
+        },
+        {
+          "label": "同集 Deep Dive",
+          "url": "https://github.com/BubbleBrainBB/awesome-fable-5.2/tree/main/deep-dive"
+        },
+        {
+          "label": "同集 Mountain Hike",
+          "url": "https://github.com/BubbleBrainBB/awesome-fable-5.2/tree/main/mountain-hike"
+        }
+      ]
+    },
+    {
+      "id": "fable-of-clawd",
+      "title": "The Fable of Clawd",
+      "original_published_at": "2026-11-15T00:17:32+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://www.youtube.com/watch?v=Bvb4DxB35MM"
+        },
+        {
+          "label": "成片",
+          "url": "https://www.youtube.com/watch?v=Bvb4DxB35MM"
+        },
+        {
+          "label": "制作拆解",
+          "url": "https://claude.ai/artifact/BkA6dzdGMx796WymCFpRyZ"
+        },
+        {
+          "label": "原帖",
+          "url": "https://x.com/rileybrown/status/2121642720045261185"
+        }
+      ]
+    },
+    {
+      "id": "fable-blender-walkthrough",
+      "title": "Fable 5.2 接入 Blender",
+      "original_published_at": "2026-11-14T05:49:09+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://www.youtube.com/watch?v=zVmnw-sgJPA"
+        },
+        {
+          "label": "视频",
+          "url": "https://www.youtube.com/watch?v=zVmnw-sgJPA"
+        },
+        {
+          "label": "书面教程与提示词",
+          "url": "https://www.aiformortals.co/blog/fable-5-2-blender"
+        },
+        {
+          "label": "技能包",
+          "url": "https://fallingwater-astra.vercel.app/blender-production.zip"
+        }
+      ]
+    },
+    {
+      "id": "python-blender-ads",
+      "title": "Python + Blender 广告",
+      "original_published_at": "2026-11-13T23:49:53+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://www.youtube.com/watch?v=qyaHfXiT6d8"
+        },
+        {
+          "label": "教程",
+          "url": "https://www.youtube.com/watch?v=qyaHfXiT6d8"
+        }
+      ]
+    },
+    {
+      "id": "astral-realm",
+      "title": "Astral Realm",
+      "original_published_at": "2026-11-13T23:24:00+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://x.com/scottstts/status/2121262812228141395"
+        },
+        {
+          "label": "原帖",
+          "url": "https://x.com/scottstts/status/2121262812228141395"
+        }
+      ]
+    },
+    {
+      "id": "no-external-assets",
+      "title": "No External Assets",
+      "original_published_at": "2026-11-13T17:39:38+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://x.com/chetaslua/status/2121176151234330707"
+        },
+        {
+          "label": "原帖",
+          "url": "https://x.com/chetaslua/status/2121176151234330707"
+        }
+      ]
+    },
+    {
+      "id": "painted-valley",
+      "title": "Painted Valley",
+      "original_published_at": "2026-11-12T09:43:45+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://x.com/BlendiByl/status/2120694003230560585"
+        },
+        {
+          "label": "打开演示",
+          "url": "https://patch.gg/blendi/painted-valley"
+        },
+        {
+          "label": "原帖",
+          "url": "https://x.com/BlendiByl/status/2120694003230560585"
+        },
+        {
+          "label": "源码与改造说明",
+          "url": "https://patch.gg/blendi/painted-valley/files"
+        }
+      ]
+    },
+    {
+      "id": "apimodels-blender-python",
+      "title": "命令行 Python 出 MP4",
+      "original_published_at": "2026-11-12T00:00:00+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://apimodels.app/blender-python-claude-code"
+        },
+        {
+          "label": "教程",
+          "url": "https://apimodels.app/blender-python-claude-code"
+        }
+      ]
+    },
+    {
+      "id": "apimodels-threejs-export",
+      "title": "Three.js 导出视频",
+      "original_published_at": "2026-11-12T00:00:00+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://apimodels.app/claude-code-threejs"
+        },
+        {
+          "label": "教程",
+          "url": "https://apimodels.app/claude-code-threejs"
+        }
+      ]
+    },
+    {
+      "id": "animated-show-intro",
+      "title": "Animated Show Intro",
+      "original_published_at": "2026-11-11T23:35:38+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://x.com/kevin_t_ngo/status/2120540964909711415"
+        },
+        {
+          "label": "原帖",
+          "url": "https://x.com/kevin_t_ngo/status/2120540964909711415"
+        },
+        {
+          "label": "相邻教程：Blender广告",
+          "url": "https://www.youtube.com/watch?v=qyaHfXiT6d8"
+        }
+      ]
+    },
+    {
+      "id": "blender-code-film",
+      "title": "Blender 代码短片技能",
+      "original_published_at": "2026-11-11T07:18:06+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://varg.ai/how-to/skills/blender-code-film"
+        },
+        {
+          "label": "教程",
+          "url": "https://varg.ai/how-to/skills/blender-code-film"
+        },
+        {
+          "label": "源码",
+          "url": "https://github.com/vargHQ/skills/tree/main/blender-code-film"
+        }
+      ]
+    },
+    {
+      "id": "nineties-toy-commercial",
+      "title": "90's Toy Commercial",
+      "original_published_at": "2026-11-10T09:55:16+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://x.com/kevin_t_ngo/status/2119972124211454139"
+        },
+        {
+          "label": "原帖",
+          "url": "https://x.com/kevin_t_ngo/status/2119972124211454139"
+        },
+        {
+          "label": "相邻教程：Blender广告",
+          "url": "https://www.youtube.com/watch?v=qyaHfXiT6d8"
+        }
+      ]
+    },
+    {
+      "id": "pelican-bicycle",
+      "title": "Pelican on a bicycle",
+      "original_published_at": "2026-11-10T06:47:50+08:00",
+      "cycle": "2026-11-18",
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://x.com/techfren/status/2119924958134702276"
+        },
+        {
+          "label": "原片",
+          "url": "https://x.com/techfren/status/2119924958134702276"
+        },
+        {
+          "label": "技术说明",
+          "url": "https://x.com/techfren/status/2119926681716834440"
+        },
+        {
+          "label": "迭代记录",
+          "url": "https://huggingface.co/datasets/techfren/pelican-fable-trace"
+        }
+      ]
+    },
+    {
+      "id": "portals",
+      "title": "Portals",
+      "original_published_at": "2026-11-10T06:21:25+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://x.com/emollick/status/2119918307457577163"
+        },
+        {
+          "label": "打开演示",
+          "url": "https://portals-endless-worlds.netlify.app"
+        },
+        {
+          "label": "源代码",
+          "url": "https://github.com/emollick/ai-portals"
+        },
+        {
+          "label": "原帖",
+          "url": "https://x.com/emollick/status/2119918307457577163"
+        }
+      ]
+    },
+    {
+      "id": "what-the-water-keeps",
+      "title": "What the water keeps",
+      "original_published_at": "2026-11-10T03:05:21+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://x.com/kevin_t_ngo/status/2119868968307695818"
+        },
+        {
+          "label": "打开演示",
+          "url": "https://what-the-water-keeps.vercel.app/"
+        },
+        {
+          "label": "原帖",
+          "url": "https://x.com/kevin_t_ngo/status/2119868968307695818"
+        }
+      ]
+    },
+    {
+      "id": "connect-claude-code-to-blender",
+      "title": "Claude Code 接入 Blender",
+      "original_published_at": "2026-11-08T20:28:00+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://thegrowthengine.net/connect-claude-code-to-blender"
+        },
+        {
+          "label": "教程",
+          "url": "https://thegrowthengine.net/connect-claude-code-to-blender"
+        }
+      ]
+    },
+    {
+      "id": "moss-keeper",
+      "title": "The Moss Keeper",
+      "original_published_at": "2026-11-02T16:19:49+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://x.com/chetaslua/status/2117169796290916732"
+        },
+        {
+          "label": "打开演示",
+          "url": "https://chetaslua.github.io/moss-keeper/"
+        },
+        {
+          "label": "源代码",
+          "url": "https://github.com/ChetasLua/moss-keeper"
+        },
+        {
+          "label": "原帖",
+          "url": "https://x.com/chetaslua/status/2117169796290916732"
+        }
+      ]
+    },
+    {
+      "id": "threejs-shorts",
+      "title": "Three.js 短片",
+      "original_published_at": "2026-11-01T14:15:41+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://www.youtube.com/watch?v=OtbLL6OBNE4"
+        },
+        {
+          "label": "教程",
+          "url": "https://www.youtube.com/watch?v=OtbLL6OBNE4"
+        },
+        {
+          "label": "技能包",
+          "url": "https://github.com/mromidev/claude-animated-shorts"
+        }
+      ]
+    },
+    {
+      "id": "slop-newyork",
+      "title": "Slop New York",
+      "original_published_at": "2026-10-22T15:55:23+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://x.com/mrdoob/status/2113177383658561721"
+        },
+        {
+          "label": "打开演示",
+          "url": "https://mrdoob.github.io/slop-newyork/"
+        },
+        {
+          "label": "源代码",
+          "url": "https://github.com/mrdoob/slop-newyork"
+        },
+        {
+          "label": "原帖",
+          "url": "https://x.com/mrdoob/status/2113177383658561721"
+        }
+      ]
+    },
+    {
+      "id": "javascript-frames",
+      "title": "JavaScript 逐帧",
+      "original_published_at": "2026-10-07T01:00:09+08:00",
+      "cycle": null,
+      "links": [
+        {
+          "label": "\n          ",
+          "url": "https://www.youtube.com/watch?v=rscb1DgJtNg"
+        },
+        {
+          "label": "教程",
+          "url": "https://www.youtube.com/watch?v=rscb1DgJtNg"
+        },
+        {
+          "label": "技能包",
+          "url": "https://github.com/cth9191/animate"
+        }
+      ]
+    }
+  ]
+}
