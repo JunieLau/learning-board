@@ -1,12 +1,15 @@
 (function () {
   var KEY = "learning-board-freeform-v1";
   var OLD_KEY = "learning-board-local-v1";
-  var LAYOUT_REVISION = "2026-11-19";
+  var LAYOUT_REVISION = "2026-11-19-10";
   var CYCLE = "2026-11-19";
   var NOTE_MAX = 2000;
   var FILE_MAX = 500000;
   var CARD_W = 280;
   var GAP = 28;
+  var COLUMNS = 10;
+  var ORIGIN_X = 48;
+  var ORIGIN_Y = 48;
   var board = document.querySelector(".board");
   var stage = document.getElementById("stage");
   var world = document.getElementById("world");
@@ -211,14 +214,27 @@
     }
   }
 
+  function rowRight() {
+    return ORIGIN_X + COLUMNS * (CARD_W + GAP) - GAP;
+  }
+
   function arrange(list) {
-    var x = 48;
-    var y = 48;
+    var intro = board.querySelector(".intro");
+    var content = list.filter(function (card) { return card && card !== intro; });
+    var contentTop = ORIGIN_Y;
+    if (intro) {
+      state.positions[intro.dataset.id] = { x: ORIGIN_X, y: ORIGIN_Y };
+      applyPosition(intro);
+      contentTop = ORIGIN_Y + (intro.offsetHeight || 160) + GAP;
+    }
+    var x = ORIGIN_X;
+    var y = contentTop;
     var rowH = 0;
-    var maxW = 1560;
-    list.forEach(function (card) {
-      if (x > 48 && x + CARD_W > maxW) {
-        x = 48;
+    var col = 0;
+    content.forEach(function (card) {
+      if (col === COLUMNS) {
+        col = 0;
+        x = ORIGIN_X;
         y += rowH + GAP;
         rowH = 0;
       }
@@ -226,6 +242,7 @@
       applyPosition(card);
       rowH = Math.max(rowH, card.offsetHeight || 360);
       x += CARD_W + GAP;
+      col += 1;
     });
   }
 
@@ -289,16 +306,19 @@
       var y = 48;
       if (anchor) {
         var pos = state.positions[anchor.dataset.id];
-        if (after) {
+        if (!anchor.dataset.published) {
+          x = ORIGIN_X;
+          y = pos.y + (anchor.offsetHeight || 160) + GAP;
+        } else if (after) {
           x = pos.x + CARD_W + GAP;
           y = pos.y;
-          if (x + CARD_W > 1560) {
-            x = 48;
+          if (x + CARD_W > rowRight()) {
+            x = ORIGIN_X;
             y = pos.y + (anchor.offsetHeight || 360) + GAP;
           }
         } else {
           x = pos.x;
-          y = Math.max(48, pos.y - 380);
+          y = Math.max(ORIGIN_Y, pos.y - 380);
         }
       }
       var guard = 0;
@@ -312,9 +332,17 @@
   }
 
   function showNewest() {
-    state.camera.x = 16;
-    state.camera.y = 12;
+    var list = works().slice().sort(byPublishedDesc);
+    var first = list[0];
+    var pos = first && state.positions[first.dataset.id];
     state.camera.z = 1;
+    if (pos) {
+      state.camera.x = 20 - pos.x;
+      state.camera.y = 16 - pos.y;
+    } else {
+      state.camera.x = 16;
+      state.camera.y = 12;
+    }
     applyCamera();
   }
 
@@ -470,9 +498,9 @@
 
   function arrangeByDate() {
     arrange(dateList());
-    fit();
+    showNewest();
     if (!persist()) return;
-    setStatus("已按发布日期排开。这次会换掉之前摆放的位置。还不会同步到其他设备。");
+    setStatus("已按发布日期排开，内容卡每行十张。这次会换掉之前摆放的位置。还不会同步到其他设备。");
   }
 
   function exportBackup() {
@@ -564,8 +592,8 @@
       showNewest();
       autoPlaced = true;
       loadNotice = hadSavedLayout
-        ? "这次内容更新已按原发布日期从新到旧重新排开。以前保存的摆放和视角已让位，标注还留在这台浏览器里。还不会同步到其他设备。"
-        : "已按发布日期排开，并写在这台浏览器。还不会同步到其他设备。";
+        ? "这次排版已按原发布日期从新到旧重新排开，内容卡每行十张。以前保存的摆放和视角已让位，标注还留在这台浏览器里。还不会同步到其他设备。"
+        : "已按发布日期排开，内容卡每行十张，并写在这台浏览器。还不会同步到其他设备。";
     } else {
       var beforeCount = Object.keys(state.positions).length;
       placeMissing();
