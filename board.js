@@ -1,13 +1,13 @@
 (function () {
   var KEY = "learning-board-freeform-v1";
   var OLD_KEY = "learning-board-local-v1";
-  var LAYOUT_REVISION = "2026-11-19-10";
+  var LAYOUT_REVISION = "2026-11-19-8view";
   var CYCLE = "2026-11-19";
   var NOTE_MAX = 2000;
   var FILE_MAX = 500000;
   var CARD_W = 280;
   var GAP = 28;
-  var COLUMNS = 10;
+  var COLUMNS = 8;
   var ORIGIN_X = 48;
   var ORIGIN_Y = 48;
   var board = document.querySelector(".board");
@@ -333,16 +333,46 @@
 
   function showNewest() {
     var list = works().slice().sort(byPublishedDesc);
-    var first = list[0];
-    var pos = first && state.positions[first.dataset.id];
-    state.camera.z = 1;
-    if (pos) {
-      state.camera.x = 20 - pos.x;
-      state.camera.y = 16 - pos.y;
-    } else {
+    var row = [];
+    var y0 = null;
+    list.forEach(function (card) {
+      if (row.length >= COLUMNS) return;
+      var pos = state.positions[card.dataset.id];
+      if (!pos) return;
+      if (y0 == null) y0 = pos.y;
+      if (Math.abs(pos.y - y0) > 2) return;
+      row.push(card);
+    });
+    if (!row.length) {
       state.camera.x = 16;
       state.camera.y = 12;
+      state.camera.z = 1;
+      applyCamera();
+      return;
     }
+    var minX = Infinity;
+    var minY = Infinity;
+    var maxX = -Infinity;
+    row.forEach(function (card) {
+      var pos = state.positions[card.dataset.id];
+      minX = Math.min(minX, pos.x);
+      minY = Math.min(minY, pos.y);
+      maxX = Math.max(maxX, pos.x + (card.offsetWidth || CARD_W));
+    });
+    var pad = 12;
+    var sw = stage.clientWidth || window.innerWidth || 1280;
+    var rowW = Math.max(maxX - minX, CARD_W);
+    var z = (sw - pad * 2) / rowW;
+    if (sw < 1100) {
+      var twoW = CARD_W * 2 + GAP;
+      var zTwo = (sw - pad * 2) / twoW;
+      var zOne = Math.min((sw - pad * 2) / CARD_W, 1);
+      z = zTwo * CARD_W >= 150 ? Math.min(zTwo, 1.2) : zOne;
+    }
+    z = clamp(z, 0.18, 1.6);
+    state.camera.z = z;
+    state.camera.x = pad - minX * z;
+    state.camera.y = pad - minY * z;
     applyCamera();
   }
 
@@ -500,7 +530,7 @@
     arrange(dateList());
     showNewest();
     if (!persist()) return;
-    setStatus("已按发布日期排开，内容卡每行十张。这次会换掉之前摆放的位置。还不会同步到其他设备。");
+    setStatus("已按发布日期排开，这一行八张放进了窗口。这次会换掉之前摆放的位置。还不会同步到其他设备。");
   }
 
   function exportBackup() {
@@ -592,8 +622,8 @@
       showNewest();
       autoPlaced = true;
       loadNotice = hadSavedLayout
-        ? "这次排版已按原发布日期从新到旧重新排开，内容卡每行十张。以前保存的摆放和视角已让位，标注还留在这台浏览器里。还不会同步到其他设备。"
-        : "已按发布日期排开，内容卡每行十张，并写在这台浏览器。还不会同步到其他设备。";
+        ? "这次打开已按原发布日期从新到旧排开，并把这一行八张放进窗口。以前保存的摆放和视角已让位，标注还留在这台浏览器里。还不会同步到其他设备。"
+        : "已按发布日期排开，这一行八张放进了窗口，并写在这台浏览器。还不会同步到其他设备。";
     } else {
       var beforeCount = Object.keys(state.positions).length;
       placeMissing();
