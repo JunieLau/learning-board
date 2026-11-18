@@ -4,7 +4,7 @@
   "source_check_date": "2026-11-19T00:52:00+08:00",
   "research_cycle_date": "2026-11-19",
   "policy_date": "2026-11-19",
-  "content_card_count_in_this_commit": 44,
+  "content_card_count_in_this_commit": 45,
   "last_successful_deployment_before_this_commit": {
     "sha": "8af059e29b02e0d8ed36bb6ead5ef93b5530f0eb",
     "at": "2026-11-19T01:20:12+08:00",
@@ -925,7 +925,7 @@
   ],
   "verified_new_projects_this_cycle": 7,
   "pending_reference_this_cycle": 0,
-  "layout_revision": "2026-11-19-community8",
+  "layout_revision": "2026-11-19-ev",
   "layout_columns": {
     "content_cards_per_row": 8,
     "intro_consumes_content_slot": false,
@@ -945,7 +945,7 @@
   "boards": {
     "claude": {
       "url": "https://junielau.com/learning-board/#claude",
-      "content_cards": 28,
+      "content_cards": 29,
       "verified": 27,
       "pending_reference": 1
     },
@@ -963,5 +963,25 @@
   "preview_gaps": {
     "bilibili-fable-moba": "Card image is a crop of the supplied Bilibili page screenshot: site header, full title, 2026-11-13 21:31:30, and UP 傅盛. Recommended videos and the black player are not in the crop. Labeled 原帖页面截图（非成片静帧）. Still a pending reference, not Starfall.",
     "matt-pure-code-film": "Official post cover is nearly dark. x.com returned HTTP 403 from this environment, so the official cover remains and is labeled as not a watched frame."
+  },
+  "escape_velocity": {
+    "id": "escape-velocity",
+    "original_published_at": "2026-09-26T01:17:57+08:00",
+    "sort": "oldest known date on the Claude board; after 2026-10-07",
+    "reception": {
+      "checked_at": "2026-11-19T02:49:00+08:00",
+      "source": "live public X interface on https://x.com/anabology/status/2103534482930491441",
+      "impressions": 20234881,
+      "video_view_count": 3360278,
+      "video_views_are_not_impressions": true,
+      "likes": 16508,
+      "reposts": 2017,
+      "quotes": 907,
+      "replies": 1044,
+      "bookmarks": 13926,
+      "making_of_site_metrics": "not part of this original-post snapshot",
+      "sampling": "not a formal representative sample; positive replies and mixed AI-propaganda reactions both exist"
+    },
+    "publication": "ready to publish after this metrics check"
   }
 }

@@ -2,8 +2,8 @@
 function boot(section) {
   var KEY = "learning-board-freeform-v1-" + (section.getAttribute("data-board") || "claude");
   var OLD_KEY = "learning-board-local-v1";
-  var LAYOUT_REVISION = "2026-11-19-community8";
-  var CYCLE = "2026-11-19-community";
+  var LAYOUT_REVISION = "2026-11-19-ev";
+  var CYCLE = "2026-11-19-ev";
   var NOTE_MAX = 2000;
   var FILE_MAX = 500000;
   var CARD_W = 280;
@@ -761,14 +761,14 @@ markNav();
 
 var showCycle = document.getElementById("show-cycle");
 if (showCycle) showCycle.addEventListener("click", function () {
-  if (location.hash !== "#openai") {
-    location.hash = "openai";
+  if (location.hash === "#openai") {
+    location.hash = "claude";
     requestAnimationFrame(function () {
-      if (mounts.openai) mounts.openai.focusCycle();
+      if (mounts.claude) mounts.claude.focusCycle();
     });
     return;
   }
-  var api = mounts.openai;
+  var api = mounts.claude;
   if (api) api.focusCycle();
 });
 var arrangeBtn = document.getElementById("arrange-date");
