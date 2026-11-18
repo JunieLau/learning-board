@@ -5,7 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>学习板 · Claude / GPT</title>
   <meta name="description" content="Claude 与 GPT 的创意技术项目，一块一块钉在这块黑底的板上。">
-  <link rel="stylesheet" href="styles.css?v=2026-11-19-8gpt">
+  <link rel="stylesheet" href="styles.css?v=2026-11-19-split8">
+  <script>
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search).get("board");
+        if ((q === "openai" || q === "claude") && location.hash !== "#" + q) {
+          location.replace("#" + q);
+        }
+      } catch (err) {}
+    })();
+  </script>
 </head>
 <body>
   <header class="mast">
@@ -14,7 +24,7 @@
   </header>
 
   <div class="local-tools">
-    <p class="local-explain">可以拖动卡片、拖空白处看别处、滚轮或双指缩放。位置只写在这台浏览器里，不会同步到其他设备。每次内容更新后，第一次打开会按原发布日期从新到旧重新排开，并让这一行八张同时出现在窗口里。说明卡单独放在上面，不占位子。同一版里再拖动，仍会留在这台浏览器。本轮是 7 个 OpenAI 官方 Showcase 的 GPT-6.2 Astra 项目，官方页没有作品日期，所以排在所有已知日期之后。点「查看本轮新增」就能看到。标注还留着，页面上不再显示输入框。</p>
+    <p class="local-explain">上方目录分成 Claude 学习板和 OpenAI 学习板，点一下就换。地址用 #claude 或 #openai，不带记号时打开 Claude。可以拖动、平移和缩放。每次内容更新后，第一次打开会按原发布日期从新到旧排开，桌面窗口里一行八张内容卡同时可见，说明卡单独占上面一行。没有脚本时也会按这个行列排，不会把说明卡算进八张里。同一版里再拖动，仍留在这台浏览器，两块板分开记。OpenAI 这 7 张官方页没有作品日期，写的是发布日期待核实。点「查看本轮新增」打开 OpenAI 学习板。标注还留着，页面上不再显示输入框。</p>
     <div class="local-actions">
       <button type="button" id="show-cycle">查看本轮新增</button>
       <button type="button" id="arrange-date">按日期排开</button>
@@ -29,16 +39,21 @@
     <p id="save-state" class="save-state" role="status"></p>
   </div>
 
-  <div class="stage" id="stage" tabindex="0">
-    <div class="world" id="world">
-  <main class="board">
-    <article class="card intro" data-id="intro">
+  <nav class="board-nav" aria-label="目录">
+    <a href="#claude">Claude 学习板<small>28 张，含 1 条待核实参考</small></a>
+    <a href="#openai">OpenAI 学习板<small>7 张官方 Showcase</small></a>
+  </nav>
+
+  <section id="claude" class="board-view" data-board="claude">
+    <div class="stage" tabindex="0">
+      <div class="world">
+        <main class="board">
+    <article class="card intro" data-id="intro-claude">
       <div class="meta">
-        <p class="hello">想学的，放在这里。</p>
-        <p>Claude 和 GPT 的创意技术。每块上面是标志性画面，下面是标题和一小段说明。</p>
+        <p class="hello">Claude 学习板</p>
+        <p>28 张。其中 27 张是已有项目，1 张是指定参考、制作细节待核实，不计入已核实案例。按原发布日期从新到旧，说明卡不占内容位。</p>
       </div>
     </article>
-
     <article class="card" data-id="blender-ai-video-course" data-published="2026-11-17T00:33:20+08:00">
       <figure>
         <a class="still" href="https://www.youtube.com/watch?v=OO6J2w_FBnE" target="_blank" rel="noopener" aria-label="打开 Dan Kieft 课程的原片">
@@ -57,7 +72,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="cat-garden" data-published="2026-11-16T21:00:55+08:00">
       <figure>
         <a class="still" href="https://x.com/BubbleBrain/status/2122313967473434639" target="_blank" rel="noopener" aria-label="打开 Cat Garden 的原帖">
@@ -81,7 +95,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="fable-of-clawd" data-published="2026-11-15T00:17:32+08:00">
       <figure>
         <a class="still" href="https://www.youtube.com/watch?v=Bvb4DxB35MM" target="_blank" rel="noopener" aria-label="打开 The Fable of Clawd 的成片">
@@ -101,7 +114,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="fable-blender-walkthrough" data-published="2026-11-14T05:49:09+08:00">
       <figure>
         <a class="still" href="https://www.youtube.com/watch?v=zVmnw-sgJPA" target="_blank" rel="noopener" aria-label="打开 Fable 5.2 接入 Blender 的视频">
@@ -124,7 +136,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="python-blender-ads" data-published="2026-11-13T23:49:53+08:00">
       <figure>
         <a class="still" href="https://www.youtube.com/watch?v=qyaHfXiT6d8" target="_blank" rel="noopener" aria-label="打开 Python + Blender 广告的教程">
@@ -141,7 +152,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="astral-realm" data-published="2026-11-13T23:24:00+08:00">
       <figure>
         <a class="still" href="https://x.com/scottstts/status/2121262812228141395" target="_blank" rel="noopener" aria-label="打开 Astral Realm 的原帖">
@@ -158,7 +168,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="no-external-assets" data-published="2026-11-13T17:39:38+08:00">
       <figure>
         <a class="still" href="https://x.com/chetaslua/status/2121176151234330707" target="_blank" rel="noopener" aria-label="打开 No External Assets 的原帖">
@@ -175,7 +184,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="bilibili-fable-moba" data-published="2026-11-13T00:00:00+08:00" data-cycle="2026-11-19" data-verification="pending-reference">
       <figure>
         <a class="still still-text" href="https://www.bilibili.com/video/BV1raWB6uEmW/" target="_blank" rel="noopener" aria-label="打开指定参考视频。这是文字预览，不是影片静帧">
@@ -194,7 +202,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="painted-valley" data-published="2026-11-12T09:43:45+08:00">
       <figure>
         <a class="still" href="https://x.com/BlendiByl/status/2120694003230560585" target="_blank" rel="noopener" aria-label="打开 Painted Valley 的原帖">
@@ -214,7 +221,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="apimodels-blender-python" data-published="2026-11-12T00:00:00+08:00" data-tie="0">
       <figure>
         <a class="still" href="https://apimodels.app/blender-python-claude-code" target="_blank" rel="noopener" aria-label="打开命令行 Python 出 MP4 的教程">
@@ -231,7 +237,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="apimodels-threejs-export" data-published="2026-11-12T00:00:00+08:00" data-tie="1">
       <figure>
         <a class="still" href="https://apimodels.app/claude-code-threejs" target="_blank" rel="noopener" aria-label="打开 Three.js 导出视频 的教程">
@@ -248,7 +253,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="animated-show-intro" data-published="2026-11-11T23:35:38+08:00">
       <figure>
         <a class="still" href="https://x.com/kevin_t_ngo/status/2120540964909711415" target="_blank" rel="noopener" aria-label="打开 Animated Show Intro 的原帖">
@@ -267,7 +271,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="blender-code-film" data-published="2026-11-11T07:18:06+08:00">
       <figure>
         <a class="still" href="https://varg.ai/how-to/skills/blender-code-film" target="_blank" rel="noopener" aria-label="打开 Blender 代码短片技能 的教程">
@@ -285,7 +288,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="crosstown" data-published="2026-11-11T06:27:08+08:00" data-cycle="2026-11-19" data-verification="verified">
       <figure>
         <a class="still" href="https://nyc.somethingbig.ai/" target="_blank" rel="noopener" aria-label="打开 CROSSTOWN 可玩页">
@@ -306,7 +308,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="nineties-toy-commercial" data-published="2026-11-10T09:55:16+08:00">
       <figure>
         <a class="still" href="https://x.com/kevin_t_ngo/status/2119972124211454139" target="_blank" rel="noopener" aria-label="打开 90's Toy Commercial 的原帖">
@@ -325,7 +326,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="saltline" data-published="2026-11-10T06:50:32+08:00" data-cycle="2026-11-19" data-verification="verified">
       <figure>
         <a class="still" href="https://claude.ai/artifact/BGY1SztrAYcJQHSsnHHGmp" target="_blank" rel="noopener" aria-label="打开 Saltline 现在可玩的页面">
@@ -345,7 +345,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="pelican-bicycle" data-published="2026-11-10T06:47:50+08:00">
       <figure>
         <a class="still" href="https://x.com/techfren/status/2119924958134702276" target="_blank" rel="noopener" aria-label="打开鹈鹕骑自行车原帖">
@@ -365,7 +364,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="portals" data-published="2026-11-10T06:21:25+08:00">
       <figure>
         <a class="still" href="https://x.com/emollick/status/2119918307457577163" target="_blank" rel="noopener" aria-label="打开 Portals 的原帖">
@@ -384,7 +382,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="the-edge" data-published="2026-11-10T05:17:03+08:00" data-cycle="2026-11-19" data-verification="verified">
       <figure>
         <a class="still" href="https://x.com/rileybrown/status/2119902109709537708" target="_blank" rel="noopener" aria-label="打开 The Edge 的原帖">
@@ -403,7 +400,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="matt-pure-code-film" data-published="2026-11-10T05:12:19+08:00" data-cycle="2026-11-19" data-verification="verified">
       <figure>
         <a class="still" href="https://x.com/mattshumer_/status/2119900920347828670" target="_blank" rel="noopener" aria-label="打开这条纯代码长片的原帖">
@@ -421,7 +417,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="welcome-fable-worlds" data-published="2026-11-10T03:06:55+08:00" data-cycle="2026-11-19" data-verification="verified">
       <figure>
         <a class="still" href="https://x.com/jeremyberman/status/2119869358679712206" target="_blank" rel="noopener" aria-label="打开 Jeremy Berman 的原帖">
@@ -440,7 +435,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="what-the-water-keeps" data-published="2026-11-10T03:05:21+08:00">
       <figure>
         <a class="still" href="https://x.com/kevin_t_ngo/status/2119868968307695818" target="_blank" rel="noopener" aria-label="打开 What the water keeps 的原帖">
@@ -458,7 +452,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="connect-claude-code-to-blender" data-published="2026-11-08T20:28:00+08:00">
       <figure>
         <a class="still" href="https://thegrowthengine.net/connect-claude-code-to-blender" target="_blank" rel="noopener" aria-label="打开 Claude Code 接入 Blender 的教程">
@@ -475,7 +468,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="moss-keeper" data-published="2026-11-02T16:19:49+08:00">
       <figure>
         <a class="still" href="https://x.com/chetaslua/status/2117169796290916732" target="_blank" rel="noopener" aria-label="打开 The Moss Keeper 的原帖">
@@ -495,7 +487,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="threejs-shorts" data-published="2026-11-01T14:15:41+08:00">
       <figure>
         <a class="still" href="https://www.youtube.com/watch?v=OtbLL6OBNE4" target="_blank" rel="noopener" aria-label="打开 Three.js 短片的教程">
@@ -513,7 +504,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="legal-documents-scale" data-published="2026-10-28T00:00:00+08:00" data-cycle="2026-11-19" data-verification="verified">
       <figure>
         <a class="still" href="https://images.aiwithayushman.com/marketing/a72ac6314f7e2dfc.mp4" target="_blank" rel="noopener" aria-label="打开 Navigating Complex Legal Documents at Scale 的作者成片">
@@ -532,7 +522,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="slop-newyork" data-published="2026-10-22T15:55:23+08:00">
       <figure>
         <a class="still" href="https://x.com/mrdoob/status/2113177383658561721" target="_blank" rel="noopener" aria-label="打开 Slop New York 的原帖">
@@ -551,7 +540,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="javascript-frames" data-published="2026-10-07T01:00:09+08:00">
       <figure>
         <a class="still" href="https://www.youtube.com/watch?v=rscb1DgJtNg" target="_blank" rel="noopener" aria-label="打开 JavaScript 逐帧的教程">
@@ -569,7 +557,20 @@
         </p>
       </div>
     </article>
-
+        </main>
+      </div>
+    </div>
+  </section>
+  <section id="openai" class="board-view" data-board="openai">
+    <div class="stage" tabindex="0">
+      <div class="world">
+        <main class="board">
+    <article class="card intro" data-id="intro-openai">
+      <div class="meta">
+        <p class="hello">OpenAI 学习板</p>
+        <p>7 个官方 Showcase 项目，型号是 GPT-6.2 Astra（gpt-6.2-astra）。官方页没有作品日期，所以写发布日期待核实，并按推荐顺序排列。未试玩，未复跑。</p>
+      </div>
+    </article>
     <article class="card" data-id="paris-atlas" data-date-precision="unknown" data-tie="0" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
       <figure>
         <a class="still" href="https://paris-atlas-street-explorer.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Paris Atlas 的在线演示">
@@ -589,7 +590,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="notre-damn" data-date-precision="unknown" data-tie="1" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
       <figure>
         <a class="still" href="https://cathedral-walk.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Notre Damn 的在线演示">
@@ -609,7 +609,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="forest-walks" data-date-precision="unknown" data-tie="2" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
       <figure>
         <a class="still" href="https://forest-walks-at-dusk.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Forest Walks 的在线演示">
@@ -629,7 +628,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="escapement" data-date-precision="unknown" data-tie="3" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
       <figure>
         <a class="still" href="https://escapement.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Escapement 的在线演示">
@@ -649,7 +647,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="light-and-matter" data-date-precision="unknown" data-tie="4" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
       <figure>
         <a class="still" href="https://light-and-matter.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Light and Matter 的在线演示">
@@ -669,7 +666,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="dot-rumble" data-date-precision="unknown" data-tie="5" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
       <figure>
         <a class="still" href="https://dot-rumble-arcade.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Dot Rumble 的在线演示">
@@ -689,7 +685,6 @@
         </p>
       </div>
     </article>
-
     <article class="card" data-id="terrarium" data-date-precision="unknown" data-tie="6" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
       <figure>
         <a class="still" href="https://terrarium-glasshouse-studio.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Terrarium 的在线演示">
@@ -709,16 +704,17 @@
         </p>
       </div>
     </article>
-  </main>
+        </main>
+      </div>
     </div>
-  </div>
+  </section>
 
   <footer class="colophon">
     画面来自各项目的官方发布，或作者视频的官方封面。Portals 为 CC BY-NC-SA 4.0，仅限非商业使用。The Moss Keeper 的海报取自 Chetaslua 仓库里的官方画面，版权仍归原作者。
   </footer>
   <script>
     (function () {
-      var expected = "2026-11-19-8gpt";
+      var expected = "2026-11-19-split8";
       function check() {
         fetch("revision.json?t=" + Date.now(), { cache: "no-store" }).then(function (res) {
           if (!res.ok) return null;
@@ -743,6 +739,6 @@
       });
     })();
   </script>
-  <script src="board.js?v=2026-11-19-8gpt"></script>
+  <script src="board.js?v=2026-11-19-split8"></script>
 </body>
 </html>
