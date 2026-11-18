@@ -804,7 +804,7 @@
     "static_fallback": "CSS grid is also eight content columns, intro spans the full width, nav links work without script"
   },
   "preview_gaps": {
-    "bilibili-fable-moba": "Public Bilibili requests from this environment return HTTP 412. The supplied page screenshot path was not readable on disk, so the card still uses a text stand-in, not a cropped page shot and not a Starfall image.",
+    "bilibili-fable-moba": "Card image is a crop of the supplied Bilibili page screenshot: site header, full title, 2026-11-13 21:31:30, and UP 傅盛. Recommended videos and the black player are not in the crop. Labeled 原帖页面截图（非成片静帧）. Still a pending reference, not Starfall.",
     "matt-pure-code-film": "Official post cover is nearly dark. x.com returned HTTP 403 from this environment, so the official cover remains and is labeled as not a watched frame."
   }
 }
