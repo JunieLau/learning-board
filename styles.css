@@ -60,6 +60,28 @@ body {
   outline-offset: -4px;
 }
 
+.card .still.still-text {
+  display: grid;
+  place-items: center;
+  min-height: 168px;
+  padding: 18px 14px;
+  background: #1c1a16;
+  color: #f3efe6;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.card .badge {
+  display: inline-block;
+  margin: 0 0 0.35rem;
+  padding: 0.08rem 0.4rem;
+  border: 1px solid currentColor;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+}
+
 .card img {
   display: block;
   width: 100%;
