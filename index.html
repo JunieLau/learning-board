@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>学习板 · Claude / GPT</title>
   <meta name="description" content="Claude 与 GPT 的创意技术项目，一块一块钉在这块黑底的板上。">
-  <link rel="stylesheet" href="styles.css?v=2026-11-19-split8">
+  <link rel="stylesheet" href="styles.css?v=2026-11-19-community8">
   <script>
     (function () {
       try {
@@ -24,7 +24,7 @@
   </header>
 
   <div class="local-tools">
-    <p class="local-explain">上方目录分成 Claude 学习板和 OpenAI 学习板，点一下就换。地址用 #claude 或 #openai，不带记号时打开 Claude。可以拖动、平移和缩放。每次内容更新后，第一次打开会按原发布日期从新到旧排开，桌面窗口里一行八张内容卡同时可见，说明卡单独占上面一行。没有脚本时也会按这个行列排，不会把说明卡算进八张里。同一版里再拖动，仍留在这台浏览器，两块板分开记。OpenAI 这 7 张官方页没有作品日期，写的是发布日期待核实。点「查看本轮新增」打开 OpenAI 学习板。标注还留着，页面上不再显示输入框。</p>
+    <p class="local-explain">上方目录分成 Claude 学习板和 OpenAI 学习板，点一下就换。地址用 #claude 或 #openai，不带记号时打开 Claude。可以拖动、平移和缩放。每次内容更新后，第一次打开会按原发布日期从新到旧排开，桌面窗口里一行八张内容卡同时可见，说明卡单独占上面一行。没有脚本时也会按这个行列排，不会把说明卡算进八张里。同一版里再拖动，仍留在这台浏览器，两块板分开记。OpenAI 板先排 9 个社区原帖，再排 7 张没有作品日期的官方 Showcase。点「查看本轮新增」会打开 OpenAI 板并框住这 9 张。标注还留着，页面上不再显示输入框。</p>
     <div class="local-actions">
       <button type="button" id="show-cycle">查看本轮新增</button>
       <button type="button" id="arrange-date">按日期排开</button>
@@ -41,7 +41,7 @@
 
   <nav class="board-nav" aria-label="目录">
     <a href="#claude">Claude 学习板<small>28 张，含 1 条待核实参考</small></a>
-    <a href="#openai">OpenAI 学习板<small>7 张官方 Showcase</small></a>
+    <a href="#openai">OpenAI 学习板<small>16 张：9 个社区作品，7 张官方 Showcase</small></a>
   </nav>
 
   <section id="claude" class="board-view" data-board="claude">
@@ -569,7 +569,213 @@
     <article class="card intro" data-id="intro-openai">
       <div class="meta">
         <p class="hello">OpenAI 学习板</p>
-        <p>7 个官方 Showcase 项目，型号是 GPT-6.2 Astra（gpt-6.2-astra）。官方页没有作品日期，所以写发布日期待核实，并按推荐顺序排列。未试玩，未复跑。</p>
+        <p>16 张。前面 9 张是独立创作者 2026-11-18 的原帖，按发帖时间从新到旧。后面 7 张是官方 Showcase，官方页没有作品日期，所以排在最后。社区卡的成片没有看完，可玩页没有试玩。</p>
+      </div>
+    </article>
+    <article class="card" data-id="nagi-reef" data-published="2026-11-18T08:18:13+08:00" data-cycle="2026-11-19-community" data-verification="community">
+      <figure>
+        <a class="still" href="https://x.com/Masimo_Blue/status/2122846803477537071" target="_blank" rel="noopener" aria-label="打开凪 NAGI 的原帖">
+          <img src="images/nagi-reef/preview.jpg" alt="原帖视频封面：浅海珊瑚和一条黑黄相间的鱼，界面写着 NAGI 和 Coral Garden。" width="1200" height="675">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">独立创作者 · 社区</p>
+        <h2>凪 NAGI（珊瑚礁浅滩）</h2>
+        <p class="by">マシモGPT · @Masimo_Blue</p>
+        <p class="when"><time datetime="2026-11-18T08:18:13+08:00">2026-11-18</time></p>
+        <p>作者称用 GPT-6.2 Astra 做了一个能在海里游、还能戳鱼的网页。可玩页的名字是「凪 NAGI · 珊瑚礁の浅瀬」。值得学的是把水下场景做成能上手的现场，而不是只放一段片子。</p>
+        <p class="links">
+          <a href="https://x.com/Masimo_Blue/status/2122846803477537071" target="_blank" rel="noopener">原帖</a>
+          <a href="https://nagi-reef-soundings.crystalosc.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p>原帖原文：GPT-6.2 Astraで、海の中を泳ぐWebサイトを作りました。作者写明帖里的视频是初期版本；现在可玩页上的鱼已经换成 @nachat_dayo 的鱿鱼，以及其他用套件做的鱼，不是全部一次生成。作者没有写具体前端引擎。暂未找到源码。未试玩，未看完视频。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="nocturne-jukebox" data-published="2026-11-18T07:16:45+08:00" data-cycle="2026-11-19-community" data-verification="community">
+      <figure>
+        <a class="still" href="https://x.com/ShadeLurk/status/2122831337321349384" target="_blank" rel="noopener" aria-label="打开 Nocturne 的原帖">
+          <img src="images/nocturne-jukebox/preview.jpg" alt="原帖视频封面：Nocturne 界面，两台金属转盘和两侧的机械臂。" width="1200" height="713">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">独立创作者 · 社区</p>
+        <h2>Nocturne 光学点唱机</h2>
+        <p class="by">ShadeLurk · @ShadeLurk</p>
+        <p class="when"><time datetime="2026-11-18T07:16:45+08:00">2026-11-18</time></p>
+        <p>作者称用 GPT-6.2 Astra 做了浏览器里的 CD 点唱机：选曲后机械臂取碟，两台唱机接歌。页面标题是 Nocturne — Optical Jukebox。值得学的是把取碟、接歌、声音和画面收进同一份 HTML。</p>
+        <p class="links">
+          <a href="https://x.com/ShadeLurk/status/2122831337321349384" target="_blank" rel="noopener">原帖</a>
+          <a href="https://shadelurk.github.io/nocturne-jukebox/" target="_blank" rel="noopener">在线演示</a>
+          <a href="https://x.com/ShadeLurk/status/2122831545119735839" target="_blank" rel="noopener">HTML 说明</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p>作者长文写声音和画面用 Web Audio 与 Canvas／WebGL，五首歌打进同一个 HTML。回复里的地址和可玩页是同一份。这是公开可查看的 HTML，不是可随便商用的许可。暂未找到另外的仓库。未试玩，未看完视频。日期用原帖时间，不用页面的 Last-Modified。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="peacock-svg" data-published="2026-11-18T06:18:19+08:00" data-cycle="2026-11-19-community" data-verification="community">
+      <figure>
+        <a class="still" href="https://x.com/petergostev/status/2122816629402910859" target="_blank" rel="noopener" aria-label="打开 SVG 孔雀的原帖">
+          <img src="images/peacock-svg/preview.jpg" alt="原帖视频封面：一只蓝色孔雀的头和颈，冠羽展开，背景是灰蓝的树。" width="1200" height="675">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">独立创作者 · 社区</p>
+        <h2>SVG 孔雀</h2>
+        <p class="by">Peter Gostev · @petergostev</p>
+        <p class="when"><time datetime="2026-11-18T06:18:19+08:00">2026-11-18</time></p>
+        <p>作者称这是他最喜欢的一次 GPT-6.2-Astra 生成：一只用 SVG 画的孔雀。值得学的是用矢量而不是常见的三维网格去表现一只活的动物。这是单次作品，不是一套可玩项目。</p>
+        <p class="links">
+          <a href="https://x.com/petergostev/status/2122816629402910859" target="_blank" rel="noopener">原帖</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p>原帖写 GPT-6.2-Astra，并拿包括 Fable 在内的其他模型作比较。只展示这一件。暂未找到可打开的 SVG 文件或教程。未看完视频。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="kasane-valley" data-published="2026-11-18T06:17:01+08:00" data-cycle="2026-11-19-community" data-verification="community">
+      <figure>
+        <a class="still" href="https://x.com/givros/status/2122816304071803109" target="_blank" rel="noopener" aria-label="打开 Kasane Valley 的原帖">
+          <img src="images/kasane-valley/preview.jpg" alt="原帖视频封面：红桥、瓦屋、梯田和远处的山，画面像一座日本山村。" width="1200" height="675">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">独立创作者 · 社区 · GPT-6.2 Astra</p>
+        <h2>Kasane Valley（叠加之谷）</h2>
+        <p class="by">Givros · @givros</p>
+        <p class="when"><time datetime="2026-11-18T06:17:01+08:00">2026-11-18</time></p>
+        <p>作者命名的可探索山村。他写用 Blender、three.js 和自制环境技能来做。可玩页能走、能看鸟瞰。值得学的是地形、房子和探索放在同一条制作链上，而不是只交一张静帧。</p>
+        <p class="links">
+          <a href="https://x.com/givros/status/2122816304071803109" target="_blank" rel="noopener">原帖</a>
+          <a href="https://givros.github.io/kasane-valley/" target="_blank" rel="noopener">在线演示</a>
+          <a href="https://x.com/givros/status/2122816315542925338" target="_blank" rel="noopener">提示词回复</a>
+          <a href="https://x.com/givros/status/2122940510000009323" target="_blank" rel="noopener">后续说明</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p>首帖原文写 “GPT 6.2 Astra Ultra”。Ultra 不是官方型号名，也不是官方 reasoning.effort 的取值。作者后来的帖子写 “GPT 6.2 Astra”，并自报 1 小时 53 分。徽章用官方名称 GPT-6.2 Astra。可玩页写地形影像改编自日本地理院。自制技能没有找到独立发布页。未试玩，未看完工作流视频。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="nuremberg-market" data-published="2026-11-18T05:32:53+08:00" data-cycle="2026-11-19-community" data-verification="community">
+      <figure>
+        <a class="still" href="https://x.com/FlorianGallwitz/status/2122805196938231879" target="_blank" rel="noopener" aria-label="打开纽伦堡圣诞市场的原帖">
+          <img src="images/nuremberg-market/preview.jpg" alt="原帖视频封面：夜色里的教堂前有圣诞摊和行人，界面写着 Stadtatlas Nürnberg。" width="1200" height="818">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">独立创作者 · 社区</p>
+        <h2>可走的纽伦堡圣诞市场</h2>
+        <p class="by">Florian Gallwitz · @FlorianGallwitz</p>
+        <p class="when"><time datetime="2026-11-18T05:32:53+08:00">2026-11-18</time></p>
+        <p>作者称用和半年前完全相同的提示词，让 GPT-6.2 Astra 再做一遍可走进去的圣诞市场，并觉得比旧版更真实。值得学的是同一条提示词换模型之后，空间还能不能走。</p>
+        <p class="links">
+          <a href="https://x.com/FlorianGallwitz/status/2122805196938231879" target="_blank" rel="noopener">原帖</a>
+          <a href="https://x.com/FlorianGallwitz/status/2050215434075414709" target="_blank" rel="noopener">半年前的对照帖</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p>旧帖当时写的是 ChatGPT-5.5 Pro。这次没有写引擎，也没有可玩地址。未看完视频。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="pixel-jet-game" data-published="2026-11-18T05:13:18+08:00" data-cycle="2026-11-19-community" data-verification="community">
+      <figure>
+        <a class="still" href="https://x.com/vib3coded/status/2122800268706259244" target="_blank" rel="noopener" aria-label="打开像素喷气游戏的原帖">
+          <img src="images/pixel-jet-game/preview.jpg" alt="原帖视频封面：像素飞机飞在水面上方，画面上方写着 ChatGPT-6.2 Astra 和 5.31 美元。" width="1200" height="750">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">独立创作者 · 社区</p>
+        <h2>单文件像素喷气游戏</h2>
+        <p class="by">Vib3Coded · @vib3coded</p>
+        <p class="when"><time datetime="2026-11-18T05:13:18+08:00">2026-11-18</time></p>
+        <p>作者称 GPT-6.2 Astra 在一个 HTML 文件里做出能开加力、滚转、切座舱和发射的像素飞机。值得学的是飞行、视角和武器收在同一份文件里。36 分钟和 5.31 美元是作者自己说的。</p>
+        <p class="links">
+          <a href="https://x.com/vib3coded/status/2122800268706259244" target="_blank" rel="noopener">原帖</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p>暂未找到可下载的 HTML 或可玩页。未看完视频。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="city-disaster-sim" data-published="2026-11-18T03:13:04+08:00" data-cycle="2026-11-19-community" data-verification="community">
+      <figure>
+        <a class="still" href="https://x.com/lucian__03/status/2122770012234805383" target="_blank" rel="noopener" aria-label="打开城市灾难模拟器的原帖">
+          <img src="images/city-disaster-sim/preview.jpg" alt="原帖视频封面：海中小岛上的小镇，标题 Pocket Chaos，上方写着 GPT 6.2 Astra (MAX)。" width="1080" height="1080">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">独立创作者 · 社区</p>
+        <h2>三维城市灾难模拟器</h2>
+        <p class="by">루샨 · @lucian__03</p>
+        <p class="when"><time datetime="2026-11-18T03:13:04+08:00">2026-11-18</time></p>
+        <p>作者称只写了一次提示词，让 GPT-6.2 Astra 做龙卷风、陨石、内涝和建筑破坏修复。值得学的是把几种灾害放进同一座城。封面上方的 MAX 是作者写的推理力度，不是官方型号 Astra Max。</p>
+        <p class="links">
+          <a href="https://x.com/lucian__03/status/2122770012234805383" target="_blank" rel="noopener">原帖</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p>Max 是官方文档里 reasoning.effort 的一个取值。作者自报约 40 分钟一次做完。暂未找到可玩页或源码。未看完视频。同一作者另有 Sol 的作品，不并进这张卡。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="pink-sky-train" data-published="2026-11-18T03:03:15+08:00" data-cycle="2026-11-19-community" data-verification="community">
+      <figure>
+        <a class="still" href="https://x.com/soyukke_game/status/2122767541823225891" target="_blank" rel="noopener" aria-label="打开粉红天空蒸汽火车的原帖">
+          <img src="images/pink-sky-train/preview.jpg" alt="原帖视频封面：粉橙色天空下，一列蒸汽火车驶过水面上方的轨道，远处有飞艇。" width="1200" height="675">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">独立创作者 · 社区</p>
+        <h2>粉红天空里的蒸汽火车</h2>
+        <p class="by">soyukke · @soyukke_game</p>
+        <p class="when"><time datetime="2026-11-18T03:03:15+08:00">2026-11-18</time></p>
+        <p>作者没有给正式片名。他写这是 GPT-6.2 Astra xhigh，而且用的是同一条提示词。值得学的是同一条提示词从 Fable 5.2 换到 Astra 之后，天空和火车会变成什么样。这不是一套新设定。</p>
+        <p class="links">
+          <a href="https://x.com/soyukke_game/status/2122767541823225891" target="_blank" rel="noopener">原帖</a>
+          <a href="https://x.com/soyukke_game/status/2119928049982640282" target="_blank" rel="noopener">同一提示词的旧帖</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p>旧帖写的是让 Fable 5.2 从建模做到视频。xhigh 按作者用词记下，是推理力度的说法。暂未找到可玩页。未看完视频。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="space-elevator" data-published="2026-11-18T02:16:10+08:00" data-cycle="2026-11-19-community" data-verification="community">
+      <figure>
+        <a class="still" href="https://x.com/emollick/status/2122755693191287009" target="_blank" rel="noopener" aria-label="打开太空电梯乘坐体验的原帖">
+          <img src="images/space-elevator/preview.jpg" alt="原帖视频封面：驾驶舱里的控制台，窗外是海面和一座环形结构，标牌写着 PELAGIC ANCHOR。" width="1200" height="675">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">独立创作者 · 社区</p>
+        <h2>从零做的太空电梯乘坐体验</h2>
+        <p class="by">Ethan Mollick · @emollick</p>
+        <p class="when"><time datetime="2026-11-18T02:16:10+08:00">2026-11-18</time></p>
+        <p>作者称在发布前就用过 GPT-6.2 Astra，觉得难驾驭；把「用 Blender 和 Unity 从零做一次太空电梯乘坐」交给它时，结果还可以。值得学的是大型装置的尺度和乘坐视角，同时保留他对可控性的保留意见。</p>
+        <p class="links">
+          <a href="https://x.com/emollick/status/2122755693191287009" target="_blank" rel="noopener">原帖</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p>原文写 prior to launch，以及 harder to steer。工具是作者写的 Blender 和 Unity。暂未找到可玩页或源码。未看完视频。同日另一则只写 Astra 6.2 的快艇帖不并进这张卡。</p>
+        </details>
       </div>
     </article>
     <article class="card" data-id="paris-atlas" data-date-precision="unknown" data-tie="0" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
@@ -715,7 +921,7 @@
   </footer>
   <script>
     (function () {
-      var expected = "2026-11-19-split8";
+      var expected = "2026-11-19-community8";
       function check() {
         fetch("revision.json?t=" + Date.now(), { cache: "no-store" }).then(function (res) {
           if (!res.ok) return null;
@@ -740,6 +946,6 @@
       });
     })();
   </script>
-  <script src="board.js?v=2026-11-19-split8"></script>
+  <script src="board.js?v=2026-11-19-community8"></script>
 </body>
 </html>
