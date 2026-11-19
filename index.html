@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>学习板 · Claude / GPT</title>
   <meta name="description" content="Claude 与 GPT 的创意技术项目，一块一块钉在这块黑底的板上。">
-  <link rel="stylesheet" href="styles.css?v=2026-11-19-ev">
+  <link rel="stylesheet" href="styles.css?v=2026-11-19-pr21">
   <script>
     (function () {
       try {
@@ -24,7 +24,7 @@
   </header>
 
   <div class="local-tools">
-    <p class="local-explain">上方目录分成 Claude 学习板和 OpenAI 学习板，点一下就换。地址用 #claude 或 #openai，不带记号时打开 Claude。可以拖动、平移和缩放。每次内容更新后，第一次打开会按原发布日期从新到旧排开，桌面窗口里一行八张内容卡同时可见，说明卡单独占上面一行。没有脚本时也会按这个行列排，不会把说明卡算进八张里。同一版里再拖动，仍留在这台浏览器，两块板分开记。OpenAI 板先排 9 个社区原帖，再排 7 张没有作品日期的官方 Showcase。点「查看本轮新增」会留在 Claude 板，并框住 ESCAPE VELOCITY。标注还留着，页面上不再显示输入框。</p>
+    <p class="local-explain">上方目录分成 Claude 学习板和 OpenAI 学习板，点一下就换。地址用 #claude 或 #openai，不带记号时打开 Claude。可以拖动、平移和缩放。每次内容更新后，第一次打开会按原发布日期从新到旧排开，桌面窗口里一行八张内容卡同时可见，说明卡单独占上面一行。没有脚本时也会按这个行列排，不会把说明卡算进八张里。同一版里再拖动，仍留在这台浏览器，两块板分开记。OpenAI 板先排 9 个社区原帖，再排 7 张没有作品日期的官方 Showcase。点「查看本轮新增」会留在 Claude 板，并同时框住 GTA VI: Cursed Trailer 和雾锁山门。标注还留着，页面上不再显示输入框。</p>
     <div class="local-actions">
       <button type="button" id="show-cycle">查看本轮新增</button>
       <button type="button" id="arrange-date">按日期排开</button>
@@ -40,7 +40,7 @@
   </div>
 
   <nav class="board-nav" aria-label="目录">
-    <a href="#claude">Claude 学习板<small>29 张，含 1 条待核实参考</small></a>
+    <a href="#claude">Claude 学习板<small>31 张，含 1 条待核实参考</small></a>
     <a href="#openai">OpenAI 学习板<small>16 张：9 个社区作品，7 张官方 Showcase</small></a>
   </nav>
 
@@ -51,7 +51,34 @@
     <article class="card intro" data-id="intro-claude">
       <div class="meta">
         <p class="hello">Claude 学习板</p>
-        <p>29 张。其中 28 张是已有项目，1 张是指定参考、制作细节待核实，不计入已核实案例。按原发布日期从新到旧，说明卡不占内容位。</p>
+        <p>31 张。其中 30 张是项目，1 张是指定参考、制作细节待核实，不计入已核实案例。按原发布日期从新到旧，说明卡不占内容位。</p>
+      </div>
+    </article>
+    <article class="card" data-id="gta-cursed-trailer" data-published="2026-11-19T03:41:53+08:00" data-cycle="2026-11-19-pr21" data-verification="author-reported">
+      <figure>
+        <a class="still" href="https://x.com/thedorbrothers/status/2123139649992311027" target="_blank" rel="noopener" aria-label="打开 GTA VI: Cursed Trailer 的原帖">
+          <img src="images/gta-cursed-trailer/thumb.jpg" alt="原帖视频封面：铁丝网后的近景，身后是橙色囚服和一座瞭望塔。这是预告片封面，不是角色设定表。" width="1200" height="675">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">案例 · 作者自述</p>
+        <h2>GTA VI: Cursed Trailer</h2>
+        <p class="by">The Dor Brothers · @thedorbrothers</p>
+        <p class="when"><time datetime="2026-11-19T03:41:53+08:00">2026-11-19</time></p>
+        <p>约 1 分 42 秒的预告片。人给出想法和方向，并做了半手工剪辑。作者说画面生成、视频生成，以及对已有片段的后期，都交给 Claude Code 代理自动完成，这些步骤他们没有亲手做。值得学的是角色设定表怎么用来保持同一张脸，以及把更多步骤交给代理之后，哪些镜头会开始不喜欢。</p>
+        <p class="links">
+          <a href="https://x.com/thedorbrothers/status/2123139649992311027" target="_blank" rel="noopener">原片</a>
+          <a href="https://x.com/thedorbrothers/status/2123170931321307605" target="_blank" rel="noopener">自动化说明</a>
+          <a href="https://x.com/thedorbrothers/status/2123187663322988582" target="_blank" rel="noopener">耗时回复</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p>“85% 自动化”是作者后来的说法，不是片内字幕。这条预告他们回复是 “a few hours”。另一条帖说近期短片大多自动化，空闲时要 2 到 6 小时。他们还说有些镜头不喜欢，例如 Russell 那镜，因为让 AI 多做是一种研究，会碰到收益递减。</p>
+          <p>有人问用了什么库，截至 2026-11-19 19:19（亚洲/上海）作者还没答。不要把 Seedance、Midjourney 或其他生成库写到这部预告上。官网客户片仍写人工剪辑、声音和调色，那是另一条流程。</p>
+          <p>暂未找到这部片子的完整教程或工具清单。不要把别人的 GTA 教程当成他们的方法。未看完，未复跑。</p>
+          <p>原帖 2026-11-19 19:19（亚洲/上海）核验：曝光 191909，视频播放 115733，两者不是同一个数。赞 3030，转发 635，引用 126，回复 190，收藏 1067。抽样里有人说好看或好笑，也有人觉得没那么有趣，或批评选用现实人物。不是人人都觉得好。</p>
+        </details>
       </div>
     </article>
     <article class="card" data-id="blender-ai-video-course" data-published="2026-11-17T00:33:20+08:00">
@@ -201,6 +228,37 @@
         <p class="links">
           <a href="https://www.bilibili.com/video/BV1raWB6uEmW/" target="_blank" rel="noopener">原视频</a>
         </p>
+      </div>
+    </article>
+    <article class="card" data-id="wusuo-shanmen" data-published="2026-11-12T09:43:55+08:00" data-cycle="2026-11-19-pr21" data-verification="author-reported">
+      <figure>
+        <a class="still" href="https://x.com/op7418/status/2120694045299327187" target="_blank" rel="noopener" aria-label="打开雾锁山门的原帖">
+          <img src="images/wusuo-shanmen/shot-combo.jpg" alt="官方游戏内横图：俯视雪地，白衣角色站在圈里，前方有几道粉色光。" width="640" height="360">
+        </a>
+        <figcaption>官方游戏内画面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">案例 · 可玩 · 作者自述</p>
+        <h2>雾锁山门</h2>
+        <p class="by">歸藏 · @op7418 · Claude Fable 5.2</p>
+        <p class="when"><time datetime="2026-11-12T09:43:55+08:00">2026-11-12</time></p>
+        <p>浏览器里可玩的一幕仙侠动作：小怪和 Boss。人只定了国风仙侠，提供工具，要求先看参考片、先做调研，并用白话试玩了 7 轮。Claude Fable 5.2 负责协调和搭建；部分测试跑过 Opus 5.5。概念图走即梦，三维和绑定走 Tripo，音乐走 Suno，运行是 three.js。不是一次做完。</p>
+        <p class="links">
+          <a href="https://x.com/op7418/status/2120694045299327187" target="_blank" rel="noopener">原帖</a>
+          <a href="https://op7418.github.io/guizang-game-skill/" target="_blank" rel="noopener">打开游戏</a>
+          <a href="https://github.com/op7418/guizang-game-skill" target="_blank" rel="noopener">技能与说明</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p>原帖写成 “45 亿 token”，作者几分钟后更正：是 4.5 亿 Token，语音输入打错了。说明页也是约 6 小时、4.5 亿 Token，其中一部分是 Opus 5.5 的测试。不要把 45 亿当成事实。作者后来说还做了技能，并补充即梦、Tripo 和压缩。作者不把自己写成游戏程序员。</p>
+          <p>技能文档和脚本是 AGPL-3.0。演示游戏的画面、模型、声音、音乐和文字版权归 2026 歸藏，可以玩、可以分享链接，不能据此当成可商用素材。作者说这条技能只在这一个项目上从头走到尾，另有一次只到规划的对照。不要写成每次都能做出同样的质量。未试玩，未复跑。</p>
+          <p>原帖 2026-11-19 19:19（亚洲/上海）核验：曝光 295962，视频播放 101641，两者不是同一个数。赞 1162，转发 123，引用 59，回复 276，收藏 971。抽样里有人试玩后称赞，也有人说第一波太难，或仍在用未更正的 45 亿。不是人人都满意。</p>
+          <p class="links">
+            <a href="https://x.com/op7418/status/2120695301204005060" target="_blank" rel="noopener">不是一次做完</a>
+            <a href="https://x.com/op7418/status/2120695897956995075" target="_blank" rel="noopener">token 更正</a>
+            <a href="https://x.com/op7418/status/2120694594409312403" target="_blank" rel="noopener">即梦与 Tripo</a>
+          </p>
+        </details>
       </div>
     </article>
     <article class="card" data-id="painted-valley" data-published="2026-11-12T09:43:45+08:00">
@@ -954,7 +1012,7 @@
   </footer>
   <script>
     (function () {
-      var expected = "2026-11-19-ev";
+      var expected = "2026-11-19-pr21";
       function check() {
         fetch("revision.json?t=" + Date.now(), { cache: "no-store" }).then(function (res) {
           if (!res.ok) return null;
@@ -979,6 +1037,6 @@
       });
     })();
   </script>
-  <script src="board.js?v=2026-11-19-ev"></script>
+  <script src="board.js?v=2026-11-19-pr21"></script>
 </body>
 </html>
