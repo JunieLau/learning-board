@@ -4,13 +4,13 @@
   "source_check_date": "2026-11-19T00:52:00+08:00",
   "research_cycle_date": "2026-11-19",
   "policy_date": "2026-11-19",
-  "content_card_count_in_this_commit": 45,
+  "content_card_count_in_this_commit": 47,
   "last_successful_deployment_before_this_commit": {
-    "sha": "8af059e29b02e0d8ed36bb6ead5ef93b5530f0eb",
-    "at": "2026-11-19T01:20:12+08:00",
+    "sha": "b77834b0bfc8aadbc9f0acb88e4da35c13b980ad",
+    "at": "2026-11-19T02:53:46+08:00",
+    "content_cards": 45,
     "page": "https://junielau.com/learning-board/",
-    "content_cards": 35,
-    "evidence": "HTTP Last-Modified Wed, 18 Nov 2026 17:20:12 GMT after PR #18. This file does not claim the nine community cards are deployed."
+    "evidence": "PR #20 merge. This file does not claim the two new cards are deployed."
   },
   "this_commit_publication": "not yet deployed at the time this file was written",
   "official_model_check": {
@@ -925,7 +925,7 @@
   ],
   "verified_new_projects_this_cycle": 7,
   "pending_reference_this_cycle": 0,
-  "layout_revision": "2026-11-19-ev",
+  "layout_revision": "2026-11-19-pr21",
   "layout_columns": {
     "content_cards_per_row": 8,
     "intro_consumes_content_slot": false,
@@ -945,7 +945,7 @@
   "boards": {
     "claude": {
       "url": "https://junielau.com/learning-board/#claude",
-      "content_cards": 29,
+      "content_cards": 31,
       "verified": 27,
       "pending_reference": 1
     },
