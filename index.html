@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>学习板 · Claude / GPT</title>
   <meta name="description" content="Claude 与 GPT 的创意技术项目，一块一块钉在这块黑底的板上。">
-  <link rel="stylesheet" href="styles.css?v=2026-11-25-audit">
+  <link rel="stylesheet" href="styles.css?v=2026-11-25-round">
   <script>
     (function () {
       try {
@@ -24,7 +24,7 @@
   </header>
 
   <div class="local-tools">
-    <p class="local-explain">上方目录分成 Claude 学习板和 OpenAI 学习板，点一下就换。地址用 #claude 或 #openai，不带记号时打开 Claude。可以拖动、平移和缩放。每次内容更新后，第一次打开会按原发布日期从新到旧排开，桌面窗口里一行八张内容卡同时可见，说明卡单独占上面一行。没有脚本时也会按这个行列排，不会把说明卡算进八张里。同一版里再拖动，仍留在这台浏览器，两块板分开记。这一版是 2026-11-25 的全板复核：每张卡都按同一标准重写了「依据与限度」。点「查看本轮新增」会框住当前这块板的新卡：Claude 板是 Rourke 的教程，OpenAI 板是 Saltmere。标注还留着，页面上不再显示输入框。</p>
+    <p class="local-explain">上方目录分成 Claude 学习板和 OpenAI 学习板，点一下就换。地址用 #claude 或 #openai，不带记号时打开 Claude。可以拖动、平移和缩放。每次内容更新后，第一次打开会按原发布日期从新到旧排开，桌面窗口里一行八张内容卡同时可见，说明卡单独占上面一行。没有脚本时也会按这个行列排，不会把说明卡算进八张里。同一版里再拖动，仍留在这台浏览器，两块板分开记。这一版是 2026-11-25 的新一轮：按同一审核标准新增 7 张，Claude 板 4 张（Kevin Ngo 的开放世界 RPG 和塔防、黎曼猜想动画片头、Claude 搭灰模拍广告），OpenAI 板 3 张（官方 1915 世博会胶片、外行做 3D VTuber、AT-AT 的 Three.js 对 Blender）。点「查看本轮新增」会框住当前这块板的新卡。标注还留着，页面上不再显示输入框。</p>
     <div class="local-actions">
       <button type="button" id="show-cycle">查看本轮新增</button>
       <button type="button" id="arrange-date">按日期排开</button>
@@ -40,8 +40,8 @@
   </div>
 
   <nav class="board-nav" aria-label="目录">
-    <a href="#claude">Claude 学习板<small>32 张，含 1 条待核实参考</small></a>
-    <a href="#openai">OpenAI 学习板<small>17 张：10 个社区作品，7 张官方 Showcase</small></a>
+    <a href="#claude">Claude 学习板<small>36 张，含 1 条待核实参考</small></a>
+    <a href="#openai">OpenAI 学习板<small>20 张：12 个社区作品，8 张官方 Showcase</small></a>
   </nav>
 
   <section id="claude" class="board-view" data-board="claude">
@@ -51,7 +51,127 @@
     <article class="card intro" data-id="intro-claude">
       <div class="meta">
         <p class="hello">Claude 学习板</p>
-        <p>32 张。其中 31 张是项目，1 张是指定参考、制作细节待核实，不计入已核实案例。按原发布日期从新到旧，说明卡不占内容位。2026-11-25 全板复核：每张卡的「依据与限度」写了原发布时间、作者自述的方法和工具、当天重新查的数据、社区反馈抽样、推广与利益关系，以及上板判断。</p>
+        <p>36 张。其中 35 张是项目，1 张是指定参考、制作细节待核实，不计入已核实案例。按原发布日期从新到旧，说明卡不占内容位。2026-11-25 全板复核：每张卡的「依据与限度」写了原发布时间、作者自述的方法和工具、当天重新查的数据、社区反馈抽样、推广与利益关系，以及上板判断。2026-11-25 新一轮按同一标准新增，见「查看本轮新增」。</p>
+      </div>
+    </article>
+    <article class="card" data-id="procedural-rpg" data-published="2026-11-25T04:10:45+08:00" data-cycle="2026-11-25-round" data-verification="author-reported" data-audit="keep" data-audited="2026-11-25">
+      <figure>
+        <a class="still" href="https://x.com/kevin_t_ngo/status/2125321244686029289" target="_blank" rel="noopener" aria-label="打开程序生成 RPG 的原帖">
+          <img src="images/procedural-rpg/preview.jpg" alt="原帖视频封面：铅笔线条画的草地上，戴帽子的小勇士站在几只蘑菇和粉色小怪中间，头顶写着它们的名字和等级。" width="1080" height="1080">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">独立创作者 · Claude Fable 5.2 · 作者自述</p>
+        <h2>着色器画的开放世界 RPG</h2>
+        <p class="by">Kevin Ngo · @kevin_t_ngo</p>
+        <p class="when"><time datetime="2026-11-25T04:10:45+08:00">2026-11-25</time></p>
+        <p>浏览器里就能玩的程序生成开放世界 RPG，画面是铅笔线条和彩铅质感的草地、蘑菇和小怪。作者说没用任何素材、图像生成或 3D 建模工具，画面全是 Claude 写的代码。值得学的是先定一种手绘画风，再让程序生成去铺满整个世界。</p>
+        <p class="links">
+          <a href="https://x.com/kevin_t_ngo/status/2125321244686029289" target="_blank" rel="noopener">原帖</a>
+          <a href="https://kevintngo.github.io/procedural-rpg/" target="_blank" rel="noopener">在线试玩</a>
+          <a href="https://github.com/kevintngo/procedural-rpg" target="_blank" rel="noopener">源码（MIT）</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-25 04:10:45（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>原帖说是让 Fable 5.2 做的，单个约 300kB 的 HTML，每个像素都由着色器绘制。作者在回复里说没有素材，没用图像生成器或 3D 建模工具；Fable 5.2 做得更好，Opus 5.5 也能做；首版之后他改用 Opus 5.5 加新角色、敌人和区域。</p>
+          <p><b>数据（2026-11-25 13:58 亚洲/上海 核验）：</b>原帖曝光 41271，视频播放 19411，赞 1224，转发 87，引用 13，回复 66，收藏 843。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 13:56–13:57 亚洲/上海 抽样，不是全量）：</b>多数夸画风（“帽子上的铅笔线”“画风可爱”），也谢谢作者开源；有人问画风是 Fable 自己定的还是作者引导的。批评也不少：有人说文案是“AI slop”“fableslop”；有人指出页面除了 HTML 还加载 JS、CSS、字体等文件，“着色器画每个像素”也是 3D 游戏的常规做法。</p>
+          <p><b>推广与利益：</b>作者 X 简介是 fal（AI 模型平台）的 creative engineer。这条原帖没有推广链接，也没说用了 fal。</p>
+          <p><b>本轮核对的限度：</b></p>
+          <p>原帖发出后，仓库在 2026-11-25 09:59（亚洲/上海）有一次提交，说明写着改用 TypeScript 栈重建：三个职业、技能树、战利品和地下城，之后改成 GitHub Actions 自动部署。所以现在的在线版是构建后的多文件版本，不一定还是原帖说的单个 300kB 文件。没有公开提示词和花费。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>赞过千（1224），能玩、开源；但曝光只有 4.1 万，反馈里有明显批评。学的时候看画风和程序生成，不要拿它当“单文件”的证明。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="cinderwatch" data-published="2026-11-24T14:50:58+08:00" data-cycle="2026-11-25-round" data-verification="author-reported" data-audit="keep" data-audited="2026-11-25">
+      <figure>
+        <a class="still" href="https://x.com/kevin_t_ngo/status/2125119969109418333" target="_blank" rel="noopener" aria-label="打开 Cinderwatch 塔防的原帖">
+          <img src="images/cinderwatch/preview.jpg" alt="原帖视频封面：夜里的等距视角营地，火把和篝火照亮木屋、栅栏和小路，左上角是波数和资源，右上角是下一波提示。" width="1200" height="675">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">独立创作者 · Claude Fable 5.2 · 作者自述</p>
+        <h2>Cinderwatch 塔防</h2>
+        <p class="by">Kevin Ngo · @kevin_t_ngo</p>
+        <p class="when"><time datetime="2026-11-24T14:50:58+08:00">2026-11-24</time></p>
+        <p>一个单文件 HTML 的等距视角塔防：夜里的营地、火光，雪地、苔地、灰烬和沙地几种地块，浏览器和手机都能玩。值得学的是用暖光和阴影给一个小战场定气氛；仓库的提交说明也值得看，里面一条条修可读性，比如空塔位看不清、飞行敌人走直线太快。</p>
+        <p class="links">
+          <a href="https://x.com/kevin_t_ngo/status/2125119969109418333" target="_blank" rel="noopener">原帖</a>
+          <a href="https://kevintngo.github.io/cinderwatch/" target="_blank" rel="noopener">在线试玩</a>
+          <a href="https://github.com/kevintngo/cinderwatch" target="_blank" rel="noopener">源码（MIT）</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-24 14:50:58（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>原帖只写“让 Fable 5.2 做一个单 HTML 塔防，开源，可在浏览器里玩”，没有公开提示词、轮数或花费。仓库的提交说明写得很细，例如“阴影约占每帧 60%，每帧要画十张阴影贴图”，可以当调优日志看；这些提交是不是全由模型写的，作者没说。</p>
+          <p><b>数据（2026-11-25 13:58 亚洲/上海 核验）：</b>原帖曝光 88864，视频播放 42114，赞 1978，转发 100，引用 11，回复 120，收藏 1504。GitHub 78 星。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 13:56–13:57 亚洲/上海 抽样，不是全量）：</b>几乎都是正面：“玩了一个小时”“第一个玩超过两分钟的 AI 游戏”“手机上很流畅”“平衡也不错”。也有人说打到第 15 波就不动了，有人觉得节奏偏慢；有人认为显然经过很多轮提示和重试，希望作者公开提示词。</p>
+          <p><b>推广与利益：</b>作者 X 简介是 fal 的 creative engineer。原帖没有推广链接。</p>
+          <p><b>本轮核对的限度：</b></p>
+          <p>没有提示词。本板没有复跑，只确认在线页和仓库都能打开（MIT 许可，仓库 2026-11-24 建立）。</p>
+          <p><b>上板判断：达标。</b>近九万曝光、近两千赞、一千五百收藏，反馈正面。导演能学的是氛围和画面可读性，不是玩法本身。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="riemann-anime-intro" data-published="2026-11-23T18:15:27+08:00" data-cycle="2026-11-25-round" data-verification="author-reported" data-audit="keep" data-audited="2026-11-25">
+      <figure>
+        <a class="still" href="https://www.youtube.com/watch?v=UoGY-e8_sss" target="_blank" rel="noopener" aria-label="打开黎曼猜想动画片头">
+          <img src="images/riemann-anime-intro/maxresdefault.jpg" alt="视频官方封面：戴圆眼镜的橙色方头机器人，胸前写着 AI，背后是彩虹光束和海面，右上角竖排日文写着黎曼的名字。" width="1280" height="720">
+        </a>
+        <figcaption>视频官方封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">独立创作者 · Fable 5.2 + Opus 5.5 · 作者自述</p>
+        <h2>黎曼猜想动画片头</h2>
+        <p class="by">Easy Riders · @easy_riders · YouTube</p>
+        <p class="when"><time datetime="2026-11-23T18:15:27+08:00">2026-11-23</time></p>
+        <p>一段 90 秒的日式动画片头，把黎曼猜想和历代数学家（都画成同一种机器人脸）剪成一支热血 OP。值得学的是片头节奏：标题卡、人物逐个亮相、高潮定格；作者还公开了 token 账单。</p>
+        <p class="links">
+          <a href="https://www.youtube.com/watch?v=UoGY-e8_sss" target="_blank" rel="noopener">成片</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-23 18:15:27（亚洲/上海），YouTube 上传时间。</p>
+          <p><b>方法与工具（作者自述）：</b>简介只写了用量：Fable 5.2 输入 9.56 亿、输出 670 万 token；Opus 5.5 输入 28.8 亿、输出 1770 万 token；合计约 2075 美元（按当前 API 价）。没写渲染方式，没说是不是纯代码，也没说音乐怎么来的。</p>
+          <p><b>数据（2026-11-25 13:55 亚洲/上海 核验）：</b>播放 26597，赞 906，抓到评论 60 条。频道 2.83 万订阅。</p>
+          <p><b>社区反馈（YouTube 评论，2026-11-25 13:55 亚洲/上海 抽样，不是全量）：</b>几乎一面倒正面：“2026 十佳动画 OP”“以后每个千禧年难题都该这样”“我会看这样的动画”。有人笑说角色全是机器人，只是换了头发和衣服。有评论把它和一首知名动画主题曲联系在一起；配乐的来源和授权，视频里没有说明。</p>
+          <p><b>推广与利益：</b>简介没有推广链接，只放了作者的 Instagram。</p>
+          <p><b>本轮核对的限度：</b></p>
+          <p>没有教程、提示词或工程文件，只有成片和用量数字。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>播放过两万、赞近千，反馈很好。方法几乎没公开，学的是片头结构和节奏。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="claude-blender-commercial" data-published="2026-11-20T23:04:26+08:00" data-cycle="2026-11-25-round" data-verification="author-reported" data-audit="keep" data-audited="2026-11-25">
+      <figure>
+        <a class="still" href="https://www.youtube.com/watch?v=jc0Qh09Qrlo" target="_blank" rel="noopener" aria-label="打开 Claude + Blender 广告教程">
+          <img src="images/claude-blender-commercial/maxresdefault.jpg" alt="教程官方封面：左半边是灰模里的人物和红色长条道具，右半边是同一构图的成片，戴绿色耳机的女孩躺在草地上，右上角大字 FABLE 5.2。" width="1280" height="720">
+        </a>
+        <figcaption>教程官方封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">教程 · 作者自述 · 含推广</p>
+        <h2>Claude 搭灰模拍耳机广告</h2>
+        <p class="by">Thomas Lundström · @thomaslundstrm · Claude + Blender + Seedance 2.5</p>
+        <p class="when"><time datetime="2026-11-20T23:04:26+08:00">2026-11-20</time></p>
+        <p>一支 47 秒耳机广告的完整拆解：先和 Claude 定概念，再让 Claude 在 Blender 里搭灰模、定机位，用 Seedream 5.5 做素材，最后只用了三次 Seedance 2.5 生成。值得学的是“先做场景图，再照着场景搭灰模”这一步，评论区也最认这一条。</p>
+        <p class="links">
+          <a href="https://www.youtube.com/watch?v=jc0Qh09Qrlo" target="_blank" rel="noopener">教程</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-20 23:04:26（亚洲/上海），YouTube 上传时间。</p>
+          <p><b>方法与工具（作者自述）：</b>章节：0:00 成片；2:15 用 Claude 定广告概念；4:04 Claude 搭 Blender 灰模；7:04 在 Artlist 用 Seedream 5.5 做素材；9:07 在 Artlist 用 Seedance 2.5 生成视频；13:14 声音、音乐和 Ultimate Vocal Remover；15:09 用 Claude 做 HyperFrames 动态图形；15:48 成本。视频标签写了 Fable 5.2，简介正文没写具体型号。成片的大部分画面是 AI 视频，不是 Blender 渲的。</p>
+          <p><b>数据（2026-11-25 13:55 亚洲/上海 核验）：</b>播放 127010，赞 2353，抓到评论 60 条。频道 3.21 万订阅。</p>
+          <p><b>社区反馈（YouTube 评论，2026-11-25 13:55 亚洲/上海 抽样，不是全量）：</b>评论正面。高赞是“先做场景再搭灰模，能少很多次重抽”这条技巧；不少人想看 HyperFrames 动态图形的单独教程。也有人调侃讲解视频可能比广告本身做得还久。</p>
+          <p><b>推广与利益：</b>简介第一行是 Artlist 节日 40% 折扣推广链接；Higgsfield、Magnific、Wispr Flow、Gling 等也都是推荐码链接；另推作者的 Skool 社区和 GenHQ 付费教育；作者置顶评论也是 Artlist 链接。成片全在 Artlist 里生成。</p>
+          <p><b>本轮核对的限度：</b></p>
+          <p>成片主体是 Seedance 2.5 生成的 AI 视频，Claude 和 Blender 负责概念和灰模。和板上 Dan Kieft、Rourke 两张教程的路线相近，这张多的是“广告”这种片型和成本拆分。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>12.7 万播放、两千多赞，是这一轮传播最大的方法视频。推广很重，Artlist 可以换成别的生成平台。</p>
+        </details>
       </div>
     </article>
     <article class="card" data-id="rourke-claude-blender" data-published="2026-11-19T05:36:53+08:00" data-cycle="2026-11-25-audit" data-verification="author-reported" data-audit="keep" data-audited="2026-11-25">
@@ -971,7 +1091,7 @@
     <article class="card intro" data-id="intro-openai">
       <div class="meta">
         <p class="hello">OpenAI 学习板</p>
-        <p>17 张。10 张是独立创作者的原帖，7 张是官方 Showcase。按原发布日期从新到旧；其中 5 张官方作品本轮找到了作者在 X 的首发帖，按那个时间排，另外 2 张找不到日期，排在最后。2026-11-25 全板复核：每张卡的「依据与限度」写了原发布时间、作者自述的方法、当天数据、社区反馈抽样、推广与利益关系，以及上板判断。</p>
+        <p>20 张。12 张是独立创作者的作品，8 张是官方 Showcase 或官方发布。按原发布日期从新到旧；其中 5 张官方作品本轮找到了作者在 X 的首发帖，按那个时间排，另外 2 张找不到日期，排在最后。2026-11-25 全板复核：每张卡的「依据与限度」写了原发布时间、作者自述的方法、当天数据、社区反馈抽样、推广与利益关系，以及上板判断。2026-11-25 新一轮按同一标准新增，见「查看本轮新增」。</p>
       </div>
     </article>
     <article class="card" data-id="saltmere" data-published="2026-11-24T15:12:11+08:00" data-cycle="2026-11-25-audit" data-verification="author-reported" data-audit="keep" data-audited="2026-11-25">
@@ -1008,6 +1128,94 @@
           <p><b>此前核对的限度（仍有效）：</b></p>
           <p>“五天”指他用这个模型五天，不是说这一页只做了五天。没有公开完整提示词或逐步教程，也没说是在 ChatGPT、Codex 还是 Cursor 里做的。本板没有复跑。</p>
           <p><b>上板判断：达标。</b>近九万曝光、千余收藏，技能可以直接拿来用，适合做作品官网或项目页。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="worlds-fair-reel" data-published="2026-11-24T03:12:37+08:00" data-cycle="2026-11-25-round" data-verification="official-showcase" data-audit="keep" data-audited="2026-11-25">
+      <figure>
+        <a class="still" href="https://x.com/OpenAIDevs/status/2124944225955639430" target="_blank" rel="noopener" aria-label="打开 1915 世博会胶片的原帖">
+          <img src="images/worlds-fair-reel/preview.jpg" alt="原帖视频封面：黑白旧胶片质感的大穹顶展馆和尖塔，左下角字幕写 Recreating the 1915 World’s Fair with GPT-6.2 Astra。" width="1920" height="1080">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">OpenAI 官方 · GPT-6.2 Astra + Blender</p>
+        <h2>1915 世博会“老胶片”</h2>
+        <p class="by">OpenAI Developers · @OpenAIDevs</p>
+        <p class="when"><time datetime="2026-11-24T03:12:37+08:00">2026-11-24</time></p>
+        <p>看起来像 1915 年旧金山世博会（巴拿马太平洋万国博览会）的黑白新闻片：穹顶展馆、尖塔、颗粒和划痕。官方说整段是在 Blender 里做的。值得学的是“伪资料片”的做法：先用三维搭出历史建筑，再在调色和颗粒上做旧。</p>
+        <p class="links">
+          <a href="https://x.com/OpenAIDevs/status/2124944225955639430" target="_blank" rel="noopener">原帖</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-24 03:12:37（亚洲/上海），OpenAI 开发者账号的 X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>原帖说：GPT-6.2 能理解世界、模拟事物如何运作、帮你造自己的世界；这段看着像 1915 年世博会的胶片，但“整个是在 Blender 里做的”。视频封面字幕写 “Recreating the 1915 World’s Fair with GPT-6.2 Astra”。没有公开提示词、步骤、用时或参与的人。同一串里还列了 3D 建模、绑定、游戏、姿态估计、机器人仿真等例子，每条一个链接。</p>
+          <p><b>数据（2026-11-25 13:58 亚洲/上海 核验）：</b>原帖曝光 187332，视频播放 68533，赞 2315，转发 156，引用 38，回复 106，收藏 597。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 13:56–13:57 亚洲/上海 抽样，不是全量）：</b>有人说在 Blender 里伪造 1915 年胶片“很狠”，想走进去逛。最有用的一条批评是镜头：静帧的颗粒和泛黄很像，但运动是现代 24 帧的顺滑，推近园艺馆像用了稳定器；1915 年是手摇摄影机，偏快、会晃，问虚拟摄影机能不能做出手摇速度和片门抖动。也有人借楼抱怨 Astra 6.2 难沟通，或问有没有教程。</p>
+          <p><b>推广与利益：</b>OpenAI 官方账号的产品宣传，不是独立创作者。</p>
+          <p><b>本轮核对的限度：</b></p>
+          <p>官方没说做了多久、人工改了多少、用的什么渲染器。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>18.7 万曝光、两千多赞。这是官方宣传片，按官方 Showcase 记。学的是做旧和镜头语言，再加上评论里那条“手摇速度”的批评。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="ai-vtuber-147" data-published="2026-11-22T20:07:40+08:00" data-cycle="2026-11-25-round" data-verification="author-reported" data-audit="keep" data-audited="2026-11-25">
+      <figure>
+        <a class="still" href="https://www.youtube.com/watch?v=dNX6rNt5BYI" target="_blank" rel="noopener" aria-label="打开 AI 做 3D VTuber 的视频">
+          <img src="images/ai-vtuber-147/maxresdefault.jpg" alt="视频官方封面：金发粉瞳的动漫风 3D 女孩特写，上方小字写 Fable 5.2 × Astra 6.2，下方红色大字写只用 AI 做完烧掉了 15 万日元。" width="1280" height="720">
+        </a>
+        <figcaption>视频官方封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">独立创作者 · Fable 5.2 + Astra 6.2 · 作者自述</p>
+        <h2>外行 147 次重做的 3D VTuber</h2>
+        <p class="by">サリーのAI無茶ぶり · @Otameshi_BOX · YouTube</p>
+        <p class="when"><time datetime="2026-11-22T20:07:40+08:00">2026-11-22</time></p>
+        <p>不会 3D 的作者只给 Claude Fable 5.2 和 Codex 里的 Astra 6.2 下指令，七天、147 次重做，做出一个能动的 3D VTuber 和一支 MV，额外账单超过 15 万日元。值得学的是作者把做不到的也演出来（比如鼓掌），最后拿收据和刷卡明细重新算一遍成本。</p>
+        <p class="links">
+          <a href="https://www.youtube.com/watch?v=dNX6rNt5BYI" target="_blank" rel="noopener">成片</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-22 20:07:40（亚洲/上海），YouTube 上传时间。</p>
+          <p><b>方法与工具（作者自述）：</b>简介：用 Claude Fable 5.2 和 Codex Astra 6.2 下指令做 3D VTuber，7 天、147 次重做；身体的 3D 生成用 Tripo。章节有“能不能动”“做不到的”“做法”“算账”和完整 MV。简介没写两个模型各自负责哪一部分。</p>
+          <p><b>数据（2026-11-25 13:55 亚洲/上海 核验）：</b>播放 95507，赞 1462，抓到评论 60 条。频道只有 1140 订阅，这一条是爆款。</p>
+          <p><b>社区反馈（YouTube 评论，2026-11-25 13:55 亚洲/上海 抽样，不是全量）：</b>正面为主，讨论集中在成本：有人说外包至少要百万日元，15 万很便宜；有人建议做完后让 Fable 和 Astra 回顾聊天记录、总结卡在哪，第二次就能省钱；有人算了订阅套餐的省钱方案。也有人担心 3D 建模师和创作者的工作会消失；有人照着做，说“只是下指令也很难”。</p>
+          <p><b>推广与利益：</b>简介没有推广码，只给了 Tripo 的普通链接。</p>
+          <p><b>本轮核对的限度：</b></p>
+          <p>放在 OpenAI 板是因为用了 Astra 6.2，但 Claude Fable 5.2 也是主力，两边各干了什么没写清。“15 万日元”是作者自报，本板没看到收据。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>9.5 万播放、近一千五百赞，难得把失败和账单都摆出来。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="atat-threejs-blender" data-published="2026-11-22T10:23:31+08:00" data-cycle="2026-11-25-round" data-verification="author-reported" data-audit="keep" data-audited="2026-11-25">
+      <figure>
+        <a class="still" href="https://x.com/vib3coded/status/2124327889776640303" target="_blank" rel="noopener" aria-label="打开 AT-AT 对比的原帖">
+          <img src="images/atat-threejs-blender/preview.jpg" alt="原帖视频封面：上下两格雪原上的四足步行机，上格标 GPT-6.2 Astra XHIGH + THREE.JS 14.86$，下格标 GPT-6.2 Astra XHIGH + BLENDER 22.65$。" width="923" height="1200">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">独立创作者 · GPT-6.2 Astra · 作者自述</p>
+        <h2>AT-AT：Three.js 对 Blender</h2>
+        <p class="by">Vib3Coded · @vib3coded</p>
+        <p class="when"><time datetime="2026-11-22T10:23:31+08:00">2026-11-22</time></p>
+        <p>同一个提示词，让 GPT-6.2 Astra（XHigh）分别用 Three.js 和 Blender 做一台在雪原上行走的 AT-AT。Three.js 版 48 分钟、14.86 美元；Blender 版 2 小时 15 分、22.65 美元。值得学的是怎么选工具：只要一个镜头、在网页里看，Three.js 更快；要改模型、绑定、复用到更多镜头，Blender 更合适。</p>
+        <p class="links">
+          <a href="https://x.com/vib3coded/status/2124327889776640303" target="_blank" rel="noopener">原帖</a>
+          <a href="https://x.com/vib3coded/status/2124327971565527275" target="_blank" rel="noopener">提示词（作者回复）</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-22 10:23:31（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>原帖：同一任务，都用 GPT-6.2 Astra XHigh；Three.js 48 分钟、14.86 美元，Blender 2 小时 15 分、22.65 美元。作者紧接着在回复里贴了提示词（Three.js r160、单个 HTML、WebGL 2）。作者回复说两段都是 Astra；要导出的话建议导成 GLB，骨骼能带走，JS 驱动的动画要先烘焙，他自己还没试；如果要给同一台步行机拍十个镜头，他会用 Blender。</p>
+          <p><b>数据（2026-11-25 13:58 亚洲/上海 核验）：</b>原帖曝光 67045，视频播放 33683，赞 792，转发 62，引用 9，回复 92，收藏 546。提示词那条回复曝光 4424，赞 62，收藏 99。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 13:56–13:57 亚洲/上海 抽样，不是全量）：</b>多数在讨论工具怎么选，不只是夸：有人说 Blender 才有真正的绑定和导出；有人说 Blender 要经过 MCP 和 Python 接口多绕一层，但人更容易在 Blender 里接手做创作决定；有人建议再测“改步态、改一个机位”的交接成本。有人用作者的提示词复现成功，也有人拿 Opus 5.5 跑同一提示词对比；还有人指出 Astra 做的腿经常关节反向弯。</p>
+          <p><b>推广与利益：</b>没有推广链接。作者简介写“这里的东西都是 vibe coding 做的”。板上另一张 pixel-jet-game 也是这位作者。</p>
+          <p><b>本轮核对的限度：</b></p>
+          <p>只跑了一次，时间和花费是作者自报。Blender 版用的渲染器没说（有人问 Cycles 还是 Eevee，抽样里没看到回答）。AT-AT 是《星球大战》的形象，这是同人练习，不能商用。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>6.7 万曝光、提示词公开，回复里关于工具选择的争论本身就是学习材料。</p>
         </details>
       </div>
     </article>
@@ -1498,7 +1706,7 @@
   </footer>
   <script>
     (function () {
-      var expected = "2026-11-25-audit";
+      var expected = "2026-11-25-round";
       function check() {
         fetch("revision.json?t=" + Date.now(), { cache: "no-store" }).then(function (res) {
           if (!res.ok) return null;
@@ -1523,6 +1731,6 @@
       });
     })();
   </script>
-  <script src="board.js?v=2026-11-25-audit"></script>
+  <script src="board.js?v=2026-11-25-round"></script>
 </body>
 </html>

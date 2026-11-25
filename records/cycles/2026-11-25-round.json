@@ -1,0 +1,125 @@
+{
+  "record_type": "publication_cycle_log",
+  "cycle_id": "2026-11-25-round",
+  "timezone": "Asia/Shanghai",
+  "request": "New research round after the routine missed its 72-hour runs (Junie, 2026-11-25: 'claude 和openai 没有其他新的学习内容吗？？？').",
+  "window": "2026-11-19 to 2026-11-25, plus strong earlier misses",
+  "added_ids": [
+    "procedural-rpg",
+    "cinderwatch",
+    "riemann-anime-intro",
+    "claude-blender-commercial",
+    "worlds-fair-reel",
+    "ai-vtuber-147",
+    "atat-threejs-blender"
+  ],
+  "added_by_board": {
+    "claude": [
+      "procedural-rpg",
+      "cinderwatch",
+      "riemann-anime-intro",
+      "claude-blender-commercial"
+    ],
+    "openai": [
+      "worlds-fair-reel",
+      "ai-vtuber-147",
+      "atat-threejs-blender"
+    ]
+  },
+  "metrics_checked_at": {
+    "x_posts": "2026-11-25T13:58:00+08:00",
+    "youtube": "2026-11-25T13:55:00+08:00",
+    "x_replies_sampled": "2026-11-25T13:56:00+08:00/2026-11-25T13:57:00+08:00"
+  },
+  "reach_rule": "pass: X impressions >= 50,000 or likes >= 1,000; YouTube views >= 20,000. borderline: X 20,000-50,000 impressions with positive reception, or very large reach with polarized reception. No public metrics = unverifiable.",
+  "official_model_check": "Anthropic models overview read 2026-11-25 ~13:5x Asia/Shanghai: Fable 5.2, Opus 5.5, Sonnet 5.5, Haiku 5.5 listed; no Opus 5.6.",
+  "rejected": [
+    {
+      "source": "chetaslua 2125226204764733481 / 2125253343480275008 / 2125331978891461023",
+      "item": "Opus 5.6 纯代码动画三条（曝光 25.3 万 / 23.0 万 / 16.0 万，赞 3128 / 3719 / 2582）",
+      "reason": "型号无法核实：Anthropic 官方模型页（2026-11-25 13:5x 亚洲/上海 读取）只有 Opus 5.5 和 Fable 5.2，没有 Opus 5.6；vib3coded 同日也写“传闻 Anthropic 在测 Opus 5.6”。和 Moss Keeper 一样按“说法无法核实”不收，官方发布后可重审。"
+    },
+    {
+      "source": "vib3coded 2125313222488252689",
+      "item": "Opus 5.6 对 Opus 5.5 坦克（曝光 6065）",
+      "reason": "同上型号无法核实；传播也不够。"
+    },
+    {
+      "source": "alexfredo87 2124867276264415325",
+      "item": "Astra 6.2 + three.js 把 AI 视频转成 3D 精灵（曝光 103756，赞 814）",
+      "reason": "传播够，但方法没公开，回复里多是“怎么做的”，也有人直接说“就是一段视频”“他不会分享因为是假的”；连自动回复都指出还用了视频生成、深度提取等别的工具。反馈不算正面，学习价值也说不清，列为近线。"
+    },
+    {
+      "source": "Noble Goose 7b0ec9GwLIw",
+      "item": "I Gave Claude $1,000 to Make Its Own Anime（2026-11-18 22:00，播放 53752，赞 721）",
+      "reason": "传播够，但评论两极：有人说潜力很大，也有高赞说剪辑差、画面不连贯、“看起来很糟”；简介是 Artlist 推广链接。列为近线。"
+    },
+    {
+      "source": "OpenAI 1u0hTd86_HU",
+      "item": "Experiment with SVG & 3D Design with the Codex Plugin（播放 32529）",
+      "reason": "官方教程，播放够，但高赞评论大多在嘲讽主持和剪辑（“这是广告还是求救”），夸插件的是少数。反馈两极，列为近线。"
+    },
+    {
+      "source": "Danny Why GM1DIGlDVa0",
+      "item": "Claude + Blender Is The Best Way To Make AI Videos（播放 92284，赞 1562）",
+      "reason": "和本轮 Lundström、板上 Rourke、Dan Kieft 的路线重复；Higgsfield 推广码，评论多在问费用。"
+    },
+    {
+      "source": "Kevin Stratvert hnpNRoKdneo",
+      "item": "How to Use Claude with Blender（2026-11-18，播放 91648）",
+      "reason": "入门安装教程，和板上 connect-claude-code-to-blender 重复，导演学习价值低。"
+    },
+    {
+      "source": "Dan Kieft GOR4Fn0GGes",
+      "item": "GTA 6 Trailer with Seedance 2.5 + Fable 5.2（播放 78528）",
+      "reason": "同一作者已有一张 Blender→AI 视频课程卡，方法重复；Higgsfield 推广码。"
+    },
+    {
+      "source": "kevin_t_ngo 2124213815697158160",
+      "item": "用自己游戏引擎让 Claude 剪预告片（曝光 21880，赞 452）",
+      "reason": "传播不够；很有导演价值，下轮可复查。"
+    },
+    {
+      "source": "kevin_t_ngo 2125288449788019168 / 2125382762861580571",
+      "item": "Tokyo 代码动画（赞 484）、Blender 动画（曝光 4326）",
+      "reason": "传播不够。"
+    },
+    {
+      "source": "givros 2124404063802429838",
+      "item": "Valley of the Aqueduct（曝光 40010，赞 502）",
+      "reason": "传播不够；用的是 GPT-6.2 Sol，不是 Astra。"
+    },
+    {
+      "source": "mizugame_22 2123403431167844544",
+      "item": "雨夜京都小巷，Fable 5.2 对 Astra（曝光 40203，赞 249）",
+      "reason": "传播不够；下轮可复查。"
+    },
+    {
+      "source": "Easy Riders 以外的 YouTube 测评类（Theo、AI Search、WorldofAI、Chase AI 等）",
+      "item": "模型测评",
+      "reason": "是模型测评，不是创作项目。"
+    },
+    {
+      "source": "ArtificialAnlys 2123581865965855205 / eliadele 2123878763624857693 / kerstov 2124062838725505099",
+      "item": "视频和多模型对比基准",
+      "reason": "基准和排行榜，不是作品；eliadele 推自己的对比网站。"
+    },
+    {
+      "source": "felixrieseberg 2125310111149416682",
+      "item": "Claude 做桌面应用",
+      "reason": "产品发布，不是创作项目。"
+    },
+    {
+      "source": "mattshumer_ 2125354482565280090",
+      "item": "MAGI-2 预告片",
+      "reason": "不是 Claude 或 OpenAI 的作品。"
+    }
+  ],
+  "layout_revision": "2026-11-25-round",
+  "layout_columns": 8,
+  "counts_after": {
+    "claude": 36,
+    "openai": 20,
+    "total": 56
+  }
+}

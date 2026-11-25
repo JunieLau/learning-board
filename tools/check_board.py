@@ -90,7 +90,7 @@ with sync_playwright() as p:
             if st.get('revision') != rev: err(f'{label} {b}: stored revision {st.get("revision")}')
             print(label, b, 'first-row', [x[0] for x in pos[:8]], 'visible', info['vis'])
         # cycle framing on each board
-        for b, want in (('claude', 'rourke-claude-blender'), ('openai', 'saltmere')):
+        for b, want in (('claude', 'procedural-rpg'), ('openai', 'worlds-fair-reel')):
             pg.goto(base + '#' + b); pg.wait_for_timeout(800)
             pg.click('#show-cycle'); pg.wait_for_timeout(500)
             h = pg.evaluate('location.hash')

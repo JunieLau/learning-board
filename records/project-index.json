@@ -4,7 +4,7 @@
   "source_check_date": "2026-11-25T12:53:00+08:00",
   "research_cycle_date": "2026-11-25",
   "policy_date": "2026-11-19",
-  "content_card_count_in_this_commit": 49,
+  "content_card_count_in_this_commit": 56,
   "last_successful_deployment_before_this_commit": {
     "sha": "8a6ec6a6355f1a83bfcf0dba2d543272f7b23c50",
     "at": "2026-11-19T19:35:00+08:00",
@@ -38,6 +38,118 @@
     }
   },
   "cards": [
+    {
+      "id": "procedural-rpg",
+      "board": "claude",
+      "title": "着色器画的开放世界 RPG",
+      "original_published_at": "2026-11-25T04:10:45+08:00",
+      "date_precision": null,
+      "verification": "author-reported",
+      "cycle": "2026-11-25-round",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-25 04:10:45（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 41271，视频播放 19411，赞 1224，转发 87，引用 13，回复 66，收藏 843。",
+        "reception": "多数夸画风（“帽子上的铅笔线”“画风可爱”），也谢谢作者开源；有人问画风是 Fable 自己定的还是作者引导的。批评也不少：有人说文案是“AI slop”“fableslop”；有人指出页面除了 HTML 还加载 JS、CSS、字体等文件，“着色器画每个像素”也是 3D 游戏的常规做法。",
+        "promotion": "作者 X 简介是 fal（AI 模型平台）的 creative engineer。这条原帖没有推广链接，也没说用了 fal。",
+        "reason": "赞过千（1224），能玩、开源；但曝光只有 4.1 万，反馈里有明显批评。学的时候看画风和程序生成，不要拿它当“单文件”的证明。"
+      },
+      "links": [
+        {
+          "label": "原帖",
+          "url": "https://x.com/kevin_t_ngo/status/2125321244686029289"
+        },
+        {
+          "label": "在线试玩",
+          "url": "https://kevintngo.github.io/procedural-rpg/"
+        },
+        {
+          "label": "源码（MIT）",
+          "url": "https://github.com/kevintngo/procedural-rpg"
+        }
+      ]
+    },
+    {
+      "id": "cinderwatch",
+      "board": "claude",
+      "title": "Cinderwatch 塔防",
+      "original_published_at": "2026-11-24T14:50:58+08:00",
+      "date_precision": null,
+      "verification": "author-reported",
+      "cycle": "2026-11-25-round",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-24 14:50:58（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 88864，视频播放 42114，赞 1978，转发 100，引用 11，回复 120，收藏 1504。GitHub 78 星。",
+        "reception": "几乎都是正面：“玩了一个小时”“第一个玩超过两分钟的 AI 游戏”“手机上很流畅”“平衡也不错”。也有人说打到第 15 波就不动了，有人觉得节奏偏慢；有人认为显然经过很多轮提示和重试，希望作者公开提示词。",
+        "promotion": "作者 X 简介是 fal 的 creative engineer。原帖没有推广链接。",
+        "reason": "近九万曝光、近两千赞、一千五百收藏，反馈正面。导演能学的是氛围和画面可读性，不是玩法本身。"
+      },
+      "links": [
+        {
+          "label": "原帖",
+          "url": "https://x.com/kevin_t_ngo/status/2125119969109418333"
+        },
+        {
+          "label": "在线试玩",
+          "url": "https://kevintngo.github.io/cinderwatch/"
+        },
+        {
+          "label": "源码（MIT）",
+          "url": "https://github.com/kevintngo/cinderwatch"
+        }
+      ]
+    },
+    {
+      "id": "riemann-anime-intro",
+      "board": "claude",
+      "title": "黎曼猜想动画片头",
+      "original_published_at": "2026-11-23T18:15:27+08:00",
+      "date_precision": null,
+      "verification": "author-reported",
+      "cycle": "2026-11-25-round",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-23 18:15:27（亚洲/上海），YouTube 上传时间。",
+        "metrics": "播放 26597，赞 906，抓到评论 60 条。频道 2.83 万订阅。",
+        "reception": "几乎一面倒正面：“2026 十佳动画 OP”“以后每个千禧年难题都该这样”“我会看这样的动画”。有人笑说角色全是机器人，只是换了头发和衣服。有评论把它和一首知名动画主题曲联系在一起；配乐的来源和授权，视频里没有说明。",
+        "promotion": "简介没有推广链接，只放了作者的 Instagram。",
+        "reason": "播放过两万、赞近千，反馈很好。方法几乎没公开，学的是片头结构和节奏。"
+      },
+      "links": [
+        {
+          "label": "成片",
+          "url": "https://www.youtube.com/watch?v=UoGY-e8_sss"
+        }
+      ]
+    },
+    {
+      "id": "claude-blender-commercial",
+      "board": "claude",
+      "title": "Claude 搭灰模拍耳机广告",
+      "original_published_at": "2026-11-20T23:04:26+08:00",
+      "date_precision": null,
+      "verification": "author-reported",
+      "cycle": "2026-11-25-round",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-20 23:04:26（亚洲/上海），YouTube 上传时间。",
+        "metrics": "播放 127010，赞 2353，抓到评论 60 条。频道 3.21 万订阅。",
+        "reception": "评论正面。高赞是“先做场景再搭灰模，能少很多次重抽”这条技巧；不少人想看 HyperFrames 动态图形的单独教程。也有人调侃讲解视频可能比广告本身做得还久。",
+        "promotion": "简介第一行是 Artlist 节日 40% 折扣推广链接；Higgsfield、Magnific、Wispr Flow、Gling 等也都是推荐码链接；另推作者的 Skool 社区和 GenHQ 付费教育；作者置顶评论也是 Artlist 链接。成片全在 Artlist 里生成。",
+        "reason": "12.7 万播放、两千多赞，是这一轮传播最大的方法视频。推广很重，Artlist 可以换成别的生成平台。"
+      },
+      "links": [
+        {
+          "label": "教程",
+          "url": "https://www.youtube.com/watch?v=jc0Qh09Qrlo"
+        }
+      ]
+    },
     {
       "id": "rourke-claude-blender",
       "board": "claude",
@@ -1027,6 +1139,82 @@
       ]
     },
     {
+      "id": "worlds-fair-reel",
+      "board": "openai",
+      "title": "1915 世博会“老胶片”",
+      "original_published_at": "2026-11-24T03:12:37+08:00",
+      "date_precision": null,
+      "verification": "official-showcase",
+      "cycle": "2026-11-25-round",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-24 03:12:37（亚洲/上海），OpenAI 开发者账号的 X 原帖。",
+        "metrics": "原帖曝光 187332，视频播放 68533，赞 2315，转发 156，引用 38，回复 106，收藏 597。",
+        "reception": "有人说在 Blender 里伪造 1915 年胶片“很狠”，想走进去逛。最有用的一条批评是镜头：静帧的颗粒和泛黄很像，但运动是现代 24 帧的顺滑，推近园艺馆像用了稳定器；1915 年是手摇摄影机，偏快、会晃，问虚拟摄影机能不能做出手摇速度和片门抖动。也有人借楼抱怨 Astra 6.2 难沟通，或问有没有教程。",
+        "promotion": "OpenAI 官方账号的产品宣传，不是独立创作者。",
+        "reason": "18.7 万曝光、两千多赞。这是官方宣传片，按官方 Showcase 记。学的是做旧和镜头语言，再加上评论里那条“手摇速度”的批评。"
+      },
+      "links": [
+        {
+          "label": "原帖",
+          "url": "https://x.com/OpenAIDevs/status/2124944225955639430"
+        }
+      ]
+    },
+    {
+      "id": "ai-vtuber-147",
+      "board": "openai",
+      "title": "外行 147 次重做的 3D VTuber",
+      "original_published_at": "2026-11-22T20:07:40+08:00",
+      "date_precision": null,
+      "verification": "author-reported",
+      "cycle": "2026-11-25-round",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-22 20:07:40（亚洲/上海），YouTube 上传时间。",
+        "metrics": "播放 95507，赞 1462，抓到评论 60 条。频道只有 1140 订阅，这一条是爆款。",
+        "reception": "正面为主，讨论集中在成本：有人说外包至少要百万日元，15 万很便宜；有人建议做完后让 Fable 和 Astra 回顾聊天记录、总结卡在哪，第二次就能省钱；有人算了订阅套餐的省钱方案。也有人担心 3D 建模师和创作者的工作会消失；有人照着做，说“只是下指令也很难”。",
+        "promotion": "简介没有推广码，只给了 Tripo 的普通链接。",
+        "reason": "9.5 万播放、近一千五百赞，难得把失败和账单都摆出来。"
+      },
+      "links": [
+        {
+          "label": "成片",
+          "url": "https://www.youtube.com/watch?v=dNX6rNt5BYI"
+        }
+      ]
+    },
+    {
+      "id": "atat-threejs-blender",
+      "board": "openai",
+      "title": "AT-AT：Three.js 对 Blender",
+      "original_published_at": "2026-11-22T10:23:31+08:00",
+      "date_precision": null,
+      "verification": "author-reported",
+      "cycle": "2026-11-25-round",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-22 10:23:31（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 67045，视频播放 33683，赞 792，转发 62，引用 9，回复 92，收藏 546。提示词那条回复曝光 4424，赞 62，收藏 99。",
+        "reception": "多数在讨论工具怎么选，不只是夸：有人说 Blender 才有真正的绑定和导出；有人说 Blender 要经过 MCP 和 Python 接口多绕一层，但人更容易在 Blender 里接手做创作决定；有人建议再测“改步态、改一个机位”的交接成本。有人用作者的提示词复现成功，也有人拿 Opus 5.5 跑同一提示词对比；还有人指出 Astra 做的腿经常关节反向弯。",
+        "promotion": "没有推广链接。作者简介写“这里的东西都是 vibe coding 做的”。板上另一张 pixel-jet-game 也是这位作者。",
+        "reason": "6.7 万曝光、提示词公开，回复里关于工具选择的争论本身就是学习材料。"
+      },
+      "links": [
+        {
+          "label": "原帖",
+          "url": "https://x.com/vib3coded/status/2124327889776640303"
+        },
+        {
+          "label": "提示词（作者回复）",
+          "url": "https://x.com/vib3coded/status/2124327971565527275"
+        }
+      ]
+    },
+    {
       "id": "forest-walks",
       "board": "openai",
       "title": "Forest Walks",
@@ -1491,9 +1679,17 @@
       ]
     }
   ],
-  "verified_new_projects_this_cycle": 2,
+  "verified_new_projects_this_cycle": [
+    "procedural-rpg",
+    "cinderwatch",
+    "riemann-anime-intro",
+    "claude-blender-commercial",
+    "worlds-fair-reel",
+    "ai-vtuber-147",
+    "atat-threejs-blender"
+  ],
   "pending_reference_this_cycle": 0,
-  "layout_revision": "2026-11-25-audit",
+  "layout_revision": "2026-11-25-round",
   "layout_columns": {
     "content_cards_per_row": 8,
     "intro_consumes_content_slot": false,
