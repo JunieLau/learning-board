@@ -433,3 +433,91 @@ body.is-freeform .card button {
   font-size: 0.66rem;
   line-height: 1.4;
 }
+
+
+body.is-freeform .card .meta {
+  padding-bottom: 1.6rem;
+}
+
+body.is-freeform .intro .meta {
+  padding-bottom: 1.7rem;
+}
+
+.learned-toggle {
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0.32rem;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  margin: 0;
+  padding: 0.1rem 0.06rem 0.1rem 0.12rem;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  line-height: 1;
+  cursor: pointer;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.learned-label {
+  font-size: 0.52rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.learned-track {
+  position: relative;
+  display: block;
+  width: 1.72rem;
+  height: 0.88rem;
+  border-radius: 999px;
+  background: rgba(22, 20, 18, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(22, 20, 18, 0.2);
+}
+
+.learned-knob {
+  position: absolute;
+  top: 0.09rem;
+  left: 0.09rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #f8f4eb;
+  box-shadow: 0 1px 2px rgba(22, 20, 18, 0.3);
+  transition: transform 0.18s ease;
+}
+
+.learned-toggle[aria-checked="true"] .learned-track {
+  background: #161412;
+  box-shadow: none;
+}
+
+.learned-toggle[aria-checked="true"] .learned-knob {
+  transform: translateX(0.84rem);
+  background: #f3efe6;
+}
+
+.learned-toggle[aria-checked="true"] .learned-label {
+  color: var(--ink);
+}
+
+.learned-toggle:focus-visible {
+  outline: 2px solid #161412;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.card.is-learned {
+  opacity: 0.68;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+}
+
+.card.is-learned .learned-toggle {
+  opacity: 1;
+}
