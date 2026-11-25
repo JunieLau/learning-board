@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>学习板 · Claude / GPT</title>
   <meta name="description" content="Claude 与 GPT 的创意技术项目，一块一块钉在这块黑底的板上。">
-  <link rel="stylesheet" href="styles.css?v=2026-11-25-opus56">
+  <link rel="stylesheet" href="styles.css?v=2026-11-25-learned-toggle">
   <script>
     (function () {
       try {
@@ -24,7 +24,7 @@
   </header>
 
   <div class="local-tools">
-    <p class="local-explain">上方目录分成 Claude 学习板和 OpenAI 学习板，点一下就换。地址用 #claude 或 #openai，不带记号时打开 Claude。可以拖动、平移和缩放。每次内容更新后，第一次打开会按原发布日期从新到旧排开，桌面窗口里一行八张内容卡同时可见，说明卡单独占上面一行。没有脚本时也会按这个行列排，不会把说明卡算进八张里。同一版里再拖动，仍留在这台浏览器，两块板分开记。这一版是 2026-11-25 晚上的补充：按新规则，作者自称型号还没在官方型号表里出现的作品，可以上 Claude 板，但卡面要标「型号存疑」。这次加了 Chetaslua 的 3 张（呪い / 祝い、The Tea Ride、The Last Page）。同一天早些时候新增的 7 张（Claude 4 张、OpenAI 3 张）都还在。点「查看本轮新增」会框住这 3 张；OpenAI 板这一版没有新卡。标注还留着，页面上不再显示输入框。</p>
+    <p class="local-explain">上方目录分成 Claude 学习板和 OpenAI 学习板，点一下就换。地址用 #claude 或 #openai，不带记号时打开 Claude。可以拖动、平移和缩放。每次内容更新后，第一次打开会按原发布日期从新到旧排开，桌面窗口里一行八张内容卡同时可见，说明卡单独占上面一行。没有脚本时也会按这个行列排，不会把说明卡算进八张里。同一版里再拖动，仍留在这台浏览器，两块板分开记。每张卡右下角有一个小开关：默认滑块在左边，是未学；滑到右边，变成已学，卡片会稍稍变淡。只记在这台浏览器里，不会同步。这一版只加了已学开关，卡片没有增减。上一版按新规则上了 3 张「型号存疑」（呪い / 祝い、The Tea Ride、The Last Page）；同一天早些时候新增的 7 张也都还在。点「查看本轮新增」会框住这 3 张；OpenAI 板这一版没有新卡。标注还留着，页面上不再显示输入框。</p>
     <div class="local-actions">
       <button type="button" id="show-cycle">查看本轮新增</button>
       <button type="button" id="arrange-date">按日期排开</button>
@@ -1803,7 +1803,7 @@
   </footer>
   <script>
     (function () {
-      var expected = "2026-11-25-opus56";
+      var expected = "2026-11-25-learned-toggle";
       function check() {
         fetch("revision.json?t=" + Date.now(), { cache: "no-store" }).then(function (res) {
           if (!res.ok) return null;
@@ -1828,6 +1828,6 @@
       });
     })();
   </script>
-  <script src="board.js?v=2026-11-25-opus56"></script>
+  <script src="board.js?v=2026-11-25-learned-toggle"></script>
 </body>
 </html>

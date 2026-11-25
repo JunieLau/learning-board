@@ -98,16 +98,74 @@ with sync_playwright() as p:
             if want is None: continue  # no new cards on this board this revision
             ok = pg.evaluate(f'''() => {{const r=document.querySelector('#{b} [data-id="{want}"]').getBoundingClientRect();return r.width>0&&r.left>=0&&r.right<=innerWidth&&r.top>=0}}''')
             if not ok: err(f'{label}: show-cycle did not frame {want}')
+        for b in ("claude", "openai"):
+            pg.goto(base + "#" + b); pg.wait_for_timeout(800)
+            info = pg.evaluate("""() => {
+              const bid = location.hash.replace("#","");
+              const cards = [...document.querySelectorAll("#" + bid + " article.card")];
+              const missing = cards.filter(c => !c.querySelector(".learned-toggle")).map(c => c.dataset.id);
+              const bad = cards.map(c => c.querySelector(".learned-toggle")).filter(t => !t || t.getAttribute("role") !== "switch");
+              const learned = cards.filter(c => c.classList.contains("is-learned")).map(c => c.dataset.id);
+              const checked = cards.filter(c => {
+                const t = c.querySelector(".learned-toggle");
+                return t && t.getAttribute("aria-checked") === "true";
+              }).map(c => c.dataset.id);
+              return {n: cards.length, missing, bad: bad.length, learned, checked};
+            }""")
+            if info["missing"]: err(f"{label} {b}: toggle missing on {info['missing']}")
+            if info["bad"]: err(f"{label} {b}: {info['bad']} toggles missing role=switch")
+            if label == "fresh":
+                if info["learned"] or info["checked"]:
+                    err(f"{label} {b}: fresh board should be unlearned, got {info['learned']} / {info['checked']}")
+        if label == "fresh":
+            pg.goto(base + "#claude"); pg.wait_for_timeout(800)
+            before = pg.evaluate("""() => {
+              const card = document.querySelector("#claude article.card:not(.intro)");
+              const t = card.querySelector(".learned-toggle");
+              const r = card.getBoundingClientRect();
+              const tr = t.getBoundingClientRect();
+              return {id: card.dataset.id, left: card.style.left, top: card.style.top,
+                      inCorner: tr.right <= r.right + 1 && tr.bottom <= r.bottom + 1 && tr.left > r.left + r.width * 0.45};
+            }""")
+            if not before["inCorner"]: err(f"{label}: toggle not in bottom-right of {before['id']}")
+            pg.click("#claude [data-id=\"%s\"] .learned-toggle" % before["id"])
+            pg.wait_for_timeout(200)
+            after = pg.evaluate("""(id) => {
+              const card = document.querySelector("#claude [data-id='" + id + "']");
+              const t = card.querySelector(".learned-toggle");
+              const st = JSON.parse(localStorage.getItem("learning-board-freeform-v1-claude") || "{}");
+              return {learned: card.classList.contains("is-learned"), aria: t.getAttribute("aria-checked"),
+                      label: (t.querySelector(".learned-label") || {}).textContent,
+                      left: card.style.left, top: card.style.top,
+                      saved: !!(st.learned && st.learned[id])};
+            }""", before["id"])
+            if after["left"] != before["left"] or after["top"] != before["top"]:
+                err(f"{label}: clicking toggle moved card {before['id']}")
+            if not after["learned"] or after["aria"] != "true" or after["label"] != "已学" or not after["saved"]:
+                err(f"{label}: click did not mark {before['id']} learned: {after}")
+            pg.reload(); pg.wait_for_timeout(1200)
+            held = pg.evaluate("""(id) => {
+              const card = document.querySelector("#claude [data-id='" + id + "']");
+              const t = card && card.querySelector(".learned-toggle");
+              const st = JSON.parse(localStorage.getItem("learning-board-freeform-v1-claude") || "{}");
+              return {ok: !!(card && card.classList.contains("is-learned") && t && t.getAttribute("aria-checked")==="true" && st.learned && st.learned[id])};
+            }""", before["id"])
+            if not held["ok"]: err(f"{label}: learned state did not persist across reload for {before['id']}")
         pg.close()
     ctx = br.new_context(viewport={'width': 1600, 'height': 1000}); js_check(ctx, 'fresh'); ctx.close()
     # returning browser with an old revision and dragged positions
     ctx = br.new_context(viewport={'width': 1600, 'height': 1000})
-    old = {'v': 1, 'positions': {'escape-velocity': {'x': 9, 'y': 9}, 'gta-cursed-trailer': {'x': 4000, 'y': 3000}}, 'notes': {'gta-cursed-trailer': 'keep me'}, 'camera': {'x': -900, 'y': -900, 'z': 0.3}, 'revision': '2026-11-19-pr21'}
+    old = {'v': 1, 'positions': {'escape-velocity': {'x': 9, 'y': 9}, 'gta-cursed-trailer': {'x': 4000, 'y': 3000}}, 'notes': {'gta-cursed-trailer': 'keep me'}, 'learned': {'gta-cursed-trailer': True}, 'camera': {'x': -900, 'y': -900, 'z': 0.3}, 'revision': '2026-11-19-pr21'}
     ctx.add_init_script('if(!sessionStorage.getItem("seeded")){localStorage.setItem("learning-board-freeform-v1-claude",%s);sessionStorage.setItem("seeded","1")}' % json.dumps(json.dumps(old)))
     js_check(ctx, 'returning')
     pg = ctx.new_page(); pg.goto(base + '#claude'); pg.wait_for_timeout(800)
     st = json.loads(pg.evaluate('localStorage.getItem("learning-board-freeform-v1-claude")'))
     if st.get('notes', {}).get('gta-cursed-trailer') != 'keep me': err('returning: stored note was lost')
+    if st.get('learned', {}).get('gta-cursed-trailer') is not True: err('returning: learned flag was lost')
+    learned_cls = pg.evaluate('document.querySelector("#claude [data-id=gta-cursed-trailer]").classList.contains("is-learned")')
+    if not learned_cls: err('returning: learned class not applied after re-layout')
+    aria = pg.evaluate('document.querySelector("#claude [data-id=gta-cursed-trailer] .learned-toggle").getAttribute("aria-checked")')
+    if aria != 'true': err('returning: learned toggle aria-checked not true')
     pg.screenshot(path=os.path.join(ROOT, '..', 'full-audit-data', 'check-claude.png'))
     pg.goto(base + '#openai'); pg.wait_for_timeout(800)
     pg.screenshot(path=os.path.join(ROOT, '..', 'full-audit-data', 'check-openai.png'))

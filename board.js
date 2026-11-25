@@ -2,7 +2,7 @@
 function boot(section) {
   var KEY = "learning-board-freeform-v1-" + (section.getAttribute("data-board") || "claude");
   var OLD_KEY = "learning-board-local-v1";
-  var LAYOUT_REVISION = "2026-11-25-opus56";
+  var LAYOUT_REVISION = "2026-11-25-learned-toggle";
   var CYCLE = "2026-11-25-opus56";
   var NOTE_MAX = 2000;
   var FILE_MAX = 500000;
@@ -20,6 +20,7 @@ function boot(section) {
   var state = {
     positions: {},
     notes: {},
+    learned: {},
     camera: { x: 36, y: 28, z: 1 }
   };
   var canStore = true;
@@ -102,6 +103,20 @@ function boot(section) {
     return notes;
   }
 
+  function cleanLearned(value) {
+    if (value == null) return {};
+    if (typeof value !== "object" || Array.isArray(value)) return null;
+    var learned = {};
+    var keys = Object.keys(value);
+    for (var i = 0; i < keys.length; i += 1) {
+      var key = keys[i];
+      if (key === "__proto__" || key === "constructor" || key === "prototype") return null;
+      if (!/^[a-z0-9-]+$/.test(key)) return null;
+      if (value[key] === true) learned[key] = true;
+    }
+    return learned;
+  }
+
   function cleanOrder(value) {
     if (!Array.isArray(value)) return null;
     var out = [];
@@ -126,6 +141,8 @@ function boot(section) {
     if (!data || typeof data !== "object" || Array.isArray(data) || data.v !== 1) return null;
     var notes = cleanNotes(data.notes);
     if (!notes) return null;
+    var learned = cleanLearned(data.learned);
+    if (!learned) learned = {};
     var positions = data.positions == null ? null : cleanPositions(data.positions);
     if (data.positions != null && !positions) return null;
     var camera = data.camera == null ? { x: 36, y: 28, z: 1 } : cleanCamera(data.camera);
@@ -133,7 +150,7 @@ function boot(section) {
     var manualOrder = data.manualOrder == null ? null : cleanOrder(data.manualOrder);
     if (data.manualOrder != null && !manualOrder) return null;
     var revision = typeof data.revision === "string" ? data.revision : "";
-    return { v: 1, positions: positions, notes: notes, camera: camera, manualOrder: manualOrder, revision: revision };
+    return { v: 1, positions: positions, notes: notes, learned: learned, camera: camera, manualOrder: manualOrder, revision: revision };
   }
 
   function readKey(key) {
@@ -176,6 +193,7 @@ function boot(section) {
         revision: LAYOUT_REVISION,
         positions: state.positions,
         notes: notes,
+        learned: state.learned,
         camera: state.camera
       }));
       canStore = true;
@@ -521,7 +539,8 @@ function boot(section) {
 
   function onKey(event) {
     var tag = event.target && event.target.tagName;
-    if (tag === "TEXTAREA" || tag === "INPUT") return;
+    if (tag === "TEXTAREA" || tag === "INPUT" || tag === "BUTTON") return;
+    if (event.target && event.target.closest && event.target.closest(".learned-toggle")) return;
     if (!selected) return;
     var step = event.shiftKey ? 40 : 12;
     var pos = state.positions[selected.dataset.id];
@@ -549,6 +568,7 @@ function boot(section) {
       revision: LAYOUT_REVISION,
       positions: state.positions,
       notes: state.notes,
+      learned: state.learned,
       camera: state.camera
     }, null, 2)], { type: "application/json" });
     var url = URL.createObjectURL(blob);
@@ -578,6 +598,7 @@ function boot(section) {
         return;
       }
       state.notes = clean.notes;
+      state.learned = clean.learned || {};
       state.camera = clean.camera;
       if (clean.positions) {
         state.positions = clean.positions;
@@ -586,6 +607,7 @@ function boot(section) {
       } else if (clean.manualOrder) {
         arrange(listFromOrder(clean.manualOrder));
       }
+      applyAllLearned();
       applyCamera();
       if (!persist()) return;
       setStatus("已用备份覆盖这台浏览器里的位置。还不会同步到其他设备。");
@@ -619,14 +641,25 @@ function boot(section) {
         if (!state.notes[id] && bag.notes[id]) state.notes[id] = bag.notes[id];
       });
     }
+    function takeLearned(bag) {
+      if (!bag || !bag.learned) return;
+      cards().forEach(function (card) {
+        var id = card.dataset.id;
+        if (!state.learned[id] && bag.learned[id] === true) state.learned[id] = true;
+      });
+    }
     takeNotes(old.data);
     takeNotes(readKey("learning-board-freeform-v1").data);
+    takeLearned(old.data);
+    takeLearned(readKey("learning-board-freeform-v1").data);
     if (loaded.data) {
       state.notes = Object.assign({}, old.data && old.data.notes, loaded.data.notes);
+      state.learned = Object.assign({}, old.data && old.data.learned, loaded.data.learned);
       state.camera = loaded.data.camera;
       if (loaded.data.positions) state.positions = loaded.data.positions;
     } else if (old.data) {
       state.notes = old.data.notes || {};
+      state.learned = Object.assign({}, state.learned, old.data.learned || {});
     }
     var revisionMatches = !!(loaded.data && loaded.data.revision === LAYOUT_REVISION);
     var hadSavedLayout = Object.keys(state.positions).length > 0;
@@ -649,6 +682,124 @@ function boot(section) {
     if (loadNotice) setStatus(loadNotice);
     else setStatus("已读到这台浏览器里的位置。还不会同步到其他设备。");
   }
+
+  function applyLearned(card) {
+    if (!card) return;
+    var on = !!state.learned[card.dataset.id];
+    card.classList.toggle("is-learned", on);
+    var btn = card.querySelector(".learned-toggle");
+    if (!btn) return;
+    btn.setAttribute("aria-checked", on ? "true" : "false");
+    btn.setAttribute("aria-label", on ? "已学，滑到左边可改为未学" : "未学，滑到右边记为已学");
+    var label = btn.querySelector(".learned-label");
+    if (label) label.textContent = on ? "已学" : "未学";
+  }
+
+  function applyAllLearned() {
+    cards().forEach(applyLearned);
+  }
+
+  function setLearned(id, on) {
+    if (on) state.learned[id] = true;
+    else delete state.learned[id];
+    applyLearned(board.querySelector('article.card[data-id="' + id + '"]'));
+    persist();
+  }
+
+  function bindLearnedToggle(btn, card) {
+    var drag = null;
+
+    function learnedFromClientX(clientX, track) {
+      var rect = track.getBoundingClientRect();
+      var width = rect.width || 1;
+      return clientX >= rect.left + width / 2;
+    }
+
+    function onDown(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      if (event.button != null && event.button !== 0) return;
+      drag = {
+        startX: event.clientX,
+        startOn: !!state.learned[card.dataset.id],
+        moved: false,
+        track: btn.querySelector(".learned-track")
+      };
+      try { btn.setPointerCapture(event.pointerId); } catch (err) {}
+    }
+
+    function onMove(event) {
+      event.stopPropagation();
+      if (!drag) return;
+      if (!drag.moved && Math.abs(event.clientX - drag.startX) < 4) return;
+      drag.moved = true;
+      event.preventDefault();
+      var on = learnedFromClientX(event.clientX, drag.track);
+      if (on) state.learned[card.dataset.id] = true;
+      else delete state.learned[card.dataset.id];
+      applyLearned(card);
+    }
+
+    function onUp(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      if (!drag) return;
+      if (!drag.moved) setLearned(card.dataset.id, !drag.startOn);
+      else setLearned(card.dataset.id, learnedFromClientX(event.clientX, drag.track));
+      drag = null;
+    }
+
+    function onClick(event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    function onToggleKey(event) {
+      if (event.key === "ArrowRight" || event.key === "ArrowUp") {
+        event.preventDefault();
+        event.stopPropagation();
+        setLearned(card.dataset.id, true);
+      } else if (event.key === "ArrowLeft" || event.key === "ArrowDown") {
+        event.preventDefault();
+        event.stopPropagation();
+        setLearned(card.dataset.id, false);
+      } else if (event.key === " " || event.key === "Enter") {
+        event.preventDefault();
+        event.stopPropagation();
+        setLearned(card.dataset.id, !state.learned[card.dataset.id]);
+      } else {
+        event.stopPropagation();
+      }
+    }
+
+    btn.addEventListener("pointerdown", onDown);
+    btn.addEventListener("pointermove", onMove);
+    btn.addEventListener("pointerup", onUp);
+    btn.addEventListener("pointercancel", onUp);
+    btn.addEventListener("click", onClick);
+    btn.addEventListener("keydown", onToggleKey);
+  }
+
+  function mountLearnedToggles() {
+    cards().forEach(function (card) {
+      if (card.querySelector(".learned-toggle")) {
+        applyLearned(card);
+        return;
+      }
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "learned-toggle";
+      btn.setAttribute("role", "switch");
+      btn.setAttribute("aria-checked", "false");
+      btn.setAttribute("aria-label", "未学，滑到右边记为已学");
+      btn.innerHTML = '<span class="learned-label">未学</span><span class="learned-track" aria-hidden="true"><span class="learned-knob"></span></span>';
+      card.appendChild(btn);
+      bindLearnedToggle(btn, card);
+      applyLearned(card);
+    });
+  }
+
+  mountLearnedToggles();
 
   stage.addEventListener("pointerdown", onPointerDown);
   stage.addEventListener("pointermove", onPointerMove);
