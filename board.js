@@ -2,8 +2,8 @@
 function boot(section) {
   var KEY = "learning-board-freeform-v1-" + (section.getAttribute("data-board") || "claude");
   var OLD_KEY = "learning-board-local-v1";
-  var LAYOUT_REVISION = "2026-11-19-pr21";
-  var CYCLE = "2026-11-19-pr21";
+  var LAYOUT_REVISION = "2026-11-25-audit";
+  var CYCLE = "2026-11-25-audit";
   var NOTE_MAX = 2000;
   var FILE_MAX = 500000;
   var CARD_W = 280;
@@ -761,14 +761,8 @@ markNav();
 
 var showCycle = document.getElementById("show-cycle");
 if (showCycle) showCycle.addEventListener("click", function () {
-  if (location.hash === "#openai") {
-    location.hash = "claude";
-    requestAnimationFrame(function () {
-      if (mounts.claude) mounts.claude.focusCycle();
-    });
-    return;
-  }
-  var api = mounts.claude;
+  // Each board has its own new card in this revision; frame the one on the board in view.
+  var api = active();
   if (api) api.focusCycle();
 });
 var arrangeBtn = document.getElementById("arrange-date");

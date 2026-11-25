@@ -1,16 +1,16 @@
 {
   "record_type": "public_project_index",
   "timezone": "Asia/Shanghai",
-  "source_check_date": "2026-11-19T00:52:00+08:00",
-  "research_cycle_date": "2026-11-19",
+  "source_check_date": "2026-11-25T12:53:00+08:00",
+  "research_cycle_date": "2026-11-25",
   "policy_date": "2026-11-19",
-  "content_card_count_in_this_commit": 47,
+  "content_card_count_in_this_commit": 49,
   "last_successful_deployment_before_this_commit": {
-    "sha": "b77834b0bfc8aadbc9f0acb88e4da35c13b980ad",
-    "at": "2026-11-19T02:53:46+08:00",
-    "content_cards": 45,
+    "sha": "8a6ec6a6355f1a83bfcf0dba2d543272f7b23c50",
+    "at": "2026-11-19T19:35:00+08:00",
+    "content_cards": 47,
     "page": "https://junielau.com/learning-board/",
-    "evidence": "PR #20 merge. This file does not claim the two new cards are deployed."
+    "evidence": "PR #21 merge."
   },
   "this_commit_publication": "not yet deployed at the time this file was written",
   "official_model_check": {
@@ -39,15 +39,83 @@
   },
   "cards": [
     {
-      "id": "blender-ai-video-course",
-      "title": "Blender锁运镜→AI视频",
-      "original_published_at": "2026-11-17T00:33:20+08:00",
-      "cycle": null,
+      "id": "rourke-claude-blender",
+      "board": "claude",
+      "title": "真人夹 CG 一镜到底",
+      "original_published_at": "2026-11-19T05:36:53+08:00",
+      "date_precision": null,
+      "verification": "author-reported",
+      "cycle": "2026-11-25-audit",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-19 05:36:53（亚洲/上海），YouTube 上传时间（平台记的是 2026-11-18 UTC）。",
+        "metrics": "播放 76151，赞 1262，评论 28。2026-11-22 约 04:28 的记录是 54944 播放、982 赞、45 条评论，评论数比那时少，原因不明。",
+        "reception": "高赞评论集中批评 Higgsfield 广告（“another higsfield AD”“你根本不需要 Higgsfield”，还有人因此取关）；也有人称赞“真人夹 CG 一镜到底”的想法，或问换成更便宜的 Opus 5.5 行不行。",
+        "promotion": "简介第一行是 Higgsfield 黑五 65% 折扣推广链接，工具链接带推荐码；片中口播推作者自己的 GenHQ 付费教育和接单平台；免费指南要留邮箱才能下载。",
+        "reason": "七万多播放、一千多赞，方法讲得最完整；但推广很重，学的时候要把 Higgsfield 那一段当成可选。"
+      },
       "links": [
         {
-          "label": "\n          ",
-          "url": "https://www.youtube.com/watch?v=OO6J2w_FBnE"
+          "label": "教程",
+          "url": "https://www.youtube.com/watch?v=DU9vZGXkD0Y"
         },
+        {
+          "label": "提示词指南（需留邮箱）",
+          "url": "https://rourkeideas.com/downloads/claude-fable-cgi"
+        }
+      ]
+    },
+    {
+      "id": "gta-cursed-trailer",
+      "board": "claude",
+      "title": "GTA VI: Cursed Trailer",
+      "original_published_at": "2026-11-19T03:41:53+08:00",
+      "date_precision": null,
+      "verification": "author-reported",
+      "cycle": "2026-11-19-pr21",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-19 03:41:53（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 434688，视频播放 271586（两者不是同一个数），赞 4161，转发 853，引用 171，回复 245，收藏 1451。自动化说明那条回复曝光 8135、赞 181。",
+        "reception": "沿用 2026-11-19 的抽样：有人说好看或好笑，也有人觉得没那么有趣，或批评用现实人物做恶搞。本轮没有重新抽样。",
+        "promotion": "原帖 paid_partnership 为 false。The Dor Brothers 是商业制作公司，这条也在给自己的自动化能力做展示。",
+        "reason": "曝光四十多万、赞四千多，反馈以正面为主但有争议；能学角色设定表保持同一张脸，以及哪些步骤可以交给代理。"
+      },
+      "links": [
+        {
+          "label": "原片",
+          "url": "https://x.com/thedorbrothers/status/2123139649992311027"
+        },
+        {
+          "label": "自动化说明",
+          "url": "https://x.com/thedorbrothers/status/2123170931321307605"
+        },
+        {
+          "label": "耗时回复",
+          "url": "https://x.com/thedorbrothers/status/2123187663322988582"
+        }
+      ]
+    },
+    {
+      "id": "blender-ai-video-course",
+      "board": "claude",
+      "title": "Blender锁运镜→AI视频",
+      "original_published_at": "2026-11-17T00:33:20+08:00",
+      "date_precision": null,
+      "verification": null,
+      "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-17 00:33:20（亚洲/上海），YouTube 上传时间。",
+        "metrics": "播放 440270，评论 60 条以上被抓到（平台未返回赞数）。",
+        "reception": "抽样里有人说开头两分半像好莱坞电影、说他讲得平静实用；也有人照着 Workflow 01 做，说 Seedance 还是会乱，或者问整体要花多少钱（这条评论 206 赞）。",
+        "promotion": "简介第一行是 Higgsfield 黑五优惠的推广链接（dankieft.com/higgsfield），另推作者的 Skool 社区。不是中立评测。",
+        "reason": "播放四十多万、反馈以正面为主；Blender 锁运镜再交给视频模型，正是导演最需要的可控性。"
+      },
+      "links": [
         {
           "label": "教程",
           "url": "https://www.youtube.com/watch?v=OO6J2w_FBnE"
@@ -56,19 +124,26 @@
           "label": "提示词",
           "url": "https://claude-and-blender.vercel.app/"
         }
-      ],
-      "added_in_cycle": "2026-11-18"
+      ]
     },
     {
       "id": "cat-garden",
+      "board": "claude",
       "title": "Cat Garden",
       "original_published_at": "2026-11-16T21:00:55+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-16 21:00:55（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 108743，视频播放 60272，赞 1411，转发 98，回复 74，收藏 826。",
+        "reception": "抽样以惊叹为主，特别提到声音也是代码生成；也有人不信这是 Fable 做的，或追问成本和耗时。回复里一些长篇技术解释来自 @grok 自动回复，不是作者原话，本板不采用。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "十万级曝光、正面反馈，“画面和声音同一条时间轴”对导演有直接启发。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://x.com/BubbleBrain/status/2122313967473434639"
-        },
         {
           "label": "原片",
           "url": "https://x.com/BubbleBrain/status/2122313967473434639"
@@ -89,19 +164,26 @@
           "label": "同集 Mountain Hike",
           "url": "https://github.com/BubbleBrainBB/awesome-fable-5.2/tree/main/mountain-hike"
         }
-      ],
-      "added_in_cycle": "2026-11-18"
+      ]
     },
     {
       "id": "fable-of-clawd",
+      "board": "claude",
       "title": "The Fable of Clawd",
       "original_published_at": "2026-11-15T00:17:32+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-15 00:17:32（亚洲/上海），YouTube 上传时间；X 宣传帖晚 16 分钟（00:33:37）。",
+        "metrics": "X 原帖曝光 243541，视频播放 103637，赞 2029，回复 222，收藏 2115。YouTube（作者第二频道 rileybrown2）播放 8868，赞 208，评论 23（同一时间核验）。",
+        "reception": "X 和 YouTube 的抽样都以夸赞为主（“best AI-made video I’ve seen”）；有人问 4.5 小时里人工剪了多少、代码是否开源、是不是 Claude 付了钱。作者对“人工剪辑”的追问只回了一个 “yep”，含义不清。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "X 上二十多万曝光、正面反馈，而且有完整拆解页。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://www.youtube.com/watch?v=Bvb4DxB35MM"
-        },
         {
           "label": "成片",
           "url": "https://www.youtube.com/watch?v=Bvb4DxB35MM"
@@ -118,14 +200,22 @@
     },
     {
       "id": "fable-blender-walkthrough",
+      "board": "claude",
       "title": "Fable 5.2 接入 Blender",
       "original_published_at": "2026-11-14T05:49:09+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-14 05:49:09（亚洲/上海），YouTube 上传时间。",
+        "metrics": "播放 71805，赞 1061，抓到评论 60 条。",
+        "reception": "高赞评论有惊叹，也有三维从业者担心饭碗；有人说远看不错、凑近一看就粗糙，还问植物怎么做得不像一团。多条评论说书面教程页 404，本轮打开是 200，标题是 “Claude Fable 5.2 in Blender: Three Builds, Real Costs”。",
+        "promotion": "简介推作者自己的每日邮件订阅 aiformortals。",
+        "reason": "七万播放、千赞，教程和技能包都公开。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://www.youtube.com/watch?v=zVmnw-sgJPA"
-        },
         {
           "label": "视频",
           "url": "https://www.youtube.com/watch?v=zVmnw-sgJPA"
@@ -142,14 +232,22 @@
     },
     {
       "id": "python-blender-ads",
+      "board": "claude",
       "title": "Python + Blender 广告",
       "original_published_at": "2026-11-13T23:49:53+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "recommend-removal",
+        "published_basis": "2026-11-13 23:49:53（亚洲/上海），YouTube 上传时间。",
+        "metrics": "播放 879，赞 23，评论 2（其中 1 条是作者自己的置顶）。",
+        "reception": "唯一一条外部评论说“看起来不错，但太花时间”。样本太少，谈不上社区认可。",
+        "promotion": "技能包要加入作者的 Skool 社区才能拿；简介还推作者的 AI 代理公司和咨询预约。",
+        "reason": "播放不到一千，达不到“大量真实传播”；内容和 Dan Kieft、Pat Simmons 两张教程重复。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://www.youtube.com/watch?v=qyaHfXiT6d8"
-        },
         {
           "label": "教程",
           "url": "https://www.youtube.com/watch?v=qyaHfXiT6d8"
@@ -158,14 +256,22 @@
     },
     {
       "id": "astral-realm",
+      "board": "claude",
       "title": "Astral Realm",
       "original_published_at": "2026-11-13T23:24:00+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-13 23:24:00（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 54723，视频播放 31115，赞 467，回复 44，收藏 280。",
+        "reception": "中文和英文回复多在夸画面（“不知天上宫阙”）和 token 成本低；也有人直接说 “Looks bad!”“slop”，或问是真能玩还是只是视频。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "刚过五万曝光的门槛，反馈多数正面；角色和程序化场景的分工值得看。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://x.com/scottstts/status/2121262812228141395"
-        },
         {
           "label": "原帖",
           "url": "https://x.com/scottstts/status/2121262812228141395"
@@ -174,14 +280,22 @@
     },
     {
       "id": "no-external-assets",
+      "board": "claude",
       "title": "No External Assets",
       "original_published_at": "2026-11-13T17:39:38+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-13 17:39:38（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 198397，视频播放 104552，赞 3747，回复 159，收藏 1674。",
+        "reception": "抽样以夸画面为主，尤其是寺庙、红枫和龙的尺度感；也有人说自己跑不出同样结果，或问花了多少钱，作者未答。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "近二十万曝光、正面反馈；可以学“无外部素材”下的场景设计。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://x.com/chetaslua/status/2121176151234330707"
-        },
         {
           "label": "原帖",
           "url": "https://x.com/chetaslua/status/2121176151234330707"
@@ -190,13 +304,21 @@
     },
     {
       "id": "bilibili-fable-moba",
+      "board": "claude",
       "title": "Fable 5.2网页MOBA（制作待核）",
-      "original_published_at": "2026-11-13",
-      "date_precision": "day",
+      "original_published_at": "2026-11-13T00:00:00+08:00",
+      "date_precision": null,
       "verification": "pending-reference",
-      "status": "指定参考·制作细节待核实",
       "cycle": "2026-11-19",
-      "counts_as_verified_new": false,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "unverifiable",
+        "published_basis": "页面显示 2026-11-13 21:31:30，页面本身没写时区，所以只记到日期。",
+        "metrics": "本轮读不到：哔哩哔哩对盒子的公开接口和页面都返回 412（风控），换抓取渠道只拿到标题、发布时间和官方封面，没有播放、点赞、弹幕数。",
+        "reception": "未能抽样评论。",
+        "promotion": "UP 主傅盛。是否有商务合作，本板未能查看。",
+        "reason": "这是你指定的参考，本板读不到传播数据，也看不到方法。要么你确认保留为“指定参考”，要么移除。封面已换成该视频的官方封面，不再用页眉截图。"
+      },
       "links": [
         {
           "label": "原视频",
@@ -205,15 +327,55 @@
       ]
     },
     {
-      "id": "painted-valley",
-      "title": "Painted Valley",
-      "original_published_at": "2026-11-12T09:43:45+08:00",
-      "cycle": null,
+      "id": "wusuo-shanmen",
+      "board": "claude",
+      "title": "雾锁山门",
+      "original_published_at": "2026-11-12T09:43:55+08:00",
+      "date_precision": null,
+      "verification": "author-reported",
+      "cycle": "2026-11-19-pr21",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-12 09:43:55（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 308683，视频播放 104912，赞 1181，转发 124，引用 61，回复 282，收藏 979。更正帖（4.5 亿 token）曝光 10210。",
+        "reception": "沿用 2026-11-19 的抽样：有人试玩后称赞，也有人说第一波太难，或仍在引用未更正的 45 亿。本轮没有重新抽样。",
+        "promotion": "原帖 paid_partnership 为 false。技能以 AGPL-3.0 开源。",
+        "reason": "三十万曝光、正面为主，技能和说明页公开，是少见的完整工作流。"
+      },
       "links": [
         {
-          "label": "\n          ",
-          "url": "https://x.com/BlendiByl/status/2120694003230560585"
+          "label": "原帖",
+          "url": "https://x.com/op7418/status/2120694045299327187"
         },
+        {
+          "label": "打开游戏",
+          "url": "https://op7418.github.io/guizang-game-skill/"
+        },
+        {
+          "label": "技能与说明",
+          "url": "https://github.com/op7418/guizang-game-skill"
+        }
+      ]
+    },
+    {
+      "id": "painted-valley",
+      "board": "claude",
+      "title": "Painted Valley",
+      "original_published_at": "2026-11-12T09:43:45+08:00",
+      "date_precision": null,
+      "verification": null,
+      "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-12 09:43:45（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 73473，视频播放 33779，赞 1830，回复 72，收藏 1326。",
+        "reception": "抽样里有人夸画风、说开源最重要；也有人说草不够好、电脑带不动、村子进不去，“不是真的开放世界”，还有人说这是“偷来的画风”。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "七万曝光、近两千赞、源码公开，反馈正面但有画风来源的争议。"
+      },
+      "links": [
         {
           "label": "打开演示",
           "url": "https://patch.gg/blendi/painted-valley"
@@ -230,14 +392,22 @@
     },
     {
       "id": "apimodels-blender-python",
+      "board": "claude",
       "title": "命令行 Python 出 MP4",
       "original_published_at": "2026-11-12T00:00:00+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "recommend-removal",
+        "published_basis": "页面只写到 2026-11-12，没有钟点。",
+        "metrics": "网页教程，没有公开的浏览、点赞或评论数。",
+        "reception": "找不到公开评论。",
+        "promotion": "APIMODELS 自称聚合 180 多个模型、最高比官方价低 95% 的 API 平台，教程同时是引流内容。",
+        "reason": "没有任何可核实的传播和社区反馈；方法已经被 Pat Simmons、Rourke 等更完整的教程覆盖。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://apimodels.app/blender-python-claude-code"
-        },
         {
           "label": "教程",
           "url": "https://apimodels.app/blender-python-claude-code"
@@ -246,14 +416,22 @@
     },
     {
       "id": "apimodels-threejs-export",
+      "board": "claude",
       "title": "Three.js 导出视频",
       "original_published_at": "2026-11-12T00:00:00+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "recommend-removal",
+        "published_basis": "页面只写到 2026-11-12，没有钟点。",
+        "metrics": "网页教程，没有公开的浏览、点赞或评论数。",
+        "reception": "找不到公开评论。",
+        "promotion": "APIMODELS 自称聚合 180 多个模型、最高比官方价低 95% 的 API 平台，教程同时是引流内容。",
+        "reason": "没有可核实的传播和反馈；同类方法已有 Chase AI（23 万播放）那张卡。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://apimodels.app/claude-code-threejs"
-        },
         {
           "label": "教程",
           "url": "https://apimodels.app/claude-code-threejs"
@@ -262,14 +440,22 @@
     },
     {
       "id": "animated-show-intro",
+      "board": "claude",
       "title": "Animated Show Intro",
       "original_published_at": "2026-11-11T23:35:38+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "borderline",
+        "published_basis": "2026-11-11 23:35:38（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 29050，视频播放 12377，赞 570，回复 54，收藏 374。",
+        "reception": "抽样很正面（干净、温暖、音效好），但多条在说手还是有问题；很多人追问提示词和流程，作者在样本里没有回答。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "反馈正面，但曝光不到五万、赞不到一千，而且没有方法可学。卡上的“相邻教程”是 879 播放的 Marcus 视频，这条链接也建议一起拿掉。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://x.com/kevin_t_ngo/status/2120540964909711415"
-        },
         {
           "label": "原帖",
           "url": "https://x.com/kevin_t_ngo/status/2120540964909711415"
@@ -282,14 +468,22 @@
     },
     {
       "id": "blender-code-film",
+      "board": "claude",
       "title": "Blender 代码短片技能",
       "original_published_at": "2026-11-11T07:18:06+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "recommend-removal",
+        "published_basis": "页面标的是 2026-11-11 07:18:06（亚洲/上海）。",
+        "metrics": "技能页和 GitHub 目录，没有单独的传播数据。",
+        "reception": "找不到公开评论。",
+        "promotion": "varg.ai 是商业 AI 视频生成和 API 平台，技能页同时是产品介绍。",
+        "reason": "没有可核实的传播和反馈。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://varg.ai/how-to/skills/blender-code-film"
-        },
         {
           "label": "教程",
           "url": "https://varg.ai/how-to/skills/blender-code-film"
@@ -302,11 +496,21 @@
     },
     {
       "id": "crosstown",
+      "board": "claude",
       "title": "CROSSTOWN",
       "original_published_at": "2026-11-11T06:27:08+08:00",
+      "date_precision": null,
       "verification": "verified",
       "cycle": "2026-11-19",
-      "counts_as_verified_new": true,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "borderline",
+        "published_basis": "2026-11-11 06:27:08（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 3850507，视频播放 1651727，赞 7515，回复 676，收藏 1939。补证帖曝光 1044467，赞 2586。方法视频播放 10780，赞 227（同一时间核验）。",
+        "reception": "两极分化。原帖回复里很多人骂“garbage”，说颜色平、贴图有 bug、物理半成品，拿它和 GTA 比是误导；也有人觉得在进步、受启发。方法视频评论里有人质疑模型刚发布两天怎么可能用了一个月，或说他是拿了 Anthropic 的钱。",
+        "promotion": "原帖 paid_partnership 为 false。方法视频推作者的 newsletter（somethingbig.ai），可玩页也在这个域名下；作者简介留了商务赞助邮箱。",
+        "reason": "传播非常大，但反馈不能说是正面，“7 天做完 GTA”的说法也被质疑。保留的理由是方法视频里多代理和验收循环有学习价值。是否保留由你决定。"
+      },
       "links": [
         {
           "label": "打开可玩页",
@@ -328,14 +532,22 @@
     },
     {
       "id": "nineties-toy-commercial",
+      "board": "claude",
       "title": "90's Toy Commercial",
       "original_published_at": "2026-11-10T09:55:16+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "borderline",
+        "published_basis": "2026-11-10 09:55:16（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 31915，视频播放 13014，赞 769，回复 61，收藏 374。",
+        "reception": "抽样正面，夸 VHS 倒带和跟踪线做得像；也有人追问提示词、问旁白是不是也是代码做的，作者在样本里没有回答。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "反馈好，但曝光不到五万、赞不到一千，而且没有方法可学。卡上的“相邻教程”同样是 879 播放的 Marcus 视频。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://x.com/kevin_t_ngo/status/2119972124211454139"
-        },
         {
           "label": "原帖",
           "url": "https://x.com/kevin_t_ngo/status/2119972124211454139"
@@ -348,11 +560,21 @@
     },
     {
       "id": "saltline",
+      "board": "claude",
       "title": "Saltline",
       "original_published_at": "2026-11-10T06:50:32+08:00",
+      "date_precision": null,
       "verification": "verified",
       "cycle": "2026-11-19",
-      "counts_as_verified_new": true,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-10 06:50:32（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 4493270，视频播放 2127818，赞 15056，转发 1171，回复 861，收藏 10394。提示词回复曝光 209135，赞 1784。",
+        "reception": "抽样多是称赞（手机上也能玩、“8 小时从零做完”），有人照着做了多人版；也有人问“到底有多少游戏内容”，或抱怨设备跑不动。作者没有官方仓库。",
+        "promotion": "原帖 paid_partnership 为 false。Felix Rieseberg 的 X 简介写 “I build things @AnthropicAI”，算 Anthropic 内部的人在展示自家模型。",
+        "reason": "四百多万曝光、一万五千赞，提示词公开，是“单提示词能到哪”的标杆。"
+      },
       "links": [
         {
           "label": "打开现可玩页",
@@ -370,14 +592,22 @@
     },
     {
       "id": "pelican-bicycle",
+      "board": "claude",
       "title": "Pelican on a bicycle",
       "original_published_at": "2026-11-10T06:47:50+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-10 06:47:50（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 171351，视频播放 100990，赞 917，收藏 256。技术说明那条曝光 6039。",
+        "reception": "以玩笑和惊叹为主；也有人挑刺说“踏板速度和车轮对不上，slop”，或者说这不是单提示词 SVG（原本的鹈鹕测试是 SVG）。",
+        "promotion": "原帖 paid_partnership 为 false。agent trace 公开在 Hugging Face。",
+        "reason": "十七万曝光，trace 公开，可以看代理每一步怎么迭代。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://x.com/techfren/status/2119924958134702276"
-        },
         {
           "label": "原片",
           "url": "https://x.com/techfren/status/2119924958134702276"
@@ -390,19 +620,26 @@
           "label": "迭代记录",
           "url": "https://huggingface.co/datasets/techfren/pelican-fable-trace"
         }
-      ],
-      "added_in_cycle": "2026-11-18"
+      ]
     },
     {
       "id": "portals",
+      "board": "claude",
       "title": "Portals",
       "original_published_at": "2026-11-10T06:21:25+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-10 06:21:25（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 111758，视频播放 54822，赞 1937，回复 226，收藏 1054。",
+        "reception": "可读的回复多在讨论代理规模和“规则手册”，有人照着做了自己的版本；但这条回复区混有大量离题和辱骂，抽样代表性差。",
+        "promotion": "原帖 paid_partnership 为 false。Ethan Mollick 简介写沃顿商学院教授、研究 AI，并在推自己的新书。",
+        "reason": "十一万曝光、源码公开，可以学“一段旅程串很多世界”的结构。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://x.com/emollick/status/2119918307457577163"
-        },
         {
           "label": "打开演示",
           "url": "https://portals-endless-worlds.netlify.app"
@@ -419,11 +656,21 @@
     },
     {
       "id": "the-edge",
+      "board": "claude",
       "title": "The Edge",
       "original_published_at": "2026-11-10T05:17:03+08:00",
+      "date_precision": null,
       "verification": "verified",
       "cycle": "2026-11-19",
-      "counts_as_verified_new": true,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-10 05:17:03（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 922445，视频播放 378899，赞 7079，转发 389，回复 271，收藏 7291。",
+        "reception": "抽样以惊叹为主，常被引用的是“一条提示词、13 镜、4K、52 分钟、5.75 美元”；也有人怀疑是收钱推广，或拿其他模型做了对照。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "九十多万曝光、正面反馈，有制作说明页。"
+      },
       "links": [
         {
           "label": "原片",
@@ -437,12 +684,21 @@
     },
     {
       "id": "matt-pure-code-film",
+      "board": "claude",
       "title": "纯代码长片",
       "original_published_at": "2026-11-10T05:12:19+08:00",
+      "date_precision": null,
       "verification": "verified",
       "cycle": "2026-11-19",
-      "counts_as_verified_new": true,
-      "note": "No official title. Neutral description only.",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "recommend-removal",
+        "published_basis": "2026-11-10 05:12:19（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 58267，视频播放 26142，赞 468，回复 65，收藏 204。",
+        "reception": "抽样明显负面：很多人说是 slop、看一分钟就跳着看、“发之前都不检查”，高赞回复在骂浪费 token；只有少数说这是有价值的实验。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "社区反馈以负面为主，作者自己没看片，也没有可学的方法。"
+      },
       "links": [
         {
           "label": "原帖",
@@ -452,11 +708,21 @@
     },
     {
       "id": "welcome-fable-worlds",
+      "board": "claude",
       "title": "Welcome Fable 5.2, creator of worlds",
       "original_published_at": "2026-11-10T03:06:55+08:00",
+      "date_precision": null,
       "verification": "verified",
       "cycle": "2026-11-19",
-      "counts_as_verified_new": true,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-10 03:06:55（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 297644，视频播放 184679，赞 1349，回复 39，收藏 374。方法回复曝光 4625。",
+        "reception": "抽样以称赞为主（草和毛发“像实拍”，有人说可以用来教历史）；也有人说还比不上自然历史博物馆的东西，或问这是不是纯代码。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "近三十万曝光、正面反馈，但方法只有一句，学习价值有限。"
+      },
       "links": [
         {
           "label": "原帖",
@@ -470,14 +736,22 @@
     },
     {
       "id": "what-the-water-keeps",
+      "board": "claude",
       "title": "What the water keeps",
       "original_published_at": "2026-11-10T03:05:21+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-10 03:05:21（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 516376，视频播放 226066，赞 4288，回复 178，收藏 1824。",
+        "reception": "抽样正面，夸美术统一、中端笔记本也流畅；有人问用了什么引擎、在 Tripo 上花了多少，作者在样本里没有回答。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "五十万曝光、正面反馈，可学跨场景保持统一的美术方向。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://x.com/kevin_t_ngo/status/2119868968307695818"
-        },
         {
           "label": "打开演示",
           "url": "https://what-the-water-keeps.vercel.app/"
@@ -490,14 +764,22 @@
     },
     {
       "id": "connect-claude-code-to-blender",
+      "board": "claude",
       "title": "Claude Code 接入 Blender",
       "original_published_at": "2026-11-08T20:28:00+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "recommend-removal",
+        "published_basis": "页面写 2026-11-08 20:28（亚洲/上海）。",
+        "metrics": "网页教程，没有公开的浏览、点赞或评论数。",
+        "reception": "找不到公开评论。",
+        "promotion": "站点是一家用 AI 投放广告的营销代理公司，教程同时是获客内容。",
+        "reason": "没有可核实的传播和反馈；接线步骤已被更完整的视频教程覆盖。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://thegrowthengine.net/connect-claude-code-to-blender"
-        },
         {
           "label": "教程",
           "url": "https://thegrowthengine.net/connect-claude-code-to-blender"
@@ -506,14 +788,22 @@
     },
     {
       "id": "moss-keeper",
+      "board": "claude",
       "title": "The Moss Keeper",
       "original_published_at": "2026-11-02T16:19:49+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "recommend-removal",
+        "published_basis": "2026-11-02 16:19:49（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 2453652，视频播放 667830，赞 8182，回复 373，收藏 5966。",
+        "reception": "多数惊叹；但有人指出“没有 Fable 5.5，只有 5、5.1 和 5.2”，也有人问能否从 GitHub 代码确认，或嘲讽为了省视频费烧更多 token。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "型号不是官方型号，“纯代码”也无法从公开文件里核实；卡上原来写的“学习用代码组织绘画质感、场景和镜头”没有依据，已删去。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://x.com/chetaslua/status/2117169796290916732"
-        },
         {
           "label": "打开演示",
           "url": "https://chetaslua.github.io/moss-keeper/"
@@ -530,14 +820,22 @@
     },
     {
       "id": "threejs-shorts",
+      "board": "claude",
       "title": "Three.js 短片",
       "original_published_at": "2026-11-01T14:15:41+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-01 14:15:41（亚洲/上海），YouTube 上传时间。",
+        "metrics": "播放 1374773，赞 32314，抓到评论 60 条。",
+        "reception": "最高赞评论（2500 赞）感谢他免费公开；但也有 719 赞的 “The slop thickens.”，还有人说仓库缺 package.json、零基础跑不起来，或说是“烧 500 美元想赚 5 美元”。",
+        "promotion": "另推付费 Skool 社区（更多技能和写实 3D）。",
+        "reason": "一百三十多万播放、三万赞，流程和技能都公开；反馈正面为主，也有明确的 slop 批评。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://www.youtube.com/watch?v=OtbLL6OBNE4"
-        },
         {
           "label": "教程",
           "url": "https://www.youtube.com/watch?v=OtbLL6OBNE4"
@@ -550,13 +848,21 @@
     },
     {
       "id": "legal-documents-scale",
+      "board": "claude",
       "title": "Navigating Complex Legal Documents at Scale",
-      "original_published_at": "2026-10-28",
-      "date_precision": "day",
+      "original_published_at": "2026-10-28T00:00:00+08:00",
+      "date_precision": null,
       "verification": "verified",
       "cycle": "2026-11-19",
-      "counts_as_verified_new": true,
-      "label": "补充遗漏",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "recommend-removal",
+        "published_basis": "博客只写到 2026-10-28，没有钟点。",
+        "metrics": "博客文章和 MP4，没有公开的浏览、点赞或评论数。",
+        "reception": "找不到公开评论。",
+        "promotion": "这是作者给客户 Jus Mundi 做的商业片。博客是作者个人站，同时推他的免费 AI 课程。",
+        "reason": "没有可核实的传播和社区反馈。如果你看重“真实客户片”这一点，可以保留为参考。"
+      },
       "links": [
         {
           "label": "制作说明",
@@ -570,14 +876,22 @@
     },
     {
       "id": "slop-newyork",
+      "board": "claude",
       "title": "Slop New York",
       "original_published_at": "2026-10-22T15:55:23+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-10-22 15:55:23（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 374269，视频播放 155529，赞 4054，转发 331，回复 271，收藏 2608。",
+        "reception": "非常正面，而且有实际行动：作者说 4 天里出现了 35 个以上基于它的项目，很多人移植到自己的城市；也有人报告出租车穿过路灯、偶尔卡顿。",
+        "promotion": "原帖 paid_partnership 为 false。MIT 许可。",
+        "reason": "三十七万曝光、大量二创，后续开发有 Claude 署名。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://x.com/mrdoob/status/2113177383658561721"
-        },
         {
           "label": "打开演示",
           "url": "https://mrdoob.github.io/slop-newyork/"
@@ -594,14 +908,22 @@
     },
     {
       "id": "javascript-frames",
+      "board": "claude",
       "title": "JavaScript 逐帧",
       "original_published_at": "2026-10-07T01:00:09+08:00",
+      "date_precision": null,
+      "verification": null,
       "cycle": null,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-10-07 01:00:09（亚洲/上海），YouTube 上传时间。",
+        "metrics": "播放 234281，赞 3946，抓到评论 60 条。",
+        "reception": "正面为主；也有人说 5.9 万行代码太浪费，用 Remotion 更省 token，标题里的“免费”言过其实（还要 Claude 订阅），还有人担心“讲解类 slop”泛滥。",
+        "promotion": "简介和置顶评论推作者的付费 Skool 课程和一对一咨询。",
+        "reason": "二十多万播放、近四千赞，技能公开。"
+      },
       "links": [
-        {
-          "label": "\n          ",
-          "url": "https://www.youtube.com/watch?v=rscb1DgJtNg"
-        },
         {
           "label": "教程",
           "url": "https://www.youtube.com/watch?v=rscb1DgJtNg"
@@ -613,60 +935,114 @@
       ]
     },
     {
-      "id": "paris-atlas",
-      "title": "Paris Atlas",
-      "original_published_at": null,
-      "date_precision": "unknown",
-      "tie": 0,
-      "verification": "official-showcase",
-      "model": "GPT-6.2 Astra",
-      "api_id": "gpt-6.2-astra",
-      "cycle": "2026-11-19-gpt",
-      "counts_as_verified_new": true,
+      "id": "escape-velocity",
+      "board": "claude",
+      "title": "ESCAPE VELOCITY",
+      "original_published_at": "2026-09-26T01:17:57+08:00",
+      "date_precision": null,
+      "verification": "author-archive",
+      "cycle": "2026-11-19-ev",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-09-26 01:17:57（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 20251448，视频播放 3365314，赞 16511，转发 2016，引用 913，回复 1044，收藏 13921。",
+        "reception": "沿用 2026-11-19 的抽样：有人想试、受启发，也有人追问视频模型，或担心这是 AI 宣传。本轮没有重新抽样。",
+        "promotion": "原帖 paid_partnership 为 false。原帖那句“12 hours later, woke up”是套用别人的过夜说法。",
+        "reason": "两千万曝光，制作档案完整，人和工具的分工写得最清楚。"
+      },
       "links": [
         {
-          "label": "在线演示",
-          "url": "https://paris-atlas-street-explorer.openai.chatgpt.site/"
+          "label": "原片",
+          "url": "https://x.com/anabology/status/2103534482930491441"
         },
         {
-          "label": "官方制作过程",
-          "url": "https://developers.openai.com/showcase/paris-atlas"
+          "label": "制作说明",
+          "url": "https://claudia.gallery/record/escape-velocity/readme.md"
+        },
+        {
+          "label": "影片页",
+          "url": "https://claudia.gallery/escape-velocity.md"
+        },
+        {
+          "label": "Midjourney 提示词",
+          "url": "https://claudia.gallery/record/escape-velocity/prompts-midjourney.md"
+        },
+        {
+          "label": "Seedance 提示词",
+          "url": "https://claudia.gallery/record/escape-velocity/prompts-seedance.md"
+        },
+        {
+          "label": "Suno 记录",
+          "url": "https://claudia.gallery/record/escape-velocity/prompts-suno.md"
         }
       ]
     },
     {
-      "id": "notre-damn",
-      "title": "Notre Damn",
-      "original_published_at": null,
-      "date_precision": "unknown",
-      "tie": 1,
-      "verification": "official-showcase",
-      "model": "GPT-6.2 Astra",
-      "api_id": "gpt-6.2-astra",
-      "cycle": "2026-11-19-gpt",
-      "counts_as_verified_new": true,
+      "id": "saltmere",
+      "board": "openai",
+      "title": "Saltmere 三维落地页",
+      "original_published_at": "2026-11-24T15:12:11+08:00",
+      "date_precision": null,
+      "verification": "author-reported",
+      "cycle": "2026-11-25-audit",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-24 15:12:11（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 87445，视频播放 36151，赞 890，转发 76，引用 8，回复 57，收藏 1018。Greg Brockman 引用转发说 Astra 做 3D 很强。",
+        "reception": "回复整体正面，有人专门夸粒子溶解技能保留原网格的细节；也有人反映加载约 10 秒、会卡，作者回应自己测下来不到 8 秒、不到 8MB。",
+        "promotion": "这一页本身是作者 ThreeUI 的付费 Pro 模板（源码 299 美元买断或 199 美元一年），免费公开的是演示和四个技能。布局参考了 Hey Detya。",
+        "reason": "近九万曝光、千余收藏，技能可以直接拿来用，适合做作品官网或项目页。"
+      },
       "links": [
         {
-          "label": "在线演示",
-          "url": "https://cathedral-walk.openai.chatgpt.site/"
+          "label": "原帖",
+          "url": "https://x.com/MengTo/status/2125125308991090749"
         },
         {
-          "label": "官方制作过程",
-          "url": "https://developers.openai.com/showcase/notre-damn"
+          "label": "在线演示",
+          "url": "https://threeui.com/saltmere"
+        },
+        {
+          "label": "Brockman 引用",
+          "url": "https://x.com/gdb/status/2125386640923521141"
+        },
+        {
+          "label": "粒子溶解",
+          "url": "https://github.com/MengTo/Skills/tree/main/agent-skills/3d/hover-particle-dissolve"
+        },
+        {
+          "label": "三维小物件",
+          "url": "https://github.com/MengTo/Skills/tree/main/agent-skills/3d/3d-feature-objects"
+        },
+        {
+          "label": "互动地形",
+          "url": "https://github.com/MengTo/Skills/tree/main/agent-skills/3d/interactive-topography"
+        },
+        {
+          "label": "边框手电",
+          "url": "https://github.com/MengTo/Skills/tree/main/agent-skills/web-design/gradient-border-flashlight"
         }
       ]
     },
     {
       "id": "forest-walks",
+      "board": "openai",
       "title": "Forest Walks",
-      "original_published_at": null,
-      "date_precision": "unknown",
-      "tie": 2,
+      "original_published_at": "2026-11-18T22:48:09+08:00",
+      "date_precision": null,
       "verification": "official-showcase",
-      "model": "GPT-6.2 Astra",
-      "api_id": "gpt-6.2-astra",
       "cycle": "2026-11-19-gpt",
-      "counts_as_verified_new": true,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "recommend-removal",
+        "published_basis": "2026-11-18 22:48:09（亚洲/上海），作者 Thomas Ricouard（@Dimillian）的 X 首发帖；官方 Showcase 页没有日期。",
+        "metrics": "作者首发帖曝光 11093，视频播放 4265，赞 173，回复 9。",
+        "reception": "回复太少，未抽样。",
+        "promotion": "作者 X 简介写在 OpenAI 做 Codex 开发者体验，这是官方展示。",
+        "reason": "曝光一万出头，达不到传播门槛。“同一空间切三种画风”对美术指导有用，所以如果你想保留官方案例，可以留。"
+      },
       "links": [
         {
           "label": "在线演示",
@@ -675,106 +1051,30 @@
         {
           "label": "官方制作过程",
           "url": "https://developers.openai.com/showcase/forest-walks"
-        }
-      ]
-    },
-    {
-      "id": "escapement",
-      "title": "Escapement",
-      "original_published_at": null,
-      "date_precision": "unknown",
-      "tie": 3,
-      "verification": "official-showcase",
-      "model": "GPT-6.2 Astra",
-      "api_id": "gpt-6.2-astra",
-      "cycle": "2026-11-19-gpt",
-      "counts_as_verified_new": true,
-      "links": [
-        {
-          "label": "在线演示",
-          "url": "https://escapement.openai.chatgpt.site/"
         },
         {
-          "label": "官方制作过程",
-          "url": "https://developers.openai.com/showcase/escapement"
-        }
-      ]
-    },
-    {
-      "id": "light-and-matter",
-      "title": "Light & Matter",
-      "original_published_at": null,
-      "date_precision": "unknown",
-      "tie": 4,
-      "verification": "official-showcase",
-      "model": "GPT-6.2 Astra",
-      "api_id": "gpt-6.2-astra",
-      "cycle": "2026-11-19-gpt",
-      "counts_as_verified_new": true,
-      "links": [
-        {
-          "label": "在线演示",
-          "url": "https://light-and-matter.openai.chatgpt.site/"
-        },
-        {
-          "label": "官方制作过程",
-          "url": "https://developers.openai.com/showcase/light-and-matter"
-        }
-      ]
-    },
-    {
-      "id": "dot-rumble",
-      "title": "Dot Rumble",
-      "original_published_at": null,
-      "date_precision": "unknown",
-      "tie": 5,
-      "verification": "official-showcase",
-      "model": "GPT-6.2 Astra",
-      "api_id": "gpt-6.2-astra",
-      "cycle": "2026-11-19-gpt",
-      "counts_as_verified_new": true,
-      "links": [
-        {
-          "label": "在线演示",
-          "url": "https://dot-rumble-arcade.openai.chatgpt.site/"
-        },
-        {
-          "label": "官方制作过程",
-          "url": "https://developers.openai.com/showcase/dot-rumble"
-        }
-      ]
-    },
-    {
-      "id": "terrarium",
-      "title": "Terrarium",
-      "original_published_at": null,
-      "date_precision": "unknown",
-      "tie": 6,
-      "verification": "official-showcase",
-      "model": "GPT-6.2 Astra",
-      "api_id": "gpt-6.2-astra",
-      "cycle": "2026-11-19-gpt",
-      "counts_as_verified_new": true,
-      "links": [
-        {
-          "label": "在线演示",
-          "url": "https://terrarium-glasshouse-studio.openai.chatgpt.site/"
-        },
-        {
-          "label": "官方制作过程",
-          "url": "https://developers.openai.com/showcase/terrarium-glasshouse-studio"
+          "label": "作者首发帖",
+          "url": "https://x.com/Dimillian/status/2123065728697778446"
         }
       ]
     },
     {
       "id": "nagi-reef",
+      "board": "openai",
       "title": "凪 NAGI（珊瑚礁浅滩）",
       "original_published_at": "2026-11-18T08:18:13+08:00",
+      "date_precision": null,
       "verification": "community",
-      "model": "GPT-6.2 Astra",
-      "api_id": "gpt-6.2-astra",
       "cycle": "2026-11-19-community",
-      "counts_as_verified_new": true,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "recommend-removal",
+        "published_basis": "2026-11-18 08:18:13（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 5579，视频播放 1278，赞 87，回复 1，收藏 18。",
+        "reception": "只有两条回复，一条是作者自己。谈不上社区反馈。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "曝光不到六千，达不到传播门槛。这批社区卡是按你“独立创作者的 Astra 实验”偏好收的，所以列出来请你决定。"
+      },
       "links": [
         {
           "label": "原帖",
@@ -788,13 +1088,21 @@
     },
     {
       "id": "nocturne-jukebox",
+      "board": "openai",
       "title": "Nocturne 光学点唱机",
       "original_published_at": "2026-11-18T07:16:45+08:00",
+      "date_precision": null,
       "verification": "community",
-      "model": "GPT-6.2 Astra",
-      "api_id": "gpt-6.2-astra",
       "cycle": "2026-11-19-community",
-      "counts_as_verified_new": true,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "recommend-removal",
+        "published_basis": "2026-11-18 07:16:45（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 2283，视频播放 786，赞 92，回复 3。HTML 回复曝光 424。",
+        "reception": "几条回复都友好（夸品味），样本太少。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "曝光两千多，达不到传播门槛。"
+      },
       "links": [
         {
           "label": "原帖",
@@ -803,18 +1111,30 @@
         {
           "label": "在线演示",
           "url": "https://shadelurk.github.io/nocturne-jukebox/"
+        },
+        {
+          "label": "HTML 说明",
+          "url": "https://x.com/ShadeLurk/status/2122831545119735839"
         }
       ]
     },
     {
       "id": "peacock-svg",
+      "board": "openai",
       "title": "SVG 孔雀",
       "original_published_at": "2026-11-18T06:18:19+08:00",
+      "date_precision": null,
       "verification": "community",
-      "model": "GPT-6.2 Astra",
-      "api_id": "gpt-6.2-astra",
       "cycle": "2026-11-19-community",
-      "counts_as_verified_new": true,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-18 06:18:19（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 87702，视频播放 48797，赞 1622，回复 63，收藏 324。",
+        "reception": "多数惊叹羽毛细节，有人说“所有 Astra 对比里只有这条让我服气”；也有人提醒 SVG 里可能嵌位图、要放大看，或要求公开提示词。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "近九万曝光、正面反馈；但只是一张单次生成，方法学习价值有限。"
+      },
       "links": [
         {
           "label": "原帖",
@@ -824,13 +1144,21 @@
     },
     {
       "id": "kasane-valley",
+      "board": "openai",
       "title": "Kasane Valley（叠加之谷）",
       "original_published_at": "2026-11-18T06:17:01+08:00",
+      "date_precision": null,
       "verification": "community",
-      "model": "GPT-6.2 Astra",
-      "api_id": "gpt-6.2-astra",
       "cycle": "2026-11-19-community",
-      "counts_as_verified_new": true,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-18 06:17:01（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 85942，视频播放 40558，赞 1053，回复 38，收藏 677。提示词回复曝光 6098，收藏 105。",
+        "reception": "抽样正面为主，有人说靠的是“告诉模型不要做什么”；也有人说“不太好看”，或打开很慢。",
+        "promotion": "原帖 paid_partnership 为 false。可玩页写地形影像改编自日本国土地理院。",
+        "reason": "八万多曝光、正面反馈，提示词公开，Blender 加 three.js 的分工可学。"
+      },
       "links": [
         {
           "label": "原帖",
@@ -839,34 +1167,62 @@
         {
           "label": "在线演示",
           "url": "https://givros.github.io/kasane-valley/"
+        },
+        {
+          "label": "提示词回复",
+          "url": "https://x.com/givros/status/2122816315542925338"
+        },
+        {
+          "label": "后续说明",
+          "url": "https://x.com/givros/status/2122940510000009323"
         }
       ]
     },
     {
       "id": "nuremberg-market",
+      "board": "openai",
       "title": "可走的纽伦堡圣诞市场",
       "original_published_at": "2026-11-18T05:32:53+08:00",
+      "date_precision": null,
       "verification": "community",
-      "model": "GPT-6.2 Astra",
-      "api_id": "gpt-6.2-astra",
       "cycle": "2026-11-19-community",
-      "counts_as_verified_new": true,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "recommend-removal",
+        "published_basis": "2026-11-18 05:32:53（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 6166，视频播放 3414，赞 109，回复 10。2026-05-01 旧帖曝光 9244，赞 55。",
+        "reception": "德语回复友好，高赞回复在开玩笑说“没有路障和保安，不像真的圣诞市场”。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "曝光六千，达不到传播门槛。“同一提示词换模型”的对照思路有价值，但这条数据太小。"
+      },
       "links": [
         {
           "label": "原帖",
           "url": "https://x.com/FlorianGallwitz/status/2122805196938231879"
+        },
+        {
+          "label": "半年前的对照帖",
+          "url": "https://x.com/FlorianGallwitz/status/2050215434075414709"
         }
       ]
     },
     {
       "id": "pixel-jet-game",
+      "board": "openai",
       "title": "单文件像素喷气游戏",
       "original_published_at": "2026-11-18T05:13:18+08:00",
+      "date_precision": null,
       "verification": "community",
-      "model": "GPT-6.2 Astra",
-      "api_id": "gpt-6.2-astra",
       "cycle": "2026-11-19-community",
-      "counts_as_verified_new": true,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-18 05:13:18（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 161119，视频播放 88392，赞 870，回复 74，收藏 525。",
+        "reception": "正面为主，很多人在说价格和时间；也有人说这是原型或演示，不算一个游戏，或质疑改一处会不会弄坏另一处。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "十六万曝光、正面反馈；但没有公开文件，能学的主要是“单文件装下整套玩法”。"
+      },
       "links": [
         {
           "label": "原帖",
@@ -876,13 +1232,21 @@
     },
     {
       "id": "city-disaster-sim",
+      "board": "openai",
       "title": "三维城市灾难模拟器",
       "original_published_at": "2026-11-18T03:13:04+08:00",
+      "date_precision": null,
       "verification": "community",
-      "model": "GPT-6.2 Astra",
-      "api_id": "gpt-6.2-astra",
       "cycle": "2026-11-19-community",
-      "counts_as_verified_new": true,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "recommend-removal",
+        "published_basis": "2026-11-18 03:13:04（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 3642，视频播放 1494，赞 68，回复 14。",
+        "reception": "韩语回复正面（像模拟城市、质量比想象好），样本小。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "曝光不到四千，达不到传播门槛。"
+      },
       "links": [
         {
           "label": "原帖",
@@ -892,40 +1256,244 @@
     },
     {
       "id": "pink-sky-train",
+      "board": "openai",
       "title": "粉红天空里的蒸汽火车",
       "original_published_at": "2026-11-18T03:03:15+08:00",
+      "date_precision": null,
       "verification": "community",
-      "model": "GPT-6.2 Astra",
-      "api_id": "gpt-6.2-astra",
       "cycle": "2026-11-19-community",
-      "counts_as_verified_new": true,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "recommend-removal",
+        "published_basis": "2026-11-18 03:03:15（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 548137，视频播放 238011，赞 2034，回复 47，收藏 860。",
+        "reception": "传播大，但回复几乎都在笑 Astra 这版：“输了吧”“Codex 没品味”“少了 Fable 那版的镜头冲击力”，还有人调侃机器人对车尾的动作。",
+        "promotion": "原帖 paid_partnership 为 false。",
+        "reason": "大家认可的是这条对比的笑点，不是这件作品；它更像 Fable 那条的反例。建议移除，或者改成“同一提示词对照”的说明，由你决定。"
+      },
       "links": [
         {
           "label": "原帖",
           "url": "https://x.com/soyukke_game/status/2122767541823225891"
+        },
+        {
+          "label": "同一提示词的旧帖",
+          "url": "https://x.com/soyukke_game/status/2119928049982640282"
+        }
+      ]
+    },
+    {
+      "id": "light-and-matter",
+      "board": "openai",
+      "title": "Light & Matter",
+      "original_published_at": "2026-11-18T02:20:51+08:00",
+      "date_precision": null,
+      "verification": "official-showcase",
+      "cycle": "2026-11-19-gpt",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "recommend-removal",
+        "published_basis": "2026-11-18 02:20:51（亚洲/上海），作者 Eric Provencher（@pvncher）的 X 首发帖；官方 Showcase 页没有日期。",
+        "metrics": "作者首发帖曝光 12685，赞 196，回复 11，收藏 43。",
+        "reception": "回复太少，未抽样。",
+        "promotion": "作者 X 简介写在 OpenAI 做 Codex 开发者体验，这是官方展示。",
+        "reason": "曝光一万出头，达不到传播门槛。"
+      },
+      "links": [
+        {
+          "label": "在线演示",
+          "url": "https://light-and-matter.openai.chatgpt.site/"
+        },
+        {
+          "label": "官方制作过程",
+          "url": "https://developers.openai.com/showcase/light-and-matter"
+        },
+        {
+          "label": "作者首发帖",
+          "url": "https://x.com/pvncher/status/2122756870771200470"
         }
       ]
     },
     {
       "id": "space-elevator",
+      "board": "openai",
       "title": "从零做的太空电梯乘坐体验",
       "original_published_at": "2026-11-18T02:16:10+08:00",
+      "date_precision": null,
       "verification": "community",
-      "model": "GPT-6.2 Astra",
-      "api_id": "gpt-6.2-astra",
       "cycle": "2026-11-19-community",
-      "counts_as_verified_new": true,
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-18 02:16:10（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 133615，视频播放 68408，赞 1320，回复 149，收藏 277。",
+        "reception": "回复大多认同“不稳定但大项目能交付”，讨论要不要把任务拆小、写验收标准；也有人拿别的模型做了对照。",
+        "promotion": "原帖 paid_partnership 为 false。作者发布前就拿到了模型。",
+        "reason": "十三万曝光，作者自己的保留意见本身就是学习点。"
+      },
       "links": [
         {
           "label": "原帖",
           "url": "https://x.com/emollick/status/2122755693191287009"
         }
       ]
+    },
+    {
+      "id": "escapement",
+      "board": "openai",
+      "title": "Escapement",
+      "original_published_at": "2026-11-18T02:15:09+08:00",
+      "date_precision": null,
+      "verification": "official-showcase",
+      "cycle": "2026-11-19-gpt",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-18 02:15:09（亚洲/上海），作者 Eric Provencher（@pvncher）的 X 首发帖；官方 Showcase 页没有日期。",
+        "metrics": "作者首发帖曝光 57114，视频播放 25525，赞 624，回复 35，收藏 156。",
+        "reception": "本轮没有系统抽样，看到的几条在夸物理和参考图的用法。",
+        "promotion": "作者 X 简介写在 OpenAI 做 Codex 开发者体验，这是官方展示。",
+        "reason": "五万多曝光，官方页有步骤，镜头和声音按碰撞对齐值得学。"
+      },
+      "links": [
+        {
+          "label": "在线演示",
+          "url": "https://escapement.openai.chatgpt.site/"
+        },
+        {
+          "label": "官方制作过程",
+          "url": "https://developers.openai.com/showcase/escapement"
+        },
+        {
+          "label": "作者首发帖",
+          "url": "https://x.com/pvncher/status/2122755434758967623"
+        }
+      ]
+    },
+    {
+      "id": "paris-atlas",
+      "board": "openai",
+      "title": "Paris Atlas",
+      "original_published_at": "2026-11-18T02:08:53+08:00",
+      "date_precision": null,
+      "verification": "official-showcase",
+      "cycle": "2026-11-19-gpt",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-18 02:08:53（亚洲/上海），作者 Thomas Ricouard（@Dimillian）的 X 首发帖；官方 Showcase 页没有日期。",
+        "metrics": "作者首发帖曝光 69570，视频播放 29562，赞 882，回复 60，收藏 331。",
+        "reception": "本轮没有抽样首发帖的回复。作者 11-18 自己说这批演示的流量比之前小。",
+        "promotion": "作者 X 简介写在 OpenAI 做 Codex 开发者体验，这是官方展示。",
+        "reason": "七万曝光，官方页有分步做法，可学真实城市尺度。"
+      },
+      "links": [
+        {
+          "label": "在线演示",
+          "url": "https://paris-atlas-street-explorer.openai.chatgpt.site/"
+        },
+        {
+          "label": "官方制作过程",
+          "url": "https://developers.openai.com/showcase/paris-atlas"
+        },
+        {
+          "label": "作者首发帖",
+          "url": "https://x.com/Dimillian/status/2122753859281928626"
+        }
+      ]
+    },
+    {
+      "id": "notre-damn",
+      "board": "openai",
+      "title": "Notre Damn",
+      "original_published_at": "2026-11-18T01:56:08+08:00",
+      "date_precision": null,
+      "verification": "official-showcase",
+      "cycle": "2026-11-19-gpt",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep",
+        "published_basis": "2026-11-18 01:56:08（亚洲/上海），作者 Thomas Ricouard（@Dimillian）的 X 首发帖；官方 Showcase 页没有日期。",
+        "metrics": "作者首发帖曝光 51192，视频播放 20564，赞 781，回复 24，收藏 182。",
+        "reception": "本轮没有抽样首发帖的回复。有回复专门夸玫瑰窗倒影的渲染难度。",
+        "promotion": "作者 X 简介写在 OpenAI 做 Codex 开发者体验，这是官方展示。",
+        "reason": "五万曝光，官方页有做法；UE5 和网页版的差别要分清。"
+      },
+      "links": [
+        {
+          "label": "在线演示",
+          "url": "https://cathedral-walk.openai.chatgpt.site/"
+        },
+        {
+          "label": "官方制作过程",
+          "url": "https://developers.openai.com/showcase/notre-damn"
+        },
+        {
+          "label": "作者首发帖",
+          "url": "https://x.com/Dimillian/status/2122750651998355800"
+        }
+      ]
+    },
+    {
+      "id": "dot-rumble",
+      "board": "openai",
+      "title": "Dot Rumble",
+      "original_published_at": null,
+      "date_precision": "unknown",
+      "verification": "official-showcase",
+      "cycle": "2026-11-19-gpt",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "unverifiable",
+        "published_basis": "找不到作者首发帖；官方 Showcase 页没有日期，继续排在最后。",
+        "metrics": "官方页没有互动数；X 上只找到一条中文转述（曝光约一千），找不到作者 Chaow Wu 的帖子。",
+        "reception": "找不到。",
+        "promotion": "OpenAI 官方展示。",
+        "reason": "没有可核实的传播和反馈。"
+      },
+      "links": [
+        {
+          "label": "在线演示",
+          "url": "https://dot-rumble-arcade.openai.chatgpt.site/"
+        },
+        {
+          "label": "官方制作过程",
+          "url": "https://developers.openai.com/showcase/dot-rumble"
+        }
+      ]
+    },
+    {
+      "id": "terrarium",
+      "board": "openai",
+      "title": "Terrarium",
+      "original_published_at": null,
+      "date_precision": "unknown",
+      "verification": "official-showcase",
+      "cycle": "2026-11-19-gpt",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "unverifiable",
+        "published_basis": "找不到这个作品的作者首发帖；官方 Showcase 页没有日期，继续排在最后。",
+        "metrics": "官方页没有互动数。作者 Katia Gil Guzman（@kagigz）11-18 只发了一条泛泛夸 Astra 的帖（曝光 1576），没有单独发这个作品。",
+        "reception": "找不到。",
+        "promotion": "OpenAI 官方展示。",
+        "reason": "没有可核实的传播和反馈。"
+      },
+      "links": [
+        {
+          "label": "在线演示",
+          "url": "https://terrarium-glasshouse-studio.openai.chatgpt.site/"
+        },
+        {
+          "label": "官方制作过程",
+          "url": "https://developers.openai.com/showcase/terrarium-glasshouse-studio"
+        }
+      ]
     }
   ],
-  "verified_new_projects_this_cycle": 7,
+  "verified_new_projects_this_cycle": 2,
   "pending_reference_this_cycle": 0,
-  "layout_revision": "2026-11-19-pr21",
+  "layout_revision": "2026-11-25-audit",
   "layout_columns": {
     "content_cards_per_row": 8,
     "intro_consumes_content_slot": false,
@@ -935,24 +1503,18 @@
     "applies_to": "default first load of a layout revision, and the 按日期排开 action",
     "future_updates": "Keep eight content cards per row, and keep the desktop opening view showing that whole row. The earlier ten-per-row rule is superseded. Do not go back to scale 1 that leaves most of the row offscreen. Version the stylesheet and script URLs with the layout revision."
   },
-  "pending_user_request": {
-    "requested_at": "2026-11-19T00:45:00+08:00",
-    "topic": "Add official GPT-6.2 Astra showcase projects",
-    "status": "seven official showcase cards added; publication dates remain unknown",
-    "cards_added": 7
-  },
   "date_sort_policy": "On the first load of a new content revision, every content card is laid out by original publication date, newest first, eight per row, on fresh and returning browsers. A desktop window shows that whole newest row. The intro tile stays above that grid and does not take a slot. Saved x/y and camera from an older revision are not applied. Within the same revision, freeform drag still persists locally. Day-only dates sort after known clocks on that day. Adding a link never changes a card's original date. Stored notes are kept and are not shown as inputs. Projects whose official page gives no publication date sort after every known date, in a stable tie order, and are not dated with the model launch day or the day they were collected.",
   "boards": {
     "claude": {
       "url": "https://junielau.com/learning-board/#claude",
-      "content_cards": 31,
+      "content_cards": 32,
       "verified": 27,
       "pending_reference": 1
     },
     "openai": {
       "url": "https://junielau.com/learning-board/#openai",
-      "content_cards": 16,
-      "community": 9,
+      "content_cards": 17,
+      "community": 10,
       "official_showcase": 7
     },
     "default": "claude",
@@ -961,7 +1523,6 @@
     "static_fallback": "CSS grid is also eight content columns, intro spans the full width, nav links work without script"
   },
   "preview_gaps": {
-    "bilibili-fable-moba": "Card image is a crop of the supplied Bilibili page screenshot: site header, full title, 2026-11-13 21:31:30, and UP 傅盛. Recommended videos and the black player are not in the crop. Labeled 原帖页面截图（非成片静帧）. Still a pending reference, not Starfall.",
     "matt-pure-code-film": "Official post cover is nearly dark. x.com returned HTTP 403 from this environment, so the official cover remains and is labeled as not a watched frame."
   },
   "escape_velocity": {

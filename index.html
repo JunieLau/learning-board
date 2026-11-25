@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>学习板 · Claude / GPT</title>
   <meta name="description" content="Claude 与 GPT 的创意技术项目，一块一块钉在这块黑底的板上。">
-  <link rel="stylesheet" href="styles.css?v=2026-11-19-pr21">
+  <link rel="stylesheet" href="styles.css?v=2026-11-25-audit">
   <script>
     (function () {
       try {
@@ -24,7 +24,7 @@
   </header>
 
   <div class="local-tools">
-    <p class="local-explain">上方目录分成 Claude 学习板和 OpenAI 学习板，点一下就换。地址用 #claude 或 #openai，不带记号时打开 Claude。可以拖动、平移和缩放。每次内容更新后，第一次打开会按原发布日期从新到旧排开，桌面窗口里一行八张内容卡同时可见，说明卡单独占上面一行。没有脚本时也会按这个行列排，不会把说明卡算进八张里。同一版里再拖动，仍留在这台浏览器，两块板分开记。OpenAI 板先排 9 个社区原帖，再排 7 张没有作品日期的官方 Showcase。点「查看本轮新增」会留在 Claude 板，并同时框住 GTA VI: Cursed Trailer 和雾锁山门。标注还留着，页面上不再显示输入框。</p>
+    <p class="local-explain">上方目录分成 Claude 学习板和 OpenAI 学习板，点一下就换。地址用 #claude 或 #openai，不带记号时打开 Claude。可以拖动、平移和缩放。每次内容更新后，第一次打开会按原发布日期从新到旧排开，桌面窗口里一行八张内容卡同时可见，说明卡单独占上面一行。没有脚本时也会按这个行列排，不会把说明卡算进八张里。同一版里再拖动，仍留在这台浏览器，两块板分开记。这一版是 2026-11-25 的全板复核：每张卡都按同一标准重写了「依据与限度」。点「查看本轮新增」会框住当前这块板的新卡：Claude 板是 Rourke 的教程，OpenAI 板是 Saltmere。标注还留着，页面上不再显示输入框。</p>
     <div class="local-actions">
       <button type="button" id="show-cycle">查看本轮新增</button>
       <button type="button" id="arrange-date">按日期排开</button>
@@ -40,8 +40,8 @@
   </div>
 
   <nav class="board-nav" aria-label="目录">
-    <a href="#claude">Claude 学习板<small>31 张，含 1 条待核实参考</small></a>
-    <a href="#openai">OpenAI 学习板<small>16 张：9 个社区作品，7 张官方 Showcase</small></a>
+    <a href="#claude">Claude 学习板<small>32 张，含 1 条待核实参考</small></a>
+    <a href="#openai">OpenAI 学习板<small>17 张：10 个社区作品，7 张官方 Showcase</small></a>
   </nav>
 
   <section id="claude" class="board-view" data-board="claude">
@@ -51,10 +51,42 @@
     <article class="card intro" data-id="intro-claude">
       <div class="meta">
         <p class="hello">Claude 学习板</p>
-        <p>31 张。其中 30 张是项目，1 张是指定参考、制作细节待核实，不计入已核实案例。按原发布日期从新到旧，说明卡不占内容位。</p>
+        <p>32 张。其中 31 张是项目，1 张是指定参考、制作细节待核实，不计入已核实案例。按原发布日期从新到旧，说明卡不占内容位。2026-11-25 全板复核：每张卡的「依据与限度」写了原发布时间、作者自述的方法和工具、当天重新查的数据、社区反馈抽样、推广与利益关系，以及上板判断。</p>
       </div>
     </article>
-    <article class="card" data-id="gta-cursed-trailer" data-published="2026-11-19T03:41:53+08:00" data-cycle="2026-11-19-pr21" data-verification="author-reported">
+    <article class="card" data-id="rourke-claude-blender" data-published="2026-11-19T05:36:53+08:00" data-cycle="2026-11-25-audit" data-verification="author-reported" data-audit="keep" data-audited="2026-11-25">
+      <figure>
+        <a class="still" href="https://www.youtube.com/watch?v=DU9vZGXkD0Y" target="_blank" rel="noopener" aria-label="打开 Rourke 的 Claude + Blender 教程">
+          <img src="images/rourke-claude-blender/maxresdefault.jpg" alt="教程官方封面：戴帽子的作者坐在公园长椅上，手拿咖啡，身旁笔记本屏幕里是 Blender 中他自己的灰模头像，前景一个橙色方块小机器人，标题写 Claude Fable 5.2 3D CGI。" width="1280" height="720">
+        </a>
+        <figcaption>教程官方封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">教程 · 作者自述 · 含推广</p>
+        <h2>真人夹 CG 一镜到底</h2>
+        <p class="by">Rourke · @RourkeHeath · Claude Fable 5.2 + Blender</p>
+        <p class="when"><time datetime="2026-11-19T05:36:53+08:00">2026-11-19</time></p>
+        <p>原标题：Fable 5.2: Make 3D Animations With Claude and Blender。开头结尾是真人实拍，中间约 35 秒 CG 全由 Claude Fable 5.2 写场景、驱动 Blender 渲出，作者说这一段没有 AI 视频。值得学的是 10 步：需求、世界和角色、分镜、低清动态分镜、批注循环、渲染、max pass、按实拍调色、剪辑、声音，以及装 FFmpeg 让 Claude 看自己的帧。</p>
+        <p class="links">
+          <a href="https://www.youtube.com/watch?v=DU9vZGXkD0Y" target="_blank" rel="noopener">教程</a>
+          <a href="https://rourkeideas.com/downloads/claude-fable-cgi" target="_blank" rel="noopener">提示词指南（需留邮箱）</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-19 05:36:53（亚洲/上海），YouTube 上传时间（平台记的是 2026-11-18 UTC）。</p>
+          <p><b>方法与工具（作者自述）：</b>作者片中和简介：开头和结尾是两段真人实拍，中间约 35 秒 CG 全是 Claude Fable 5.2 在 Claude Code 里写场景、驱动 Blender 渲出来的，作者明确说这一段没有用 AI 视频。真人素材另用 Higgsfield 上的 Seedance 2.5 换光换背景。装 FFmpeg 让 Claude 能看自己的帧。10 步：需求、世界和角色、分镜、低清动态分镜、批注循环、正式渲染、max pass、按实拍调色、剪辑、声音。</p>
+          <p><b>数据（2026-11-25 12:54 亚洲/上海 核验）：</b>播放 76151，赞 1262，评论 28。2026-11-22 约 04:28 的记录是 54944 播放、982 赞、45 条评论，评论数比那时少，原因不明。</p>
+          <p><b>社区反馈（YouTube 评论，2026-11-25 12:54 亚洲/上海 抽样，不是全量）：</b>高赞评论集中批评 Higgsfield 广告（“another higsfield AD”“你根本不需要 Higgsfield”，还有人因此取关）；也有人称赞“真人夹 CG 一镜到底”的想法，或问换成更便宜的 Opus 5.5 行不行。</p>
+          <p><b>推广与利益：</b>简介第一行是 Higgsfield 黑五 65% 折扣推广链接，工具链接带推荐码；片中口播推作者自己的 GenHQ 付费教育和接单平台；免费指南要留邮箱才能下载。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>作者说 Fable 擅长场景、产品、材质和光，不擅长写实人物和动物。30 秒在 MacBook 上要渲 2.5 到 3 小时，云渲染约 5 美元。</p>
+          <p>片尾的 Amazon 广告是另一条“写实路线”：Blender 只出灰模镜头和布局，Nano Banana 画首帧，几乎每一镜都是 Seedance 2.5 生成的。那一段是 AI 视频，别和开头机器人片混在一起。</p>
+          <p>标题在 2026-11-22 是 “Claude + Blender Is The Best Way To Make 3D Animations (Fable 5.2 Full Course)”，本轮已改成 “Fable 5.2: Make 3D Animations With Claude and Blender”。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>七万多播放、一千多赞，方法讲得最完整；但推广很重，学的时候要把 Higgsfield 那一段当成可选。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="gta-cursed-trailer" data-published="2026-11-19T03:41:53+08:00" data-cycle="2026-11-19-pr21" data-verification="author-reported" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/thedorbrothers/status/2123139649992311027" target="_blank" rel="noopener" aria-label="打开 GTA VI: Cursed Trailer 的原帖">
           <img src="images/gta-cursed-trailer/thumb.jpg" alt="原帖视频封面：铁丝网后的近景，身后是橙色囚服和一座瞭望塔。这是预告片封面，不是角色设定表。" width="1200" height="675">
@@ -74,14 +106,20 @@
         </p>
         <details class="more">
           <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-19 03:41:53（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者回复：85% 由 Claude Code 自动完成，没有手动生成图片、视频，也没有手动做已有片段的后期；人只做半手工剪辑，并给代理想法和方向。耗时回复只有一句 “a few hours”。没有写画面和视频生成用的是哪个模型或库。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 434688，视频播放 271586（两者不是同一个数），赞 4161，转发 853，引用 171，回复 245，收藏 1451。自动化说明那条回复曝光 8135、赞 181。</p>
+          <p><b>社区反馈：</b>沿用 2026-11-19 的抽样：有人说好看或好笑，也有人觉得没那么有趣，或批评用现实人物做恶搞。本轮没有重新抽样。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。The Dor Brothers 是商业制作公司，这条也在给自己的自动化能力做展示。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
           <p>“85% 自动化”是作者后来的说法，不是片内字幕。这条预告他们回复是 “a few hours”。另一条帖说近期短片大多自动化，空闲时要 2 到 6 小时。他们还说有些镜头不喜欢，例如 Russell 那镜，因为让 AI 多做是一种研究，会碰到收益递减。</p>
           <p>有人问用了什么库，截至 2026-11-19 19:19（亚洲/上海）作者还没答。不要把 Seedance、Midjourney 或其他生成库写到这部预告上。官网客户片仍写人工剪辑、声音和调色，那是另一条流程。</p>
           <p>暂未找到这部片子的完整教程或工具清单。不要把别人的 GTA 教程当成他们的方法。未看完，未复跑。</p>
-          <p>原帖 2026-11-19 19:19（亚洲/上海）核验：曝光 191909，视频播放 115733，两者不是同一个数。赞 3030，转发 635，引用 126，回复 190，收藏 1067。抽样里有人说好看或好笑，也有人觉得没那么有趣，或批评选用现实人物。不是人人都觉得好。</p>
+          <p><b>上板判断：达标。</b>曝光四十多万、赞四千多，反馈以正面为主但有争议；能学角色设定表保持同一张脸，以及哪些步骤可以交给代理。</p>
         </details>
       </div>
     </article>
-    <article class="card" data-id="blender-ai-video-course" data-published="2026-11-17T00:33:20+08:00">
+    <article class="card" data-id="blender-ai-video-course" data-published="2026-11-17T00:33:20+08:00" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://www.youtube.com/watch?v=OO6J2w_FBnE" target="_blank" rel="noopener" aria-label="打开 Dan Kieft 课程的原片">
           <img src="images/blender-ai-video-course/anchor-hall.jpg" alt="作者配套页上的走廊场景：狭长旧楼道，日光灯，两侧掉漆的墙，地上堆着纸箱、鞋和一把伞。" width="1800" height="1005">
@@ -92,14 +130,24 @@
         <p class="by">Dan Kieft · 教程 · 跨工具</p>
         <p class="when"><time datetime="2026-11-17">2026-11-17</time></p>
         <p>原标题：Claude + Blender Is The Best Way To Make AI Videos (Full Course)。先用 Blender 锁住镜头和空间，再交给生成模型出片，不是纯代码成片。</p>
-        <p>Claude 写提示词并做进阶 MCP 搭景。初学路线推荐 Opus 5.5，进阶用的型号没有写明。成片走 Higgsfield / Nano Banana Pro 锚点，再由 Seedance 2.5 生成。作者公开了配套提示词。课程含付费插件推广。本板未看完全片，也未复跑。</p>
         <p class="links">
           <a href="https://www.youtube.com/watch?v=OO6J2w_FBnE" target="_blank" rel="noopener">教程</a>
           <a href="https://claude-and-blender.vercel.app/" target="_blank" rel="noopener">提示词</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-17 00:33:20（亚洲/上海），YouTube 上传时间。</p>
+          <p><b>方法与工具（作者自述）：</b>作者简介写：先用 Blender + Claude 做出可控的镜头、角色和场景参考，再把它交给 Seedance 2.5 生成视频。提示词公开在配套页。本板此前记的 Higgsfield / Nano Banana Pro 锚点来自片中流程；作者没有写进阶段落用的 Claude 型号。</p>
+          <p><b>数据（2026-11-25 12:54 亚洲/上海 核验）：</b>播放 440270，评论 60 条以上被抓到（平台未返回赞数）。</p>
+          <p><b>社区反馈（YouTube 评论，2026-11-25 12:54 亚洲/上海 抽样，不是全量）：</b>抽样里有人说开头两分半像好莱坞电影、说他讲得平静实用；也有人照着 Workflow 01 做，说 Seedance 还是会乱，或者问整体要花多少钱（这条评论 206 赞）。</p>
+          <p><b>推广与利益：</b>简介第一行是 Higgsfield 黑五优惠的推广链接（dankieft.com/higgsfield），另推作者的 Skool 社区。不是中立评测。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>Claude 写提示词并做进阶 MCP 搭景。初学路线推荐 Opus 5.5，进阶用的型号没有写明。成片走 Higgsfield / Nano Banana Pro 锚点，再由 Seedance 2.5 生成。作者公开了配套提示词。课程含付费插件推广。本板未看完全片，也未复跑。</p>
+          <p><b>上板判断：达标。</b>播放四十多万、反馈以正面为主；Blender 锁运镜再交给视频模型，正是导演最需要的可控性。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="cat-garden" data-published="2026-11-16T21:00:55+08:00">
+    <article class="card" data-id="cat-garden" data-published="2026-11-16T21:00:55+08:00" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/BubbleBrain/status/2122313967473434639" target="_blank" rel="noopener" aria-label="打开 Cat Garden 的原帖">
           <img src="images/cat-garden/preview.jpg" alt="Cat Garden 仓库预览：低机位看花园，前景虚化的绿叶，中景是红罂粟、紫花和一座温室。" width="1920" height="1080">
@@ -110,7 +158,6 @@
         <p class="by">BubbleBrain · Claude Fable 5.2 · 案例＋源码</p>
         <p class="when"><time datetime="2026-11-16">2026-11-16</time></p>
         <p>约 110 秒的猫眼高度花园。作者仓库写明代码由 Claude（claude-fable-5-2）在 Claude Code 里写成，画面和声音由这段代码计算，不是 Blender、Three.js 或视频生成。</p>
-        <p>低机位、步态和视线弹簧、曝光与声音绑在同一时间轴，并用抽样帧做检查。暂未找到公开的逐步复刻教程。只能在 Apple Silicon + Metal 上跑，Windows 不能直接运行。仓库没有 LICENSE，不能据此当作可改写或可商用。本板未看完全片，也未跑渲染脚本。</p>
         <p class="links">
           <a href="https://x.com/BubbleBrain/status/2122313967473434639" target="_blank" rel="noopener">原片</a>
           <a href="https://github.com/BubbleBrainBB/awesome-fable-5.2/tree/main/cat-garden" target="_blank" rel="noopener">源码</a>
@@ -120,9 +167,20 @@
           <a href="https://github.com/BubbleBrainBB/awesome-fable-5.2/tree/main/deep-dive" target="_blank" rel="noopener">同集 Deep Dive</a>
           <a href="https://github.com/BubbleBrainBB/awesome-fable-5.2/tree/main/mountain-hike" target="_blank" rel="noopener">同集 Mountain Hike</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-16 21:00:55（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者仓库写明代码由 Claude（claude-fable-5-2）在 Claude Code 里写成，画面和声音都由代码算出来。作者回复：用的是 Claude Ultra 套餐，渲染大约 3 小时，没有用 Blender 或 Unreal（“No. it's just code.”）。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 108743，视频播放 60272，赞 1411，转发 98，回复 74，收藏 826。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>抽样以惊叹为主，特别提到声音也是代码生成；也有人不信这是 Fable 做的，或追问成本和耗时。回复里一些长篇技术解释来自 @grok 自动回复，不是作者原话，本板不采用。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>低机位、步态和视线弹簧、曝光与声音绑在同一时间轴，并用抽样帧做检查。暂未找到公开的逐步复刻教程。只能在 Apple Silicon + Metal 上跑，Windows 不能直接运行。仓库没有 LICENSE，不能据此当作可改写或可商用。本板未看完全片，也未跑渲染脚本。</p>
+          <p><b>上板判断：达标。</b>十万级曝光、正面反馈，“画面和声音同一条时间轴”对导演有直接启发。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="fable-of-clawd" data-published="2026-11-15T00:17:32+08:00">
+    <article class="card" data-id="fable-of-clawd" data-published="2026-11-15T00:17:32+08:00" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://www.youtube.com/watch?v=Bvb4DxB35MM" target="_blank" rel="noopener" aria-label="打开 The Fable of Clawd 的成片">
           <img src="images/fable-of-clawd/maxresdefault.jpg" alt="The Fable of Clawd：绿色的小机器人悬在桌面上，旁边是一盆橙色郁金香，左侧漂着红色的方块身体。" width="1280" height="720">
@@ -133,15 +191,25 @@
         <p class="by">Riley Brown · Claude Fable 5.2 · Python + Blender · 成片 · 制作拆解</p>
         <p class="when"><time datetime="2026-11-15">2026-11-15</time></p>
         <p>2 分 19 秒的动画短片：Clawd 给自己造身体，送出生日礼物。作者称 Fable 5.2 / Claude Code 写 Python，在 Blender 里出片，并用 RunPod 云渲染。制作拆解页有起始提示词、流程、渲染设置和 52 镜故事板，没有成片播放器，也没有可下载源码。</p>
-        <p>本板未复跑，也不把它当成已端到端核实的完整教程，未审片。时长来自页面元数据。</p>
         <p class="links">
           <a href="https://www.youtube.com/watch?v=Bvb4DxB35MM" target="_blank" rel="noopener">成片</a>
           <a href="https://claude.ai/artifact/BkA6dzdGMx796WymCFpRyZ" target="_blank" rel="noopener">制作拆解</a>
           <a href="https://x.com/rileybrown/status/2121642720045261185" target="_blank" rel="noopener">原帖</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-15 00:17:32（亚洲/上海），YouTube 上传时间；X 宣传帖晚 16 分钟（00:33:37）。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：一条提示词，Fable 5.2 在 Blender 里用 Python 建出全部资产（5 个角色和道具、7 个场景），约 4.5 小时，4K 两分钟。制作拆解页另写了 RunPod 云渲染、渲染设置和 52 镜故事板。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>X 原帖曝光 243541，视频播放 103637，赞 2029，回复 222，收藏 2115。YouTube（作者第二频道 rileybrown2）播放 8868，赞 208，评论 23（同一时间核验）。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>X 和 YouTube 的抽样都以夸赞为主（“best AI-made video I’ve seen”）；有人问 4.5 小时里人工剪了多少、代码是否开源、是不是 Claude 付了钱。作者对“人工剪辑”的追问只回了一个 “yep”，含义不清。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>本板未复跑，也不把它当成已端到端核实的完整教程，未审片。时长来自页面元数据。</p>
+          <p><b>上板判断：达标。</b>X 上二十多万曝光、正面反馈，而且有完整拆解页。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="fable-blender-walkthrough" data-published="2026-11-14T05:49:09+08:00">
+    <article class="card" data-id="fable-blender-walkthrough" data-published="2026-11-14T05:49:09+08:00" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://www.youtube.com/watch?v=zVmnw-sgJPA" target="_blank" rel="noopener" aria-label="打开 Fable 5.2 接入 Blender 的视频">
           <img src="images/fable-blender-walkthrough/maxresdefault.jpg" alt="教程封面：作者指向一座白蓝相间的现代建筑群三维模型，上方写着 Copy This，下方是 Fable 5.2 和 Blender 图标。" width="1280" height="720">
@@ -152,18 +220,25 @@
         <p class="by">Pat Simmons · Fable 5.2 · 过程展示</p>
         <p class="when"><time datetime="2026-11-14">2026-11-14</time></p>
         <p>过程展示：Claude 驱动 Blender、写场景，Cycles 或云渲染出图，不是视频生成模型。另附书面教程、三份完整提示词与技能包，含静帧批评循环。尚未逐步复跑。技能包里的 Blender 5.1.2 是软件版本。</p>
-        <details class="more">
-          <summary>日期依据</summary>
-          <p>排序仍用视频日期 2026-11-14。书面页可见 November 17, 2026，JSON-LD 为 2026-11-18 11:29 亚洲/上海，两说并存，不拿文章日期覆盖视频日期。</p>
-        </details>
         <p class="links">
           <a href="https://www.youtube.com/watch?v=zVmnw-sgJPA" target="_blank" rel="noopener">视频</a>
           <a href="https://www.aiformortals.co/blog/fable-5-2-blender" target="_blank" rel="noopener">书面教程与提示词</a>
           <a href="https://fallingwater-astra.vercel.app/blender-production.zip" target="_blank" rel="noopener">技能包</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-14 05:49:09（亚洲/上海），YouTube 上传时间。</p>
+          <p><b>方法与工具（作者自述）：</b>作者简介：让 Claude Fable 5.2 控制 Blender，做了 Stahl House 漫游、瓦伦西亚艺术科学城和一部带配音的恐怖游戏，并讲清每次花了多少钱。书面页有提示词、Blender 技能包和产出。</p>
+          <p><b>数据（2026-11-25 12:54 亚洲/上海 核验）：</b>播放 71805，赞 1061，抓到评论 60 条。</p>
+          <p><b>社区反馈（YouTube 评论，2026-11-25 12:54 亚洲/上海 抽样，不是全量）：</b>高赞评论有惊叹，也有三维从业者担心饭碗；有人说远看不错、凑近一看就粗糙，还问植物怎么做得不像一团。多条评论说书面教程页 404，本轮打开是 200，标题是 “Claude Fable 5.2 in Blender: Three Builds, Real Costs”。</p>
+          <p><b>推广与利益：</b>简介推作者自己的每日邮件订阅 aiformortals。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>排序仍用视频日期 2026-11-14。书面页可见 November 17, 2026，JSON-LD 为 2026-11-18 11:29 亚洲/上海，两说并存，不拿文章日期覆盖视频日期。</p>
+          <p><b>上板判断：达标。</b>七万播放、千赞，教程和技能包都公开。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="python-blender-ads" data-published="2026-11-13T23:49:53+08:00">
+    <article class="card" data-id="python-blender-ads" data-published="2026-11-13T23:49:53+08:00" data-audit="recommend-removal" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://www.youtube.com/watch?v=qyaHfXiT6d8" target="_blank" rel="noopener" aria-label="打开 Python + Blender 广告的教程">
           <img src="images/python-blender-ads/maxresdefault.jpg" alt="教程封面：名为 Vaelle 的香水瓶在金色液体和兰花中，旁边是被锁链锁住的 Blender 图标、打开的代码笔记本和 Claude 标志。" width="1280" height="720">
@@ -177,9 +252,18 @@
         <p class="links">
           <a href="https://www.youtube.com/watch?v=qyaHfXiT6d8" target="_blank" rel="noopener">教程</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-13 23:49:53（亚洲/上海），YouTube 上传时间。</p>
+          <p><b>方法与工具（作者自述）：</b>作者简介：Fable 5.2 写 Python，在 Blender 关着的情况下后台出图，分三级做一瓶虚构香水：瓶子、10 秒广告、16:9 和 9:16 的 20 秒广告；先出预览静帧再长渲染。</p>
+          <p><b>数据（2026-11-25 12:54 亚洲/上海 核验）：</b>播放 879，赞 23，评论 2（其中 1 条是作者自己的置顶）。</p>
+          <p><b>社区反馈（YouTube 评论，2026-11-25 12:54 亚洲/上海 抽样，不是全量）：</b>唯一一条外部评论说“看起来不错，但太花时间”。样本太少，谈不上社区认可。</p>
+          <p><b>推广与利益：</b>技能包要加入作者的 Skool 社区才能拿；简介还推作者的 AI 代理公司和咨询预约。</p>
+          <p><b>上板判断：建议移除。</b>播放不到一千，达不到“大量真实传播”；内容和 Dan Kieft、Pat Simmons 两张教程重复。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="astral-realm" data-published="2026-11-13T23:24:00+08:00">
+    <article class="card" data-id="astral-realm" data-published="2026-11-13T23:24:00+08:00" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/scottstts/status/2121262812228141395" target="_blank" rel="noopener" aria-label="打开 Astral Realm 的原帖">
           <img src="images/astral-realm/poster.jpg" alt="Astral Realm：穿白衣红裙的人站在朱红金柱的殿廊下，望向云海和对面巨大的地球。" width="1280" height="720">
@@ -193,9 +277,18 @@
         <p class="links">
           <a href="https://x.com/scottstts/status/2121262812228141395" target="_blank" rel="noopener">原帖</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-13 23:24:00（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：Fable 5.2 制作，three.js 渲染；2 小时、200 万 token、迭代很多次；除角色外都是程序生成。作者回复说只用了 2 个会话。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 54723，视频播放 31115，赞 467，回复 44，收藏 280。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>中文和英文回复多在夸画面（“不知天上宫阙”）和 token 成本低；也有人直接说 “Looks bad!”“slop”，或问是真能玩还是只是视频。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>上板判断：达标。</b>刚过五万曝光的门槛，反馈多数正面；角色和程序化场景的分工值得看。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="no-external-assets" data-published="2026-11-13T17:39:38+08:00">
+    <article class="card" data-id="no-external-assets" data-published="2026-11-13T17:39:38+08:00" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/chetaslua/status/2121176151234330707" target="_blank" rel="noopener" aria-label="打开 No External Assets 的原帖">
           <img src="images/no-external-assets/poster.jpg" alt="No External Assets：红色巨龙盘在秋枫山谷的岩峰上，下方是朱红牌楼、亭台和瀑布。" width="1312" height="720">
@@ -209,28 +302,47 @@
         <p class="links">
           <a href="https://x.com/chetaslua/status/2121176151234330707" target="_blank" rel="noopener">原帖</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-13 17:39:38（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖只有一句：Fable 5.2 配合 three.js 做到这个程度，完全没有外部素材。没有写提示词、耗时或成本。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 198397，视频播放 104552，赞 3747，回复 159，收藏 1674。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>抽样以夸画面为主，尤其是寺庙、红枫和龙的尺度感；也有人说自己跑不出同样结果，或问花了多少钱，作者未答。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>上板判断：达标。</b>近二十万曝光、正面反馈；可以学“无外部素材”下的场景设计。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="bilibili-fable-moba" data-published="2026-11-13T00:00:00+08:00" data-cycle="2026-11-19" data-verification="pending-reference">
+    <article class="card" data-id="bilibili-fable-moba" data-published="2026-11-13T00:00:00+08:00" data-cycle="2026-11-19" data-verification="pending-reference" data-audit="unverifiable" data-audited="2026-11-25">
       <figure>
-        <a class="still" href="https://www.bilibili.com/video/BV1raWB6uEmW/" target="_blank" rel="noopener" aria-label="打开指定参考视频。图是原帖页面截图，不是成片静帧">
-          <img src="images/bilibili-fable-moba/page-header.jpg" alt="原帖页面截图：哔哩哔哩页眉、视频全名、发布时间 2026-11-13 21:31:30，以及 UP 主傅盛。不是成片静帧。" width="1920" height="170">
+        <a class="still" href="https://www.bilibili.com/video/BV1raWB6uEmW/" target="_blank" rel="noopener" aria-label="打开指定参考视频">
+          <img src="images/bilibili-fable-moba/cover.jpg" alt="该视频的官方封面：UP 主傅盛在右侧，左侧是网页 MOBA 的游戏画面，大字写着这一刻我等了三年、Fable5.2 手搓王者荣耀、仅仅只用了一晚。" width="1672" height="940">
         </a>
-        <figcaption>原帖页面截图（非成片静帧）</figcaption>
+        <figcaption>官方视频封面</figcaption>
       </figure>
       <div class="meta">
         <p class="badge">指定参考·制作细节待核实</p>
         <h2>Fable 5.2网页MOBA（制作待核）</h2>
         <p class="by">傅盛 · 指定参考</p>
         <p class="when"><time datetime="2026-11-13">2026-11-13</time></p>
-        <p>指定参考，制作细节待核实。不计入已核实案例。视频全名：这一刻我等了三年！Fable5.2手搓王者荣耀仅仅只用了一晚！页面显示 UP 主傅盛。可见发布时间是 2026-11-13 21:31:30，页面没有时区，所以只记到这一天。画面是原帖页眉截图，不是成片静帧，也没有借用其他项目的图。</p>
-        <p>2026-11-19 打开该页时，播放器需要登录。未登录，未观看。正文没有 sanwan 链接、没有 Starfall 名称，也没有 X 账号。不能据此并到别的项目，也不能把 UP 显示名以外的身份当成已经核实。模型只记作者标题标注的 Fable 5.2；制作细节待核实。工具未知，页面没有写 Blender 或 three.js。暂未找到该 BV 对应的公开教程或源码。</p>
+        <p>指定参考，制作细节待核实，不计入已核实案例。视频全名：这一刻我等了三年！Fable5.2手搓王者荣耀仅仅只用了一晚！页面显示 UP 主傅盛。可见发布时间是 2026-11-13 21:31:30，页面没有时区，所以只记到这一天。画面是该视频的官方封面。</p>
         <p class="links">
           <a href="https://www.bilibili.com/video/BV1raWB6uEmW/" target="_blank" rel="noopener">原视频</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>页面显示 2026-11-13 21:31:30，页面本身没写时区，所以只记到日期。</p>
+          <p><b>方法与工具（作者自述）：</b>标题写 Fable5.2 手搓王者荣耀、只用了一晚。页面没有写工具链、提示词或源码。</p>
+          <p><b>数据：</b>本轮读不到：哔哩哔哩对盒子的公开接口和页面都返回 412（风控），换抓取渠道只拿到标题、发布时间和官方封面，没有播放、点赞、弹幕数。</p>
+          <p><b>社区反馈：</b>未能抽样评论。</p>
+          <p><b>推广与利益：</b>UP 主傅盛。是否有商务合作，本板未能查看。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>2026-11-19 打开该页时，播放器需要登录。未登录，未观看。正文没有 sanwan 链接、没有 Starfall 名称，也没有 X 账号。不能据此并到别的项目，也不能把 UP 显示名以外的身份当成已经核实。模型只记作者标题标注的 Fable 5.2；制作细节待核实。工具未知，页面没有写 Blender 或 three.js。暂未找到该 BV 对应的公开教程或源码。</p>
+          <p><b>上板判断：无法核实。</b>这是你指定的参考，本板读不到传播数据，也看不到方法。要么你确认保留为“指定参考”，要么移除。封面已换成该视频的官方封面，不再用页眉截图。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="wusuo-shanmen" data-published="2026-11-12T09:43:55+08:00" data-cycle="2026-11-19-pr21" data-verification="author-reported">
+    <article class="card" data-id="wusuo-shanmen" data-published="2026-11-12T09:43:55+08:00" data-cycle="2026-11-19-pr21" data-verification="author-reported" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/op7418/status/2120694045299327187" target="_blank" rel="noopener" aria-label="打开雾锁山门的原帖">
           <img src="images/wusuo-shanmen/shot-combo.jpg" alt="官方游戏内横图：俯视雪地，白衣角色站在圈里，前方有几道粉色光。" width="640" height="360">
@@ -250,18 +362,20 @@
         </p>
         <details class="more">
           <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-12 09:43:55（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者自述：Claude Fable 5.2 负责协调和搭建，部分测试用了 Opus 5.5；即梦出概念图，Tripo 做三维和绑定，Suno 出音乐，three.js 运行。不是一次做完，中间改了很多轮，最后做成了技能。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 308683，视频播放 104912，赞 1181，转发 124，引用 61，回复 282，收藏 979。更正帖（4.5 亿 token）曝光 10210。</p>
+          <p><b>社区反馈：</b>沿用 2026-11-19 的抽样：有人试玩后称赞，也有人说第一波太难，或仍在引用未更正的 45 亿。本轮没有重新抽样。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。技能以 AGPL-3.0 开源。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
           <p>原帖写成 “45 亿 token”，作者几分钟后更正：是 4.5 亿 Token，语音输入打错了。说明页也是约 6 小时、4.5 亿 Token，其中一部分是 Opus 5.5 的测试。不要把 45 亿当成事实。作者后来说还做了技能，并补充即梦、Tripo 和压缩。作者不把自己写成游戏程序员。</p>
           <p>技能文档和脚本是 AGPL-3.0。演示游戏的画面、模型、声音、音乐和文字版权归 2026 歸藏，可以玩、可以分享链接，不能据此当成可商用素材。作者说这条技能只在这一个项目上从头走到尾，另有一次只到规划的对照。不要写成每次都能做出同样的质量。未试玩，未复跑。</p>
-          <p>原帖 2026-11-19 19:19（亚洲/上海）核验：曝光 295962，视频播放 101641，两者不是同一个数。赞 1162，转发 123，引用 59，回复 276，收藏 971。抽样里有人试玩后称赞，也有人说第一波太难，或仍在用未更正的 45 亿。不是人人都满意。</p>
-          <p class="links">
-            <a href="https://x.com/op7418/status/2120695301204005060" target="_blank" rel="noopener">不是一次做完</a>
-            <a href="https://x.com/op7418/status/2120695897956995075" target="_blank" rel="noopener">token 更正</a>
-            <a href="https://x.com/op7418/status/2120694594409312403" target="_blank" rel="noopener">即梦与 Tripo</a>
-          </p>
+          <p>不是一次做完 token 更正 即梦与 Tripo</p>
+          <p><b>上板判断：达标。</b>三十万曝光、正面为主，技能和说明页公开，是少见的完整工作流。</p>
         </details>
       </div>
     </article>
-    <article class="card" data-id="painted-valley" data-published="2026-11-12T09:43:45+08:00">
+    <article class="card" data-id="painted-valley" data-published="2026-11-12T09:43:45+08:00" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/BlendiByl/status/2120694003230560585" target="_blank" rel="noopener" aria-label="打开 Painted Valley 的原帖">
           <img src="images/painted-valley/preview.jpg" alt="Painted Valley：戴草帽、穿蓝斗篷的旅人站在草地里，远望手绘风格的山谷、村庄与雪山。" width="1200" height="675">
@@ -272,15 +386,25 @@
         <p class="by">Blendi · Fable 5.2</p>
         <p class="when"><time datetime="2026-11-12">2026-11-12</time></p>
         <p>一座吉卜力手绘风格的山谷，可以走进去散步。土地、云和村庄都是代码画出来的。</p>
-        <p>Three.js 项目，非 Blender。型号依据原帖，演示页本身没写 Claude。本次检索未找到原作完整制作教程，可从源码改造入手。</p>
         <p class="links">
           <a href="https://patch.gg/blendi/painted-valley" target="_blank" rel="noopener">打开演示</a>
           <a href="https://x.com/BlendiByl/status/2120694003230560585" target="_blank" rel="noopener">原帖</a>
           <a href="https://patch.gg/blendi/painted-valley/files" target="_blank" rel="noopener">源码与改造说明</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-12 09:43:45（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：用 Fable 5.2 做的吉卜力风场景，可玩、开源。没有写提示词或耗时。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 73473，视频播放 33779，赞 1830，回复 72，收藏 1326。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>抽样里有人夸画风、说开源最重要；也有人说草不够好、电脑带不动、村子进不去，“不是真的开放世界”，还有人说这是“偷来的画风”。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>Three.js 项目，非 Blender。型号依据原帖，演示页本身没写 Claude。本次检索未找到原作完整制作教程，可从源码改造入手。</p>
+          <p><b>上板判断：达标。</b>七万曝光、近两千赞、源码公开，反馈正面但有画风来源的争议。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="apimodels-blender-python" data-published="2026-11-12T00:00:00+08:00" data-tie="0">
+    <article class="card" data-id="apimodels-blender-python" data-published="2026-11-12T00:00:00+08:00" data-tie="0" data-audit="recommend-removal" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://apimodels.app/blender-python-claude-code" target="_blank" rel="noopener" aria-label="打开命令行 Python 出 MP4 的教程">
           <img src="images/apimodels-blender-python/og.png" alt="APIMODELS 官方分享图：深色底、黄绿色顶条，标题是 Blender Python with Claude Code: Model, Animate and Render From the Command Line，左上有标志，左下是 apimodels.app。页面没有公布渲染静帧。" width="1200" height="630">
@@ -294,9 +418,18 @@
         <p class="links">
           <a href="https://apimodels.app/blender-python-claude-code" target="_blank" rel="noopener">教程</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>页面只写到 2026-11-12，没有钟点。</p>
+          <p><b>方法与工具（作者自述）：</b>第三方教程页：命令行用 Python 驱动 Blender，先渲染预览图再出 MP4。页面写明测的是工具链，不是某个模型。</p>
+          <p><b>数据：</b>网页教程，没有公开的浏览、点赞或评论数。</p>
+          <p><b>社区反馈：</b>找不到公开评论。</p>
+          <p><b>推广与利益：</b>APIMODELS 自称聚合 180 多个模型、最高比官方价低 95% 的 API 平台，教程同时是引流内容。</p>
+          <p><b>上板判断：建议移除。</b>没有任何可核实的传播和社区反馈；方法已经被 Pat Simmons、Rourke 等更完整的教程覆盖。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="apimodels-threejs-export" data-published="2026-11-12T00:00:00+08:00" data-tie="1">
+    <article class="card" data-id="apimodels-threejs-export" data-published="2026-11-12T00:00:00+08:00" data-tie="1" data-audit="recommend-removal" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://apimodels.app/claude-code-threejs" target="_blank" rel="noopener" aria-label="打开 Three.js 导出视频 的教程">
           <img src="images/apimodels-threejs-export/og.png" alt="APIMODELS 官方分享图：深色底、黄绿色顶条，标题是 Claude Code + Three.js: Build 3D Scenes and Games, Then Export Them to Video，左上有标志，左下是 apimodels.app。页面没有公布场景静帧。" width="1200" height="630">
@@ -310,9 +443,18 @@
         <p class="links">
           <a href="https://apimodels.app/claude-code-threejs" target="_blank" rel="noopener">教程</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>页面只写到 2026-11-12，没有钟点。</p>
+          <p><b>方法与工具（作者自述）：</b>第三方教程页：用 renderAt(t) 让 Three.js 每一帧可复现，再用 Playwright 和 FFmpeg 导出 MP4。</p>
+          <p><b>数据：</b>网页教程，没有公开的浏览、点赞或评论数。</p>
+          <p><b>社区反馈：</b>找不到公开评论。</p>
+          <p><b>推广与利益：</b>APIMODELS 自称聚合 180 多个模型、最高比官方价低 95% 的 API 平台，教程同时是引流内容。</p>
+          <p><b>上板判断：建议移除。</b>没有可核实的传播和反馈；同类方法已有 Chase AI（23 万播放）那张卡。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="animated-show-intro" data-published="2026-11-11T23:35:38+08:00">
+    <article class="card" data-id="animated-show-intro" data-published="2026-11-11T23:35:38+08:00" data-audit="borderline" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/kevin_t_ngo/status/2120540964909711415" target="_blank" rel="noopener" aria-label="打开 Animated Show Intro 的原帖">
           <img src="images/animated-show-intro/poster.jpg" alt="Animated Show Intro：戴白帽的女孩在蓝色背景前拉弓瞄准，画面带有 REC 标记和 1996 年 8 月 1 日的日期。" width="1280" height="720">
@@ -323,14 +465,24 @@
         <p class="by">Kevin Ngo · Claude Fable 5.2 · Python + Blender</p>
         <p class="when"><time datetime="2026-11-11">2026-11-11</time></p>
         <p>Claude Fable 5.2 做的动画节目片头。画面是代码：Python 做动画，Blender 渲染。暂未找到原作完整教程。未审片。</p>
-        <p>本次检索未找到原作完整教程；此为相邻基础教学，非原作复刻，配套技能包在站外。</p>
         <p class="links">
           <a href="https://x.com/kevin_t_ngo/status/2120540964909711415" target="_blank" rel="noopener">原帖</a>
           <a href="https://www.youtube.com/watch?v=qyaHfXiT6d8" target="_blank" rel="noopener">相邻教程：Blender广告</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-11 23:35:38（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：Claude Fable 5.2 做的动画片头，画面全是代码，Python 做动画，Blender 渲染。没有公开提示词或流程。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 29050，视频播放 12377，赞 570，回复 54，收藏 374。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>抽样很正面（干净、温暖、音效好），但多条在说手还是有问题；很多人追问提示词和流程，作者在样本里没有回答。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>本次检索未找到原作完整教程；此为相邻基础教学，非原作复刻，配套技能包在站外。</p>
+          <p><b>上板判断：边缘。</b>反馈正面，但曝光不到五万、赞不到一千，而且没有方法可学。卡上的“相邻教程”是 879 播放的 Marcus 视频，这条链接也建议一起拿掉。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="blender-code-film" data-published="2026-11-11T07:18:06+08:00">
+    <article class="card" data-id="blender-code-film" data-published="2026-11-11T07:18:06+08:00" data-audit="recommend-removal" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://varg.ai/how-to/skills/blender-code-film" target="_blank" rel="noopener" aria-label="打开 Blender 代码短片技能 的教程">
           <img src="images/blender-code-film/og.jpg" alt="varg 官方分享图：左侧是标题 Turn a brief into a Blender film written in Python，右侧是技能示例画面——黄昏的低多边形山谷里，一盏灯笼光球从树间升起，地上有光点，右下角标明 8 秒。" width="1200" height="630">
@@ -345,9 +497,18 @@
           <a href="https://varg.ai/how-to/skills/blender-code-film" target="_blank" rel="noopener">教程</a>
           <a href="https://github.com/vargHQ/skills/tree/main/blender-code-film" target="_blank" rel="noopener">源码</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>页面标的是 2026-11-11 07:18:06（亚洲/上海）。</p>
+          <p><b>方法与工具（作者自述）：</b>vargHQ 的可安装技能：单支 Python 在 Blender 里做短片，先出静帧再渲染，ffmpeg 封装。页面把 Fable 5.2 列成可用代理之一，没写示例片用的是哪个模型。</p>
+          <p><b>数据：</b>技能页和 GitHub 目录，没有单独的传播数据。</p>
+          <p><b>社区反馈：</b>找不到公开评论。</p>
+          <p><b>推广与利益：</b>varg.ai 是商业 AI 视频生成和 API 平台，技能页同时是产品介绍。</p>
+          <p><b>上板判断：建议移除。</b>没有可核实的传播和反馈。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="crosstown" data-published="2026-11-11T06:27:08+08:00" data-cycle="2026-11-19" data-verification="verified">
+    <article class="card" data-id="crosstown" data-published="2026-11-11T06:27:08+08:00" data-cycle="2026-11-19" data-verification="verified" data-audit="borderline" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://nyc.somethingbig.ai/" target="_blank" rel="noopener" aria-label="打开 CROSSTOWN 可玩页">
           <img src="images/crosstown/og.jpg" alt="CROSSTOWN 官方预览：白天的城市天际线，中央是一座很高的浅色塔楼，周围是密集的高楼。" width="1200" height="630">
@@ -358,19 +519,29 @@
         <p class="by">Matt Shumer · Fable 5.2（作者声明） · 可玩</p>
         <p class="when"><time datetime="2026-11-11">2026-11-11</time></p>
         <p>浏览器里可以开车、开直升机或步行的早期局部城市，范围在 Flatiron 一带。不是完成的 GTA，也不是作者说的七天计划已经做完。两条帖是同一个项目：06:27 的首发演示，08:10 的实玩补证。</p>
-        <p>作者原帖写的是 Fable 5.2，帖子里没有出现 Claude 这几个字。官方型号全称是 Claude Fable 5.2。可玩页自己写明用 Blender 和 three.js 做，在 Chrome 里运行、不用安装。本板打开过这个早期局部世界，没有把它玩成一座完成的城。方法视频是作者的公开说明，简介里写了提示词和多代理循环；本板没有看完这条视频，不摘录提示词。暂未找到 GitHub 源码。</p>
         <p class="links">
           <a href="https://nyc.somethingbig.ai/" target="_blank" rel="noopener">打开可玩页</a>
           <a href="https://x.com/mattshumer_/status/2120282133503820150" target="_blank" rel="noopener">首发演示</a>
           <a href="https://x.com/mattshumer_/status/2120308139153326225" target="_blank" rel="noopener">实玩补证</a>
           <a href="https://www.youtube.com/watch?v=M--oC9_5HI8" target="_blank" rel="noopener">方法视频</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-11 06:27:08（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：“Rockstar 做了 8 年，Fable 5.2 要在 7 天里做完”；补证帖说当时才做了约 13 小时。方法视频简介写：一个月用了 4000 亿 token，讲单代理、两种多代理做法、“gauntlet loop”，以及 16 小时做出纽约开放世界的逐条提示词。可玩页写用 Blender 和 three.js。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 3850507，视频播放 1651727，赞 7515，回复 676，收藏 1939。补证帖曝光 1044467，赞 2586。方法视频播放 10780，赞 227（同一时间核验）。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>两极分化。原帖回复里很多人骂“garbage”，说颜色平、贴图有 bug、物理半成品，拿它和 GTA 比是误导；也有人觉得在进步、受启发。方法视频评论里有人质疑模型刚发布两天怎么可能用了一个月，或说他是拿了 Anthropic 的钱。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。方法视频推作者的 newsletter（somethingbig.ai），可玩页也在这个域名下；作者简介留了商务赞助邮箱。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>作者原帖写的是 Fable 5.2，帖子里没有出现 Claude 这几个字。官方型号全称是 Claude Fable 5.2。可玩页自己写明用 Blender 和 three.js 做，在 Chrome 里运行、不用安装。本板打开过这个早期局部世界，没有把它玩成一座完成的城。方法视频是作者的公开说明，简介里写了提示词和多代理循环；本板没有看完这条视频，不摘录提示词。暂未找到 GitHub 源码。</p>
+          <p><b>上板判断：边缘。</b>传播非常大，但反馈不能说是正面，“7 天做完 GTA”的说法也被质疑。保留的理由是方法视频里多代理和验收循环有学习价值。是否保留由你决定。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="nineties-toy-commercial" data-published="2026-11-10T09:55:16+08:00">
+    <article class="card" data-id="nineties-toy-commercial" data-published="2026-11-10T09:55:16+08:00" data-audit="borderline" data-audited="2026-11-25">
       <figure>
-        <a class="still" href="https://x.com/kevin_t_ngo/status/2119972124211454139" target="_blank" rel="noopener" aria-label="打开 90's Toy Commercial 的原帖">
-          <img src="images/nineties-toy-commercial/poster.jpg" alt="90's Toy Commercial：录像带风格的画面里，绿色玩具英雄举着发光的剑，扫描线下方写着 Light-Up Lumen Beast。" width="720" height="720">
+        <a class="still" href="https://x.com/kevin_t_ngo/status/2119972124211454139" target="_blank" rel="noopener" aria-label="打开 90&#x27;s Toy Commercial 的原帖">
+          <img src="images/nineties-toy-commercial/poster.jpg" alt="90&#x27;s Toy Commercial：录像带风格的画面里，绿色玩具英雄举着发光的剑，扫描线下方写着 Light-Up Lumen Beast。" width="720" height="720">
         </a>
       </figure>
       <div class="meta">
@@ -378,14 +549,24 @@
         <p class="by">Kevin Ngo · Claude Fable 5.2 · Python + Blender</p>
         <p class="when"><time datetime="2026-11-10">2026-11-10</time></p>
         <p>Claude Fable 5.2 做的 90 年代玩具广告。画面是代码：Python 做动画，Blender 渲染。暂未找到原作完整教程。未审片。</p>
-        <p>本次检索未找到原作完整教程；此为相邻基础教学，非原作复刻，配套技能包在站外。</p>
         <p class="links">
           <a href="https://x.com/kevin_t_ngo/status/2119972124211454139" target="_blank" rel="noopener">原帖</a>
           <a href="https://www.youtube.com/watch?v=qyaHfXiT6d8" target="_blank" rel="noopener">相邻教程：Blender广告</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-10 09:55:16（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：Claude Fable 5.2 做的 90 年代玩具广告，画面全是代码，Python 做动画，Blender 渲染。没有公开提示词或流程。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 31915，视频播放 13014，赞 769，回复 61，收藏 374。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>抽样正面，夸 VHS 倒带和跟踪线做得像；也有人追问提示词、问旁白是不是也是代码做的，作者在样本里没有回答。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>本次检索未找到原作完整教程；此为相邻基础教学，非原作复刻，配套技能包在站外。</p>
+          <p><b>上板判断：边缘。</b>反馈好，但曝光不到五万、赞不到一千，而且没有方法可学。卡上的“相邻教程”同样是 879 播放的 Marcus 视频。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="saltline" data-published="2026-11-10T06:50:32+08:00" data-cycle="2026-11-19" data-verification="verified">
+    <article class="card" data-id="saltline" data-published="2026-11-10T06:50:32+08:00" data-cycle="2026-11-19" data-verification="verified" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://claude.ai/artifact/BGY1SztrAYcJQHSsnHHGmp" target="_blank" rel="noopener" aria-label="打开 Saltline 现在可玩的页面">
           <img src="images/saltline/poster.jpg" alt="Saltline 原帖画面：第一人称握着步枪，站在有货架、木箱和天窗的仓库里，左上角写着切断三个上行中继。" width="1200" height="665">
@@ -396,15 +577,25 @@
         <p class="by">Felix Rieseberg · Fable 5.2（作者声明） · 可玩</p>
         <p class="when"><time datetime="2026-11-10">2026-11-10</time></p>
         <p>浏览器里的第一人称关卡。开始画面能看到任务、坚守、难度、Deploy 和操作说明。点 Deploy 时超时，所以没有测到进入后的玩法。原帖日期仍是 2026-11-10 06:50:32（亚洲/上海）。没有单独的修改完成时间，不把日期改晚。</p>
-        <p>作者原帖写的是 Claude Fable 5.2 一次生成、当时没有人工反馈。页面上 Felix 的署名说明接着写：那次实验之后，他又花了两个小时改武器模型、声音和玩法。现在打开的可玩页是作者改过的演示，不是那次完全没动过的一次生成。页面链到一次生成的版本，本板没有记下那个确切地址，所以这里不放。页面自己说表面、机器和声音是在浏览器里生成的。提示词在作者回复里。第三方镜像不当作原仓库。</p>
         <p class="links">
           <a href="https://claude.ai/artifact/BGY1SztrAYcJQHSsnHHGmp" target="_blank" rel="noopener">打开现可玩页</a>
           <a href="https://x.com/felixrieseberg/status/2119925633564463609" target="_blank" rel="noopener">原帖</a>
           <a href="https://x.com/felixrieseberg/status/2119927483994907024" target="_blank" rel="noopener">提示词回复</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-10 06:50:32（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：想测试 Fable 5.2 在没有人工反馈时一次提示的质量；模型、声音、贴图全部从零生成；按 API 价约 550 美元、约 270 万输出和 4.45 亿输入 token（大量缓存），用了 8 小时。提示词在作者回复里。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 4493270，视频播放 2127818，赞 15056，转发 1171，回复 861，收藏 10394。提示词回复曝光 209135，赞 1784。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>抽样多是称赞（手机上也能玩、“8 小时从零做完”），有人照着做了多人版；也有人问“到底有多少游戏内容”，或抱怨设备跑不动。作者没有官方仓库。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。Felix Rieseberg 的 X 简介写 “I build things @AnthropicAI”，算 Anthropic 内部的人在展示自家模型。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>作者原帖写的是 Claude Fable 5.2 一次生成、当时没有人工反馈。页面上 Felix 的署名说明接着写：那次实验之后，他又花了两个小时改武器模型、声音和玩法。现在打开的可玩页是作者改过的演示，不是那次完全没动过的一次生成。页面链到一次生成的版本，本板没有记下那个确切地址，所以这里不放。页面自己说表面、机器和声音是在浏览器里生成的。提示词在作者回复里。第三方镜像不当作原仓库。</p>
+          <p><b>上板判断：达标。</b>四百多万曝光、一万五千赞，提示词公开，是“单提示词能到哪”的标杆。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="pelican-bicycle" data-published="2026-11-10T06:47:50+08:00">
+    <article class="card" data-id="pelican-bicycle" data-published="2026-11-10T06:47:50+08:00" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/techfren/status/2119924958134702276" target="_blank" rel="noopener" aria-label="打开鹈鹕骑自行车原帖">
           <img src="images/pelican-bicycle/poster.jpg" alt="一只白色鹈鹕骑着青绿色自行车，背景是栏杆和水面。名称来自作者技术说明，不是另行公布的正式片名。" width="1200" height="675">
@@ -415,15 +606,25 @@
         <p class="by">TechFriendAJ · Claude Fable 5.2 · Python + Blender</p>
         <p class="when"><time datetime="2026-11-10">2026-11-10</time></p>
         <p>名称来自作者技术说明里的描述，不是另行公布的正式片名。约 18.5 秒。作者回复写明 Claude Fable 5.2 在 Claude Code 里写 Python：绑定、几何、自行车连杆和五个镜头。</p>
-        <p>Blender 5.2.3 是软件版本，用 Cycles OptiX 渲染，ffmpeg 出片。用了 PolyHaven 的 CC0 天空和地面，不是无外部素材。公开的 agent trace 能看迭代，但不是已独立验证的逐步教程。未审片，也未把 trace 逐条跑通。</p>
         <p class="links">
           <a href="https://x.com/techfren/status/2119924958134702276" target="_blank" rel="noopener">原片</a>
           <a href="https://x.com/techfren/status/2119926681716834440" target="_blank" rel="noopener">技术说明</a>
           <a href="https://huggingface.co/datasets/techfren/pelican-fable-trace" target="_blank" rel="noopener">迭代记录</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-10 06:47:50（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者技术说明：Claude Fable 5.2 在 Claude Code 里，不打开 Blender 界面写了约 4800 行 Python，在 RTX 5080 上 56 分钟渲完 444 帧；Blender 5.2.3 是软件版本，Cycles 渲染，ffmpeg 出片。作者回复说仍是单条提示词，并且专门要求“尽量写实”所以它选了 Blender。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 171351，视频播放 100990，赞 917，收藏 256。技术说明那条曝光 6039。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>以玩笑和惊叹为主；也有人挑刺说“踏板速度和车轮对不上，slop”，或者说这不是单提示词 SVG（原本的鹈鹕测试是 SVG）。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。agent trace 公开在 Hugging Face。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>Blender 5.2.3 是软件版本，用 Cycles OptiX 渲染，ffmpeg 出片。用了 PolyHaven 的 CC0 天空和地面，不是无外部素材。公开的 agent trace 能看迭代，但不是已独立验证的逐步教程。未审片，也未把 trace 逐条跑通。</p>
+          <p><b>上板判断：达标。</b>十七万曝光，trace 公开，可以看代理每一步怎么迭代。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="portals" data-published="2026-11-10T06:21:25+08:00">
+    <article class="card" data-id="portals" data-published="2026-11-10T06:21:25+08:00" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/emollick/status/2119918307457577163" target="_blank" rel="noopener" aria-label="打开 Portals 的原帖">
           <img src="images/portals/midwinter-express.jpg" alt="Portals 中的冬夜火车：灯光火车驶过积雪山谷里的高架石桥，桥下有灯火与城堡。" width="1600" height="900">
@@ -431,17 +632,26 @@
       </figure>
       <div class="meta">
         <h2>Portals</h2>
-        <p class="by">Ethan Mollick · Claude Fable 5.2 · 471 个世界</p>
+        <p class="by">Ethan Mollick · Claude Fable 5.2 · 450 多个世界</p>
         <p class="when"><time datetime="2026-11-10">2026-11-10</time></p>
-        <p>一场不用操作的飞行。作者原帖写让 Fable 5.2 来做；Claude 写代码和世界，three.js 在浏览器里现场生成场景。门里已经是下一个世界，没有剪辑，也没有淡入淡出。未玩完 471 个世界。</p>
+        <p>一场不用操作的飞行。作者原帖写让 Fable 5.2 来做；Claude 写代码和世界，three.js 在浏览器里现场生成场景。门里已经是下一个世界，没有剪辑，也没有淡入淡出。原帖写 25000 个代理做了 450 多个世界，仓库写 471 个。未玩完。</p>
         <p class="links">
           <a href="https://portals-endless-worlds.netlify.app" target="_blank" rel="noopener">打开演示</a>
           <a href="https://github.com/emollick/ai-portals" target="_blank" rel="noopener">源代码</a>
           <a href="https://x.com/emollick/status/2119918307457577163" target="_blank" rel="noopener">原帖</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-10 06:21:25（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：让 Fable 5.2 做一段不用操作、穿过传送门的三维旅程；25000 个代理用代码做了 450 多个世界，灵感来自书、艺术和地方。仓库 README 写 471 个世界。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 111758，视频播放 54822，赞 1937，回复 226，收藏 1054。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>可读的回复多在讨论代理规模和“规则手册”，有人照着做了自己的版本；但这条回复区混有大量离题和辱骂，抽样代表性差。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。Ethan Mollick 简介写沃顿商学院教授、研究 AI，并在推自己的新书。</p>
+          <p><b>上板判断：达标。</b>十一万曝光、源码公开，可以学“一段旅程串很多世界”的结构。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="the-edge" data-published="2026-11-10T05:17:03+08:00" data-cycle="2026-11-19" data-verification="verified">
+    <article class="card" data-id="the-edge" data-published="2026-11-10T05:17:03+08:00" data-cycle="2026-11-19" data-verification="verified" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/rileybrown/status/2119902109709537708" target="_blank" rel="noopener" aria-label="打开 The Edge 的原帖">
           <img src="images/the-edge/poster.jpg" alt="The Edge 原帖画面：木桌、打开的笔记本、台灯、植物和一幅红日挂画，窗光斜打在墙上。" width="1200" height="675">
@@ -452,14 +662,24 @@
         <p class="by">Riley Brown · Fable 5.2（作者声明） · 案例</p>
         <p class="when"><time datetime="2026-11-10">2026-11-10</time></p>
         <p>2026-11-10 的 59 秒、13 镜短片，和 11 月 15 日那部 52 镜的 The Fable of Clawd 不是同一部。原帖正文没有短标题；The Edge 来自制作说明页的标题。画面仍用原帖官方封面，点图进原帖。</p>
-        <p>制作说明页已经直接读过，标题是 The Edge Making-Of，正文是 How The Edge was made。提示记在 Riley Brown 的一条消息和 claude-fable-5-2 上。作者原帖写 Fable 5.2，没有把 Claude 三个字写进那句声明；说明页用的是 claude-fable-5-2。流程是：HTML / three.js 做屏幕和世界，Python 在 Blender 里做场景和动画，Cycles OptiX 在 RunPod 上渲染，再做调色、字幕和声音。署名是 Claude Fable 5.2、两个代理（应用屏幕和 three.js 世界），以及 ElevenLabs 的配乐和声音。页面没有下载按钮，只列出 211MB 的 MP4 和 1.13GB 的母带，不是可下载源码。分镜里有打字、Clawd 回来、过夜搭建渲染和日出。制作说明已直接核对，本板没有复跑。</p>
         <p class="links">
           <a href="https://x.com/rileybrown/status/2119902109709537708" target="_blank" rel="noopener">原片</a>
           <a href="https://claude.ai/artifact/QGWUAjRrzRzZWGcQzSMLfa" target="_blank" rel="noopener">制作说明</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-10 05:17:03（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：直播里一次做成，只给了 Claude 一条提示词；代码在 Blender 里建出整间屋子（桌子、MacBook、灯、Clawd），笔记本屏幕是 Claude 另做的网页。制作说明页写 HTML / three.js 做屏幕和世界，Python 在 Blender 里做场景，Cycles 在 RunPod 渲染。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 922445，视频播放 378899，赞 7079，转发 389，回复 271，收藏 7291。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>抽样以惊叹为主，常被引用的是“一条提示词、13 镜、4K、52 分钟、5.75 美元”；也有人怀疑是收钱推广，或拿其他模型做了对照。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>制作说明页已经直接读过，标题是 The Edge Making-Of，正文是 How The Edge was made。提示记在 Riley Brown 的一条消息和 claude-fable-5-2 上。作者原帖写 Fable 5.2，没有把 Claude 三个字写进那句声明；说明页用的是 claude-fable-5-2。流程是：HTML / three.js 做屏幕和世界，Python 在 Blender 里做场景和动画，Cycles OptiX 在 RunPod 上渲染，再做调色、字幕和声音。署名是 Claude Fable 5.2、两个代理（应用屏幕和 three.js 世界），以及 ElevenLabs 的配乐和声音。页面没有下载按钮，只列出 211MB 的 MP4 和 1.13GB 的母带，不是可下载源码。分镜里有打字、Clawd 回来、过夜搭建渲染和日出。制作说明已直接核对，本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>九十多万曝光、正面反馈，有制作说明页。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="matt-pure-code-film" data-published="2026-11-10T05:12:19+08:00" data-cycle="2026-11-19" data-verification="verified">
+    <article class="card" data-id="matt-pure-code-film" data-published="2026-11-10T05:12:19+08:00" data-cycle="2026-11-19" data-verification="verified" data-audit="recommend-removal" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/mattshumer_/status/2119900920347828670" target="_blank" rel="noopener" aria-label="打开这条纯代码长片的原帖">
           <img src="images/matt-pure-code-film/poster.jpg" alt="原帖视频的官方封面，画面几乎是一片深蓝，看不出具体场景。这不是审片截图。" width="1200" height="503">
@@ -470,13 +690,23 @@
         <p class="by">Matt Shumer · Fable 5.2（作者声明） · 案例</p>
         <p class="when"><time datetime="2026-11-10">2026-11-10</time></p>
         <p>没有正式片名。作者原话是用纯代码做完整部片子，Voices, graphics, everything。他自己当时也写了还没看。和 CROSSTOWN 不是同一个项目。平台给出的媒体时长约 49 分钟，那是元数据，不是本板的审片结论。封面几乎全暗，不是看过之后截的画面。</p>
-        <p>作者声明到 Fable 5.2 和纯代码为止，原帖没有写 Claude 这三个字。官方型号全称是 Claude Fable 5.2。没有写具体的渲染器、视频引擎或音频引擎，这里也不补。暂未找到源码或教程。已核实的是作者自己的说法，不是独立跑通的制作流程。</p>
         <p class="links">
           <a href="https://x.com/mattshumer_/status/2119900920347828670" target="_blank" rel="noopener">原帖</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-10 05:12:19（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖只有一句：Fable 5.2 用纯代码做了整部片，“Voices, graphics, everything”。没有写工具、提示词或流程；作者当时自己也说还没看。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 58267，视频播放 26142，赞 468，回复 65，收藏 204。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>抽样明显负面：很多人说是 slop、看一分钟就跳着看、“发之前都不检查”，高赞回复在骂浪费 token；只有少数说这是有价值的实验。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>作者声明到 Fable 5.2 和纯代码为止，原帖没有写 Claude 这三个字。官方型号全称是 Claude Fable 5.2。没有写具体的渲染器、视频引擎或音频引擎，这里也不补。暂未找到源码或教程。已核实的是作者自己的说法，不是独立跑通的制作流程。</p>
+          <p><b>上板判断：建议移除。</b>社区反馈以负面为主，作者自己没看片，也没有可学的方法。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="welcome-fable-worlds" data-published="2026-11-10T03:06:55+08:00" data-cycle="2026-11-19" data-verification="verified">
+    <article class="card" data-id="welcome-fable-worlds" data-published="2026-11-10T03:06:55+08:00" data-cycle="2026-11-19" data-verification="verified" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/jeremyberman/status/2119869358679712206" target="_blank" rel="noopener" aria-label="打开 Jeremy Berman 的原帖">
           <img src="images/welcome-fable-worlds/poster.jpg" alt="原帖官方封面：一只剑龙样的恐龙低头靠近水边的芦苇。" width="1200" height="502">
@@ -487,14 +717,24 @@
         <p class="by">Jeremy Berman · Fable 5.2（作者声明） · 案例</p>
         <p class="when"><time datetime="2026-11-10">2026-11-10</time></p>
         <p>标题用作者原帖里的原句，不是另起的片名。画面是史前水坑。作者回复写：用 Fable 写 Python 去控制 Blender，从零做起。原帖欢迎的是 Fable 5.2，回复里写的是 Fable，两处都没有把 Claude 三个字写进那句话。官方型号全称是 Claude Fable 5.2。</p>
-        <p>平台给出的时长约 18.3 秒，是元数据。本板没有看片。没有写许可证，也没有作者自己的公开教程或仓库。暂不把别人的综述当成这部的教程。</p>
         <p class="links">
           <a href="https://x.com/jeremyberman/status/2119869358679712206" target="_blank" rel="noopener">原帖</a>
           <a href="https://x.com/jeremyberman/status/2119870801730245009" target="_blank" rel="noopener">制作回复</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-10 03:06:55（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者回复：从零开始，用 Fable 写 Python 控制 Blender。没有提示词、耗时或仓库。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 297644，视频播放 184679，赞 1349，回复 39，收藏 374。方法回复曝光 4625。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>抽样以称赞为主（草和毛发“像实拍”，有人说可以用来教历史）；也有人说还比不上自然历史博物馆的东西，或问这是不是纯代码。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>平台给出的时长约 18.3 秒，是元数据。本板没有看片。没有写许可证，也没有作者自己的公开教程或仓库。暂不把别人的综述当成这部的教程。</p>
+          <p><b>上板判断：达标。</b>近三十万曝光、正面反馈，但方法只有一句，学习价值有限。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="what-the-water-keeps" data-published="2026-11-10T03:05:21+08:00">
+    <article class="card" data-id="what-the-water-keeps" data-published="2026-11-10T03:05:21+08:00" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/kevin_t_ngo/status/2119868968307695818" target="_blank" rel="noopener" aria-label="打开 What the water keeps 的原帖">
           <img src="images/what-the-water-keeps/poster.jpg" alt="What the water keeps：金色黄昏里，一个提着灯的小孩坐在小船中，从木桥下划过平静的水面。" width="1280" height="720">
@@ -509,9 +749,18 @@
           <a href="https://what-the-water-keeps.vercel.app/" target="_blank" rel="noopener">打开演示</a>
           <a href="https://x.com/kevin_t_ngo/status/2119868968307695818" target="_blank" rel="noopener">原帖</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-10 03:05:21（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：Claude Fable 5.2 做的游戏演示，浏览器里可玩，坐船穿过 8 个梦境世界。没有公开提示词或流程。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 516376，视频播放 226066，赞 4288，回复 178，收藏 1824。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>抽样正面，夸美术统一、中端笔记本也流畅；有人问用了什么引擎、在 Tripo 上花了多少，作者在样本里没有回答。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>上板判断：达标。</b>五十万曝光、正面反馈，可学跨场景保持统一的美术方向。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="connect-claude-code-to-blender" data-published="2026-11-08T20:28:00+08:00">
+    <article class="card" data-id="connect-claude-code-to-blender" data-published="2026-11-08T20:28:00+08:00" data-audit="recommend-removal" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://thegrowthengine.net/connect-claude-code-to-blender" target="_blank" rel="noopener" aria-label="打开 Claude Code 接入 Blender 的教程">
           <img src="images/connect-claude-code-to-blender/cyberpunk-street.webp" alt="一篇文章里的官方测试图：夜间霓虹街道，湿润路面通向远处，两侧有 NOODLE、OPEN、SUSHI、24H 等招牌。左上角写着 Made in Blender by Claude Code。图说写明这是作者用 Claude Code 在 Blender 5.2 里做的测试。" width="900" height="960">
@@ -525,9 +774,18 @@
         <p class="links">
           <a href="https://thegrowthengine.net/connect-claude-code-to-blender" target="_blank" rel="noopener">教程</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>页面写 2026-11-08 20:28（亚洲/上海）。</p>
+          <p><b>方法与工具（作者自述）：</b>第三方教程页：一步步把 Claude Code 接到 Blender，用技能包搭小场景。作者只写 Claude Code，没写型号；文中的 5.2 是 Blender 版本。</p>
+          <p><b>数据：</b>网页教程，没有公开的浏览、点赞或评论数。</p>
+          <p><b>社区反馈：</b>找不到公开评论。</p>
+          <p><b>推广与利益：</b>站点是一家用 AI 投放广告的营销代理公司，教程同时是获客内容。</p>
+          <p><b>上板判断：建议移除。</b>没有可核实的传播和反馈；接线步骤已被更完整的视频教程覆盖。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="moss-keeper" data-published="2026-11-02T16:19:49+08:00">
+    <article class="card" data-id="moss-keeper" data-published="2026-11-02T16:19:49+08:00" data-audit="recommend-removal" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/chetaslua/status/2117169796290916732" target="_blank" rel="noopener" aria-label="打开 The Moss Keeper 的原帖">
           <img src="images/moss-keeper/poster.jpg" alt="The Moss Keeper：长满苔藓的远古巨人在日出的薄雾森林里，藤蔓从树冠垂下。" width="1280" height="694">
@@ -537,16 +795,26 @@
         <h2>The Moss Keeper</h2>
         <p class="by">Chetaslua · 单文件 HTML · 作者称 Fable 5.5</p>
         <p class="when"><time datetime="2026-11-02">2026-11-02</time></p>
-        <p>苔藓巨人与森林的代码动画短片：日出时，长满苔藓的巨人在遗忘的森林里醒来。学习用代码组织绘画质感、场景和镜头。</p>
-        <p>作者原帖和仓库写 Made with Fable 5.5。2026-11-18 核对的官方型号表没有 Claude Fable 5.5，不能改记成 Fable 5.2，也不能当成已核实的官方型号。</p>
+        <p>苔藓巨人与森林的动画短片：日出时，长满苔藓的巨人在遗忘的森林里醒来。作者说是纯代码一次做成，但公开仓库里只有一份内嵌 MP4 的 HTML，看不到生成画面的代码。</p>
         <p class="links">
           <a href="https://chetaslua.github.io/moss-keeper/" target="_blank" rel="noopener">打开演示</a>
           <a href="https://github.com/ChetasLua/moss-keeper" target="_blank" rel="noopener">源代码</a>
           <a href="https://x.com/chetaslua/status/2117169796290916732" target="_blank" rel="noopener">原帖</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-02 16:19:49（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖写 “Fable 5.5”“PURE CODE”“one shotted”。本轮打开仓库：只有 README 和一份约 48MB 的 index.html，README 写明成片是以 base64 MP4 嵌在页面里，播放器和一层 canvas 颗粒是代码；仓库里看不到生成画面的代码。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 2453652，视频播放 667830，赞 8182，回复 373，收藏 5966。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>多数惊叹；但有人指出“没有 Fable 5.5，只有 5、5.1 和 5.2”，也有人问能否从 GitHub 代码确认，或嘲讽为了省视频费烧更多 token。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>作者原帖和仓库写 Made with Fable 5.5。2026-11-18 核对的官方型号表没有 Claude Fable 5.5，不能改记成 Fable 5.2，也不能当成已核实的官方型号。</p>
+          <p><b>上板判断：建议移除。</b>型号不是官方型号，“纯代码”也无法从公开文件里核实；卡上原来写的“学习用代码组织绘画质感、场景和镜头”没有依据，已删去。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="threejs-shorts" data-published="2026-11-01T14:15:41+08:00">
+    <article class="card" data-id="threejs-shorts" data-published="2026-11-01T14:15:41+08:00" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://www.youtube.com/watch?v=OtbLL6OBNE4" target="_blank" rel="noopener" aria-label="打开 Three.js 短片的教程">
           <img src="images/threejs-shorts/maxresdefault.jpg" alt="教程封面：三格火柴人短片分别写着 paradise、making soup? 和 the fifth，中间叠着 Claude 字样。" width="1280" height="720">
@@ -561,9 +829,18 @@
           <a href="https://www.youtube.com/watch?v=OtbLL6OBNE4" target="_blank" rel="noopener">教程</a>
           <a href="https://github.com/mromidev/claude-animated-shorts" target="_blank" rel="noopener">技能包</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-01 14:15:41（亚洲/上海），YouTube 上传时间。</p>
+          <p><b>方法与工具（作者自述）：</b>作者简介：让 Claude 逐帧看一个频道最新 20 条短片，写风格手册，再在自己电脑上用 three.js 做 2D 角色、3D 世界的短片，没有视频生成器；第一版显得廉价，于是用 7 个代理逐项对照参考（描线、镜头模糊、运镜、阴影颜色）。技能免费公开。Claude 型号没有写。</p>
+          <p><b>数据（2026-11-25 12:54 亚洲/上海 核验）：</b>播放 1374773，赞 32314，抓到评论 60 条。</p>
+          <p><b>社区反馈（YouTube 评论，2026-11-25 12:54 亚洲/上海 抽样，不是全量）：</b>最高赞评论（2500 赞）感谢他免费公开；但也有 719 赞的 “The slop thickens.”，还有人说仓库缺 package.json、零基础跑不起来，或说是“烧 500 美元想赚 5 美元”。</p>
+          <p><b>推广与利益：</b>另推付费 Skool 社区（更多技能和写实 3D）。</p>
+          <p><b>上板判断：达标。</b>一百三十多万播放、三万赞，流程和技能都公开；反馈正面为主，也有明确的 slop 批评。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="legal-documents-scale" data-published="2026-10-28T00:00:00+08:00" data-cycle="2026-11-19" data-verification="verified">
+    <article class="card" data-id="legal-documents-scale" data-published="2026-10-28T00:00:00+08:00" data-cycle="2026-11-19" data-verification="verified" data-audit="recommend-removal" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://images.aiwithayushman.com/marketing/a72ac6314f7e2dfc.mp4" target="_blank" rel="noopener" aria-label="打开 Navigating Complex Legal Documents at Scale 的作者成片">
           <img src="images/legal-documents-scale/hero.webp" alt="博客配图：深色背景上有亮绿色的曲线和散开的光点，像一张网络。" width="2000" height="667">
@@ -574,14 +851,24 @@
         <p class="by">Ayushman Dash · Claude Opus 5.5 · 补充遗漏</p>
         <p class="when"><time datetime="2026-10-28">2026-10-28</time></p>
         <p>补充近 30 天里漏掉的一条，不是最近三天的新作。日期只精确到 2026-10-28。作者写这是给 Jus Mundi 做的说明片：一个约 326KB 的 HTML，用时间函数和 three.js 出画，再用 Playwright 和 ffmpeg 导出。旁白和音乐来自 ElevenLabs。博客里放了作者的 720p MP4。暂未找到可公开打开的原 HTML 演示。</p>
-        <p>作者说成片约 5 分 35 秒、65 个场景。本板没有看片，不把这句话写成已审结论。点图打开的是博客里的成片地址。</p>
         <p class="links">
           <a href="https://aiwithayushman.com/blog/opus-5-5-is-insane-at-producing-videos" target="_blank" rel="noopener">制作说明</a>
           <a href="https://images.aiwithayushman.com/marketing/a72ac6314f7e2dfc.mp4" target="_blank" rel="noopener">成片</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>博客只写到 2026-10-28，没有钟点。</p>
+          <p><b>方法与工具（作者自述）：</b>作者博客：给 Jus Mundi 做的说明片，一份约 326KB 的 HTML，用时间函数和 three.js 出画，Playwright 和 ffmpeg 导出，旁白和音乐来自 ElevenLabs；作者自报 Claude Opus 5.5、约 5 分 35 秒、65 个场景。</p>
+          <p><b>数据：</b>博客文章和 MP4，没有公开的浏览、点赞或评论数。</p>
+          <p><b>社区反馈：</b>找不到公开评论。</p>
+          <p><b>推广与利益：</b>这是作者给客户 Jus Mundi 做的商业片。博客是作者个人站，同时推他的免费 AI 课程。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>作者说成片约 5 分 35 秒、65 个场景。本板没有看片，不把这句话写成已审结论。点图打开的是博客里的成片地址。</p>
+          <p><b>上板判断：建议移除。</b>没有可核实的传播和社区反馈。如果你看重“真实客户片”这一点，可以保留为参考。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="slop-newyork" data-published="2026-10-22T15:55:23+08:00">
+    <article class="card" data-id="slop-newyork" data-published="2026-10-22T15:55:23+08:00" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/mrdoob/status/2113177383658561721" target="_blank" rel="noopener" aria-label="打开 Slop New York 的原帖">
           <img src="images/slop-newyork/avenue.jpg" alt="Slop New York：黄色出租车行驶在曼哈顿街道上，两侧是现场生成的楼房与商店。" width="1600" height="900">
@@ -589,17 +876,26 @@
       </figure>
       <div class="meta">
         <h2>Slop New York</h2>
-        <p class="by">mrdoob · 历史条目</p>
+        <p class="by">mrdoob · three.js · 后续提交署名 Claude Opus 5.5</p>
         <p class="when"><time datetime="2026-10-22">2026-10-22</time></p>
-        <p>打开网页时，曼哈顿的街道、立面和车流在浏览器里现场生成，不靠提前存好的照片。历史条目，尚未核实 Claude 参与。作者原帖写的是压缩后约 784KB。</p>
+        <p>打开网页时，曼哈顿的街道、立面和车流在浏览器里现场生成，不靠提前存好的照片。作者原帖写的是压缩后约 784KB，代码以 MIT 开源。首发版用的模型没有披露；2026-11-02 起的后续提交署名 Claude Opus 5.5。</p>
         <p class="links">
           <a href="https://mrdoob.github.io/slop-newyork/" target="_blank" rel="noopener">打开演示</a>
           <a href="https://github.com/mrdoob/slop-newyork" target="_blank" rel="noopener">源代码</a>
           <a href="https://x.com/mrdoob/status/2113177383658561721" target="_blank" rel="noopener">原帖</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-10-22 15:55:23（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖只说“花了好几周的 token”做出完全程序化的纽约，压缩后 784KB，代码开源，没有写模型。本轮看仓库提交：首发前的 22 个提交没有署名模型；从 2026-11-02 起有 50 个提交写着 Co-Authored-By: Claude Opus 5.5。所以首发版用的模型未披露，之后的改进确实有 Claude Opus 5.5 参与。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 374269，视频播放 155529，赞 4054，转发 331，回复 271，收藏 2608。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>非常正面，而且有实际行动：作者说 4 天里出现了 35 个以上基于它的项目，很多人移植到自己的城市；也有人报告出租车穿过路灯、偶尔卡顿。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。MIT 许可。</p>
+          <p><b>上板判断：达标。</b>三十七万曝光、大量二创，后续开发有 Claude 署名。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="javascript-frames" data-published="2026-10-07T01:00:09+08:00">
+    <article class="card" data-id="javascript-frames" data-published="2026-10-07T01:00:09+08:00" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://www.youtube.com/watch?v=rscb1DgJtNg" target="_blank" rel="noopener" aria-label="打开 JavaScript 逐帧的教程">
           <img src="images/javascript-frames/maxresdefault.jpg" alt="教程封面：作者双手分别举着 Claude 标志和 JS 标志，四周是四格运动图形，上方写着 Motion Graphics。" width="1280" height="720">
@@ -614,9 +910,18 @@
           <a href="https://www.youtube.com/watch?v=rscb1DgJtNg" target="_blank" rel="noopener">教程</a>
           <a href="https://github.com/cth9191/animate" target="_blank" rel="noopener">技能包</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-10-07 01:00:09（亚洲/上海），YouTube 上传时间。</p>
+          <p><b>方法与工具（作者自述）：</b>作者简介：Claude Code 写 JavaScript 逐帧画，用 Playwright 渲染、FFmpeg 拼成 MP4，不用 After Effects、Remotion 或视频生成器；讲提示、工具循环、参考图和技能四级。Claude 型号没有写。</p>
+          <p><b>数据（2026-11-25 12:54 亚洲/上海 核验）：</b>播放 234281，赞 3946，抓到评论 60 条。</p>
+          <p><b>社区反馈（YouTube 评论，2026-11-25 12:54 亚洲/上海 抽样，不是全量）：</b>正面为主；也有人说 5.9 万行代码太浪费，用 Remotion 更省 token，标题里的“免费”言过其实（还要 Claude 订阅），还有人担心“讲解类 slop”泛滥。</p>
+          <p><b>推广与利益：</b>简介和置顶评论推作者的付费 Skool 课程和一对一咨询。</p>
+          <p><b>上板判断：达标。</b>二十多万播放、近四千赞，技能公开。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="escape-velocity" data-published="2026-09-26T01:17:57+08:00" data-cycle="2026-11-19-ev" data-verification="author-archive">
+    <article class="card" data-id="escape-velocity" data-published="2026-09-26T01:17:57+08:00" data-cycle="2026-11-19-ev" data-verification="author-archive" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/anabology/status/2103534482930491441" target="_blank" rel="noopener" aria-label="打开 ESCAPE VELOCITY 的原片">
           <img src="images/escape-velocity/cover.jpg" alt="作者片库封面：侧脸的人，画面上有 ESCAPE VELOCITY、5:06 和 September 2026。这是封面，不是审片截图。" width="1200" height="630">
@@ -629,7 +934,6 @@
         <p class="by">anabology · Claude Code · Opus 5.5</p>
         <p class="when"><time datetime="2026-09-26T01:17:57+08:00">2026-09-26</time></p>
         <p>一支 5 分 06 秒的 MV。人负责方向、选歌和选角、批准分镜、看剪辑并给修改，最后点头。Claude Code 里主要是 Opus 5.5，做调研、歌词、分镜、提示词整理，并协调各段和运动图形的代码。歌是 Suno v6，底板是 Midjourney v8.2，活动和对口型是 Seedance 2.5，用画面底板加上真实人声切片。</p>
-        <p>值得学的是：先有逐词、逐拍的时间网格，生成的画面和代码画的字、图形是分开的，中间有人看片的关口。不是一条提示词自动做完。</p>
         <p class="links">
           <a href="https://x.com/anabology/status/2103534482930491441" target="_blank" rel="noopener">原片</a>
           <a href="https://claudia.gallery/record/escape-velocity/readme.md" target="_blank" rel="noopener">制作说明</a>
@@ -642,10 +946,17 @@
         </p>
         <details class="more">
           <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-09-26 01:17:57（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>以作者制作档案为准：Claude Code 里主要是 Opus 5.5 做调研、歌词、分镜和提示词整理，并协调各段和运动图形代码；Suno v6 出歌，Midjourney v8.2 出底板，Seedance 2.5 做动态和对口型。人负责方向、选歌选角、批准分镜、看剪辑给意见。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 20251448，视频播放 3365314，赞 16511，转发 2016，引用 913，回复 1044，收藏 13921。</p>
+          <p><b>社区反馈：</b>沿用 2026-11-19 的抽样：有人想试、受启发，也有人追问视频模型，或担心这是 AI 宣传。本轮没有重新抽样。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。原帖那句“12 hours later, woke up”是套用别人的过夜说法。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>值得学的是：先有逐词、逐拍的时间网格，生成的画面和代码画的字、图形是分开的，中间有人看片的关口。不是一条提示词自动做完。</p>
           <p>分工和数量都来自作者的制作档案，不是本板复跑的结果。档案写 9 章、141 镜；Midjourney 188 条提示词、636 张图、130 块底板；Seedance 47 条镜头加 30 条续拍。墙钟约 19 小时，导演意见约 50 条，都是作者自报。原帖那句 “12 hours later, woke up” 是套用别人的过夜说法，不当成精确工时。</p>
           <p>开头大约 25 分钟用过 Fable 5.1，网页搜索辅助写的是 Haiku 4.5。本机还做了分轨、词级对齐和对口型备援。运动图形是自制 JS 引擎，制作页没有给出完整引擎源码，这里也不补。Claudia Grok Bot 是后来的入口，不是这部片子的制作引擎。</p>
-          <p>原帖约 2023 万次曝光，视频播放约 336 万次，两者不是同一个数。赞约 1.65 万，转发 2017（2026-11-19 核验）。抽样里有人短评、有人想试、有人想听到歌、有人说受启发去做自己的片子，也有人追问用了哪个视频模型。另有人担心或开玩笑说这是 AI 宣传。这是抽样，不是全量共识。</p>
           <p>未看完正片，未复跑。制作说明以作者档案为准。</p>
+          <p><b>上板判断：达标。</b>两千万曝光，制作档案完整，人和工具的分工写得最清楚。</p>
         </details>
       </div>
     </article>
@@ -660,10 +971,77 @@
     <article class="card intro" data-id="intro-openai">
       <div class="meta">
         <p class="hello">OpenAI 学习板</p>
-        <p>16 张。前面 9 张是独立创作者 2026-11-18 的原帖，按发帖时间从新到旧。后面 7 张是官方 Showcase，官方页没有作品日期，所以排在最后。社区卡的成片没有看完，可玩页没有试玩。</p>
+        <p>17 张。10 张是独立创作者的原帖，7 张是官方 Showcase。按原发布日期从新到旧；其中 5 张官方作品本轮找到了作者在 X 的首发帖，按那个时间排，另外 2 张找不到日期，排在最后。2026-11-25 全板复核：每张卡的「依据与限度」写了原发布时间、作者自述的方法、当天数据、社区反馈抽样、推广与利益关系，以及上板判断。</p>
       </div>
     </article>
-    <article class="card" data-id="nagi-reef" data-published="2026-11-18T08:18:13+08:00" data-cycle="2026-11-19-community" data-verification="community">
+    <article class="card" data-id="saltmere" data-published="2026-11-24T15:12:11+08:00" data-cycle="2026-11-25-audit" data-verification="author-reported" data-audit="keep" data-audited="2026-11-25">
+      <figure>
+        <a class="still" href="https://x.com/MengTo/status/2125125308991090749" target="_blank" rel="noopener" aria-label="打开 Saltmere 的原帖">
+          <img src="images/saltmere/preview.jpg" alt="原帖视频封面：雾林溪边插着一把蓝色油纸伞，左侧大字 A closer look at the coast，右侧浮着潮差和水温两张小卡片。" width="1200" height="675">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">独立创作者 · GPT-6.2 Astra · 作者自述</p>
+        <h2>Saltmere 三维落地页</h2>
+        <p class="by">Meng To · @MengTo</p>
+        <p class="when"><time datetime="2026-11-24T15:12:11+08:00">2026-11-24</time></p>
+        <p>一个可以在网页上逛的沿海观测站：雾林、油纸伞、浑仪和开花的树枝做主视觉，往下是功能卡、案例、立体地形和海面大字。作者把交互拆成四个可复用的技能并开源。值得学的是先定世界，再把世界拆成几个“可以摸的物件”。</p>
+        <p class="links">
+          <a href="https://x.com/MengTo/status/2125125308991090749" target="_blank" rel="noopener">原帖</a>
+          <a href="https://threeui.com/saltmere" target="_blank" rel="noopener">在线演示</a>
+          <a href="https://x.com/gdb/status/2125386640923521141" target="_blank" rel="noopener">Brockman 引用</a>
+        </p>
+        <p class="links">
+          <a href="https://github.com/MengTo/Skills/tree/main/agent-skills/3d/hover-particle-dissolve" target="_blank" rel="noopener">粒子溶解</a>
+          <a href="https://github.com/MengTo/Skills/tree/main/agent-skills/3d/3d-feature-objects" target="_blank" rel="noopener">三维小物件</a>
+          <a href="https://github.com/MengTo/Skills/tree/main/agent-skills/3d/interactive-topography" target="_blank" rel="noopener">互动地形</a>
+          <a href="https://github.com/MengTo/Skills/tree/main/agent-skills/web-design/gradient-border-flashlight" target="_blank" rel="noopener">边框手电</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-24 15:12:11（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖写 “Astra 6.2”（官方名 GPT-6.2 Astra）：用了五天，说它最快、三维品味最好，但需要更多纠偏，所以把做法写成了技能。四个技能以 MIT 开源在 MengTo/Skills：粒子溶解、三维功能小物件、互动地形、边框手电。作者拿 Opus 5.5（很好但慢）和 Fable 5.2（不如 Astra 省 token）做过比较，没说这两个参与了这一页。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 87445，视频播放 36151，赞 890，转发 76，引用 8，回复 57，收藏 1018。Greg Brockman 引用转发说 Astra 做 3D 很强。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>回复整体正面，有人专门夸粒子溶解技能保留原网格的细节；也有人反映加载约 10 秒、会卡，作者回应自己测下来不到 8 秒、不到 8MB。</p>
+          <p><b>推广与利益：</b>这一页本身是作者 ThreeUI 的付费 Pro 模板（源码 299 美元买断或 199 美元一年），免费公开的是演示和四个技能。布局参考了 Hey Detya。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>“五天”指他用这个模型五天，不是说这一页只做了五天。没有公开完整提示词或逐步教程，也没说是在 ChatGPT、Codex 还是 Cursor 里做的。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>近九万曝光、千余收藏，技能可以直接拿来用，适合做作品官网或项目页。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="forest-walks" data-published="2026-11-18T22:48:09+08:00" data-cycle="2026-11-19-gpt" data-verification="official-showcase" data-audit="recommend-removal" data-audited="2026-11-25">
+      <figure>
+        <a class="still" href="https://forest-walks-at-dusk.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Forest Walks 的在线演示">
+          <img src="images/forest-walks/open-graph.png" alt="Forest Walks 官方预览：黄昏树林里的小路，路边有一堆篝火。" width="1200" height="630">
+        </a>
+      </figure>
+      <div class="meta">
+        <p class="badge">OpenAI 官方 Showcase · GPT-6.2 Astra + Codex</p>
+        <h2>Forest Walks</h2>
+        <p class="by">Thomas Ricouard · OpenAI</p>
+        <p class="when"><time datetime="2026-11-18T22:48:09+08:00">2026-11-18</time></p>
+        <p>同一条空间路径上有三种画面：写实黄昏、绘本和半透明色叶。切换时位置和朝向还在。页眉写 GPT-6.2 Astra + Codex。技术是 JavaScript、Three.js、WebGL 2、Blender 和 Web Audio。篝火的声音跟着空间走。不是三张重复的卡，也不是审片。</p>
+        <p class="links">
+          <a href="https://forest-walks-at-dusk.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
+          <a href="https://developers.openai.com/showcase/forest-walks" target="_blank" rel="noopener">官方制作过程</a>
+          <a href="https://x.com/Dimillian/status/2123065728697778446" target="_blank" rel="noopener">作者首发帖</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-18 22:48:09（亚洲/上海），作者 Thomas Ricouard（@Dimillian）的 X 首发帖；官方 Showcase 页没有日期。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：测试 GPT-6.2 Astra 对画风的理解，同一片森林做写实、绘本、“liquid glass”三种风格。官方页写 Three.js、WebGL 2、Blender 和 Web Audio。</p>
+          <p><b>数据（2026-11-25 13:06 亚洲/上海 核验）：</b>作者首发帖曝光 11093，视频播放 4265，赞 173，回复 9。</p>
+          <p><b>社区反馈：</b>回复太少，未抽样。</p>
+          <p><b>推广与利益：</b>作者 X 简介写在 OpenAI 做 Codex 开发者体验，这是官方展示。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>官方制作过程未独立复跑。暂未找到公开源码。未试玩。</p>
+          <p><b>上板判断：建议移除。</b>曝光一万出头，达不到传播门槛。“同一空间切三种画风”对美术指导有用，所以如果你想保留官方案例，可以留。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="nagi-reef" data-published="2026-11-18T08:18:13+08:00" data-cycle="2026-11-19-community" data-verification="community" data-audit="recommend-removal" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/Masimo_Blue/status/2122846803477537071" target="_blank" rel="noopener" aria-label="打开凪 NAGI 的原帖">
           <img src="images/nagi-reef/preview.jpg" alt="原帖视频封面：浅海珊瑚和一条黑黄相间的鱼，界面写着 NAGI 和 Coral Garden。" width="1200" height="675">
@@ -682,11 +1060,18 @@
         </p>
         <details class="more">
           <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-18 08:18:13（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：用 GPT-6.2 Astra 做了能在海里游、能戳鱼的网页；帖里视频是用来做基准的初期版本，现在网页上的鱼已换成 @nachat_dayo 的鱿鱼和用套件做的鱼。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 5579，视频播放 1278，赞 87，回复 1，收藏 18。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>只有两条回复，一条是作者自己。谈不上社区反馈。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
           <p>原帖原文：GPT-6.2 Astraで、海の中を泳ぐWebサイトを作りました。作者写明帖里的视频是初期版本；现在可玩页上的鱼已经换成 @nachat_dayo 的鱿鱼，以及其他用套件做的鱼，不是全部一次生成。作者没有写具体前端引擎。暂未找到源码。未试玩，未看完视频。</p>
+          <p><b>上板判断：建议移除。</b>曝光不到六千，达不到传播门槛。这批社区卡是按你“独立创作者的 Astra 实验”偏好收的，所以列出来请你决定。</p>
         </details>
       </div>
     </article>
-    <article class="card" data-id="nocturne-jukebox" data-published="2026-11-18T07:16:45+08:00" data-cycle="2026-11-19-community" data-verification="community">
+    <article class="card" data-id="nocturne-jukebox" data-published="2026-11-18T07:16:45+08:00" data-cycle="2026-11-19-community" data-verification="community" data-audit="recommend-removal" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/ShadeLurk/status/2122831337321349384" target="_blank" rel="noopener" aria-label="打开 Nocturne 的原帖">
           <img src="images/nocturne-jukebox/preview.jpg" alt="原帖视频封面：Nocturne 界面，两台金属转盘和两侧的机械臂。" width="1200" height="713">
@@ -706,11 +1091,18 @@
         </p>
         <details class="more">
           <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-18 07:16:45（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：用 GPT-6.2 Astra 做浏览器里的 CD 点唱机；源码公开在回复里，说其他模型也能拿这份 HTML 换成自己的歌。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 2283，视频播放 786，赞 92，回复 3。HTML 回复曝光 424。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>几条回复都友好（夸品味），样本太少。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
           <p>作者长文写声音和画面用 Web Audio 与 Canvas／WebGL，五首歌打进同一个 HTML。回复里的地址和可玩页是同一份。这是公开可查看的 HTML，不是可随便商用的许可。暂未找到另外的仓库。未试玩，未看完视频。日期用原帖时间，不用页面的 Last-Modified。</p>
+          <p><b>上板判断：建议移除。</b>曝光两千多，达不到传播门槛。</p>
         </details>
       </div>
     </article>
-    <article class="card" data-id="peacock-svg" data-published="2026-11-18T06:18:19+08:00" data-cycle="2026-11-19-community" data-verification="community">
+    <article class="card" data-id="peacock-svg" data-published="2026-11-18T06:18:19+08:00" data-cycle="2026-11-19-community" data-verification="community" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/petergostev/status/2122816629402910859" target="_blank" rel="noopener" aria-label="打开 SVG 孔雀的原帖">
           <img src="images/peacock-svg/preview.jpg" alt="原帖视频封面：一只蓝色孔雀的头和颈，冠羽展开，背景是灰蓝的树。" width="1200" height="675">
@@ -728,11 +1120,18 @@
         </p>
         <details class="more">
           <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-18 06:18:19（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：他最喜欢的一次 GPT-6.2-Astra 生成，SVG 画的孔雀，说没有别的模型（包括 Fable）接近这个精度。没有公开 SVG 文件或提示词。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 87702，视频播放 48797，赞 1622，回复 63，收藏 324。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>多数惊叹羽毛细节，有人说“所有 Astra 对比里只有这条让我服气”；也有人提醒 SVG 里可能嵌位图、要放大看，或要求公开提示词。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
           <p>原帖写 GPT-6.2-Astra，并拿包括 Fable 在内的其他模型作比较。只展示这一件。暂未找到可打开的 SVG 文件或教程。未看完视频。</p>
+          <p><b>上板判断：达标。</b>近九万曝光、正面反馈；但只是一张单次生成，方法学习价值有限。</p>
         </details>
       </div>
     </article>
-    <article class="card" data-id="kasane-valley" data-published="2026-11-18T06:17:01+08:00" data-cycle="2026-11-19-community" data-verification="community">
+    <article class="card" data-id="kasane-valley" data-published="2026-11-18T06:17:01+08:00" data-cycle="2026-11-19-community" data-verification="community" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/givros/status/2122816304071803109" target="_blank" rel="noopener" aria-label="打开 Kasane Valley 的原帖">
           <img src="images/kasane-valley/preview.jpg" alt="原帖视频封面：红桥、瓦屋、梯田和远处的山，画面像一座日本山村。" width="1200" height="675">
@@ -753,11 +1152,18 @@
         </p>
         <details class="more">
           <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-18 06:17:01（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖写 “GPT 6.2 Astra Ultra”（Ultra 不是官方型号名）：用 Blender、three.js 和自制技能做；回复里贴了让 ChatGPT 优化过的长提示词。后来的帖子写 “GPT 6.2 Astra”，自报 1 小时 53 分。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 85942，视频播放 40558，赞 1053，回复 38，收藏 677。提示词回复曝光 6098，收藏 105。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>抽样正面为主，有人说靠的是“告诉模型不要做什么”；也有人说“不太好看”，或打开很慢。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。可玩页写地形影像改编自日本国土地理院。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
           <p>首帖原文写 “GPT 6.2 Astra Ultra”。Ultra 不是官方型号名，也不是官方 reasoning.effort 的取值。作者后来的帖子写 “GPT 6.2 Astra”，并自报 1 小时 53 分。徽章用官方名称 GPT-6.2 Astra。可玩页写地形影像改编自日本地理院。自制技能没有找到独立发布页。未试玩，未看完工作流视频。</p>
+          <p><b>上板判断：达标。</b>八万多曝光、正面反馈，提示词公开，Blender 加 three.js 的分工可学。</p>
         </details>
       </div>
     </article>
-    <article class="card" data-id="nuremberg-market" data-published="2026-11-18T05:32:53+08:00" data-cycle="2026-11-19-community" data-verification="community">
+    <article class="card" data-id="nuremberg-market" data-published="2026-11-18T05:32:53+08:00" data-cycle="2026-11-19-community" data-verification="community" data-audit="recommend-removal" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/FlorianGallwitz/status/2122805196938231879" target="_blank" rel="noopener" aria-label="打开纽伦堡圣诞市场的原帖">
           <img src="images/nuremberg-market/preview.jpg" alt="原帖视频封面：夜色里的教堂前有圣诞摊和行人，界面写着 Stadtatlas Nürnberg。" width="1200" height="818">
@@ -776,11 +1182,18 @@
         </p>
         <details class="more">
           <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-18 05:32:53（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：和半年前一字不差的提示词，换 GPT-6.2 Astra 再做一次可走的纽伦堡圣诞市场，结果更真实。旧帖写的是 ChatGPT-5.5 Pro。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 6166，视频播放 3414，赞 109，回复 10。2026-05-01 旧帖曝光 9244，赞 55。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>德语回复友好，高赞回复在开玩笑说“没有路障和保安，不像真的圣诞市场”。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
           <p>旧帖当时写的是 ChatGPT-5.5 Pro。这次没有写引擎，也没有可玩地址。未看完视频。</p>
+          <p><b>上板判断：建议移除。</b>曝光六千，达不到传播门槛。“同一提示词换模型”的对照思路有价值，但这条数据太小。</p>
         </details>
       </div>
     </article>
-    <article class="card" data-id="pixel-jet-game" data-published="2026-11-18T05:13:18+08:00" data-cycle="2026-11-19-community" data-verification="community">
+    <article class="card" data-id="pixel-jet-game" data-published="2026-11-18T05:13:18+08:00" data-cycle="2026-11-19-community" data-verification="community" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/vib3coded/status/2122800268706259244" target="_blank" rel="noopener" aria-label="打开像素喷气游戏的原帖">
           <img src="images/pixel-jet-game/preview.jpg" alt="原帖视频封面：像素飞机飞在水面上方，画面上方写着 ChatGPT-6.2 Astra 和 5.31 美元。" width="1200" height="750">
@@ -798,11 +1211,18 @@
         </p>
         <details class="more">
           <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-18 05:13:18（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：GPT-6.2 Astra 用 36 分钟、5.31 美元，在一个 HTML 文件里做出像素喷气机游戏：加力、湖面滚转、座舱视角、导弹。没有公开文件或提示词。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 161119，视频播放 88392，赞 870，回复 74，收藏 525。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>正面为主，很多人在说价格和时间；也有人说这是原型或演示，不算一个游戏，或质疑改一处会不会弄坏另一处。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
           <p>暂未找到可下载的 HTML 或可玩页。未看完视频。</p>
+          <p><b>上板判断：达标。</b>十六万曝光、正面反馈；但没有公开文件，能学的主要是“单文件装下整套玩法”。</p>
         </details>
       </div>
     </article>
-    <article class="card" data-id="city-disaster-sim" data-published="2026-11-18T03:13:04+08:00" data-cycle="2026-11-19-community" data-verification="community">
+    <article class="card" data-id="city-disaster-sim" data-published="2026-11-18T03:13:04+08:00" data-cycle="2026-11-19-community" data-verification="community" data-audit="recommend-removal" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/lucian__03/status/2122770012234805383" target="_blank" rel="noopener" aria-label="打开城市灾难模拟器的原帖">
           <img src="images/city-disaster-sim/preview.jpg" alt="原帖视频封面：海中小岛上的小镇，标题 Pocket Chaos，上方写着 GPT 6.2 Astra (MAX)。" width="1080" height="1080">
@@ -820,11 +1240,18 @@
         </p>
         <details class="more">
           <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-18 03:13:04（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：只写了一次提示词，让 GPT-6.2 Astra 做龙卷风、陨石、内涝、建筑破坏和修复；Max effort，约 40 分钟。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 3642，视频播放 1494，赞 68，回复 14。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>韩语回复正面（像模拟城市、质量比想象好），样本小。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
           <p>Max 是官方文档里 reasoning.effort 的一个取值。作者自报约 40 分钟一次做完。暂未找到可玩页或源码。未看完视频。同一作者另有 Sol 的作品，不并进这张卡。</p>
+          <p><b>上板判断：建议移除。</b>曝光不到四千，达不到传播门槛。</p>
         </details>
       </div>
     </article>
-    <article class="card" data-id="pink-sky-train" data-published="2026-11-18T03:03:15+08:00" data-cycle="2026-11-19-community" data-verification="community">
+    <article class="card" data-id="pink-sky-train" data-published="2026-11-18T03:03:15+08:00" data-cycle="2026-11-19-community" data-verification="community" data-audit="recommend-removal" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/soyukke_game/status/2122767541823225891" target="_blank" rel="noopener" aria-label="打开粉红天空蒸汽火车的原帖">
           <img src="images/pink-sky-train/preview.jpg" alt="原帖视频封面：粉橙色天空下，一列蒸汽火车驶过水面上方的轨道，远处有飞艇。" width="1200" height="675">
@@ -843,11 +1270,48 @@
         </p>
         <details class="more">
           <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-18 03:03:15（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：GPT-6.2 Astra xhigh，“同一条提示词……”，拿来对比他 11-10 用 Fable 5.2 从建模做到视频的那条。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 548137，视频播放 238011，赞 2034，回复 47，收藏 860。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>传播大，但回复几乎都在笑 Astra 这版：“输了吧”“Codex 没品味”“少了 Fable 那版的镜头冲击力”，还有人调侃机器人对车尾的动作。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
           <p>旧帖写的是让 Fable 5.2 从建模做到视频。xhigh 按作者用词记下，是推理力度的说法。暂未找到可玩页。未看完视频。</p>
+          <p><b>上板判断：建议移除。</b>大家认可的是这条对比的笑点，不是这件作品；它更像 Fable 那条的反例。建议移除，或者改成“同一提示词对照”的说明，由你决定。</p>
         </details>
       </div>
     </article>
-    <article class="card" data-id="space-elevator" data-published="2026-11-18T02:16:10+08:00" data-cycle="2026-11-19-community" data-verification="community">
+    <article class="card" data-id="light-and-matter" data-published="2026-11-18T02:20:51+08:00" data-cycle="2026-11-19-gpt" data-verification="official-showcase" data-audit="recommend-removal" data-audited="2026-11-25">
+      <figure>
+        <a class="still" href="https://light-and-matter.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Light and Matter 的在线演示">
+          <img src="images/light-and-matter/open-graph.png" alt="Light &amp; Matter 官方预览：玻璃展厅，悬挂的玻璃装置和地面上的倒影。" width="1200" height="630">
+        </a>
+      </figure>
+      <div class="meta">
+        <p class="badge">OpenAI 官方 Showcase · GPT-6.2 Astra</p>
+        <h2>Light &amp; Matter</h2>
+        <p class="by">Eric Provencher · OpenAI</p>
+        <p class="when"><time datetime="2026-11-18T02:20:51+08:00">2026-11-18</time></p>
+        <p>页眉写 GPT-6.2 Astra。官方页没有写引擎。可走的材质、光线、反射和视觉特效展厅，能走近看灯，有烘焙日光和实时阴影，悬挂物在动，地面有倒影。学的是走动着看材质，不是一条成片。</p>
+        <p class="links">
+          <a href="https://light-and-matter.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
+          <a href="https://developers.openai.com/showcase/light-and-matter" target="_blank" rel="noopener">官方制作过程</a>
+          <a href="https://x.com/pvncher/status/2122756870771200470" target="_blank" rel="noopener">作者首发帖</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-18 02:20:51（亚洲/上海），作者 Eric Provencher（@pvncher）的 X 首发帖；官方 Showcase 页没有日期。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：GPT-6.2 Astra 能做的着色器很惊人，他做了一个叫 Light and Matter 的博物馆来展示其中几种。</p>
+          <p><b>数据（2026-11-25 13:06 亚洲/上海 核验）：</b>作者首发帖曝光 12685，赞 196，回复 11，收藏 43。</p>
+          <p><b>社区反馈：</b>回复太少，未抽样。</p>
+          <p><b>推广与利益：</b>作者 X 简介写在 OpenAI 做 Codex 开发者体验，这是官方展示。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>官方制作过程未独立复跑。暂未找到公开源码。未试玩。</p>
+          <p><b>上板判断：建议移除。</b>曝光一万出头，达不到传播门槛。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="space-elevator" data-published="2026-11-18T02:16:10+08:00" data-cycle="2026-11-19-community" data-verification="community" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://x.com/emollick/status/2122755693191287009" target="_blank" rel="noopener" aria-label="打开太空电梯乘坐体验的原帖">
           <img src="images/space-elevator/preview.jpg" alt="原帖视频封面：驾驶舱里的控制台，窗外是海面和一座环形结构，标牌写着 PELAGIC ANCHOR。" width="1200" height="675">
@@ -865,68 +1329,18 @@
         </p>
         <details class="more">
           <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-18 02:16:10（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：发布前就用过 GPT-6.2 Astra，觉得很不稳定、比其他模型难驾驭；但交给它一个大项目（用 Blender 和 Unity 从零做一次太空电梯乘坐），它交出来的还不错。</p>
+          <p><b>数据（2026-11-25 12:53 亚洲/上海 核验）：</b>原帖曝光 133615，视频播放 68408，赞 1320，回复 149，收藏 277。</p>
+          <p><b>社区反馈（X 回复，2026-11-25 12:55–13:00 亚洲/上海 抽样，不是全量）：</b>回复大多认同“不稳定但大项目能交付”，讨论要不要把任务拆小、写验收标准；也有人拿别的模型做了对照。</p>
+          <p><b>推广与利益：</b>原帖 paid_partnership 为 false。作者发布前就拿到了模型。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
           <p>原文写 prior to launch，以及 harder to steer。工具是作者写的 Blender 和 Unity。暂未找到可玩页或源码。未看完视频。同日另一则只写 Astra 6.2 的快艇帖不并进这张卡。</p>
+          <p><b>上板判断：达标。</b>十三万曝光，作者自己的保留意见本身就是学习点。</p>
         </details>
       </div>
     </article>
-    <article class="card" data-id="paris-atlas" data-date-precision="unknown" data-tie="0" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
-      <figure>
-        <a class="still" href="https://paris-atlas-street-explorer.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Paris Atlas 的在线演示">
-          <img src="images/paris-atlas/open-graph.png" alt="Paris Atlas 官方预览：俯看巴黎，埃菲尔铁塔、塞纳河和网格线叠在街区上。" width="1200" height="630">
-        </a>
-      </figure>
-      <div class="meta">
-        <p class="badge">OpenAI 官方 Showcase · GPT-6.2 Astra</p>
-        <h2>Paris Atlas</h2>
-        <p class="by">Thomas Ricouard · OpenAI</p>
-        <p class="when">发布日期待核实</p>
-        <p>官方页写 GPT-6.2 Astra，API 型号是 gpt-6.2-astra。页眉没有 Codex 徽章。正文写 Codex 把 Blender 里的地标放进 Three.js，于是可以在巴黎步行或开车。学的是真实街区、地标和可走可开的尺度，不是视频模型。</p>
-        <p>推荐依据：OpenAI 官方 Showcase 收录，公开互动数未披露。官方页有分步制作过程，含提示摘要，不是已复跑的完整教程，也不是公开源码。暂未找到公开源码。未试玩，未复跑。本批七个项目的官方页都没有作品日期，所以都排在已知日期之后。</p>
-        <p class="links">
-          <a href="https://paris-atlas-street-explorer.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
-          <a href="https://developers.openai.com/showcase/paris-atlas" target="_blank" rel="noopener">官方制作过程</a>
-        </p>
-      </div>
-    </article>
-    <article class="card" data-id="notre-damn" data-date-precision="unknown" data-tie="1" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
-      <figure>
-        <a class="still" href="https://cathedral-walk.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Notre Damn 的在线演示">
-          <img src="images/notre-damn/open-graph.png" alt="Notre Damn 官方预览：哥特教堂内部，巨大玫瑰窗和彩窗，光束打在石柱上。" width="1200" height="630">
-        </a>
-      </figure>
-      <div class="meta">
-        <p class="badge">OpenAI 官方 Showcase · GPT-6.2 Astra + Codex</p>
-        <h2>Notre Damn</h2>
-        <p class="by">Thomas Ricouard · OpenAI</p>
-        <p class="when">发布日期待核实</p>
-        <p>标题用官方拼法 Notre Damn。灵感来自巴黎圣母院中殿，这是官方提示里的说法。页眉写 GPT-6.2 Astra + Codex。技术是 JavaScript、Three.js、WebGL 2 和 Canvas 2D。可走的教堂内部，按时辰看彩窗、反射和尺度。官方正文写地板下还有一台相机，用来画长椅之间的玫瑰窗倒影。</p>
-        <p>推荐依据：OpenAI 官方 Showcase 收录，公开互动数未披露。官方制作过程未独立复跑。暂未找到公开源码。未试玩。</p>
-        <p class="links">
-          <a href="https://cathedral-walk.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
-          <a href="https://developers.openai.com/showcase/notre-damn" target="_blank" rel="noopener">官方制作过程</a>
-        </p>
-      </div>
-    </article>
-    <article class="card" data-id="forest-walks" data-date-precision="unknown" data-tie="2" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
-      <figure>
-        <a class="still" href="https://forest-walks-at-dusk.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Forest Walks 的在线演示">
-          <img src="images/forest-walks/open-graph.png" alt="Forest Walks 官方预览：黄昏树林里的小路，路边有一堆篝火。" width="1200" height="630">
-        </a>
-      </figure>
-      <div class="meta">
-        <p class="badge">OpenAI 官方 Showcase · GPT-6.2 Astra + Codex</p>
-        <h2>Forest Walks</h2>
-        <p class="by">Thomas Ricouard · OpenAI</p>
-        <p class="when">发布日期待核实</p>
-        <p>同一条空间路径上有三种画面：写实黄昏、绘本和半透明色叶。切换时位置和朝向还在。页眉写 GPT-6.2 Astra + Codex。技术是 JavaScript、Three.js、WebGL 2、Blender 和 Web Audio。篝火的声音跟着空间走。不是三张重复的卡，也不是审片。</p>
-        <p>推荐依据：OpenAI 官方 Showcase 收录，公开互动数未披露。官方制作过程未独立复跑。暂未找到公开源码。未试玩。</p>
-        <p class="links">
-          <a href="https://forest-walks-at-dusk.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
-          <a href="https://developers.openai.com/showcase/forest-walks" target="_blank" rel="noopener">官方制作过程</a>
-        </p>
-      </div>
-    </article>
-    <article class="card" data-id="escapement" data-date-precision="unknown" data-tie="3" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
+    <article class="card" data-id="escapement" data-published="2026-11-18T02:15:09+08:00" data-cycle="2026-11-19-gpt" data-verification="official-showcase" data-audit="keep" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://escapement.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Escapement 的在线演示">
           <img src="images/escapement/open-graph.png" alt="Escapement 官方预览：木轨和铜质连杆之间，一颗弹珠停在轨道上。" width="1200" height="630">
@@ -936,35 +1350,87 @@
         <p class="badge">OpenAI 官方 Showcase · GPT-6.2 Astra</p>
         <h2>Escapement</h2>
         <p class="by">Eric Provencher · OpenAI</p>
-        <p class="when">发布日期待核实</p>
+        <p class="when"><time datetime="2026-11-18T02:15:09+08:00">2026-11-18</time></p>
         <p>页眉写 GPT-6.2 Astra，没有写 Codex。官方页没有写引擎，这里也不补 Three.js。三颗弹珠穿过一套连锁机构，镜头和声音按碰撞对齐。官方制作过程从鲁布·戈德堡式演示写起，含提示和分步。</p>
-        <p>推荐依据：OpenAI 官方 Showcase 收录，公开互动数未披露。那是官方步骤和提示摘要，不是已复跑的公开教程。暂未找到公开源码。未试玩。</p>
         <p class="links">
           <a href="https://escapement.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
           <a href="https://developers.openai.com/showcase/escapement" target="_blank" rel="noopener">官方制作过程</a>
+          <a href="https://x.com/pvncher/status/2122755434758967623" target="_blank" rel="noopener">作者首发帖</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-18 02:15:09（亚洲/上海），作者 Eric Provencher（@pvncher）的 X 首发帖；官方 Showcase 页没有日期。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：GPT-6.2 Astra 做漂亮的三维画面很强，有参考图引导时更强；演示在桌面浏览器里用 WebGPU 跑。多条回复把它称作 Escapement，原帖链接本轮没有展开核对。官方页没有写引擎。</p>
+          <p><b>数据（2026-11-25 13:06 亚洲/上海 核验）：</b>作者首发帖曝光 57114，视频播放 25525，赞 624，回复 35，收藏 156。</p>
+          <p><b>社区反馈：</b>本轮没有系统抽样，看到的几条在夸物理和参考图的用法。</p>
+          <p><b>推广与利益：</b>作者 X 简介写在 OpenAI 做 Codex 开发者体验，这是官方展示。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>那是官方步骤和提示摘要，不是已复跑的公开教程。暂未找到公开源码。未试玩。</p>
+          <p><b>上板判断：达标。</b>五万多曝光，官方页有步骤，镜头和声音按碰撞对齐值得学。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="light-and-matter" data-date-precision="unknown" data-tie="4" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
+    <article class="card" data-id="paris-atlas" data-published="2026-11-18T02:08:53+08:00" data-cycle="2026-11-19-gpt" data-verification="official-showcase" data-audit="keep" data-audited="2026-11-25">
       <figure>
-        <a class="still" href="https://light-and-matter.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Light and Matter 的在线演示">
-          <img src="images/light-and-matter/open-graph.png" alt="Light &amp; Matter 官方预览：玻璃展厅，悬挂的玻璃装置和地面上的倒影。" width="1200" height="630">
+        <a class="still" href="https://paris-atlas-street-explorer.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Paris Atlas 的在线演示">
+          <img src="images/paris-atlas/open-graph.png" alt="Paris Atlas 官方预览：俯看巴黎，埃菲尔铁塔、塞纳河和网格线叠在街区上。" width="1200" height="630">
         </a>
       </figure>
       <div class="meta">
         <p class="badge">OpenAI 官方 Showcase · GPT-6.2 Astra</p>
-        <h2>Light &amp; Matter</h2>
-        <p class="by">Eric Provencher · OpenAI</p>
-        <p class="when">发布日期待核实</p>
-        <p>页眉写 GPT-6.2 Astra。官方页没有写引擎。可走的材质、光线、反射和视觉特效展厅，能走近看灯，有烘焙日光和实时阴影，悬挂物在动，地面有倒影。学的是走动着看材质，不是一条成片。</p>
-        <p>推荐依据：OpenAI 官方 Showcase 收录，公开互动数未披露。官方制作过程未独立复跑。暂未找到公开源码。未试玩。</p>
+        <h2>Paris Atlas</h2>
+        <p class="by">Thomas Ricouard · OpenAI</p>
+        <p class="when"><time datetime="2026-11-18T02:08:53+08:00">2026-11-18</time></p>
+        <p>官方页写 GPT-6.2 Astra，API 型号是 gpt-6.2-astra。页眉没有 Codex 徽章。正文写 Codex 把 Blender 里的地标放进 Three.js，于是可以在巴黎步行或开车。学的是真实街区、地标和可走可开的尺度，不是视频模型。</p>
         <p class="links">
-          <a href="https://light-and-matter.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
-          <a href="https://developers.openai.com/showcase/light-and-matter" target="_blank" rel="noopener">官方制作过程</a>
+          <a href="https://paris-atlas-street-explorer.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
+          <a href="https://developers.openai.com/showcase/paris-atlas" target="_blank" rel="noopener">官方制作过程</a>
+          <a href="https://x.com/Dimillian/status/2122753859281928626" target="_blank" rel="noopener">作者首发帖</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-18 02:08:53（亚洲/上海），作者 Thomas Ricouard（@Dimillian）的 X 首发帖；官方 Showcase 页没有日期。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：他目前最大的演示，用 GPT-6.2 Astra 做的 1:1 巴黎地图，可走可开，有车流、公交、行人、自行车和 50 多个三维地标；是手工资产和程序生成的地形、贴图混合。官方页写 Codex 把 Blender 里的地标放进 Three.js。</p>
+          <p><b>数据（2026-11-25 13:06 亚洲/上海 核验）：</b>作者首发帖曝光 69570，视频播放 29562，赞 882，回复 60，收藏 331。</p>
+          <p><b>社区反馈：</b>本轮没有抽样首发帖的回复。作者 11-18 自己说这批演示的流量比之前小。</p>
+          <p><b>推广与利益：</b>作者 X 简介写在 OpenAI 做 Codex 开发者体验，这是官方展示。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>官方页有分步制作过程，含提示摘要，不是已复跑的完整教程，也不是公开源码。暂未找到公开源码。未试玩，未复跑。官方页没有作品日期，本轮改用作者在 X 的首发时间排序。</p>
+          <p><b>上板判断：达标。</b>七万曝光，官方页有分步做法，可学真实城市尺度。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="dot-rumble" data-date-precision="unknown" data-tie="5" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
+    <article class="card" data-id="notre-damn" data-published="2026-11-18T01:56:08+08:00" data-cycle="2026-11-19-gpt" data-verification="official-showcase" data-audit="keep" data-audited="2026-11-25">
+      <figure>
+        <a class="still" href="https://cathedral-walk.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Notre Damn 的在线演示">
+          <img src="images/notre-damn/open-graph.png" alt="Notre Damn 官方预览：哥特教堂内部，巨大玫瑰窗和彩窗，光束打在石柱上。" width="1200" height="630">
+        </a>
+      </figure>
+      <div class="meta">
+        <p class="badge">OpenAI 官方 Showcase · GPT-6.2 Astra + Codex</p>
+        <h2>Notre Damn</h2>
+        <p class="by">Thomas Ricouard · OpenAI</p>
+        <p class="when"><time datetime="2026-11-18T01:56:08+08:00">2026-11-18</time></p>
+        <p>标题用官方拼法 Notre Damn。灵感来自巴黎圣母院中殿，这是官方提示里的说法。页眉写 GPT-6.2 Astra + Codex。技术是 JavaScript、Three.js、WebGL 2 和 Canvas 2D。可走的教堂内部，按时辰看彩窗、反射和尺度。官方正文写地板下还有一台相机，用来画长椅之间的玫瑰窗倒影。</p>
+        <p class="links">
+          <a href="https://cathedral-walk.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
+          <a href="https://developers.openai.com/showcase/notre-damn" target="_blank" rel="noopener">官方制作过程</a>
+          <a href="https://x.com/Dimillian/status/2122750651998355800" target="_blank" rel="noopener">作者首发帖</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-18 01:56:08（亚洲/上海），作者 Thomas Ricouard（@Dimillian）的 X 首发帖；官方 Showcase 页没有日期。</p>
+          <p><b>方法与工具（作者自述）：</b>作者原帖：让 GPT-6.2 Astra 研究巴黎圣母院的照片和历史平面图，重建中殿视角。注意他首发帖写的是 “Notre-Dame in Unreal Engine 5”，而官方 Showcase 的网页版写的是 JavaScript、Three.js、WebGL 2。作者补充说它一开始是教堂里的生存射击游戏。</p>
+          <p><b>数据（2026-11-25 13:06 亚洲/上海 核验）：</b>作者首发帖曝光 51192，视频播放 20564，赞 781，回复 24，收藏 182。</p>
+          <p><b>社区反馈：</b>本轮没有抽样首发帖的回复。有回复专门夸玫瑰窗倒影的渲染难度。</p>
+          <p><b>推广与利益：</b>作者 X 简介写在 OpenAI 做 Codex 开发者体验，这是官方展示。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>官方制作过程未独立复跑。暂未找到公开源码。未试玩。</p>
+          <p><b>上板判断：达标。</b>五万曝光，官方页有做法；UE5 和网页版的差别要分清。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="dot-rumble" data-date-precision="unknown" data-tie="5" data-cycle="2026-11-19-gpt" data-verification="official-showcase" data-audit="unverifiable" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://dot-rumble-arcade.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Dot Rumble 的在线演示">
           <img src="images/dot-rumble/open-graph.png" alt="Dot Rumble 官方预览：两个毛绒角色在屋顶对打，一个在出脚，一个身上有火。" width="1200" height="630">
@@ -976,14 +1442,24 @@
         <p class="by">Chaow Wu · OpenAI</p>
         <p class="when">发布日期待核实</p>
         <p>页眉写 GPT-6.2 Astra。技术写的是 Three.js。六个格斗角色。官方制作过程从剪影、毛绒和缝线，到绑定、战斗姿势，再到攻击判定的可视化。学的是角色从外形到骨骼再到可玩判定。</p>
-        <p>推荐依据：OpenAI 官方 Showcase 收录，公开互动数未披露。官方步骤未独立复跑。暂未找到公开源码。未试玩。</p>
         <p class="links">
           <a href="https://dot-rumble-arcade.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
           <a href="https://developers.openai.com/showcase/dot-rumble" target="_blank" rel="noopener">官方制作过程</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>找不到作者首发帖；官方 Showcase 页没有日期，继续排在最后。</p>
+          <p><b>方法与工具（作者自述）：</b>只有官方页：Three.js，六个毛绒格斗角色，从剪影、毛绒和缝线做到绑定、战斗姿势和攻击判定可视化。</p>
+          <p><b>数据：</b>官方页没有互动数；X 上只找到一条中文转述（曝光约一千），找不到作者 Chaow Wu 的帖子。</p>
+          <p><b>社区反馈：</b>找不到。</p>
+          <p><b>推广与利益：</b>OpenAI 官方展示。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>官方步骤未独立复跑。暂未找到公开源码。未试玩。</p>
+          <p><b>上板判断：无法核实。</b>没有可核实的传播和反馈。</p>
+        </details>
       </div>
     </article>
-    <article class="card" data-id="terrarium" data-date-precision="unknown" data-tie="6" data-cycle="2026-11-19-gpt" data-verification="official-showcase">
+    <article class="card" data-id="terrarium" data-date-precision="unknown" data-tie="6" data-cycle="2026-11-19-gpt" data-verification="official-showcase" data-audit="unverifiable" data-audited="2026-11-25">
       <figure>
         <a class="still" href="https://terrarium-glasshouse-studio.openai.chatgpt.site/" target="_blank" rel="noopener" aria-label="打开 Terrarium 的在线演示">
           <img src="images/terrarium/open-graph.png" alt="Terrarium 官方预览：软木塞玻璃罐里的苔藓、蕨类、石头和一只小蘑菇。" width="1200" height="630">
@@ -995,11 +1471,21 @@
         <p class="by">Katia Gil Guzman · OpenAI</p>
         <p class="when">发布日期待核实</p>
         <p>页眉写 GPT-6.2 Astra + Codex。技术是 JavaScript、Three.js 和 WebGL。可布置的三维玻璃花园：拖植物、苔藓和石头，调光的方向，看物体落下和阴影对齐，再导出高清图。学的是布置工具，不是一条做完的影片。</p>
-        <p>推荐依据：OpenAI 官方 Showcase 收录，公开互动数未披露。官方制作过程未独立复跑。暂未找到公开源码。未试玩。</p>
         <p class="links">
           <a href="https://terrarium-glasshouse-studio.openai.chatgpt.site/" target="_blank" rel="noopener">在线演示</a>
           <a href="https://developers.openai.com/showcase/terrarium-glasshouse-studio" target="_blank" rel="noopener">官方制作过程</a>
         </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>找不到这个作品的作者首发帖；官方 Showcase 页没有日期，继续排在最后。</p>
+          <p><b>方法与工具（作者自述）：</b>只有官方页：JavaScript、Three.js、WebGL，可布置的玻璃花园，能拖植物、调光、导出高清图。</p>
+          <p><b>数据：</b>官方页没有互动数。作者 Katia Gil Guzman（@kagigz）11-18 只发了一条泛泛夸 Astra 的帖（曝光 1576），没有单独发这个作品。</p>
+          <p><b>社区反馈：</b>找不到。</p>
+          <p><b>推广与利益：</b>OpenAI 官方展示。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>官方制作过程未独立复跑。暂未找到公开源码。未试玩。</p>
+          <p><b>上板判断：无法核实。</b>没有可核实的传播和反馈。</p>
+        </details>
       </div>
     </article>
         </main>
@@ -1012,7 +1498,7 @@
   </footer>
   <script>
     (function () {
-      var expected = "2026-11-19-pr21";
+      var expected = "2026-11-25-audit";
       function check() {
         fetch("revision.json?t=" + Date.now(), { cache: "no-store" }).then(function (res) {
           if (!res.ok) return null;
@@ -1037,6 +1523,6 @@
       });
     })();
   </script>
-  <script src="board.js?v=2026-11-19-pr21"></script>
+  <script src="board.js?v=2026-11-25-audit"></script>
 </body>
 </html>
