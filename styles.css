@@ -424,3 +424,12 @@ body.is-freeform .card button {
   color: var(--muted);
   font-size: 0.62rem;
 }
+
+.card .model-flag {
+  margin-top: 0.3rem;
+  padding: 0.22rem 0.35rem;
+  border-left: 3px solid #c8432f;
+  background: rgba(200, 67, 47, 0.1);
+  font-size: 0.66rem;
+  line-height: 1.4;
+}

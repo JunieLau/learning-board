@@ -10,6 +10,8 @@ Junie Lau 的学习 moodboard：黑底网页，每块是一个想学的项目—
 
 2026-11-25 新一轮（`2026-11-25-round`）：按同一标准新增 7 张，Claude 4 张（procedural-rpg、cinderwatch、riemann-anime-intro、claude-blender-commercial），OpenAI 3 张（worlds-fair-reel、ai-vtuber-147、atat-threejs-blender）。没通过的候选和原因见 `AUDIT.md` 和 `records/cycles/2026-11-25-round.json`。
 
+型号存疑规则（2026-11-25 起）：作者自称的型号还不在官方型号表里的作品，达到传播和学习门槛也可以上 Claude 板，但卡面必须有「型号存疑」徽标和一行说明（作者称的型号、官方型号表查于何时、提交里的 Co-Authored-By），标记为 `data-model-claim="unverified"`。首批 3 张：noroi-iwai、the-tea-ride、the-last-page（`records/cycles/2026-11-25-opus56.json`）。
+
 Live: https://junielau.github.io/learning-board/
 
 画面来自各项目的官方发布，或作者视频的官方封面，版权仍归原作者。Portals 为 CC BY-NC-SA 4.0，仅限非商业使用。The Moss Keeper 的海报取自 Chetaslua 仓库里的官方画面。

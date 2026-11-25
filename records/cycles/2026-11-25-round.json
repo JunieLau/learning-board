@@ -37,12 +37,14 @@
     {
       "source": "chetaslua 2125226204764733481 / 2125253343480275008 / 2125331978891461023",
       "item": "Opus 5.6 纯代码动画三条（曝光 25.3 万 / 23.0 万 / 16.0 万，赞 3128 / 3719 / 2582）",
-      "reason": "型号无法核实：Anthropic 官方模型页（2026-11-25 13:5x 亚洲/上海 读取）只有 Opus 5.5 和 Fable 5.2，没有 Opus 5.6；vib3coded 同日也写“传闻 Anthropic 在测 Opus 5.6”。和 Moss Keeper 一样按“说法无法核实”不收，官方发布后可重审。"
+      "reason": "型号无法核实：Anthropic 官方模型页（2026-11-25 13:5x 亚洲/上海 读取）只有 Opus 5.5 和 Fable 5.2，没有 Opus 5.6；vib3coded 同日也写“传闻 Anthropic 在测 Opus 5.6”。和 Moss Keeper 一样按“说法无法核实”不收，官方发布后可重审。",
+      "status_update": "Admitted on 2026-11-25 under the model-disputed rule; see records/cycles/2026-11-25-opus56.json"
     },
     {
       "source": "vib3coded 2125313222488252689",
       "item": "Opus 5.6 对 Opus 5.5 坦克（曝光 6065）",
-      "reason": "同上型号无法核实；传播也不够。"
+      "reason": "同上型号无法核实；传播也不够。",
+      "status_update": "Re-checked 2026-11-25 19:36 Asia/Shanghai under the model-disputed rule: 8185 impressions, 142 likes; still below the reach bar."
     },
     {
       "source": "alexfredo87 2124867276264415325",

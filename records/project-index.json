@@ -4,7 +4,7 @@
   "source_check_date": "2026-11-25T12:53:00+08:00",
   "research_cycle_date": "2026-11-25",
   "policy_date": "2026-11-19",
-  "content_card_count_in_this_commit": 56,
+  "content_card_count_in_this_commit": 59,
   "last_successful_deployment_before_this_commit": {
     "sha": "8a6ec6a6355f1a83bfcf0dba2d543272f7b23c50",
     "at": "2026-11-19T19:35:00+08:00",
@@ -39,6 +39,40 @@
   },
   "cards": [
     {
+      "id": "noroi-iwai",
+      "board": "claude",
+      "title": "呪い / 祝い：纯代码同人动画",
+      "original_published_at": "2026-11-25T04:53:25+08:00",
+      "date_precision": null,
+      "verification": "author-reported",
+      "model_claim": "unverified",
+      "model_flag": "作者称 Opus 5.6；Anthropic 官方型号表尚无此型号（查于 2026-11-25 19:38 亚洲/上海）。仓库三次提交都署名 Co-Authored-By: Claude Opus 5.5。",
+      "cycle": "2026-11-25-opus56",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep-model-disputed",
+        "published_basis": "2026-11-25 04:53:25（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 246525，视频播放 156081，赞 3364，转发 146，引用 65，回复 162，收藏 1761。代码那条回复曝光 25226，赞 167。GitHub 60 星、11 个复刻。",
+        "reception": "很多人惊叹（中文回复有“神了”“纯代码做到这个地步很了不起”），也有人问花了多久、怎么避开版权。批评同样多：有人直说“你没有那个模型的权限，骗子”；有人认为 Claude 做不到，一定用了第三方生成画面；有人说“只有没认真看过艺术的人才会觉得是杰作”；还有人说这条是“钓鱼帖”。Matthew Berman（@MatthewBerman）2026-11-25 02:53:24（亚洲/上海）发帖说“所有在谈 Opus 5.6 的人都是骗子，他们没有这个模型的权限，那些也不是真的演示”，这条曝光 81408、赞 840（19:36 核验），没有点名；作者随后贴了一条长帖反驳，说 Opus 5.6 正在 Claude Code 里灰度测试，让大家用“2026 年 Karpathy 去了哪”这个问题自测，但这只是作者的说法，不是官方确认。",
+        "promotion": "原帖没有付费合作标记，也没有推广链接。",
+        "reason": "传播很大（近 25 万曝光、三千多赞），提示词和代码公开，对“怎么让模型自查成片”有学习价值；但型号说法有争议，同人版权也要注意。"
+      },
+      "links": [
+        {
+          "label": "原帖",
+          "url": "https://x.com/chetaslua/status/2125331978891461023"
+        },
+        {
+          "label": "代码",
+          "url": "https://github.com/ChetasLua/noroi-iwai"
+        },
+        {
+          "label": "提示词截图",
+          "url": "https://x.com/chetaslua/status/2125331990144798783"
+        }
+      ]
+    },
+    {
       "id": "procedural-rpg",
       "board": "claude",
       "title": "着色器画的开放世界 RPG",
@@ -67,6 +101,66 @@
         {
           "label": "源码（MIT）",
           "url": "https://github.com/kevintngo/procedural-rpg"
+        }
+      ]
+    },
+    {
+      "id": "the-tea-ride",
+      "board": "claude",
+      "title": "The Tea Ride",
+      "original_published_at": "2026-11-24T23:40:57+08:00",
+      "date_precision": null,
+      "verification": "author-reported",
+      "model_claim": "unverified",
+      "model_flag": "作者称 Opus 5.6；Anthropic 官方型号表尚无此型号（查于 2026-11-25 19:38 亚洲/上海）。仓库唯一的首次提交署名 Co-Authored-By: Claude Opus 5.5。",
+      "cycle": "2026-11-25-opus56",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep-model-disputed",
+        "published_basis": "2026-11-24 23:40:57（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 303905，视频播放 169778，赞 4182，转发 206，引用 75，回复 166，收藏 1542。GitHub 72 星、15 个复刻，index.html 约 1.89 MB。",
+        "reception": "正面的集中在画面（“好美”“这是 three.js 不是插画，让我脑子转不过来”），已经有人把它改成了可玩的版本。批评和疑问：“5.6？？”“感觉是假的”；有人怀疑视频本身是 AI 生成的展示动画；有人说 Claude 做的音乐听起来总是一个味道；也有人挑人体结构的毛病；问提示词、花费和用时的回复在抽样里都没有得到回答。Matthew Berman（@MatthewBerman）2026-11-25 02:53:24（亚洲/上海）发帖说“所有在谈 Opus 5.6 的人都是骗子，他们没有这个模型的权限，那些也不是真的演示”，这条曝光 81408、赞 840（19:36 核验），没有点名；作者随后贴了一条长帖反驳，说 Opus 5.6 正在 Claude Code 里灰度测试，让大家用“2026 年 Karpathy 去了哪”这个问题自测，但这只是作者的说法，不是官方确认。",
+        "promotion": "原帖没有付费合作标记，也没有推广链接。微信视频号“AI奔雷手”转载了这段，标题写“Claude 灰度测试最新模型 Opus 5.6”，那是转载评论，不是作者本人。",
+        "reason": "三十万曝光、四千多赞，代码公开、乐谱驱动画面的结构很值得学；型号说法有争议，Berman 等人公开质疑。"
+      },
+      "links": [
+        {
+          "label": "原帖",
+          "url": "https://x.com/chetaslua/status/2125253343480275008"
+        },
+        {
+          "label": "代码",
+          "url": "https://github.com/ChetasLua/the-tea-ride"
+        }
+      ]
+    },
+    {
+      "id": "the-last-page",
+      "board": "claude",
+      "title": "The Last Page",
+      "original_published_at": "2026-11-24T21:53:06+08:00",
+      "date_precision": null,
+      "verification": "author-reported",
+      "model_claim": "unverified",
+      "model_flag": "作者称 Opus 5.6；Anthropic 官方型号表尚无此型号（查于 2026-11-25 19:38 亚洲/上海）。仓库唯一的提交署名 Co-Authored-By: Claude Opus 5.5；作者自己回复说是“从 Opus 5.5 extra 路由过来的”。",
+      "cycle": "2026-11-25-opus56",
+      "audit": {
+        "checked": "2026-11-25",
+        "verdict": "keep-model-disputed",
+        "published_basis": "2026-11-24 21:53:06（亚洲/上海），X 原帖。",
+        "metrics": "原帖曝光 290676，视频播放 126575，赞 3404，转发 146，引用 59，回复 169，收藏 1376。“代码和证明”那条回复曝光 28582，赞 131。",
+        "reception": "多数惊叹，有人说“不管是不是 Opus 5.6，准确度超过一般视频模型”，也有人说“就算不是传统动画也挺酷”。批评：编排和故事连贯性还要打磨；有人回“SLOP”；有人指出 Opus 5.5 和 Sonnet 5.5 的知识截止都在 2026 年 6 月，作者拿来证明新模型的 Karpathy 问题其实只能说明 Claude Code 的系统提示和裸 API 不同，不能证明是新模型。Matthew Berman（@MatthewBerman）2026-11-25 02:53:24（亚洲/上海）发帖说“所有在谈 Opus 5.6 的人都是骗子，他们没有这个模型的权限，那些也不是真的演示”，这条曝光 81408、赞 840（19:36 核验），没有点名；作者随后贴了一条长帖反驳，说 Opus 5.6 正在 Claude Code 里灰度测试，让大家用“2026 年 Karpathy 去了哪”这个问题自测，但这只是作者的说法，不是官方确认。",
+        "promotion": "原帖没有付费合作标记，也没有推广链接。",
+        "reason": "近 29 万曝光、三千多赞，提示词和镜头说明公开，是这三张里方法最完整的；型号说法有争议。"
+      },
+      "links": [
+        {
+          "label": "原帖",
+          "url": "https://x.com/chetaslua/status/2125226204764733481"
+        },
+        {
+          "label": "代码和提示词",
+          "url": "https://github.com/ChetasLua/the-last-page"
         }
       ]
     },
@@ -1680,16 +1774,12 @@
     }
   ],
   "verified_new_projects_this_cycle": [
-    "procedural-rpg",
-    "cinderwatch",
-    "riemann-anime-intro",
-    "claude-blender-commercial",
-    "worlds-fair-reel",
-    "ai-vtuber-147",
-    "atat-threejs-blender"
+    "noroi-iwai",
+    "the-tea-ride",
+    "the-last-page"
   ],
   "pending_reference_this_cycle": 0,
-  "layout_revision": "2026-11-25-round",
+  "layout_revision": "2026-11-25-opus56",
   "layout_columns": {
     "content_cards_per_row": 8,
     "intro_consumes_content_slot": false,
@@ -1740,5 +1830,10 @@
       "sampling": "not a formal representative sample; positive replies and mixed AI-propaganda reactions both exist"
     },
     "publication": "ready to publish after this metrics check"
+  },
+  "model_disputed_policy": {
+    "name": "model-disputed",
+    "rule": "A work whose author-claimed model is not in the vendor's official model list may be admitted if it meets the normal reach/reception/learning bar. The card must show a visible 「型号存疑」 badge and a face line stating the claimed model, that the official model list does not have it (with check time), and any commit Co-Authored-By evidence. Markup: data-model-claim=\"unverified\". Reach and other audit rules unchanged.",
+    "adopted": "2026-11-25"
   }
 }
