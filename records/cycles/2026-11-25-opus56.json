@@ -1,0 +1,46 @@
+{
+  "record_type": "publication_cycle_log",
+  "cycle_id": "2026-11-25-opus56",
+  "timezone": "Asia/Shanghai",
+  "request": "Junie, 2026-11-25: works whose claimed model is unverified may go on the Claude board if clearly labeled 「型号存疑」.",
+  "policy": {
+    "name": "model-disputed",
+    "rule": "A work whose author-claimed model is not in the vendor's official model list may be admitted if it meets the normal reach/reception/learning bar. The card must show a visible 「型号存疑」 badge and a face line stating the claimed model, that the official model list does not have it (with check time), and any commit Co-Authored-By evidence. Markup: data-model-claim=\"unverified\". Reach and other audit rules unchanged.",
+    "adopted": "2026-11-25"
+  },
+  "official_model_check": {
+    "checked_at": "2026-11-25T19:38:00+08:00",
+    "source": "https://docs.anthropic.com/en/docs/about-claude/models/overview",
+    "finding": "Latest listed: Fable 5.2, Opus 5.5, Sonnet 5.5, Haiku 5.5 (plus limited Mythos). No Opus 5.6."
+  },
+  "added_ids": [
+    "noroi-iwai",
+    "the-tea-ride",
+    "the-last-page"
+  ],
+  "metrics_checked_at": {
+    "x_posts": "2026-11-25T19:36:00+08:00",
+    "x_replies_sampled": "2026-11-25T19:37:00+08:00",
+    "tea_ride_replies_sampled": "2026-11-25T19:17:00+08:00"
+  },
+  "commit_evidence": {
+    "the-tea-ride": "1 commit, Co-Authored-By: Claude Opus 5.5",
+    "the-last-page": "1 commit, Co-Authored-By: Claude Opus 5.5; author reply says routed from 'opus5.5 extra'",
+    "noroi-iwai": "3 commits, all Co-Authored-By: Claude Opus 5.5"
+  },
+  "dedupe": "The Tea Ride (2125253343480275008) is one of the three previously deferred posts; three distinct repos; no overlap with no-external-assets or moss-keeper.",
+  "not_added": [
+    {
+      "source": "vib3coded 2125313222488252689",
+      "reason": "Opus 5.6 tank: 8185 impressions, 142 likes at 2026-11-25 19:36 Asia/Shanghai; below reach bar."
+    }
+  ],
+  "copyright_note": "noroi-iwai is an unofficial fan film of a third-party anime; the board shows a self-made text title card instead of a frame.",
+  "layout_revision": "2026-11-25-opus56",
+  "layout_columns": 8,
+  "counts_after": {
+    "claude": 39,
+    "openai": 20,
+    "total": 59
+  }
+}

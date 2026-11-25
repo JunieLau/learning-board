@@ -90,11 +90,12 @@ with sync_playwright() as p:
             if st.get('revision') != rev: err(f'{label} {b}: stored revision {st.get("revision")}')
             print(label, b, 'first-row', [x[0] for x in pos[:8]], 'visible', info['vis'])
         # cycle framing on each board
-        for b, want in (('claude', 'procedural-rpg'), ('openai', 'worlds-fair-reel')):
+        for b, want in (('claude', 'noroi-iwai'), ('openai', None)):
             pg.goto(base + '#' + b); pg.wait_for_timeout(800)
             pg.click('#show-cycle'); pg.wait_for_timeout(500)
             h = pg.evaluate('location.hash')
             if h != '#' + b: err(f'{label}: show-cycle switched board from {b} to {h}')
+            if want is None: continue  # no new cards on this board this revision
             ok = pg.evaluate(f'''() => {{const r=document.querySelector('#{b} [data-id="{want}"]').getBoundingClientRect();return r.width>0&&r.left>=0&&r.right<=innerWidth&&r.top>=0}}''')
             if not ok: err(f'{label}: show-cycle did not frame {want}')
         pg.close()
