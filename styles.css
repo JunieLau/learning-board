@@ -55,6 +55,7 @@ body {
 
 body:has(#openai:target) .board-nav a[href="#openai"],
 body:has(#claude:target) .board-nav a[href="#claude"],
+body:has(#gsplat:target) .board-nav a[href="#gsplat"],
 body:not(:has(.board-view:target)) .board-nav a[href="#claude"] {
   background: #f3efe6;
   color: #161412;
@@ -63,6 +64,7 @@ body:not(:has(.board-view:target)) .board-nav a[href="#claude"] {
 
 body:has(#openai:target) .board-nav a[href="#openai"] small,
 body:has(#claude:target) .board-nav a[href="#claude"] small,
+body:has(#gsplat:target) .board-nav a[href="#gsplat"] small,
 body:not(:has(.board-view:target)) .board-nav a[href="#claude"] small {
   color: #6a655c;
 }
@@ -71,6 +73,7 @@ body:not(:has(.board-view:target)) .board-nav a[href="#claude"] small {
 
 #claude:target,
 #openai:target,
+#gsplat:target,
 body:not(:has(.board-view:target)) #claude {
   display: block;
 }
@@ -245,6 +248,7 @@ body.is-freeform {
 
 body.is-freeform #claude:target,
 body.is-freeform #openai:target,
+body.is-freeform #gsplat:target,
 body.is-freeform:not(:has(.board-view:target)) #claude {
   display: flex;
   flex-direction: column;

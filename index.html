@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>学习板 · Claude / GPT</title>
-  <meta name="description" content="Claude 与 GPT 的创意技术项目，一块一块钉在这块黑底的板上。">
-  <link rel="stylesheet" href="styles.css?v=2026-11-25-learned-toggle">
+  <title>学习板 · Claude / GPT / 高斯泼溅</title>
+  <meta name="description" content="Claude、GPT 与高斯泼溅的创意项目，一块一块钉在这块黑底的板上。">
+  <link rel="stylesheet" href="styles.css?v=2026-11-27-gsplat">
   <script>
     (function () {
       try {
         var q = new URLSearchParams(location.search).get("board");
-        if ((q === "openai" || q === "claude") && location.hash !== "#" + q) {
+        if ((q === "openai" || q === "claude" || q === "gsplat") && location.hash !== "#" + q) {
           location.replace("#" + q);
         }
       } catch (err) {}
@@ -20,11 +20,11 @@
 <body>
   <header class="mast">
     <span>学习板</span>
-    <span>Claude / GPT</span>
+    <span>Claude / GPT / 高斯泼溅</span>
   </header>
 
   <div class="local-tools">
-    <p class="local-explain">上方目录分成 Claude 学习板和 OpenAI 学习板，点一下就换。地址用 #claude 或 #openai，不带记号时打开 Claude。可以拖动、平移和缩放。每次内容更新后，第一次打开会按原发布日期从新到旧排开，桌面窗口里一行八张内容卡同时可见，说明卡单独占上面一行。没有脚本时也会按这个行列排，不会把说明卡算进八张里。同一版里再拖动，仍留在这台浏览器，两块板分开记。每张卡右下角有一个小开关：默认滑块在左边，是未学；滑到右边，变成已学，卡片会稍稍变淡。只记在这台浏览器里，不会同步。这一版只加了已学开关，卡片没有增减。上一版按新规则上了 3 张「型号存疑」（呪い / 祝い、The Tea Ride、The Last Page）；同一天早些时候新增的 7 张也都还在。点「查看本轮新增」会框住这 3 张；OpenAI 板这一版没有新卡。标注还留着，页面上不再显示输入框。</p>
+    <p class="local-explain">上方目录分成 Claude、OpenAI 和高斯泼溅三块学习板，点一下就换。地址用 #claude、#openai 或 #gsplat，不带记号时打开 Claude。可以拖动、平移和缩放。每次内容更新后，第一次打开会按原发布日期从新到旧排开，桌面窗口里一行八张内容卡同时可见，说明卡单独占上面一行。板上不足八张时，就按实际张数排在这一行，空位留空，不拿说明卡凑数。没有脚本时也会按这个行列排，不会把说明卡算进八张里。同一版里再拖动，仍留在这台浏览器，三块板分开记。每张卡右下角有一个小开关：默认滑块在左边，是未学；滑到右边，变成已学，卡片会稍稍变淡。只记在这台浏览器里，不会同步。这一版新开了「高斯泼溅」板，先收 2 张：Ink Studio 和 splat-walk。Claude 仍是 39 张，OpenAI 仍是 20 张。点「查看本轮新增」会框住高斯泼溅板上的这 2 张；另外两块板这一版没有新卡。标注还留着，页面上不再显示输入框。</p>
     <div class="local-actions">
       <button type="button" id="show-cycle">查看本轮新增</button>
       <button type="button" id="arrange-date">按日期排开</button>
@@ -42,6 +42,7 @@
   <nav class="board-nav" aria-label="目录">
     <a href="#claude">Claude 学习板<small>39 张，含 1 条待核实参考、3 张型号存疑</small></a>
     <a href="#openai">OpenAI 学习板<small>20 张：12 个社区作品，8 张官方 Showcase</small></a>
+    <a href="#gsplat">高斯泼溅学习板<small>2 张：开源作品与工具</small></a>
   </nav>
 
   <section id="claude" class="board-view" data-board="claude">
@@ -1798,12 +1799,91 @@
     </div>
   </section>
 
+  <section id="gsplat" class="board-view" data-board="gsplat">
+    <div class="stage" tabindex="0">
+      <div class="world">
+        <main class="board">
+    <article class="card intro" data-id="intro-gsplat">
+      <div class="meta">
+        <p class="hello">高斯泼溅学习板</p>
+        <p>2 张。这块板收的是以高斯泼溅（3D Gaussian Splatting）为主要手艺的作品和开源工具，不是某一家模型厂商的专板。如果一件作品主要是在演示 Claude 或 OpenAI 的模型，即使也用了泼溅，仍放在对应的厂商板。按原发布日期从新到旧，说明卡不占内容位。这一版先收 Silicon Jungle 的 Ink Studio，以及 Will Eastcott 的 splat-walk（Junie 从一条小红书转述追到原作）。传播门槛和「依据与限度」写法与另外两块板相同。</p>
+      </div>
+    </article>
+    <article class="card" data-id="ink-studio" data-published="2026-11-16T16:27:09+08:00" data-cycle="2026-11-27-gsplat" data-verification="author-reported" data-audit="keep" data-audited="2026-11-27">
+      <figure>
+        <a class="still" href="https://x.com/JungleSilicon/status/2122245074608435600" target="_blank" rel="noopener" aria-label="打开 Ink Studio 的原帖">
+          <img src="images/ink-studio/preview.jpg" alt="原帖视频封面：黑底上是一只浅蓝色的骷髅龙，橙色眼睛，正对着一台打碟机，像素风。" width="1200" height="675">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">开源工具 · 像素风高斯泼溅 · 作者自述</p>
+        <h2>Ink Studio：像素风高斯泼溅工具包</h2>
+        <p class="by">Silicon Jungle · @JungleSilicon</p>
+        <p class="when"><time datetime="2026-11-16T16:27:09+08:00">2026-11-16</time></p>
+        <p>把雕刻好的立体直接烧成能转、能动、还能打碎的像素风高斯泼溅，场景用 JavaScript 或 JSON 写。值得学的是：把“像像素画”做成渲染本身，而不是事后套一层滤镜。</p>
+        <p class="links">
+          <a href="https://x.com/JungleSilicon/status/2122245074608435600" target="_blank" rel="noopener">原帖</a>
+          <a href="https://x.com/JungleSilicon/status/2122245254187450657" target="_blank" rel="noopener">仓库回复</a>
+          <a href="https://github.com/siliconjungle/shapeshift-labs-ink-studio" target="_blank" rel="noopener">源码</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-16 16:27:09（亚洲/上海），X 原帖。43 秒后的回复给出 GitHub 地址。仓库建立于当日 15:44（亚洲/上海）。</p>
+          <p><b>方法与工具（作者自述）：</b>原帖写：老有人问这些三维像素风高斯泼溅是怎么做的，现在可以用 Ink Studio，GitHub 上免费；带完整动画套件、几何节点、雕刻、体积、会记住状态的世界效果、粒子、物理和破坏。仓库 README 写：用 JavaScript 工具包雕刻有符号距离体，再烘焙成像素风高斯泼溅，可在 Node、命令行或浏览器里用；浏览器默认是自研 WebGL 2 渲染器，没有声明运行时依赖。有人问是否用了 three.js；同线程里的说明指出 package.json 没有 three.js 依赖。后续展示帖分别写过 “made with Astra 6.2”“Fable 5.2”“sol 6.2”，开源声明本身没有绑定某一家模型。</p>
+          <p><b>数据（2026-11-27 14:42 亚洲/上海 核验）：</b>原帖曝光 80336，视频播放 41332，赞 1457，转发 124，引用 14，回复 57，收藏 1674。仓库回复曝光 20021，赞 281，收藏 495。GitHub 于 14:39 核验为 1312 星、106 个复刻，许可证 MIT。</p>
+          <p><b>社区反馈（X 回复，2026-11-27 14:43 亚洲/上海 抽样，不是全量）：</b>抽样回复以称赞为主，有人夸像素格子在物理和破坏时仍然清晰，有人问是否用了 three.js。用关键词在原帖线程里搜索批评性回复，没有找到匹配。之后一次相关讨论里，有人质疑像素后处理还算不算 splat，作者回应“后处理不会改变它是 splat”。中文账号“宋宋”在 11-25 发过转述帖（同日 14:42 核验：曝光 55474，赞 1054），那是转述，不是原作，也不计入本卡门槛。</p>
+          <p><b>推广与利益：</b>原帖没有付费合作标记。作者就是这个工具的作者，声明在 GitHub 免费、MIT 开源。包装名是 @shapeshift-labs/ink-studio，package.json 标了 private，README 写这是为了避免被意外发到 npm。本板没有在原帖里看到付费链接。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>这是工具包，不是成品短片；要用它还得写场景，或让编程助手去读文档。作者后来的展示用过不同模型名称，其中 “sol 6.2” 不是本板已核对的官方型号名，那些展示帖需单独审核，不并进这一张卡。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>原帖超过八万曝光、一千余赞，主手艺是像素风高斯泼溅工具，适合放在这块板。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="splat-walk" data-published="2026-11-05T23:31:28+08:00" data-cycle="2026-11-27-gsplat" data-verification="author-reported" data-audit="keep" data-audited="2026-11-27">
+      <figure>
+        <a class="still" href="https://x.com/willeastcott/status/2118365587823001628" target="_blank" rel="noopener" aria-label="打开 splat-walk 的原帖">
+          <img src="images/splat-walk/preview.jpg" alt="原帖视频封面：伦敦一条铺着石砖的窄巷拐角，左侧是红漆店面 LUXTRIPPER，右侧巷子向深处延伸。" width="1200" height="675">
+        </a>
+        <figcaption>原帖视频封面。场景是 David Fletcher 的 “Artillery Passage”，CC BY 4.0。</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">开源项目 · PlayCanvas / WebGPU · 作者自述</p>
+        <h2>splat-walk：假的手机随手拍</h2>
+        <p class="by">Will Eastcott · @willeastcott</p>
+        <p class="when"><time datetime="2026-11-05T23:31:28+08:00">2026-11-05</time></p>
+        <p>看起来像有人拿着手机走过伦敦一条窄巷，其实是实时渲染的高斯泼溅。点一下画面，巷子会烧成发光的椭球，再自行拼回来。值得学的是：要骗过眼睛，先模拟“走路的人”和“这台手机”，再谈场景本身。</p>
+        <p class="links">
+          <a href="https://x.com/willeastcott/status/2118365587823001628" target="_blank" rel="noopener">原帖</a>
+          <a href="https://willeastcott.github.io/splat-walk/" target="_blank" rel="noopener">在线演示</a>
+          <a href="https://github.com/willeastcott/splat-walk" target="_blank" rel="noopener">源码</a>
+          <a href="https://superspl.at/scene/f4897475" target="_blank" rel="noopener">原始扫描</a>
+          <a href="https://www.xiaohongshu.com/explore/6af6bc2d000000002500a62f" target="_blank" rel="noopener">小红书转述</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-05 23:31:28（亚洲/上海），X 原帖。仓库同日稍早建立（22:29 亚洲/上海）。</p>
+          <p><b>方法与工具（作者自述）：</b>原帖写：“这不是视频。它是实时渲染的高斯泼溅，由一个模拟的人拿着虚拟手机走拍：步态、转头、运动模糊、卷帘快门、脚步声。你可以点一下，把它烧成组成它的高斯椭球。用 PlayCanvas 做的。”线程里接着写：扫描是 David Fletcher 的 “Artillery Passage”（CC BY 4.0），从 SuperSplat 下载；他把 1.18 GB 的 PLY 压成 76 MB 的 SOG，并加了模拟的头和步态、胶片后期，以及逐个 splat 的着色器钩子来做燃烧。源码在 GitHub。仓库 README 把各部分写得更细：走法是时间的纯函数，相机做 1/80 秒曝光和 16 毫秒卷帘快门，声音按脚步落点对齐，用 ElevenLabs 生成，时钟锁在 30 帧。扫描本身是 2024 年 6 月用 Sony a7R III 拍的 1575 张照片，在 RealityScan 和 Lichtfeld Studio 里处理（作者引用 SuperSplat 页面的说明）。PlayCanvas 引擎是 MIT。splat-walk 仓库本身没有 LICENSE 文件，package.json 标了 private、也没写许可证。</p>
+          <p><b>数据（2026-11-27 14:34 亚洲/上海 核验）：</b>原帖曝光 259099，视频播放 104714，赞 2213，转发 179，引用 49，回复 37，收藏 1735。GitHub 于 14:35 核验为 71 星、7 个复刻。</p>
+          <p><b>社区反馈（X 回复，2026-11-27 14:35–14:37 亚洲/上海 抽样，不是全量）：</b>有人说脚步声和卷帘快门让人以为是真的手机录像；也有人说镜头运动很怪，一看就知道不是实拍。有人觉得脚步声太响，把假象毁了；有人提出手机常见的焦距变化还没有。还有人在部分手机、Chrome 和 Edge 上遇到黑屏，Firefox 或 Android 上可以。作者承认燃烧后变淡的 splat 在 WebGPU 排序前还没有被剔除，并开了引擎工单。</p>
+          <p><b>推广与利益：</b>原帖没有付费合作标记。作者是 PlayCanvas 的创建者和联合创始人（该公司已被 Snap 收购），这条也是 PlayCanvas、SuperSplat 和 splat-transform 能力的公开演示。声音用了 ElevenLabs。希彼赫 2026-11-13 15:28:45（亚洲/上海）在小红书发过体验页录屏转述（笔记 6af6bc2d000000002500a62f），那不是原作，小红书上的互动数也不计入本卡门槛。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>代码仓库看得见，但没有声明许可证，不能当作可任意复用的开源许可。场景是 CC BY 4.0，使用时需署名 David Fletcher。演示加载约 78 MB，在集成显卡上锁 30 帧。本板封面用的是作者原帖视频封面，不是小红书录屏。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>超过二十五万曝光、两千余赞，作者把“假手持”的做法和源码都公开了，对导演学习扫描现场如何拍得像随手拍很有用。Junie 先看到的是小红书转述，已追到原作。</p>
+        </details>
+      </div>
+    </article>
+        </main>
+      </div>
+    </div>
+  </section>
+
   <footer class="colophon">
-    画面来自各项目的官方发布，或作者视频的官方封面。Portals 为 CC BY-NC-SA 4.0，仅限非商业使用。The Moss Keeper 的海报取自 Chetaslua 仓库里的官方画面，版权仍归原作者。
+    画面来自各项目的官方发布，或作者视频的官方封面。Portals 为 CC BY-NC-SA 4.0，仅限非商业使用。The Moss Keeper 的海报取自 Chetaslua 仓库里的官方画面，版权仍归原作者。splat-walk 封面取自作者原帖视频，场景是 David Fletcher 的 “Artillery Passage”，CC BY 4.0。Ink Studio 封面取自作者原帖视频。
   </footer>
   <script>
     (function () {
-      var expected = "2026-11-25-learned-toggle";
+      var expected = "2026-11-27-gsplat";
       function check() {
         fetch("revision.json?t=" + Date.now(), { cache: "no-store" }).then(function (res) {
           if (!res.ok) return null;
@@ -1828,6 +1908,6 @@
       });
     })();
   </script>
-  <script src="board.js?v=2026-11-25-learned-toggle"></script>
+  <script src="board.js?v=2026-11-27-gsplat"></script>
 </body>
 </html>

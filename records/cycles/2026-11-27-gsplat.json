@@ -1,0 +1,107 @@
+{
+  "record_type": "publication_cycle_log",
+  "cycle_id": "2026-11-27-gsplat",
+  "timezone": "Asia/Shanghai",
+  "request": "Junie t121u: add a Gaussian-splatting board. t122u: Xiaohongshu recap of Will Eastcott splat-walk (https://xhslink.cn/o/AcThTyB7Nx); trace to original and mention the recap.",
+  "window": "2026-11-27 audit of splat-walk plus named recent 3DGS leads",
+  "added_ids": [
+    "ink-studio",
+    "splat-walk"
+  ],
+  "added_by_board": {
+    "claude": [],
+    "openai": [],
+    "gsplat": [
+      "ink-studio",
+      "splat-walk"
+    ]
+  },
+  "board_policy": {
+    "id": "gsplat",
+    "nav_label": "高斯泼溅学习板",
+    "hash": "#gsplat",
+    "scope": "Works and open-source tools whose main craft is 3D Gaussian Splatting, not a model-vendor board. Model-vendor demos that also use splats stay on the Claude or OpenAI board."
+  },
+  "metrics_checked_at": {
+    "splat_walk_x_post": "2026-11-27T14:34:00+08:00",
+    "splat_walk_x_replies_sampled": "2026-11-27T14:35:00+08:00/2026-11-27T14:37:00+08:00",
+    "splat_walk_github": "2026-11-27T14:35:00+08:00",
+    "ink_studio_github": "2026-11-27T14:39:00+08:00",
+    "ink_studio_x_post": "2026-11-27T14:42:00+08:00",
+    "ink_studio_x_replies_sampled": "2026-11-27T14:43:00+08:00",
+    "candidate_x_and_github": "2026-11-27T14:37:00+08:00/2026-11-27T14:43:00+08:00",
+    "mickmumpitz_youtube": "2026-11-27T14:39:00+08:00"
+  },
+  "reach_rule": "pass: X impressions >= 50,000 or likes >= 1,000; YouTube views >= 20,000. Never invent metrics. A recap's metrics do not count toward the original's bar.",
+  "xiaohongshu_recap": {
+    "note_id": "6af6bc2d000000002500a62f",
+    "url": "https://www.xiaohongshu.com/explore/6af6bc2d000000002500a62f",
+    "author": "希彼赫",
+    "published": "2026-11-13T15:28:45+08:00",
+    "role": "recap / screen recording of the official experience page, not the original",
+    "metrics_at_fetch": "544 likes, 426 collects, 16 comments, 112 shares at 2026-11-27 ~14:32 Asia/Shanghai; not used for admission"
+  },
+  "added": [
+    {
+      "id": "ink-studio",
+      "board": "gsplat",
+      "original": "https://x.com/JungleSilicon/status/2122245074608435600",
+      "published": "2026-11-16T16:27:09+08:00",
+      "verdict": "达标",
+      "metrics": "80336 impressions, 41332 video views, 1457 likes, 124 reposts, 14 quotes, 57 replies, 1674 bookmarks (2026-11-27 14:42 Asia/Shanghai). GitHub reply 20021 impressions / 281 likes. GitHub 1312 stars, 106 forks, MIT (14:39)."
+    },
+    {
+      "id": "splat-walk",
+      "board": "gsplat",
+      "original": "https://x.com/willeastcott/status/2118365587823001628",
+      "published": "2026-11-05T23:31:28+08:00",
+      "verdict": "达标",
+      "metrics": "259099 impressions, 104714 video views, 2213 likes, 179 reposts, 49 quotes, 37 replies, 1735 bookmarks (2026-11-27 14:34 Asia/Shanghai). GitHub 71 stars, 7 forks, no LICENSE file (14:35). Scene: Artillery Passage by David Fletcher, CC BY 4.0."
+    }
+  ],
+  "rejected": [
+    {
+      "source": "https://x.com/WrongNebula/status/2118699279984538046",
+      "item": "Sillage 3D",
+      "reason": "5622 impressions, 43 likes; GitHub 9 stars. Below reach bar."
+    },
+    {
+      "source": "https://x.com/mickmumpitz/status/2117631331853054427",
+      "item": "SplatKit World",
+      "reason": "9579 impressions, 236 likes on the Nov 3 announcement. August YouTube (153158 views) is an earlier related pipeline, not used as this post's metric."
+    },
+    {
+      "source": "DeadInternetStudios/three-js-claude-splatting-demo",
+      "item": "Reality Origami / 现实折纸",
+      "reason": "No high-reach original post found; GitHub 3 stars. Also a Claude/Sonnet demo, so vendor board if it later qualifies."
+    },
+    {
+      "source": "https://x.com/mertcobanov/status/2122046376129229261",
+      "item": "cobanov/pixelart-gaussiansplat",
+      "reason": "16771 impressions, 106 likes; GitHub 162 stars. Below reach bar."
+    },
+    {
+      "source": "https://x.com/suth_a/status/2123410151357178078",
+      "item": "Pixelomo Ink Studio roguelite",
+      "reason": "32827 impressions, 892 likes. Below bar; uses Claude, so would belong on the Claude board if it later qualifies."
+    },
+    {
+      "source": "https://x.com/JungleSilicon/status/2123198696867373386",
+      "item": "JungleSilicon later Astra/Fable/sol showcases",
+      "reason": "Example post 43941 impressions, 679 likes, below bar. Model-named showcases would prefer the vendor board."
+    },
+    {
+      "source": "https://x.com/willeastcott/status/2120915448929956242 and 2113946075245781023",
+      "item": "Other recent willeastcott splat posts",
+      "reason": "Fashion retail 1422 impressions / 35 likes; Budapest Parliament 7512 / 192. Below bar."
+    }
+  ],
+  "layout_revision": "2026-11-27-gsplat",
+  "layout_columns": 8,
+  "counts_after": {
+    "claude": 39,
+    "openai": 20,
+    "gsplat": 2,
+    "total": 61
+  }
+}

@@ -1,3 +1,29 @@
+# 补充 · 2026-11-27（`2026-11-27-gsplat`）：新开「高斯泼溅」板
+
+Junie 2026-11-27 提出加一个「高斯泼溅版」，并甩来一条小红书笔记（https://xhslink.cn/o/AcThTyB7Nx，探索页 https://www.xiaohongshu.com/explore/6af6bc2d000000002500a62f）。笔记作者是希彼赫，2026-11-13 15:28:45（亚洲/上海）发布，内容是 Will Eastcott splat-walk 体验页的录屏转述，不是原作。本轮追到 X 原帖后，按 Saltmere 标准审核，并新开第三块顶栏「高斯泼溅学习板」（`#gsplat`）。这块板收以高斯泼溅为主要手艺的作品和开源工具，不是模型厂商板；若作品主要是在演示 Claude 或 OpenAI 的模型，即使也用了泼溅，仍放在对应厂商板。
+
+- 核验时间（亚洲/上海）：splat-walk 原帖数据 2026-11-27 14:34，回复抽样 14:35–14:37，GitHub 14:35；Ink Studio 原帖数据 14:42，GitHub 14:39，回复抽样 14:43。
+- 去重：两张新卡都不在既有 Claude / OpenAI 板上。
+- 封面：都用作者原帖视频封面，不用小红书录屏。splat-walk 场景需按 CC BY 4.0 署名 David Fletcher。
+- 之后 Claude 39 张，OpenAI 20 张，高斯泼溅 2 张，共 61 张。
+
+| 板 | id | 标题 | 原发布（亚洲/上海） | 判定 | 数据 | 备注 |
+|---|---|---|---|---|---|---|
+| gsplat | `ink-studio` | Ink Studio：像素风高斯泼溅工具包 | 2026-11-16T16:27:09+08:00 | 达标 | 原帖曝光 80336，视频播放 41332，赞 1457，转发 124，引用 14，回复 57，收藏 1674。仓库回复曝光 20021、赞 281。GitHub 1312 星、106 个复刻，MIT。 | 新卡。作者 @JungleSilicon 原帖 + 仓库回复。宋宋 11-25 转述帖（曝光 55474、赞 1054）只作转述记录，不计入门槛。 |
+| gsplat | `splat-walk` | splat-walk：假的手机随手拍 | 2026-11-05T23:31:28+08:00 | 达标 | 原帖曝光 259099，视频播放 104714，赞 2213，转发 179，引用 49，回复 37，收藏 1735。GitHub 71 星、7 个复刻。 | 新卡。Junie 先看到小红书转述，已追到原作。代码仓库无 LICENSE；场景 CC BY 4.0。作者是 PlayCanvas 创建者。 |
+
+未收（近线或证据不足，留在本表，不建卡）：
+
+| 候选 | 原发 | 核验数据 | 原因 |
+|---|---|---|---|
+| Sillage 3D（@WrongNebula / wrong-nebula/sillage3D） | 2026-11-06 21:37:26 亚洲/上海，https://x.com/WrongNebula/status/2118699279984538046 | 曝光 5622，赞 43（2026-11-27 约 14:37 亚洲/上海）；GitHub 9 星（同日 14:39） | 学习价值在，但未过传播门槛。 |
+| SplatKit World（@mickmumpitz / ComfyUI-SplatKit-World） | 2026-11-03 22:53:47 亚洲/上海，https://x.com/mickmumpitz/status/2117631331853054427 | 曝光 9579，赞 236，收藏 245（同日约 14:37）；GitHub 50 星（14:39） | 未过 X 门槛。YouTube《We Open Sourced World Generation》（2026-08-25，播放 153158、赞 4295，同日约 14:39 用 yt-dlp 读取）是更早的相关管线介绍，不拿来当作 11-03 这条 SplatKit World 宣布帖的数据。 |
+| Reality Origami / 现实折纸（DeadInternetStudios/three-js-claude-splatting-demo） | 未找到作者高传播原帖 | GitHub 3 星（14:39）；能找到的介绍帖曝光只有几十 | 传播不够。且作者侧把它写成 Claude / Sonnet 演示，即使过线也应优先放 Claude 板，不放高斯泼溅板。 |
+| pixelart-gaussiansplat（@mertcobanov / cobanov/pixelart-gaussiansplat） | 2026-11-16 03:17:36 亚洲/上海，https://x.com/mertcobanov/status/2122046376129229261 | 曝光 16771，赞 106（约 14:43）；GitHub 162 星（14:39） | 未过传播门槛。 |
+| suth_a / Pixelomo 的 Ink Studio 民间肉鸽 | 2026-11-19 21:36:45 亚洲/上海，https://x.com/suth_a/status/2123410151357178078 | 曝光 32827，赞 892，视频播放 17694（14:42） | 未过门槛。作者写用了 JungleSilicon 工具包和 Claude，即使过线也应优先放 Claude 板。 |
+| JungleSilicon 后续展示（Astra / Fable / sol 6.2） | 例如 2026-11-19 07:36:31 亚洲/上海，https://x.com/JungleSilicon/status/2123198696867373386 | 该条曝光 43941，赞 679（14:42） | 单条未过门槛；且若过线，写明 Astra 的展示应优先放 OpenAI 板。不与 Ink Studio 工具卡合并。 |
+| Will Eastcott 其他近期 splat 帖（时装零售、布达佩斯国会大厦等） | 2026-11-12 / 2026-10-24 等 | 时装零售曝光 1422、赞 35；国会大厦曝光 7512、赞 192（约 14:34） | 未过门槛，也不与 splat-walk 合并。 |
+
 # 补充 · 2026-11-25 晚（`2026-11-25-opus56`）：收录（型号存疑）
 
 新规则（Junie，2026-11-25）：作者自称的型号如果还不在官方型号表里（例如 “Opus 5.6”），作品可以上 Claude 板，但卡面必须有「型号存疑」徽标和一行说明：作者称什么型号、官方型号表查于何时、提交记录里的 Co-Authored-By 写的是什么。传播门槛和其余审核标准不变。
