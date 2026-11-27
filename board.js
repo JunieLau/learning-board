@@ -2,8 +2,8 @@
 function boot(section) {
   var KEY = "learning-board-freeform-v1-" + (section.getAttribute("data-board") || "claude");
   var OLD_KEY = "learning-board-local-v1";
-  var LAYOUT_REVISION = "2026-11-27-gsplat";
-  var CYCLE = "2026-11-27-gsplat";
+  var LAYOUT_REVISION = "2026-11-27-gsplat-10";
+  var CYCLE = "2026-11-27-gsplat-10";
   var NOTE_MAX = 2000;
   var FILE_MAX = 500000;
   var CARD_W = 280;

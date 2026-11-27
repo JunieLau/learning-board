@@ -1,0 +1,146 @@
+{
+  "record_type": "publication_cycle_log",
+  "cycle_id": "2026-11-27-gsplat-10",
+  "timezone": "Asia/Shanghai",
+  "request": "Junie t123u: add about 10 new qualified cases to the existing 高斯泼溅 board, and include the recently viral racing/driving app she remembered.",
+  "window": "2026-11-27 afternoon/evening audit of 2025-2026 3DGS creative and tool works, with priority on identifying the racing/driving app",
+  "added_ids": [
+    "spark-radix",
+    "insta360-house",
+    "wascape",
+    "splat-reflections",
+    "voxel-collision",
+    "supersplat-24m",
+    "property-speedrun",
+    "splat-fps",
+    "spark-2",
+    "mrnerf-driving-sim"
+  ],
+  "added_by_board": {
+    "claude": [],
+    "openai": [],
+    "gsplat": [
+      "spark-radix",
+      "insta360-house",
+      "wascape",
+      "splat-reflections",
+      "voxel-collision",
+      "supersplat-24m",
+      "property-speedrun",
+      "splat-fps",
+      "spark-2",
+      "mrnerf-driving-sim"
+    ]
+  },
+  "kept_existing_gsplat": [
+    "ink-studio",
+    "splat-walk"
+  ],
+  "board_counts_after": {
+    "claude": 39,
+    "openai": 20,
+    "gsplat": 12,
+    "total": 71
+  },
+  "racing_case": {
+    "identified_as": "wascape",
+    "why": "Most recent public, playable app that lets people drive/ride/walk/fly real Gaussian-splat places, with a documented October 2026 traffic surge. Not a competitive racer. Misses X/YouTube working thresholds; included because Junie asked for that app, with the shortfall labeled.",
+    "alternates": [
+      "Gaussian Oxford Street (rideable real street, X below bar)",
+      "MrNeRF driving simulator (clears X bar, 2025, no public app URL found; added as its own passing card)",
+      "VIVERSE GS Racing and XGRIDS room racetrack (actual racing, not enough reach)",
+      "KPal browser racer (likely mesh, below bar)"
+    ]
+  },
+  "metrics_checked_at": {
+    "x_posts_and_media": "2026-11-27T15:28:00+08:00/2026-11-27T15:37:00+08:00",
+    "github": "2026-11-27T15:40:00+08:00",
+    "wascape_site_and_devlog": "2026-11-27T15:29:00+08:00",
+    "wascape_reddit_thread": "2026-11-27T15:37:00+08:00",
+    "reply_and_quote_samples": "2026-11-27T15:36:00+08:00/2026-11-27T15:40:00+08:00"
+  },
+  "reach_rule": "pass: X impressions >= 50,000 or likes >= 1,000; YouTube views >= 20,000. Never invent metrics. A recap's metrics do not count toward the original's bar. The named racing/driving case may be included below the bar if clearly labeled.",
+  "layout_revision": "2026-11-27-gsplat-10",
+  "added": [
+    {
+      "id": "spark-radix",
+      "board": "gsplat",
+      "original": "https://x.com/sparkjsdev/status/2115852543708536881",
+      "published": "2026-10-30T01:05:31+08:00",
+      "verdict": "达标",
+      "metrics": "64441 impressions, 18941 video views, 758 likes, 96 reposts, 19 quotes, 39 replies, 656 bookmarks (2026-11-27 15:36 Asia/Shanghai). GitHub 69 stars, 11 forks, MIT (15:40). Impressions just over 50k, likes under 1k."
+    },
+    {
+      "id": "insta360-house",
+      "board": "gsplat",
+      "original": "https://x.com/willeastcott/status/2102102073101947205",
+      "published": "2026-09-22T02:26:04+08:00",
+      "verdict": "达标",
+      "metrics": "87342 impressions, 45565 video views, 1325 likes, 109 reposts, 7 quotes, 38 replies, 1855 bookmarks (15:28)."
+    },
+    {
+      "id": "wascape",
+      "board": "gsplat",
+      "original": "https://www.reddit.com/r/threejs/comments/1w69q1w/i_built_a_photoreal_game_demo_which_can_be/",
+      "published": "2026-09-03T22:55:14+08:00",
+      "verdict": "未过 X/YouTube 工作门槛，作为点名案例收录",
+      "metrics": "No qualifying X/YouTube original. Author devlog 2026-10-30: 250k+ October page views, peak day ~65k visitors, 2k+ signups, with the author's own caveats. Site-stated Reddit as of 2026-10-15: 46k/265, 22k/58, 46k/83. Live r/threejs 2026-11-27 15:37: 60 ups, 42 comments."
+    },
+    {
+      "id": "splat-reflections",
+      "board": "gsplat",
+      "original": "https://x.com/abstrakt314/status/2078122527226814490",
+      "published": "2026-07-17T22:19:54+08:00",
+      "verdict": "达标",
+      "metrics": "84026 impressions, 41327 video views, 1215 likes, 77 reposts, 3 quotes, 18 replies, 556 bookmarks (15:36)."
+    },
+    {
+      "id": "voxel-collision",
+      "board": "gsplat",
+      "original": "https://x.com/willeastcott/status/2070110425648128245",
+      "published": "2026-06-25T19:42:40+08:00",
+      "verdict": "达标",
+      "metrics": "91525 impressions, 56761 video views, 1118 likes, 154 reposts, 14 quotes, 14 replies, 862 bookmarks (15:36)."
+    },
+    {
+      "id": "supersplat-24m",
+      "board": "gsplat",
+      "original": "https://x.com/playcanvas/status/2062165374120894862",
+      "published": "2026-06-03T21:31:53+08:00",
+      "verdict": "达标",
+      "metrics": "61582 impressions, 21119 video views, 867 likes, 130 reposts, 10 quotes, 28 replies, 694 bookmarks (15:31). GitHub SuperSplat 10737 stars, MIT (15:40). Impressions over 50k, likes under 1k."
+    },
+    {
+      "id": "property-speedrun",
+      "board": "gsplat",
+      "original": "https://x.com/willeastcott/status/2052361551265321328",
+      "published": "2026-05-07T20:14:59+08:00",
+      "verdict": "达标",
+      "metrics": "607651 impressions, 222923 video views, 5420 likes, 438 reposts, 62 quotes, 167 replies, 5687 bookmarks (15:28)."
+    },
+    {
+      "id": "splat-fps",
+      "board": "gsplat",
+      "original": "https://x.com/yak32/status/2047326252344742035",
+      "published": "2026-04-23T22:46:30+08:00",
+      "verdict": "达标",
+      "metrics": "180073 impressions, 84791 video views, 1524 likes, 136 reposts, 17 quotes, 46 replies, 943 bookmarks (15:32-15:36). HN 236 points, 63 comments when the thread was fetched."
+    },
+    {
+      "id": "spark-2",
+      "board": "gsplat",
+      "original": "https://x.com/sparkjsdev/status/2044090505982816449",
+      "published": "2026-04-15T00:28:48+08:00",
+      "verdict": "达标",
+      "metrics": "422608 impressions, 92764 video views, 2040 likes, 311 reposts, 63 quotes, 41 replies, 1773 bookmarks (15:30). GitHub 3981 stars, 599 forks, MIT (15:40)."
+    },
+    {
+      "id": "mrnerf-driving-sim",
+      "board": "gsplat",
+      "original": "https://x.com/janusch_patas/status/1979215379005345959",
+      "published": "2025-10-17T23:58:13+08:00",
+      "verdict": "达标",
+      "metrics": "139742 impressions, 53080 video views, 1202 likes, 163 reposts, 18 quotes, 28 replies, 460 bookmarks (15:30)."
+    }
+  ]
+}
