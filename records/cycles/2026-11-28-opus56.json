@@ -1,0 +1,70 @@
+{
+  "record_type": "publication_cycle_log",
+  "cycle_id": "2026-11-28-opus56",
+  "timezone": "Asia/Shanghai",
+  "request": "Junie t124u: trace originals in the WeChat recap https://mp.weixin.qq.com/s/E-4uZqUxPSd2Y8C0KMpHWA. t125u: full-web search for Claude/Opus 5.6 and update the board. t128u: prioritize new model versions (5.5/5.6), do not fill this round with more Fable 5.2; review awesome-fable-5.2 in the report only unless a Fable item clearly passes and is needed. Do not handle the Gracia AI F1 4DGS case (separate gsplat work).",
+  "window": "2026-11-28 audit of the two WeChat cases plus a 5.5/5.6 sweep; official model table rechecked",
+  "added_ids": [
+    "claude-pelican-1",
+    "the-last-boring-slide"
+  ],
+  "added_by_board": {
+    "claude": [
+      "claude-pelican-1",
+      "the-last-boring-slide"
+    ],
+    "openai": [],
+    "gsplat": []
+  },
+  "official_model_check": {
+    "checked_at": "2026-11-28T00:56:50+08:00",
+    "sources": [
+      "https://docs.anthropic.com/en/docs/about-claude/models/overview",
+      "https://platform.claude.com/docs/en/about-claude/models/overview",
+      "https://www.anthropic.com/news"
+    ],
+    "current_public": [
+      "Claude Fable 5.2",
+      "Claude Opus 5.5",
+      "Claude Sonnet 5.5",
+      "Claude Haiku 5.5",
+      "Claude Mythos 5.2 (limited)"
+    ],
+    "opus_5_6": "not listed; no model ID claude-opus-5-6"
+  },
+  "metrics_checked_at": {
+    "last_boring_slide_x_post": "2026-11-28T00:57:00+08:00",
+    "last_boring_slide_youtube": "2026-11-28T00:57:00+08:00",
+    "last_boring_slide_replies": "2026-11-28T00:58:00+08:00",
+    "pelican_keynote_x_post": "2026-11-28T00:56:00+08:00",
+    "pelican_keynote_replies": "2026-11-28T00:58:00+08:00",
+    "built_for_two": "2026-11-28T00:59:00+08:00",
+    "awesome_fable_reference_posts": "2026-11-28T01:02:00+08:00"
+  },
+  "wechat_recap": {
+    "url": "https://mp.weixin.qq.com/s/E-4uZqUxPSd2Y8C0KMpHWA",
+    "account": "你丫才美工",
+    "published": "2026-11-27T21:09:00+08:00",
+    "role": "recap, not original; no links to the original X posts; 10 million view claim is not used as the live metric"
+  },
+  "reach_rule": "pass: X impressions >= 50,000 or likes >= 1,000; YouTube views >= 20,000. Never invent metrics. A recap's metrics do not count toward the original's bar.",
+  "added": [
+    {
+      "id": "claude-pelican-1",
+      "board": "claude",
+      "original": "https://x.com/shneural/status/2125658847323017291",
+      "published": "2026-11-26T02:32:16+08:00",
+      "verdict": "达标（型号存疑）",
+      "metrics": "660071 impressions, 278769 video views, 7792 likes, 325 reposts, 148 quotes, 163 replies, 4224 bookmarks (2026-11-28 00:56 Asia/Shanghai)."
+    },
+    {
+      "id": "the-last-boring-slide",
+      "board": "claude",
+      "original": "https://x.com/fluxxrider/status/2125622238481371372",
+      "demo": "https://claude.ai/artifact/Cy2d8Vn63CnzCtonA1LSah",
+      "published": "2026-11-26T00:06:48+08:00",
+      "verdict": "达标（型号存疑）",
+      "metrics": "12212618 impressions, 40405 likes, 3101 reposts, 2310 quotes, 1502 replies, 59562 bookmarks (2026-11-28 00:57 Asia/Shanghai). Author YouTube recording 4940 views, below the YouTube bar."
+    }
+  ]
+}

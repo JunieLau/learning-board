@@ -29,10 +29,10 @@
     "mrnerf-driving-sim"
   ],
   "board_counts_after": {
-    "claude": 39,
+    "claude": 41,
     "openai": 20,
     "gsplat": 13,
-    "total": 72
+    "total": 74
   },
   "metrics_checked_at": {
     "georgii_linkedin": "2026-11-28T01:03:25+08:00",
@@ -60,5 +60,6 @@
       "conflicts": "Georgii Vysotskii is Co-founder and CEO of Gracia AI (company self-announcement). Method details beyond the short caption are second-hand retellings attributed to Andrei/Andrey Volodin (Gracia co-founder/CTO); Volodin's own original post URL was not verified this cycle. Rubloff's earlier post carries the hashtag #dellproprecision.",
       "license": "No open license found for the broadcast clip or the official LinkedIn video cover. Cover is the author's posted videocover-high still only; F1, team, DHL, and Apple TV marks appear in that official still. Did not rip Apple TV or F1 broadcast footage beyond what the author posted."
     }
-  ]
+  ],
+  "note": "Merged on top of PR28 (2026-11-28-opus56), which had already added 2 Claude cards. This cycle does not add or remove Claude/OpenAI cards."
 }

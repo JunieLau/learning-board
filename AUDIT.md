@@ -1,6 +1,6 @@
 # 补充 · 2026-11-28（`2026-11-28-gracia-f1`）：点名收录 Gracia AI 的 F1 4D 进站转播
 
-Junie 在看过 Gracia AI F1 审核后回复「这个要收」（t129u）。本轮只在已上线的「高斯泼溅」板加这一张卡，不改板的结构，不删除任何卡，不改 Claude 与 OpenAI 板。Claude 仍是 39 张，OpenAI 仍是 20 张，高斯泼溅由 12 张变为 13 张，合计 72 张。
+Junie 在看过 Gracia AI F1 审核后回复「这个要收」（t129u）。本轮只在已上线的「高斯泼溅」板加这一张卡，不改板的结构，不删除任何卡，不改 Claude 与 OpenAI 板上的卡片。合并时 main 已先合入 `2026-11-28-opus56`，Claude 为 41 张，OpenAI 仍是 20 张，高斯泼溅由 12 张变为 13 张，合计 74 张。
 
 这张卡未过本板的 X/YouTube 工作门槛（X 曝光 ≥5 万或赞 ≥1000；YouTube 播放 ≥2 万）。LinkedIn 赞数不是工作门槛；《This Week in 3DGS》第 14 集是周报，其播放量也不计入本条是否达标。按与 WASCAPE 相同的写法，标成点名收录 / `data-audit="borderline"`，不假装已经过线。
 
@@ -12,6 +12,49 @@ Junie 在看过 Gracia AI F1 审核后回复「这个要收」（t129u）。本�
 | 板 | id | 标题 | 原发布（亚洲/上海） | 判定 | 数据 | 备注 |
 |---|---|---|---|---|---|---|
 | gsplat | `gracia-f1` | Gracia AI：F1 转播里的两秒进站，做成 4D 自由视角 | 2026-11-25T01:03:28+08:00（Georgii 公司公告；更早公开提及见上） | 未过 X/YouTube 工作门槛，作为点名收录 | Georgii 原帖 01:03 核验：公开页 95 赞、10 评；未登录页无转发数；关注者 3,275；视频 56 秒。Junie 00:56 截图：94 赞、10 评、4 次转帖。第 14 集 YouTube 同刻 16,496 播放、335 赞（周报，不计本条门槛）。Rubloff 专帖同刻 405 赞、38 评。 | 新卡，临界。作者是 Gracia AI 联合创始人兼 CEO，须披露利益关系。方法细节中的 Meridian、半圆 iPhone、约 3 米、5G、1500 fps、无幻觉、Unreal、仅美国可看等，来自对 Volodin 的二手转述，不是 Georgii 原话。原帖已编辑。 |
+# 补充 · 2026-11-28（`2026-11-28-opus56`）：Claude 板新收 2 张自称 Opus 5.6 的过线作品
+
+Junie 先发来微信转述文（https://mp.weixin.qq.com/s/E-4uZqUxPSd2Y8C0KMpHWA，「你丫才美工」，2026-11-27 21:09 亚洲/上海），要求追到原文；随后要求全网检索 Claude / Opus 5.6 并更新学习板。后又明确：本轮上板优先新型号（Claude / Opus / Sonnet 5.5 与 5.6，含尚未官宣但过线的 5.6），不要用更多 Fable 5.2 作品作为这一轮的主要更新。Fable 5.2 清单 https://github.com/fengyiqicoder/awesome-fable-5.2 只作对照，过线且板上还没有的，写入本表，不在这一轮上板。高斯泼溅板的 Gracia AI F1 4DGS 另案处理，本轮不动该板。
+
+官方型号（2026-11-28 00:56 亚洲/上海）：查过 https://docs.anthropic.com/en/docs/about-claude/models/overview（跳转到 platform.claude.com 同页）和 Anthropic 新闻室。现行公开型号仍是 Claude Fable 5.2、Claude Opus 5.5、Claude Sonnet 5.5、Claude Haiku 5.5，以及有限开放的 Mythos 5.2。页面和新闻室都没有 Opus 5.6，也没有模型 ID `claude-opus-5-6`。按既定规则，自称 5.6 但过线的作品仍上 Claude 板，标「型号存疑」。
+
+微信文里的两个案例都追到了 X 原帖，并且都过线，作为本轮新卡。微信文没有给出原帖链接，文中的浏览量不作为门槛数据。
+
+- 核验时间（亚洲/上海）：官方型号表 2026-11-28 00:56；The Last Boring Slide 原帖 00:57，提示词与花费帖、YouTube 播放量同一时段；该帖批评抽样 00:58；Claude Pelican 1 原帖与视频播放 00:56，方法帖与批评抽样 00:58；Built for Two 复核 00:59；awesome-fable-5.2 对照项原帖 01:02。
+- 去重：两张新卡都不在既有三块板上。Claude Pelican 1 与已有的 `pelican-bicycle`、以及未过线的 Built for Two 不是同一部作品。
+- 封面：The Last Boring Slide 用原帖 Claude Artifact 官方分享卡；Pelican 1 的 X 默认封面过暗，改用原帖视频约第 35 秒的正式画面。
+- 之后 Claude 41 张，OpenAI 20 张，高斯泼溅 12 张，共 73 张。
+
+| 板 | id | 标题 | 原发布（亚洲/上海） | 判定 | 数据 | 备注 |
+|---|---|---|---|---|---|---|
+| claude | `claude-pelican-1` | Claude Pelican 1：鹈鹕发布会短片 | 2026-11-26T02:32:16+08:00 | 达标（型号存疑） | 原帖曝光 660071，视频播放 278769，赞 7792，转发 325，引用 148，回复 163，收藏 4224。 | 新卡。作者 @shneural。不是纯代码单模型出片：作者写明 Codex 出 39 个时代静帧，MiniMax-H3 做动画，代码对齐脚踏，剪辑约 2 小时。 |
+| claude | `the-last-boring-slide` | The Last Boring Slide | 2026-11-26T00:06:48+08:00 | 达标（型号存疑） | 原帖曝光 12212618，赞 40405，转发 3101，引用 2310，回复 1502，收藏 59562。提示词回复曝光 1844563，赞 5487。YouTube 录屏播放 4940，不过线，只作备看。 | 新卡。作者 @fluxxrider。微信写“1000 万”是转述，本轮以原帖 12212618 次曝光为准。可交互原作是 Claude Artifact，不是 PowerPoint。 |
+
+本轮检索后未上板的 5.6 / 5.5 候选：
+
+| 候选 | 原发 | 核验数据 | 原因 |
+|---|---|---|---|
+| Chetaslua Built for Two（鹈鹕唱歌，纯 WebGL2） | https://x.com/chetaslua/status/2125346298606014955 ｜ 2026-11-25 05:50:19 | 曝光 21344，赞 354（00:59） | 作者写的是官方 Opus 5.5，不是 5.6；传播未过线。与微信文里的发布会短片不是同一部。 |
+| Kevin Ngo《Tokyo》 | https://x.com/kevin_t_ngo/status/2125288449788019168 ｜ 2026-11-25 02:00:27 | 曝光 32501，赞 886 | 作者写的是 Fable 5.2，且仍未过线。 |
+| Marcel：The Last Page 的 5.6 vs 5.5 对照 | https://x.com/marcthecreatorr/status/2125254550416175477 ｜ 2026-11-24 23:45:44 | 曝光 323061，赞 1650 | 数据过线，但是已上板作品 The Last Page 的对照，不另开新卡。 |
+| @notjazii 鹈鹕骑车视频 | https://x.com/notjazii/status/2125235869716287677 ｜ 2026-11-24 22:31:30 | 曝光 116843，赞 705 | 曝光过线，但账号以资讯转述为主，原帖没有写明是自己做的，也不公布方法，不当作原作上板。 |
+| @chetaslua 转发 The Last Boring Slide 的录屏 | https://x.com/chetaslua/status/2125910807943037163 | 曝光 117335，赞 1314 | 转述，不是新作品。 |
+| @chetaslua「Sonnet Next / 5.6」宝可梦第一季回顾 | https://x.com/chetaslua/status/2126071016103477403 | 曝光 20198，赞 359 | 未过线；且自称的是 Sonnet 5.6，不是 Opus。 |
+| @shneural 同一提示词的运动图形对照（所谓 Opus Next vs 5.5） | https://x.com/shneural/status/2125609960952242194 | 曝光 21674，赞 433 | 未过线。 |
+| @legit_api 的 Opus-next 短片与插画（火柴人、GTA 戏仿、绘画等） | 多条，最高约 https://x.com/legit_api/status/2125613576396104034 | 最高曝光 28762，赞 136 | 均未过线。 |
+| @Mr_Salio 自称 Opus 5.6 的纯代码动画 | https://x.com/Mr_Salio/status/2125255537122046339 | 曝光 36085，赞 295 | 未过线。 |
+| @austinit 等对 The Last Boring Slide 的转述 | 例如 https://x.com/austinit/status/2125735378795860129 | 该转述曝光 2295367，赞 5265 | 转述，作者还要求署名；不另开卡。 |
+| @teddyaisi《Last Train》J-Horror 短片 | https://x.com/teddyaisi/status/2126184852148138338 ｜ 2026-11-27 13:22:26 | 曝光 122245，赞 243 | 曝光刚过线，赞很少；工具栈是 GPT Astra 6.2、Gemini 4 Neon、Claude Opus 5.5 和 ElevenLabs 混用，不是干净的 5.5/5.6 案例，本轮不上板。 |
+| @JamesMalsawm「5.6 vs Gemini 4 Neon」对照 | https://x.com/JamesMalsawm/status/2125779072470986927 | 曝光 50224，赞 351 | 文案接近 Marcel 的对照帖，更像转述或仿写，不另开卡。 |
+
+Fable 5.2 对照清单 https://github.com/fengyiqicoder/awesome-fable-5.2（链接核对于 2026-11-27）：本轮不把它们作为上板重点。下列几条不在现有板上、且原帖过线，只记在这里，供以后考虑。清单上的 Saltline、CROSSTOWN、The Edge（Riley Brown 那条 Claude 笔记本房间，原帖即 `the-edge` 所用）、Brushwild / procedural-rpg 等已在板上；Blendi 的 Oil Paint 和已上板的 Painted Valley 不是同一条。
+
+| 作品 | 原帖 | 原发布（亚洲/上海） | 2026-11-28 01:02 核验 | 说明 |
+|---|---|---|---|---|
+| Starry Nightrider | https://x.com/ebbyamir/status/2120284261089673376 | 2026-11-11 06:35:35 | 曝光 1997788，赞 17949，转发 2305，引用 487，回复 505，收藏 9973 | 可玩：https://starrynightrider.com 。梵高在《星夜》里骑行的游戏。明显过线，本轮按新型号优先，不上板。 |
+| Uno com Escada | https://x.com/ViktorKav/status/2122647483281015155 | 2026-11-17 19:06:11 | 曝光 611421，赞 9199，转发 432，引用 97，回复 342，收藏 2953 | 可玩与源码：https://viktorkav.com.br/apoio/uno-com-escada/fable/ ｜ https://github.com/viktorkav/uno-com-escada 。单文件 HTML，无引擎。过线，本轮不上板。 |
+| Oil Paint | https://x.com/BlendiByl/status/2120341251178594532 | 2026-11-11 10:22:02 | 曝光 463891，赞 8021，转发 404，引用 80，回复 393，收藏 4291 | 可玩：https://patch.gg/blendi/oil-paint 。与已上板的 Painted Valley 不是同一件作品。过线，本轮不上板。 |
+| Voidlight Depths | https://x.com/kevin_t_ngo/status/2125982976483975534 | 2026-11-27 00:00:15 | 曝光 94017，赞 1056，转发 77，引用 11，回复 67，收藏 993 | 可玩与源码：https://kevintngo.github.io/voidlight/ ｜ https://github.com/kevintngo/voidlight 。刚过线。作者另两件（RPG、塔防）已在板上。本轮不上板。 |
 
 # 补充 · 2026-11-27 晚（`2026-11-27-gsplat-10`）：高斯泼溅板新收约 10 张
 
