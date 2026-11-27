@@ -4,6 +4,7 @@ and returning (old-revision) browsers, and per-board new-card framing."""
 import json, os, re, subprocess, sys, time, socket, threading, http.server, functools
 from bs4 import BeautifulSoup
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BOARDS = ('claude', 'openai', 'gsplat')
 html = open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
 soup = BeautifulSoup(html, 'html.parser')
 errors = []
@@ -43,7 +44,9 @@ for sec in soup.select('section.board-view'):
         for l in a.select('a[href]'):
             if not l['href'].startswith('https://'): err(f'{cid}: non-https link {l["href"]}')
 nav = soup.select('.board-nav a small')
-for sm, b in zip(nav, ('claude', 'openai')):
+if [a.get('href') for a in soup.select('.board-nav a')] != [f'#{b}' for b in BOARDS]:
+    err('nav order does not match ' + ','.join(BOARDS))
+for sm, b in zip(nav, BOARDS):
     if not sm.get_text().startswith(f'{counts[b]} 张'): err(f'nav count for {b} says {sm.get_text()} but board has {counts[b]}')
 print('counts', counts, 'total', sum(counts.values()))
 
@@ -64,15 +67,16 @@ with sync_playwright() as p:
     # static fallback (no JS)
     ctx = br.new_context(java_script_enabled=False, viewport={'width': 1600, 'height': 1000})
     pg = ctx.new_page()
-    for b in ('claude', 'openai'):
+    for b in BOARDS:
         pg.goto(base + '#' + b); pg.wait_for_timeout(300)
         tops = pg.eval_on_selector_all(f'#{b} article.card:not(.intro)', 'els => els.map(e => Math.round(e.getBoundingClientRect().top))')
         first = tops[0]; row1 = sum(1 for t in tops if abs(t - first) < 2)
-        if row1 != 8: err(f'static {b}: first row has {row1} cards')
+        want = min(8, len(tops))
+        if row1 != want: err(f'static {b}: first row has {row1} cards, expected {want}')
     ctx.close()
     def js_check(ctx, label):
         pg = ctx.new_page()
-        for b in ('claude', 'openai'):
+        for b in BOARDS:
             pg.goto(base + '#' + b); pg.wait_for_timeout(1500)
             info = pg.evaluate(f'''() => {{
               const arts=[...document.querySelectorAll('#{b} article.card:not(.intro)')];
@@ -83,14 +87,15 @@ with sync_playwright() as p:
             }}''')
             pos = info['pos']; y0 = pos[0][2]
             row = [x for x in pos if abs(x[2] - y0) < 3]
-            if len(row) != 8: err(f'{label} {b}: JS first row has {len(row)} cards')
-            if [x[0] for x in sorted(row, key=lambda x: x[1])] != [x[0] for x in pos[:8]]: err(f'{label} {b}: first row not newest-first left to right')
+            want = min(8, len(pos))
+            if len(row) != want: err(f'{label} {b}: JS first row has {len(row)} cards, expected {want}')
+            if [x[0] for x in sorted(row, key=lambda x: x[1])] != [x[0] for x in pos[:want]]: err(f'{label} {b}: first row not newest-first left to right')
             if info['imgs']: err(f'{label} {b}: broken images {info["imgs"]}')
             st = json.loads(info['store'] or '{}')
             if st.get('revision') != rev: err(f'{label} {b}: stored revision {st.get("revision")}')
             print(label, b, 'first-row', [x[0] for x in pos[:8]], 'visible', info['vis'])
         # cycle framing on each board
-        for b, want in (('claude', 'noroi-iwai'), ('openai', None)):
+        for b, want in (('claude', None), ('openai', None), ('gsplat', 'ink-studio')):
             pg.goto(base + '#' + b); pg.wait_for_timeout(800)
             pg.click('#show-cycle'); pg.wait_for_timeout(500)
             h = pg.evaluate('location.hash')
@@ -98,7 +103,7 @@ with sync_playwright() as p:
             if want is None: continue  # no new cards on this board this revision
             ok = pg.evaluate(f'''() => {{const r=document.querySelector('#{b} [data-id="{want}"]').getBoundingClientRect();return r.width>0&&r.left>=0&&r.right<=innerWidth&&r.top>=0}}''')
             if not ok: err(f'{label}: show-cycle did not frame {want}')
-        for b in ("claude", "openai"):
+        for b in BOARDS:
             pg.goto(base + "#" + b); pg.wait_for_timeout(800)
             info = pg.evaluate("""() => {
               const bid = location.hash.replace("#","");
@@ -169,6 +174,8 @@ with sync_playwright() as p:
     pg.screenshot(path=os.path.join(ROOT, '..', 'full-audit-data', 'check-claude.png'))
     pg.goto(base + '#openai'); pg.wait_for_timeout(800)
     pg.screenshot(path=os.path.join(ROOT, '..', 'full-audit-data', 'check-openai.png'))
+    pg.goto(base + '#gsplat'); pg.wait_for_timeout(800)
+    pg.screenshot(path=os.path.join(ROOT, '..', 'full-audit-data', 'check-gsplat.png'))
     ctx.close(); br.close()
 httpd.shutdown()
 print('ERRORS' if errors else 'ALL CHECKS PASSED', len(errors))

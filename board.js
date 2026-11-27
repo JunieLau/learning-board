@@ -2,8 +2,8 @@
 function boot(section) {
   var KEY = "learning-board-freeform-v1-" + (section.getAttribute("data-board") || "claude");
   var OLD_KEY = "learning-board-local-v1";
-  var LAYOUT_REVISION = "2026-11-25-learned-toggle";
-  var CYCLE = "2026-11-25-opus56";
+  var LAYOUT_REVISION = "2026-11-27-gsplat";
+  var CYCLE = "2026-11-27-gsplat";
   var NOTE_MAX = 2000;
   var FILE_MAX = 500000;
   var CARD_W = 280;
@@ -881,12 +881,16 @@ document.querySelectorAll(".board-view").forEach(function (section) {
   if (api) mounts[section.id] = api;
 });
 
+function isBoardId(id) {
+  return id === "claude" || id === "openai" || id === "gsplat";
+}
+
 function boardIdFromLocation() {
   var hash = (location.hash || "").replace(/^#/, "");
-  if (hash === "openai" || hash === "claude") return hash;
+  if (isBoardId(hash)) return hash;
   try {
     var query = new URLSearchParams(location.search).get("board");
-    if (query === "openai" || query === "claude") return query;
+    if (isBoardId(query)) return query;
   } catch (err) {}
   return "claude";
 }
