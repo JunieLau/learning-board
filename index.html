@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>学习板 · Claude / GPT / 高斯泼溅</title>
   <meta name="description" content="Claude、GPT 与高斯泼溅的创意项目，一块一块钉在这块黑底的板上。">
-  <link rel="stylesheet" href="styles.css?v=2026-11-27-gsplat">
+  <link rel="stylesheet" href="styles.css?v=2026-11-27-gsplat-10">
   <script>
     (function () {
       try {
@@ -24,7 +24,7 @@
   </header>
 
   <div class="local-tools">
-    <p class="local-explain">上方目录分成 Claude、OpenAI 和高斯泼溅三块学习板，点一下就换。地址用 #claude、#openai 或 #gsplat，不带记号时打开 Claude。可以拖动、平移和缩放。每次内容更新后，第一次打开会按原发布日期从新到旧排开，桌面窗口里一行八张内容卡同时可见，说明卡单独占上面一行。板上不足八张时，就按实际张数排在这一行，空位留空，不拿说明卡凑数。没有脚本时也会按这个行列排，不会把说明卡算进八张里。同一版里再拖动，仍留在这台浏览器，三块板分开记。每张卡右下角有一个小开关：默认滑块在左边，是未学；滑到右边，变成已学，卡片会稍稍变淡。只记在这台浏览器里，不会同步。这一版新开了「高斯泼溅」板，先收 2 张：Ink Studio 和 splat-walk。Claude 仍是 39 张，OpenAI 仍是 20 张。点「查看本轮新增」会框住高斯泼溅板上的这 2 张；另外两块板这一版没有新卡。标注还留着，页面上不再显示输入框。</p>
+    <p class="local-explain">上方目录分成 Claude、OpenAI 和高斯泼溅三块学习板，点一下就换。地址用 #claude、#openai 或 #gsplat，不带记号时打开 Claude。可以拖动、平移和缩放。每次内容更新后，第一次打开会按原发布日期从新到旧排开，桌面窗口里一行八张内容卡同时可见，说明卡单独占上面一行。板上不足八张时，就按实际张数排在这一行，空位留空，不拿说明卡凑数。没有脚本时也会按这个行列排，不会把说明卡算进八张里。同一版里再拖动，仍留在这台浏览器，三块板分开记。每张卡右下角有一个小开关：默认滑块在左边，是未学；滑到右边，变成已学，卡片会稍稍变淡。只记在这台浏览器里，不会同步。这一版给高斯泼溅板新收 10 张（含 Junie 点名的开车应用 WASCAPE），现为 12 张。Claude 仍是 39 张，OpenAI 仍是 20 张。点「查看本轮新增」会框住这 10 张新卡；另外两块板这一版没有新卡。标注还留着，页面上不再显示输入框。</p>
     <div class="local-actions">
       <button type="button" id="show-cycle">查看本轮新增</button>
       <button type="button" id="arrange-date">按日期排开</button>
@@ -42,7 +42,7 @@
   <nav class="board-nav" aria-label="目录">
     <a href="#claude">Claude 学习板<small>39 张，含 1 条待核实参考、3 张型号存疑</small></a>
     <a href="#openai">OpenAI 学习板<small>20 张：12 个社区作品，8 张官方 Showcase</small></a>
-    <a href="#gsplat">高斯泼溅学习板<small>2 张：开源作品与工具</small></a>
+    <a href="#gsplat">高斯泼溅学习板<small>12 张：开源作品、工具与可玩演示</small></a>
   </nav>
 
   <section id="claude" class="board-view" data-board="claude">
@@ -1806,7 +1806,7 @@
     <article class="card intro" data-id="intro-gsplat">
       <div class="meta">
         <p class="hello">高斯泼溅学习板</p>
-        <p>2 张。这块板收的是以高斯泼溅（3D Gaussian Splatting）为主要手艺的作品和开源工具，不是某一家模型厂商的专板。如果一件作品主要是在演示 Claude 或 OpenAI 的模型，即使也用了泼溅，仍放在对应的厂商板。按原发布日期从新到旧，说明卡不占内容位。这一版先收 Silicon Jungle 的 Ink Studio，以及 Will Eastcott 的 splat-walk（Junie 从一条小红书转述追到原作）。传播门槛和「依据与限度」写法与另外两块板相同。</p>
+        <p>12 张。这块板收的是以高斯泼溅（3D Gaussian Splatting）为主要手艺的作品和开源工具，不是某一家模型厂商的专板。如果一件作品主要是在演示 Claude 或 OpenAI 的模型，即使也用了泼溅，仍放在对应的厂商板。按原发布日期从新到旧，说明卡不占内容位。这一版在原有 Ink Studio 和 splat-walk 之外新收 10 张；其中 WASCAPE 是 Junie 记得的最近开车应用，未过 X/YouTube 工作门槛，按点名案例收录并标明限度。传播门槛和「依据与限度」写法与另外两块板相同。</p>
       </div>
     </article>
     <article class="card" data-id="ink-studio" data-published="2026-11-16T16:27:09+08:00" data-cycle="2026-11-27-gsplat" data-verification="author-reported" data-audit="keep" data-audited="2026-11-27">
@@ -1873,6 +1873,311 @@
         </details>
       </div>
     </article>
+    <article class="card" data-id="spark-radix" data-published="2026-10-30T01:05:31+08:00" data-cycle="2026-11-27-gsplat-10" data-verification="author-reported" data-audit="keep" data-audited="2026-11-27">
+      <figure>
+        <a class="still" href="https://x.com/sparkjsdev/status/2115852543708536881" target="_blank" rel="noopener" aria-label="打开 Spark Radix 的原帖">
+          <img src="images/spark-radix/preview.jpg" alt="原帖视频封面：黑底星空里，一座长满树的小岛悬在空中，几颗发亮的光球拖着尾巴飞过。" width="1200" height="675">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">开源渲染器 · WebGPU · 作者自述</p>
+        <h2>Spark Radix：浏览器里的 WebGPU 泼溅渲染</h2>
+        <p class="by">spark · @sparkjsdev（World Labs）</p>
+        <p class="when"><time datetime="2026-10-30T01:05:31+08:00">2026-10-30</time></p>
+        <p>把投影、排序和绘制都放到 GPU 上，用 three.js 在浏览器里直接看大场景。值得学的是：同一套泼溅数据，从 WebGL 流式方案走到 WebGPU 整帧排序，移动端和桌面可以共用一条路径。</p>
+        <p class="links">
+          <a href="https://x.com/sparkjsdev/status/2115852543708536881" target="_blank" rel="noopener">原帖</a>
+          <a href="https://sparkjs.dev/radix/" target="_blank" rel="noopener">文档与示例</a>
+          <a href="https://github.com/sparkjsdev/radix" target="_blank" rel="noopener">源码</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-10-30 01:05:31（亚洲/上海），X 原帖。作者称为实验性发布。</p>
+          <p><b>方法与工具（作者自述）：</b>原帖写：今天分享 Spark Radix 的实验性版本，这是基于 three.js 的 WebGPU 高斯泼溅渲染器，可在浏览器里渲染和探索细致的三维世界，供开发者试用。后续线程写：借助 WebGPU，Radix 每帧在 GPU 上完成投影、排序和绘制；多个泼溅物体一起排序，一次绘制；没有 WebGPU 时回退到 WebGL2。</p>
+          <p><b>数据（2026-11-27 15:36 亚洲/上海 核验）：</b>原帖曝光 64441，视频播放 18941，赞 758，转发 96，引用 19，回复 39，收藏 656。曝光刚过 5 万工作线，赞未到 1000。GitHub 于 15:40 核验为 69 星、11 个复刻，许可证 MIT。星数不是本板门槛。</p>
+          <p><b>社区反馈（X，2026-11-27 约 15:36 亚洲/上海 抽样，不是全量）：</b>原帖有 39 条回复。本轮用对话搜索未能稳定列出全部回复，无法把批评抽样写全。赞和收藏说明有正向接收，但不把它说成没有批评。</p>
+          <p><b>推广与利益：</b>原帖没有付费合作标记。Spark / Radix 是 World Labs 开源的渲染器，文档和 npm 包对外免费。本板把它当作工具发布，不是某一家大模型演示。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>和本板同时收录的 Spark 2.0 不是同一条产品线：2.0 主打 WebGL2 上流式 LoD，Radix 是后来的 WebGPU 实验。作者自己标明 experimental。封面几乎是黑底，钉在这块黑板上对比度偏低。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>曝光刚过工作线，赞未到 1000，接收仍明显正向；主手艺是泼溅渲染器，适合这块板。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="insta360-house" data-published="2026-09-22T02:26:04+08:00" data-cycle="2026-11-27-gsplat-10" data-verification="author-reported" data-audit="keep" data-audited="2026-11-27">
+      <figure>
+        <a class="still" href="https://x.com/willeastcott/status/2102102073101947205" target="_blank" rel="noopener" aria-label="打开 Insta360 拍房源扫描的原帖">
+          <img src="images/insta360-house/preview.jpg" alt="原帖视频封面：从楼梯口望向一栋湖景住宅的客厅和餐厅，木地板、拱窗和石壁炉，右下角有 SuperSplat 标志。" width="1200" height="675">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">房产扫描 · 消费级 360 相机 · 作者自述</p>
+        <h2>五百美元的 360 相机扫一栋房</h2>
+        <p class="by">Will Eastcott · @willeastcott（扫描：Tony Rose）</p>
+        <p class="when"><time datetime="2026-09-22T02:26:04+08:00">2026-09-22</time></p>
+        <p>以前扫房产常要上万元的激光雷达，这里用一台大约 500 美元的 Insta360 X5 拍 360 照片，再做成可走的高斯泼溅。值得学的是：消费级全景相机加上免费软件，已经能让看房的人像进游戏一样自己走。</p>
+        <p class="links">
+          <a href="https://x.com/willeastcott/status/2102102073101947205" target="_blank" rel="noopener">原帖</a>
+          <a href="https://superspl.at/scene/9d09ab82" target="_blank" rel="noopener">SuperSplat 场景</a>
+          <a href="https://github.com/harry7557558/spirula-studio" target="_blank" rel="noopener">Spirula Studio</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-09-22 02:26:04（亚洲/上海），X 原帖线程第一条。</p>
+          <p><b>方法与工具（作者自述）：</b>原帖写：以前扫一处房产往往意味着 5000 美元的激光雷达；这栋房子是用 500 美元的 Insta360 X5 消费级 360 相机扫的；软件全部免费开源；泼溅生成用 Spirula Studio，渲染用 PlayCanvas；花 500 美元就可以把房产放到网上，让意向买家像玩游戏一样自由走。线程第二条写：扫描者是 Tony Rose，上传到 SuperSplat；当时关闭了流式加载，1500 万高斯要一次全部载入，建议用台式机看，并可在查看器里打开 Performance Mode。作者在回复里写：输入应是 Insta360 X5 间隔模式拍的一系列 360 照片；他自己没有扫这处空间；有人被拍摄者自己挡进画面时，他写拍摄者用 Spirula Studio 把自己从照片里抠掉。稍后他确认拍摄者重新发布了带流式加载的版本。</p>
+          <p><b>数据（2026-11-27 15:28 亚洲/上海 核验）：</b>原帖曝光 87342，视频播放 45565，赞 1325，转发 109，引用 7，回复 38，收藏 1855。过线。</p>
+          <p><b>社区反馈（X 回复，2026-11-27 15:40 亚洲/上海 抽样，不是全量）：</b>有人加载吃力，作者承认该扫描最初关闭了流式加载，后来请拍摄者重新发布。有人觉得操作不像看房，作者回应默认是点击移动，WASD 是给“玩使命召唤的人”准备的。Kenney 调侃房产中介会不会用扫描误导客户，作者用玩笑挡了回去。也有人讨论要不要在不同高度多扫几遍。</p>
+          <p><b>推广与利益：</b>原帖没有付费合作标记。作者是 PlayCanvas 创建者，帖子在推广免费开源工具链，并点名 Insta360。场景不是他拍的，是 Tony Rose 的扫描。Insta360 是被提及的硬件品牌，未见付费合作标记。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>与同作者 5 月那条“在房源里 speedrun”是同一类应用，但采集方法不同（消费级 360 相机 + 具名拍摄者），单独成卡。最初发布时 1500 万高斯未开流式，普通设备会卡。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>曝光和赞都过线；值得看的是低成本全景采集怎么走进可走的房产泼溅。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="wascape" data-published="2026-09-03T22:55:14+08:00" data-cycle="2026-11-27-gsplat-10" data-verification="author-reported" data-audit="borderline" data-audited="2026-11-27">
+      <figure>
+        <a class="still" href="https://www.wascape.com/" target="_blank" rel="noopener" aria-label="打开 WASCAPE 官网">
+          <img src="images/wascape/preview.jpg" alt="官方封面：深蓝底上大大的白色标题 WASCAPE，下面一行英文 Photoreal games. In a browser tab。" width="1200" height="630">
+        </a>
+        <figcaption>官网官方封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">浏览器应用 · 实景驾驶 · 未过 X/YouTube 工作线</p>
+        <h2>WASCAPE：在浏览器里开车走过真实街道</h2>
+        <p class="by">u/mini_ster · wascape.com</p>
+        <p class="when"><time datetime="2026-09-03T22:55:14+08:00">2026-09-03</time></p>
+        <p>把扫下来的真实街道流进一个浏览器标签，走路、骑车、开车、飞都能碰壁。值得学的是：泼溅不再只是转着看的模型，而变成可以驾驶的地点。这是 Junie 记得的最近开车应用；它不是带圈速和对手的赛车，传播也未过本板的 X/YouTube 工作线，下面写明限度。</p>
+        <p class="links">
+          <a href="https://www.wascape.com/" target="_blank" rel="noopener">打开应用</a>
+          <a href="https://www.reddit.com/r/threejs/comments/1w69q1w/i_built_a_photoreal_game_demo_which_can_be/" target="_blank" rel="noopener">r/threejs 原帖</a>
+          <a href="https://www.wascape.com/devlog/thank-you-and-what-the-surge-broke" target="_blank" rel="noopener">10 月流量开发日志</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>目前能核对到的最早公开帖是 2026-09-03 22:55:14（亚洲/上海）发在 r/threejs 的帖，作者 u/mini_ster，标题是“I built a photoreal game demo which can be accessed via browser”。同一天在 r/SideProject 也发过。官网官方封面角落写着 “2026.05.16”，但本板没有找到 5 月的公开发布帖，不以封面日期当作原发时间。10 月 11 日又在 r/GaussianSplatting 发过穆贾（Muggia）33M 扫描的步行和飞行。</p>
+          <p><b>方法与工具（作者自述）：</b>9 月 3 日原帖写：在浏览器里自由走真实地点，不用下载、安装或注册；用 3D 高斯泼溅把十座、六个国家的扫描城镇直接流进标签页，光线和街道就是拍摄时的样子；可以步行，也可以骑车，带碰撞物理，经 WebGPU 运行；需要 Chrome、Edge，或较新 Mac 上的 Safari 18。官网上写：提供开车、走路、骑车、飞行四种方式；开车有真实车辆物理，会撞上扫描得到的墙；骑车要克服重力，下坡会自己溜；地点是从照片里拟合出的数百万高斯，不是手搭的模型。开发日志把这事概括成“Drive a real place: a real-world scan, streamed and rendered in a browser tab.”</p>
+          <p><b>数据（2026-11-27 15:29–15:37 亚洲/上海 核验）：</b>X 和 YouTube 上几乎没有能过线的原帖，不过本板 X（曝光 ≥5 万或赞 ≥1000）和 YouTube（播放 ≥2 万）的工作门槛。作者在 2026-10-30 开发日志里写：10 月站点有 25 万以上的 page views，最忙的一天大约 6.5 万访客，2000 人以上注册；并提醒 page views 不等于人数，同一人跨天会计两次，数字来自他自己的分析服务（日志里写 10 月 22 日额度用尽）。官网把三条 Reddit 的数据标为截至 2026-10-15：r/GaussianSplatting 10 月 11 日帖 4.6 万浏览 / 265 赞；r/threejs 9 月 3 日 2.2 万浏览 / 58 赞；r/SideProject 9 月 3 日 4.6 万浏览 / 83 赞。本轮 15:37 打开 r/threejs 原帖，可见赞 60、评论 42，upvote ratio 0.86；Reddit API 没有返回浏览量，浏览量仍只采用站点标注的 10 月 15 日数字。这些流量可核对到作者自报和 Reddit 互动，但不能当成已经通过 X/YouTube 工作线。</p>
+          <p><b>社区反馈（Reddit r/threejs 原帖评论，2026-11-27 15:37 亚洲/上海 抽样）：</b>有人称赞，也有明确批评。有人在 Apple M3 Max、Safari / 中端 PC 上遇到掉帧和“性能很糟”；有人觉得跑步速度和位移不同步；有人说鼠标是反的；有人问这到底是游戏，还是一个能骑车开车的高斯查看器，有没有目标和关卡。作者承认当时还是查看器式演示，并在修性能、同步和鼠标问题。另有人一开始在 Windows 上很卡，后来发现浏览器走了核显而不是独立显卡，改过来就顺了。10 月开发日志补充：高峰期 iOS 没有指针锁定却仍去请求，四天里至少 1400 人踩到这个错误；还有人离开页面后场景还在跑。</p>
+          <p><b>推广与利益：</b>没有看到付费合作标记。这是作者自己的产品站点，官网上有 WASCAPE Studio、市场，以及面向汽车、房产、旅游和游戏的商务说明，也提到可在扫描墙面上做广告。9 月评论里有人问源码，作者说“都在，很快会发布”；到本轮核验时，本板没有找到已公开的完整源码仓库，不以开源项目来写。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>这不是带计时赛和对手的赛车，而是在真实泼溅地点里开车、骑车、走路和飞行。官方封面是字标，不是某条街道的实景。作者公开身份目前只能核到 Reddit 账号 u/mini_ster。本板没有复跑，也没有核对 Cloudflare 后台原始报表。</p>
+          <p><b>上板判断：未过 X/YouTube 工作门槛，作为点名案例收录。</b>Junie 记得最近大火的是一个赛车应用。2026 年秋天里，可玩、可开车、又有较大公开流量的，首先是这个浏览器应用；10 月站点自报出现访问高峰。它不是传统赛车，X/YouTube 也未过线，所以标成临界，不把站点流量写成已经达标。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="splat-reflections" data-published="2026-07-17T22:19:54+08:00" data-cycle="2026-11-27-gsplat-10" data-verification="author-reported" data-audit="keep" data-audited="2026-11-27">
+      <figure>
+        <a class="still" href="https://x.com/abstrakt314/status/2078122527226814490" target="_blank" rel="noopener" aria-label="打开假反射案例的原帖">
+          <img src="images/splat-reflections/preview.jpg" alt="原帖视频封面：一间现代理发店，黑椅、地灯和天花板灯槽，右侧镜子里映出店内和窗外的街景。" width="1068" height="1080">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">反射手法 · iPhone 扫描 · 作者自述</p>
+        <h2>在高斯泼溅里把反射做假</h2>
+        <p class="by">abstrakt · @abstrakt314</p>
+        <p class="when"><time datetime="2026-07-17T22:19:54+08:00">2026-07-17</time></p>
+        <p>理发店镜子里的反射看起来很真，作者自己把它叫作“假反射”。值得学的是：泼溅不会自动长出真正的镜面，要让玻璃和镜子可用，常常得另做一层骗过眼睛的办法。</p>
+        <p class="links">
+          <a href="https://x.com/abstrakt314/status/2078122527226814490" target="_blank" rel="noopener">原帖</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-07-17 22:19:54（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>原帖写：仍然觉得在高斯泼溅里把反射做假可以做得很像；用 PlayCanvas 的 WebGPU 渲染；泼溅是用 Varjo 的 Teleport iOS 应用在 iPhone 上做的。</p>
+          <p><b>数据（2026-11-27 15:36 亚洲/上海 核验）：</b>原帖曝光 84026，视频播放 41327，赞 1215，转发 77，引用 3，回复 18，收藏 556。过线。</p>
+          <p><b>社区反馈（X，2026-11-27 约 15:36 亚洲/上海 抽样，不是全量）：</b>原帖有 18 条回复。本轮用对话搜索未能稳定列出全部回复，不能把批评写全，也不把反馈写成一边倒的称赞。</p>
+          <p><b>推广与利益：</b>原帖没有付费合作标记。作者简介写自己是 PlayCanvas 团队成员，做 SuperSplat。帖子同时展示 PlayCanvas WebGPU 和 Varjo Teleport 的采集。本板按作品手法收录，并写明供职关系。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>作者在标题里就承认反射是“假的”，不要误读成泼溅已经有物理上正确的镜面。本轮没有找到可单独打开的演示页，只能看原帖视频。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>曝光和赞都过线；对导演来说，重点是镜子和玻璃在泼溅里往往要靠做假，而不是指望扫描自动出现。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="voxel-collision" data-published="2026-06-25T19:42:40+08:00" data-cycle="2026-11-27-gsplat-10" data-verification="author-reported" data-audit="keep" data-audited="2026-11-27">
+      <figure>
+        <a class="still" href="https://x.com/willeastcott/status/2070110425648128245" target="_blank" rel="noopener" aria-label="打开体素碰撞原帖">
+          <img src="images/voxel-collision/preview.jpg" alt="原帖视频封面：一座工业厂房内部，地面堆着钢材和蓝色机床，后方有楼梯通到带黄栏杆的夹层，右下角有 SuperSplat 标志。" width="1200" height="675">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">碰撞 · SuperSplat · 作者自述</p>
+        <h2>把泼溅自动打成 5 厘米体素，用来走路</h2>
+        <p class="by">Will Eastcott · @willeastcott</p>
+        <p class="when"><time datetime="2026-06-25T19:42:40+08:00">2026-06-25</time></p>
+        <p>泼溅本身没有墙，人会穿过去。这里自动生成 5 厘米体素碰撞，体积小，却能爬楼梯、走横梁。值得学的是：要让扫描变成可玩的地方，先解决“脚踩在哪儿”，画面再漂亮也只是一层皮。</p>
+        <p class="links">
+          <a href="https://x.com/willeastcott/status/2070110425648128245" target="_blank" rel="noopener">原帖</a>
+          <a href="https://superspl.at/scene/3eedaa2b" target="_blank" rel="noopener">示例场景（Kacper Ormaniec）</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-06-25 19:42:40（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>原帖写：SuperSplat 里的体素碰撞是关键一步；它能把任意高斯泼溅自动转成精确的 5 厘米体素；压缩得很小，比网格更省，却结实到可以爬楼梯、走横梁；PlayCanvas 免费开源。线程第二条给出 Kacper Ormaniec 在 SuperSplat 上的示例场景。</p>
+          <p><b>数据（2026-11-27 15:36 亚洲/上海 核验）：</b>原帖曝光 91525，视频播放 56761，赞 1118，转发 154，引用 14，回复 14，收藏 862。过线。</p>
+          <p><b>社区反馈（X，2026-11-27 约 15:36 亚洲/上海 抽样，不是全量）：</b>原帖有 14 条回复。本轮用对话搜索未能稳定列出全部回复，不能把批评写全。</p>
+          <p><b>推广与利益：</b>原帖没有付费合作标记。作者是 PlayCanvas 创建者，这是在介绍自家开源编辑器的新能力。示例扫描要署名 Kacper Ormaniec。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>5 厘米体素是近似碰撞，不是精确网格。和本板 Iakov 的 FPS 演示、以及后文 SuperSplat 大场景流式加载是同一工具生态里的不同步骤，不合并成一张卡。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>曝光和赞都过线；对要把实景扫描做成可走、可玩空间的人，这是关键一步。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="supersplat-24m" data-published="2026-06-03T21:31:53+08:00" data-cycle="2026-11-27-gsplat-10" data-verification="author-reported" data-audit="keep" data-audited="2026-11-27">
+      <figure>
+        <a class="still" href="https://x.com/playcanvas/status/2062165374120894862" target="_blank" rel="noopener" aria-label="打开 SuperSplat 2400 万高斯流式加载原帖">
+          <img src="images/supersplat-24m/preview.jpg" alt="原帖视频封面：晴天下的铁路转盘，多条铺着木枕的铁轨通向圆心，左侧是带烟囱的机车库，上空布满接触网。" width="1200" height="1002">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">开源平台 · 流式加载 · 作者自述</p>
+        <h2>2400 万高斯，在浏览器里秒开、跑满 60 帧</h2>
+        <p class="by">PlayCanvas · @playcanvas</p>
+        <p class="when"><time datetime="2026-06-03T21:31:53+08:00">2026-06-03</time></p>
+        <p>官方用一座铁路转盘扫描演示：2400 万高斯流进浏览器，几乎马上能看，并且稳住 60 帧。值得学的是：大场景能不能用，常常不取决于扫描有多细，而取决于能不能按远近流式加载。</p>
+        <p class="links">
+          <a href="https://x.com/playcanvas/status/2062165374120894862" target="_blank" rel="noopener">原帖</a>
+          <a href="https://github.com/playcanvas/supersplat" target="_blank" rel="noopener">SuperSplat 源码</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-06-03 21:31:53（亚洲/上海），PlayCanvas 官方 X 帖。</p>
+          <p><b>方法与工具（作者自述）：</b>原帖写：SuperSplat 这个免费开源的 3D 高斯泼溅平台迎来重大升级；这里是 2400 万高斯的扫描在浏览器里现场流式加载，几乎立刻载入，并能稳住 60 帧；靠的是新的基于计算着色器的 WebGPU 渲染器，加上自动 LoD 流式加载。</p>
+          <p><b>数据（2026-11-27 15:31 亚洲/上海 核验）：</b>原帖曝光 61582，视频播放 21119，赞 867，转发 130，引用 10，回复 28，收藏 694。曝光过 5 万工作线，赞未到 1000。GitHub 于 15:40 核验，playcanvas/supersplat 为 10737 星，许可证 MIT。星数不是本板门槛。</p>
+          <p><b>社区反馈（X，2026-11-27 约 15:31 亚洲/上海 抽样，不是全量）：</b>原帖有 28 条回复。本轮用对话搜索未能稳定列出全部回复。同一天 PlayCanvas 工程师 Iakov（@yak32）另发一条对照帖，说《The Matrix Awakens》在当时主机上大约 30 帧，而这个高斯场景可以在他的 2020 款 iPhone 上跑得顺；该条曝光 79719、赞 473（15:32 核验），是同一轮能力的补充发言，不单独立卡，也不把两条数据加总。</p>
+          <p><b>推广与利益：</b>原帖没有付费合作标记。这是 PlayCanvas 官方产品更新。本轮没有从原帖展开到单独的 SuperSplat 场景页，封面里的铁路转盘扫描作者本轮未能具名。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>这是平台能力演示，不是一个完整的游戏。60 帧是作者对这条演示的自述，本板没有在多台设备上复跑。封面几乎铺满实景，对比度正常。</p>
+          <p><b>上板判断：达标。</b>曝光刚过工作线，赞未到 1000，但转发和收藏不低；主手艺是大场景泼溅的流式渲染，适合这块板。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="property-speedrun" data-published="2026-05-07T20:14:59+08:00" data-cycle="2026-11-27-gsplat-10" data-verification="author-reported" data-audit="keep" data-audited="2026-11-27">
+      <figure>
+        <a class="still" href="https://x.com/willeastcott/status/2052361551265321328" target="_blank" rel="noopener" aria-label="打开房产 speedrun 原帖">
+          <img src="images/property-speedrun/preview.jpg" alt="原帖视频封面：蓝天下一栋现代两层住宅，门前有售房招牌和一辆白色皮卡，左上角有 SuperSplat 标志。" width="1200" height="777">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">房产可视化 · SuperSplat · 作者自述</p>
+        <h2>买房的人可以在房源里 speedrun</h2>
+        <p class="by">Will Eastcott · @willeastcott</p>
+        <p class="when"><time datetime="2026-05-07T20:14:59+08:00">2026-05-07</time></p>
+        <p>把房子扫成高斯泼溅，用游戏那套办法在网页里走。作者的说法是：看房不必再只靠几张照片，买家可以自己在房源里冲一圈。值得学的是：泼溅一旦能走，房产、勘景和空间说明都会换一种看的方式；同时也要听反对的人怎么说“看起来还不如照片”。</p>
+        <p class="links">
+          <a href="https://x.com/willeastcott/status/2052361551265321328" target="_blank" rel="noopener">原帖</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-05-07 20:14:59（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>原帖写：电子游戏技术正在改写房地产；步骤是扫描房子、训练 3D 高斯泼溅、用 PlayCanvas 发布到网页；买家可以在房源里 speedrun；并写可在 SuperSplat 上自己试。原帖里“自己试”后面的短链实际指向这条视频，本轮没有在原帖字段里找到单独的场景页地址。</p>
+          <p><b>数据（2026-11-27 15:28 亚洲/上海 核验）：</b>原帖曝光 607651，视频播放 222923，赞 5420，转发 438，引用 62，回复 167，收藏 5687。远超工作线。</p>
+          <p><b>社区反馈（X 回复，2026-11-27 15:36 亚洲/上海 抽样，不是全量）：</b>原帖有 167 条回复，本轮只读到一部分。批评里，@soxlej 写“它把房子渲得还不如一张照片”；后来又补“现在都有 8K 了，我不喜欢这种摄影测量熔化的样子”。作者回应：它比照片更能让人理解房子的布局、结构和动线，而且扫描和渲染质量还在很快变好。这类“能走，但看上去发黏、发糊”的意见，比赞更值得导演看。</p>
+          <p><b>推广与利益：</b>原帖没有付费合作标记。作者是 PlayCanvas 创建者，帖子在推广 SuperSplat。封面里能看到真实的售房招牌和车辆，是一处真实房源扫描，不是剧情片场。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>和 9 月 Insta360 那张卡是同一类“可走的房产泼溅”，但这一张是更早、传播更大的总论，没有在原帖里写死拍摄设备和拍摄者。本板没有找到可单独打开的场景页。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>传播非常大；对导演的价值在于可走的空间说明，以及“还不如照片”这种批评。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="splat-fps" data-published="2026-04-23T22:46:30+08:00" data-cycle="2026-11-27-gsplat-10" data-verification="author-reported" data-audit="keep" data-audited="2026-11-27">
+      <figure>
+        <a class="still" href="https://x.com/yak32/status/2047326252344742035" target="_blank" rel="noopener" aria-label="打开泼溅 FPS 演示原帖">
+          <img src="images/splat-fps/preview.jpg" alt="原帖视频封面：第一人称拿着步枪走在废弃楼道里，墙上海喷了 BDM 等涂鸦，右下角弹药是 22/30。" width="1200" height="718">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">可玩演示 · 实景扫描 · 作者自述</p>
+        <h2>把一座实景扫描做成能玩的射击游戏</h2>
+        <p class="by">Iakov Sumygin · @yak32</p>
+        <p class="when"><time datetime="2026-04-23T22:46:30+08:00">2026-04-23</time></p>
+        <p>在真实废弃空间的高斯泼溅里加上碰撞、烘焙光照、寻路和会行动的 NPC，变成能在浏览器里玩的射击演示。值得学的是：泼溅只负责看上去像那儿，走路、中弹和 AI 仍然要另做一套网格和逻辑。</p>
+        <p class="links">
+          <a href="https://x.com/yak32/status/2047326252344742035" target="_blank" rel="noopener">原帖</a>
+          <a href="https://blog.playcanvas.com/turning-a-gaussian-splat-into-a-videogame/" target="_blank" rel="noopener">制作说明</a>
+          <a href="https://playcanv.as/p/qxGSuzYq/" target="_blank" rel="noopener">打开演示</a>
+          <a href="https://playcanvas.com/project/1480299" target="_blank" rel="noopener">工程</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>PlayCanvas 博客正文标注 2026-04-22，没有更精确的钟点。X 原帖是 2026-04-23 22:46:30（亚洲/上海）。Hacker News 的 Show HN 提交时间是 2026-04-23 22:18:52（亚洲/上海）。卡片日期按 X 原帖排，博客可能早一天。</p>
+          <p><b>方法与工具（作者自述）：</b>X 原帖写：终于做完基于高斯泼溅的 FPS 演示；是 PlayCanvas 项目，在浏览器里运行；基于真实照片扫描；带物理、烘焙光照和会寻路的 NPC。博客写：场景是 Christoph Schindelar 扫描的真实废弃空间；用 splat-transform 做成可流式的 SOG，并生成碰撞网格；再用烘焙的亮度探针、Recast 导航网格、行为树驱动的 8 个有性格的 NPC，以及一套经典射击循环。超级上 SuperSplat 里标记为 Downloadable 的扫描，作者写是按知识共享发布。博客还写，他是在 Cursor 里用 PlayCanvas 的 VS Code 扩展，并可以一边和 Claude 结对写代码。主手艺仍是把泼溅做成可玩空间，不是在演示某个模型。</p>
+          <p><b>数据（2026-11-27 15:32–15:36 亚洲/上海 核验）：</b>X 原帖曝光 180073，视频播放 84791，赞 1524，转发 136，引用 17，回复 46，收藏 943。Hacker News 该帖为 236 分、63 条评论（本轮读取页面时的数字）。HN 分数不是本板门槛，只作补充。</p>
+          <p><b>社区反馈（Hacker News 评论，本轮读取该帖；X 对话搜索本轮未列出回复）：</b>有人说在 M4 Max 上还算顺，但离替代网格场景的量产方案还早，更看好混合：草和灌木用高斯，主体仍用网格。有人说从艺术家角度看，编辑高斯泼溅仍然很痛苦，得到的往往是没法继续打磨的草稿。也有人提醒：把真实地点扫成可玩地图，可能被用到危险的地方。作者承认混合路线是方向，动态物体不好做，并说演示在手机上用最低设置可以跑，但更推荐桌面。</p>
+          <p><b>推广与利益：</b>原帖没有付费合作标记。作者简介写自己在 Snap，正在做 PlayCanvas。博客和演示都挂在 PlayCanvas 官方渠道。场景需署名 Christoph Schindelar；博客写 SuperSplat 上可下载的扫描由作者按知识共享发布，本板未再单独打开该扫描的许可证页。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>这是教学演示，不是完整商业游戏。作者写用过 Claude 辅助写代码，但作品的主线是泼溅转游戏，不是模型厂商展示，故放在这块板。封面是第一人称枪械画面，注意不要和现实枪击内容混淆，它是游戏演示。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>X 数据过线；对导演最有用的是“扫描负责样子，碰撞和表演要另做”这一层，以及社区对可编辑性和滥用风险的提醒。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="spark-2" data-published="2026-04-15T00:28:48+08:00" data-cycle="2026-11-27-gsplat-10" data-verification="author-reported" data-audit="keep" data-audited="2026-11-27">
+      <figure>
+        <a class="still" href="https://x.com/sparkjsdev/status/2044090505982816449" target="_blank" rel="noopener" aria-label="打开 Spark 2.0 原帖">
+          <img src="images/spark-2/preview.jpg" alt="原帖视频封面：黑底星空中央有一颗印着真实地表的玻璃球，上面叠着白色标题 SPARK 2.0，以及一行 Gaussian Splat Worlds, on the Web。" width="1200" height="675">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">开源渲染器 · 流式 LoD · 作者自述</p>
+        <h2>Spark 2.0：把上亿高斯流进手机浏览器</h2>
+        <p class="by">spark · @sparkjsdev（World Labs）</p>
+        <p class="when"><time datetime="2026-04-15T00:28:48+08:00">2026-04-15</time></p>
+        <p>用 three.js 和 WebGL2，按远近流式加载，让上亿高斯的世界在手机到头显上都能打开。值得学的是：大场景要能被观众打开，关键往往是分层、流式和显存分页，而不是把整个文件一次丢进标签页。</p>
+        <p class="links">
+          <a href="https://x.com/sparkjsdev/status/2044090505982816449" target="_blank" rel="noopener">原帖</a>
+          <a href="https://sparkjs.dev/" target="_blank" rel="noopener">文档</a>
+          <a href="https://worldlabs.ai/blog/spark-2.0" target="_blank" rel="noopener">技术说明</a>
+          <a href="https://github.com/sparkjsdev/spark" target="_blank" rel="noopener">源码</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-04-15 00:28:48（亚洲/上海），X 正式发布帖。更早的开发者预览帖在 2026-02-21（亚洲/上海），本卡以 2.0 正式发布为准，不把预览和正式版算成两张卡。</p>
+          <p><b>方法与工具（作者自述）：</b>原帖写：Spark 2.0 用可流式的 LoD 系统做 3D 高斯泼溅；建立在 three.js 上，可把超过 1 亿高斯的世界流到从手机到 VR 的各种设备，使用 WebGL2，全部开源。线程里把三个核心系统写成：连续 LoD 树、渐进式 .RAD 流式加载，以及 GPU 虚拟内存分页。官方博客在 World Labs 站点。线程里举过 Coit Tower（4000 多万高斯）和游戏 STARSPEED 里上亿高斯关卡的例子。</p>
+          <p><b>数据（2026-11-27 15:30 亚洲/上海 核验）：</b>正式发布帖曝光 422608，视频播放 92764，赞 2040，转发 311，引用 63，回复 41，收藏 1773。远超工作线。GitHub 于 15:40 核验，sparkjsdev/spark 为 3981 星、599 个复刻，许可证 MIT。星数不是本板门槛。</p>
+          <p><b>社区反馈（X 引用抽样，2026-11-27 15:40 亚洲/上海，不是全量回复）：</b>看到的引用以称赞和转述为主，例如中文账号说“本月最好玩的东西出来了”。本轮对话搜索没有列出完整回复树，也没有在已抽样的引用里读到集中的技术批评。不把这一点写成“没有批评”。</p>
+          <p><b>推广与利益：</b>原帖没有付费合作标记。Spark 是 World Labs 的开源渲染器，博客发在公司站点。STARSPEED 等是使用方案例，不是这张卡的主体。本板把它当泼溅工具，不是大模型演示。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>和后文的 Spark Radix 是不同时间的两条发布，不合并。Coit Tower 演示链到 World Labs 的 CDN 页面，本板没有长期保证该链接仍可打开。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>传播很大；对导演的价值是如何让巨大的实景或生成场景，真的能在普通设备的浏览器里打开。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="mrnerf-driving-sim" data-published="2025-10-17T23:58:13+08:00" data-cycle="2026-11-27-gsplat-10" data-verification="author-reported" data-audit="keep" data-audited="2026-11-27">
+      <figure>
+        <a class="still" href="https://x.com/janusch_patas/status/1979215379005345959" target="_blank" rel="noopener" aria-label="打开 MrNeRF 驾驶模拟器原帖">
+          <img src="images/mrnerf-driving-sim/preview.jpg" alt="原帖视频封面：一个人坐在三联屏驾驶舱里，中间屏幕是高架桥下的路面，头顶墙上还有地图和数据屏。" width="1200" height="675">
+        </a>
+        <figcaption>原帖视频封面</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">驾驶演示 · 2025 · 作者自述</p>
+        <h2>MrNeRF：在高斯泼溅里开车的模拟器</h2>
+        <p class="by">MrNeRF · @janusch_patas</p>
+        <p class="when"><time datetime="2025-10-17T23:58:13+08:00">2025-10-17</time></p>
+        <p>作者把“在泼溅里开车”比成 YouTube 上的步行巡礼，并想象有一天连驾照考试都可以在这种模拟器里进行。值得学的是：实景泼溅一旦能被开车穿过，就会从观看变成训练和体验。本轮没有找到可公开打开的应用地址，它过了传播线，但不是这次点名的那个最近的开车应用。</p>
+        <p class="links">
+          <a href="https://x.com/janusch_patas/status/1979215379005345959" target="_blank" rel="noopener">原帖</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2025-10-17 23:58:13（亚洲/上海），X 原帖。</p>
+          <p><b>方法与工具（作者自述）：</b>原帖全文是：3D Gaussian Splatting Driving Simulator；你知道那些 YouTube 步行巡礼吗？作者觉得在泼溅里开车，或在 3DGS 模拟器里考驾照，也可能变成类似的潮流。原帖没有再写训练软件、数据来源或是否对公众开放试玩。</p>
+          <p><b>数据（2026-11-27 15:30 亚洲/上海 核验）：</b>原帖曝光 139742，视频播放 53080，赞 1202，转发 163，引用 18，回复 28，收藏 460。过线。更早一条 2025-02-18 的相关驾车视频由作者自己发出（https://x.com/janusch_patas/status/1891600479383097503），曝光 20563、赞 371，未过线；Bilawal Sidhu 第二天的转发帖曝光 241095、赞 2754，那是转述，不拿来给原作凑门槛，也不单独立卡。</p>
+          <p><b>社区反馈（X，2026-11-27 约 15:30 亚洲/上海 抽样，不是全量）：</b>原帖有 28 条回复。本轮用对话搜索未能稳定列出全部回复，不能把批评写全。</p>
+          <p><b>推广与利益：</b>原帖没有付费合作标记。作者是以 MrNeRF 为人所知的研究者和传播者。本轮没有核对到与这条演示绑定的商业产品页。</p>
+          <p><b>此前核对的限度（仍有效）：</b></p>
+          <p>本轮没有找到这条演示的公开试玩地址或对应论文页，不能把它写成已经上线的应用。封面是驾驶舱实拍，不是泼溅画面本身。时间是 2025 年 10 月，比 WASCAPE 早将近一年，不是 Junie 说的“最近”那一个。本板没有复跑。</p>
+          <p><b>上板判断：达标。</b>传播过线，主题就是在泼溅里开车；作为更早的驾驶案例收录，但不把它说成这次点名的那个应用。</p>
+        </details>
+      </div>
+    </article>
+
         </main>
       </div>
     </div>
@@ -1883,7 +2188,7 @@
   </footer>
   <script>
     (function () {
-      var expected = "2026-11-27-gsplat";
+      var expected = "2026-11-27-gsplat-10";
       function check() {
         fetch("revision.json?t=" + Date.now(), { cache: "no-store" }).then(function (res) {
           if (!res.ok) return null;
@@ -1908,6 +2213,6 @@
       });
     })();
   </script>
-  <script src="board.js?v=2026-11-27-gsplat"></script>
+  <script src="board.js?v=2026-11-27-gsplat-10"></script>
 </body>
 </html>
