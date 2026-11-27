@@ -1,0 +1,65 @@
+{
+  "record_type": "publication_cycle_log",
+  "cycle_id": "2026-11-28-gracia-f1",
+  "timezone": "Asia/Shanghai",
+  "request": "Junie t129u: 「这个要收」— admit the Gracia AI F1 Las Vegas 4D Gaussian-splatting pit-stop case to the live 高斯泼溅 board, even though it misses the X/YouTube working thresholds, and label it honestly as 点名收录 like WASCAPE.",
+  "window": "2026-11-28 early morning Asia/Shanghai live-metrics recheck and publish",
+  "added_ids": [
+    "gracia-f1"
+  ],
+  "added_by_board": {
+    "claude": [],
+    "openai": [],
+    "gsplat": [
+      "gracia-f1"
+    ]
+  },
+  "kept_existing_gsplat": [
+    "ink-studio",
+    "splat-walk",
+    "spark-radix",
+    "insta360-house",
+    "wascape",
+    "splat-reflections",
+    "voxel-collision",
+    "supersplat-24m",
+    "property-speedrun",
+    "splat-fps",
+    "spark-2",
+    "mrnerf-driving-sim"
+  ],
+  "board_counts_after": {
+    "claude": 41,
+    "openai": 20,
+    "gsplat": 13,
+    "total": 74
+  },
+  "metrics_checked_at": {
+    "georgii_linkedin": "2026-11-28T01:03:25+08:00",
+    "rubloff_linkedin": "2026-11-28T01:03:25+08:00",
+    "episode14_youtube": "2026-11-28T01:03:51+08:00",
+    "junie_screenshot": "2026-11-28T00:56:00+08:00"
+  },
+  "reach_rule": "pass: X impressions >= 50,000 or likes >= 1,000; YouTube views >= 20,000. Never invent metrics. A recap's metrics do not count toward the original's bar. LinkedIn likes are not a working threshold. Named cases may be included below the bar if clearly labeled as 点名收录.",
+  "layout_revision": "2026-11-28-gracia-f1",
+  "added": [
+    {
+      "id": "gracia-f1",
+      "board": "gsplat",
+      "original": "https://www.linkedin.com/posts/georgiivysotskii_gracia-ai-pipeline-made-it-into-the-f1-broadcast-activity-7531039800741658625-JIuG",
+      "published": "2026-11-25T01:03:28+08:00",
+      "verdict": "未过 X/YouTube 工作门槛，作为点名收录",
+      "metrics": "Georgii LinkedIn public page at 2026-11-28 01:03 Asia/Shanghai: 95 likes, 10 comments (og title and JSON-LD); no share/repost count in the logged-out markup; 3,275 followers; 56s video; post marked Edited. Junie screenshot about 2026-11-28 00:56 Asia/Shanghai: 94 likes, 10 comments, 4 reposts, 3,275 followers. This Week in 3DGS Episode 14 (recap, not this work's original) at 01:03:51: 16,496 views, 335 likes, below the 20k YouTube bar and not counted toward this card. Rubloff earlier LinkedIn post at 01:03: 405 likes, 38 comments, 16,500 followers — discovery-post metrics, not used to clear the bar.",
+      "earlier_public_mentions": {
+        "episode14_youtube": "https://youtu.be/hsEa3KYNrKg?t=271",
+        "episode14_show_page": "https://radiancefields.com/this-week-in-3dgs",
+        "episode14_upload": "YouTube upload_date 20261123; timestamp 1795474958 = 2026-11-24 07:02:38 Asia/Shanghai; chapter about 4:29",
+        "rubloff_linkedin": "https://www.linkedin.com/posts/michaelrubloff_dellproprecision-activity-7530779596913565696-DMJp",
+        "rubloff_published": "2026-11-23T23:49:31.022Z = 2026-11-24 07:49:31 Asia/Shanghai"
+      },
+      "conflicts": "Georgii Vysotskii is Co-founder and CEO of Gracia AI (company self-announcement). Method details beyond the short caption are second-hand retellings attributed to Andrei/Andrey Volodin (Gracia co-founder/CTO); Volodin's own original post URL was not verified this cycle. Rubloff's earlier post carries the hashtag #dellproprecision.",
+      "license": "No open license found for the broadcast clip or the official LinkedIn video cover. Cover is the author's posted videocover-high still only; F1, team, DHL, and Apple TV marks appear in that official still. Did not rip Apple TV or F1 broadcast footage beyond what the author posted."
+    }
+  ],
+  "note": "Merged on top of PR28 (2026-11-28-opus56), which had already added 2 Claude cards. This cycle does not add or remove Claude/OpenAI cards."
+}

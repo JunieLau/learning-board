@@ -1,3 +1,17 @@
+# 补充 · 2026-11-28（`2026-11-28-gracia-f1`）：点名收录 Gracia AI 的 F1 4D 进站转播
+
+Junie 在看过 Gracia AI F1 审核后回复「这个要收」（t129u）。本轮只在已上线的「高斯泼溅」板加这一张卡，不改板的结构，不删除任何卡，不改 Claude 与 OpenAI 板上的卡片。合并时 main 已先合入 `2026-11-28-opus56`，Claude 为 41 张，OpenAI 仍是 20 张，高斯泼溅由 12 张变为 13 张，合计 74 张。
+
+这张卡未过本板的 X/YouTube 工作门槛（X 曝光 ≥5 万或赞 ≥1000；YouTube 播放 ≥2 万）。LinkedIn 赞数不是工作门槛；《This Week in 3DGS》第 14 集是周报，其播放量也不计入本条是否达标。按与 WASCAPE 相同的写法，标成点名收录 / `data-audit="borderline"`，不假装已经过线。
+
+- 核验时间（亚洲/上海）：Georgii 原帖、Rubloff 更早专帖与第 14 集 YouTube 数据在 2026-11-28 01:03。Junie 截图约在 2026-11-28 00:56。
+- 封面：只用 Georgii LinkedIn 原帖视频的官方封面（videocover-high，1280×720），没有另去拆苹果电视或 F1 官方转播。
+- 去重：`gracia-f1` 不在既有三块板上。
+- 更早公开提及已核到：第 14 集 YouTube（上传时间戳 2026-11-24 07:02:38 亚洲/上海；节目页标 2026-11-23），以及 Michael Rubloff 的 LinkedIn 专帖 https://www.linkedin.com/posts/michaelrubloff_dellproprecision-activity-7530779596913565696-DMJp（2026-11-24 07:49:31 亚洲/上海）。
+
+| 板 | id | 标题 | 原发布（亚洲/上海） | 判定 | 数据 | 备注 |
+|---|---|---|---|---|---|---|
+| gsplat | `gracia-f1` | Gracia AI：F1 转播里的两秒进站，做成 4D 自由视角 | 2026-11-25T01:03:28+08:00（Georgii 公司公告；更早公开提及见上） | 未过 X/YouTube 工作门槛，作为点名收录 | Georgii 原帖 01:03 核验：公开页 95 赞、10 评；未登录页无转发数；关注者 3,275；视频 56 秒。Junie 00:56 截图：94 赞、10 评、4 次转帖。第 14 集 YouTube 同刻 16,496 播放、335 赞（周报，不计本条门槛）。Rubloff 专帖同刻 405 赞、38 评。 | 新卡，临界。作者是 Gracia AI 联合创始人兼 CEO，须披露利益关系。方法细节中的 Meridian、半圆 iPhone、约 3 米、5G、1500 fps、无幻觉、Unreal、仅美国可看等，来自对 Volodin 的二手转述，不是 Georgii 原话。原帖已编辑。 |
 # 补充 · 2026-11-28（`2026-11-28-opus56`）：Claude 板新收 2 张自称 Opus 5.6 的过线作品
 
 Junie 先发来微信转述文（https://mp.weixin.qq.com/s/E-4uZqUxPSd2Y8C0KMpHWA，「你丫才美工」，2026-11-27 21:09 亚洲/上海），要求追到原文；随后要求全网检索 Claude / Opus 5.6 并更新学习板。后又明确：本轮上板优先新型号（Claude / Opus / Sonnet 5.5 与 5.6，含尚未官宣但过线的 5.6），不要用更多 Fable 5.2 作品作为这一轮的主要更新。Fable 5.2 清单 https://github.com/fengyiqicoder/awesome-fable-5.2 只作对照，过线且板上还没有的，写入本表，不在这一轮上板。高斯泼溅板的 Gracia AI F1 4DGS 另案处理，本轮不动该板。
