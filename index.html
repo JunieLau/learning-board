@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>学习板 · Claude / GPT / 高斯泼溅</title>
   <meta name="description" content="Claude、GPT 与高斯泼溅的创意项目，一块一块钉在这块黑底的板上。">
-  <link rel="stylesheet" href="styles.css?v=2026-11-27-gsplat-10">
+  <link rel="stylesheet" href="styles.css?v=2026-11-28-opus56">
   <script>
     (function () {
       try {
@@ -40,7 +40,7 @@
   </div>
 
   <nav class="board-nav" aria-label="目录">
-    <a href="#claude">Claude 学习板<small>39 张，含 1 条待核实参考、3 张型号存疑</small></a>
+    <a href="#claude">Claude 学习板<small>41 张，含 1 条待核实参考、5 张型号存疑</small></a>
     <a href="#openai">OpenAI 学习板<small>20 张：12 个社区作品，8 张官方 Showcase</small></a>
     <a href="#gsplat">高斯泼溅学习板<small>12 张：开源作品、工具与可玩演示</small></a>
   </nav>
@@ -52,7 +52,75 @@
     <article class="card intro" data-id="intro-claude">
       <div class="meta">
         <p class="hello">Claude 学习板</p>
-        <p>39 张。其中 38 张是项目，1 张是指定参考、制作细节待核实，不计入已核实案例。另有 3 张标「型号存疑」：作者自称的型号不在 Anthropic 官方型号表里，只按作者自述记录。按原发布日期从新到旧，说明卡不占内容位。2026-11-25 全板复核：每张卡的「依据与限度」写了原发布时间、作者自述的方法和工具、当天重新查的数据、社区反馈抽样、推广与利益关系，以及上板判断。2026-11-25 新一轮按同一标准新增，见「查看本轮新增」。</p>
+        <p>41 张。其中 40 张是项目，1 张是指定参考、制作细节待核实，不计入已核实案例。另有 5 张标「型号存疑」：作者自称的型号不在 Anthropic 官方型号表里，只按作者自述记录。按原发布日期从新到旧，说明卡不占内容位。2026-11-25 全板复核：每张卡的「依据与限度」写了原发布时间、作者自述的方法和工具、当天重新查的数据、社区反馈抽样、推广与利益关系，以及上板判断。2026-11-28 新收 2 张自称 Opus 5.6 的过线作品，见「查看本轮新增」。</p>
+      </div>
+    </article>
+    <article class="card" data-id="claude-pelican-1" data-published="2026-11-26T02:32:16+08:00" data-cycle="2026-11-28-opus56" data-verification="author-reported" data-model-claim="unverified" data-audit="keep" data-audited="2026-11-28">
+      <figure>
+        <a class="still" href="https://x.com/shneural/status/2125658847323017291" target="_blank" rel="noopener" aria-label="打开 Claude Pelican 1 发布会短片的原帖">
+          <img src="images/claude-pelican-1/preview.jpg" alt="原帖视频约第 35 秒：一只白色鹈鹕骑着蓝色自行车，走在海边栏杆前的路上，背景是蓝海、满月和悬崖上的小镇。" width="1280" height="720">
+        </a>
+        <figcaption>原帖视频截帧（约第 35 秒）</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">型号存疑 · 独立创作者 · 发布会风格短片 · 作者自述</p>
+        <h2>Claude Pelican 1：鹈鹕发布会短片</h2>
+        <p class="by">kirill sh · @shneural</p>
+        <p class="when"><time datetime="2026-11-26T02:32:16+08:00">2026-11-26</time></p>
+        <p class="model-flag">作者称 Opus Next（5.6/6）；Anthropic 官方型号表尚无 Opus 5.6 或 claude-opus-5-6（查于 2026-11-28 00:56 亚洲/上海，现行公开型号仍是 Fable 5.2、Opus 5.5、Sonnet 5.5、Haiku 5.5，以及有限开放的 Mythos 5.2）。</p>
+        <p>有人让模型给一个虚构的「Claude Pelican 1」做 Anthropic 发布会风格宣传片：这款假模型只会画骑自行车的 SVG 鹈鹕。值得学的不是“一个模型直接出了成片”，而是作者自己写明的分工：模型先看官方发布会参考片，再决定用 Codex 出 39 个艺术时代的静帧，用 MiniMax-H3 做动画，再用代码对齐脚踏角度，整段剪辑约两小时。这和板上已有的 Fable 5.2 纯代码鹈鹕短片、以及 Chetaslua 自称 Opus 5.5 的四分钟纯代码短片，不是同一部作品。</p>
+        <p class="links">
+          <a href="https://x.com/shneural/status/2125658847323017291" target="_blank" rel="noopener">原帖</a>
+          <a href="https://x.com/shneural/status/2125660205316976956" target="_blank" rel="noopener">作者补述方法</a>
+          <a href="https://x.com/shneural/status/2125660484472820005" target="_blank" rel="noopener">提示词</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-26 02:32:16（亚洲/上海），X 原帖。微信公众号「你丫才美工」2026-11-27 21:09 的转述文没有给出原帖链接，本卡追到的是这条原作，不是微信里的录屏。</p>
+          <p><b>方法与工具（作者自述）：</b>原帖：让 Opus Next（5.6/6）给虚构的 “Claude Pelican 1” 做 Anthropic 风格发布片，并把官方发布会视频放在桌面上当参考。紧接着的回复写明：他没有规定具体做法；模型自己研究了官方宣传片，决定用 Codex 生成 39 个艺术时代的静帧，在 Colab 上跑 MiniMax-H3 做动画，用代码同步脚踏角度，再把整段剪完，大约两小时。再下一条公布提示词原文：make a 1:1 Anthropic-style launch video (like Opus 5.5 or Fable) for Pelican 1, a specialized model for generating SVG pelicans on bicycles. make it epic and ridiculously serious. all ref videos are on the desktop。成片时长约 74 秒。这不是单模型、纯代码出片，Claude 在这里主要是导演和调度。</p>
+          <p><b>数据（2026-11-28 00:56 亚洲/上海 核验）：</b>原帖曝光 660071，视频播放 278769，赞 7792，转发 325，引用 148，回复 163，收藏 4224。</p>
+          <p><b>社区反馈（X 回复，2026-11-28 00:58 亚洲/上海 抽样，不是全量）：</b>有人觉得已经接近官方发布预告。批评更值得看：@aristocrates_ 说这不算 Opus 5.6 的大工程，大部分素材是 Codex 画的、MiniMax 做的动画，Claude 只是把东西拼起来；@theo_opinions 说开头还行，后面变成扩散模型的 slop；@Xanni9 认为 Claude 不能生成写实视频，怀疑是用了别的视频模型；@okfineitslucas 那条被点了 293 个赞，玩笑说 Claude 接到 Anthropic 的活，立刻把美术外包给了 Codex。这些批评和作者自己的方法说明是对得上的。</p>
+          <p><b>推广与利益：</b>原帖没有付费合作标记，也不是 Anthropic 官方发布。作品借用了官方发布会的视觉格式，但是恶搞。</p>
+          <p><b>本轮核对的限度：</b></p>
+          <p>型号：作者称 Opus Next（5.6/6）。2026-11-28 00:56 查过 Anthropic 官方型号表和新闻室，没有 Opus 5.6，也没有模型 ID claude-opus-5-6。只能写成“作者自称”。</p>
+          <p>不要把它和板上已有的 `pelican-bicycle`（Chetaslua，Fable 5.2，2026-11-10，纯代码短片）混成一部。也不要把它和 Chetaslua 的 Built for Two 混成一部：那条原帖是 https://x.com/chetaslua/status/2125346298606014955 ，作者写的是官方 Opus 5.5、四分钟纯 WebGL2、鹈鹕唱歌，2026-11-28 00:59 核验曝光 21344、赞 354，未过本板门槛。</p>
+          <p>本板没有复跑这条工具链，也没有核对 MiniMax 或 Codex 的花费。</p>
+          <p><b>上板判断：收录（型号存疑）。</b>66 万曝光、七千多赞，过线；对导演最有用的是作者把工具分工写清楚了。微信转述容易让人以为是一个模型直接做出发布会视频，原作不是这样。</p>
+        </details>
+      </div>
+    </article>
+    <article class="card" data-id="the-last-boring-slide" data-published="2026-11-26T00:06:48+08:00" data-cycle="2026-11-28-opus56" data-verification="author-reported" data-model-claim="unverified" data-audit="keep" data-audited="2026-11-28">
+      <figure>
+        <a class="still" href="https://x.com/fluxxrider/status/2125622238481371372" target="_blank" rel="noopener" aria-label="打开 The Last Boring Slide 的原帖">
+          <img src="images/the-last-boring-slide/preview.jpg" alt="原帖分享卡封面：浅米色底上是 Anthropic 的橙色星标和黑色 Claude 字标，这是作者在 X 上分享的 Claude Artifact 官方预览图。" width="1138" height="640">
+        </a>
+        <figcaption>原帖分享卡封面（Claude Artifact）</figcaption>
+      </figure>
+      <div class="meta">
+        <p class="badge">型号存疑 · 独立创作者 · 互动网页简报 · 作者自述</p>
+        <h2>The Last Boring Slide</h2>
+        <p class="by">Nikita · @fluxxrider</p>
+        <p class="when"><time datetime="2026-11-26T00:06:48+08:00">2026-11-26</time></p>
+        <p class="model-flag">作者称 Opus 5.6，在 xhigh 档、界面仍显示 5.5 的隐蔽测试里做的；Anthropic 官方型号表尚无 Opus 5.6 或 claude-opus-5-6（查于 2026-11-28 00:56 亚洲/上海）。</p>
+        <p>一份关于智能爆炸的互动网页简报，不是可下载的 PowerPoint。开头故意做成普通幻灯片，随后自己改写自己，镜头会走进三维场景。方向键翻页，A 自动播放，F 全屏。作者公开的提示词几乎只规定题目和“做到你见过最惊人”，并写明没有另给创意方向；后来说大约 40 分钟、一个 xhigh 代理，按 Opus 5.5 接口计价约 90 美元。值得打开原作自己点，而不是只看转述录屏。</p>
+        <p class="links">
+          <a href="https://x.com/fluxxrider/status/2125622238481371372" target="_blank" rel="noopener">原帖</a>
+          <a href="https://claude.ai/artifact/Cy2d8Vn63CnzCtonA1LSah" target="_blank" rel="noopener">可交互原作</a>
+          <a href="https://x.com/fluxxrider/status/2125701190872915996" target="_blank" rel="noopener">提示词</a>
+          <a href="https://www.youtube.com/watch?v=dHWll-sc0Ss" target="_blank" rel="noopener">作者后来的录屏</a>
+        </p>
+        <details class="more">
+          <summary>依据与限度</summary>
+          <p><b>原发布：</b>2026-11-26 00:06:48（亚洲/上海），X 原帖。微信公众号「你丫才美工」2026-11-27 21:09 的转述文称 X 上已有 1000 万浏览，但没有给出原帖链接；本卡以原帖当时的公开数据为准，不把微信文章里的数字当成现时事实。</p>
+          <p><b>方法与工具（作者自述）：</b>原帖把作品放到 Claude Artifact，标题是 The Last Boring Slide。作者在回复里公布完整提示词，大意是：做一份关于 AI 未来、也就是智能爆炸的演示；可以完全不带锚定偏见，因为事情确实会变得疯狂；希望这是见过最精心、最惊人的演示，图形和转场随便做；相信你有品味和能力；祝你好运，Claude。作者接着写：Opus 5.6 on xhigh (stealth tested on 5.5)，除了这段提示词，没有另给创意方向。对提问的人还说过：大约 40 分钟、xhigh、一个代理；按 Opus 5.5 接口计价是 90 美元，约占他每周额度的 2–3%。作品是一份可下载的 HTML。作者后来发现，结尾画面倾斜、问出 “What do you want?” 时，呼应了前面那支偏了 1 度的箭头。对“在什么上面渲染”的追问，作者回过“My 4080 super”，并说有些三维场景必须渲染，所以不能把它理解成全程都是轻松的实时网页特效。</p>
+          <p><b>数据（2026-11-28 00:57 亚洲/上海 核验）：</b>原帖曝光 12212618，赞 40405，转发 3101，引用 2310，回复 1502，收藏 59562。作者公布提示词的那条回复曝光 1844563，赞 5487。作者在 2026-11-27 01:41（亚洲/上海）自己回过“10M!!”，那是当时过千万的报喜，不是本轮核验数字。作者后来把录屏放到自己的 YouTube 频道 @flixxrider（https://www.youtube.com/watch?v=dHWll-sc0Ss），2026-11-28 00:57 核验播放 4940，不到本板 YouTube 的 2 万门槛，只作打不开网页时的备看，不拿来过线。</p>
+          <p><b>社区反馈（X 回复，2026-11-28 00:58 亚洲/上海 抽样，不是全量）：</b>大量惊叹。批评和限制也很清楚：@The_John_Dreic 说加载很久，文件没有为快速打开做过优化；@TruthtideTV 说转了三十秒才出来，挖苦这是“最疯狂的 slop”；@jernejbm 只回“还在加载”。有人打不开或以为被下架，作者因此补了 YouTube 录屏，并说自己这边还能打开，格式是一份 HTML。型号未经官方确认，这一点在回复里也被反复问起。另外，作者多次要求转述帖注明来源，不要不署名就拿走他的原帖。</p>
+          <p><b>推广与利益：</b>原帖没有付费合作标记。作者主页写着咨询邮箱。后来出现的 https://thelastboringslide.com/ 带有 Google AdSense，页面里没有写 Nikita 或 @fluxxrider，不能当成作者官方站，也不能拿它的访问量来过线。可交互原作仍以 Claude Artifact 为准。</p>
+          <p><b>本轮核对的限度：</b></p>
+          <p>型号：作者称 Opus 5.6，并说是在显示为 5.5 的隐蔽测试里做的。2026-11-28 00:56 查过官方型号表和新闻室，没有这一号。只能写成“作者自称”。</p>
+          <p>提示词是作者自己公布的；中间是否还有未公开的修改，看不到。部分三维场景据作者说需要本机渲染，本板没有复跑，也没有打开那份 HTML 逐项核对哪些是实时、哪些是预渲染。</p>
+          <p><b>上板判断：收录（型号存疑）。</b>原帖现时约 1221 万曝光、四万多赞，过线；提示词、用时和花费是作者自己写的，对导演有方法价值。微信文章里的“1000 万”只是转述当时的量级，本轮以原帖 12212618 次曝光为准。</p>
+        </details>
       </div>
     </article>
     <article class="card" data-id="noroi-iwai" data-published="2026-11-25T04:53:25+08:00" data-cycle="2026-11-25-opus56" data-verification="author-reported" data-model-claim="unverified" data-audit="keep" data-audited="2026-11-25">
@@ -2188,7 +2256,7 @@
   </footer>
   <script>
     (function () {
-      var expected = "2026-11-27-gsplat-10";
+      var expected = "2026-11-28-opus56";
       function check() {
         fetch("revision.json?t=" + Date.now(), { cache: "no-store" }).then(function (res) {
           if (!res.ok) return null;
@@ -2213,6 +2281,6 @@
       });
     })();
   </script>
-  <script src="board.js?v=2026-11-27-gsplat-10"></script>
+  <script src="board.js?v=2026-11-28-opus56"></script>
 </body>
 </html>

@@ -12,6 +12,9 @@ Junie Lau 的学习 moodboard：黑底网页，每块是一个想学的项目—
 
 型号存疑规则（2026-11-25 起）：作者自称的型号还不在官方型号表里的作品，达到传播和学习门槛也可以上 Claude 板，但卡面必须有「型号存疑」徽标和一行说明（作者称的型号、官方型号表查于何时、提交里的 Co-Authored-By），标记为 `data-model-claim="unverified"`。首批 3 张：noroi-iwai、the-tea-ride、the-last-page（`records/cycles/2026-11-25-opus56.json`）。
 
+2026-11-28（`2026-11-28-opus56`）：Claude 板新收 2 张自称 Opus 5.6、已过传播门槛的作品：The Last Boring Slide（@fluxxrider）和 Claude Pelican 1 发布会短片（@shneural），均标「型号存疑」。这轮以新型号（5.5 / 5.6，含尚未官宣的 5.6）为主，不把更多 Fable 5.2 作品作为本轮上板重点。没通过或只写入报告的候选见 `AUDIT.md` 和 `records/cycles/2026-11-28-opus56.json`。之后 Claude 41 张，OpenAI 20 张，高斯泼溅 12 张，合计 73 张。
+
+
 
 2026-11-27 晚（`2026-11-27-gsplat-10`）：给既有「高斯泼溅」板新收 10 张，现为 12 张。Junie 点名最近大火的赛车应用，本轮认定为 WASCAPE（浏览器里驾驶真实泼溅地点的应用）；它未过 X/YouTube 工作门槛，按点名案例收录并标明限度。其余 9 张均过线。没通过的候选和原因见 `AUDIT.md` 和 `records/cycles/2026-11-27-gsplat-10.json`。Claude 仍是 39 张，OpenAI 仍是 20 张，合计 71 张。
 
