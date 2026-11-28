@@ -1,0 +1,53 @@
+{
+  "cycle": "2026-11-28-one-thread",
+  "published": "2026-11-28",
+  "request": "Junie sent a Chinese recap screenshot of Ishu Agrawal's cultures short, then after an audit that it missed the numerical bar, said to admit it.",
+  "official_model_check": {
+    "checked_at": "2026-11-28 08:49 Asia/Shanghai",
+    "url": "https://platform.claude.com/docs/en/about-claude/models/overview",
+    "newsroom": "https://www.anthropic.com/news",
+    "current": [
+      "Fable 5.2",
+      "Opus 5.5",
+      "Sonnet 5.5",
+      "Haiku 5.5",
+      "Mythos 5.2 limited"
+    ],
+    "opus_5_6": false
+  },
+  "metrics_checked_at": "2026-11-28 08:49 Asia/Shanghai",
+  "added": [
+    {
+      "board": "claude",
+      "id": "one-thread",
+      "title": "One Thread.",
+      "author": "Ishu Agrawal @ishuagra02",
+      "original": "https://x.com/ishuagra02/status/2125345032697999523",
+      "published": "2026-11-25T05:45:17+08:00",
+      "duration_s": 152.5,
+      "metrics": {
+        "impressions": 15399,
+        "likes": 219,
+        "retweets": 13,
+        "quotes": 1,
+        "replies": 11,
+        "bookmarks": 109,
+        "video_views": 9086
+      },
+      "paid_partnership": false,
+      "model_claim": "Opus 5.6 (routed)",
+      "audit": "borderline",
+      "verdict": "named inclusion; 型号存疑; did not meet X/YouTube working thresholds",
+      "youtube_original": null,
+      "demo_or_repo": null,
+      "cover": "official video frame ~t=27s Nile Valley, Egypt papyrus painting"
+    }
+  ],
+  "counts_after": {
+    "claude": 42,
+    "openai": 20,
+    "gsplat": 13,
+    "total": 75
+  },
+  "note": "Do not treat recap reach or the admit instruction as if the numerical bar was met."
+}
